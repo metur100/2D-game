@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8396525191200044394}
   - component: {fileID: 6732340154442523518}
   - component: {fileID: 3746187665048875365}
-  - component: {fileID: 6948562725040370011}
+  - component: {fileID: 6944204180395879249}
   m_Layer: 0
-  m_Name: FrostHit_Njinja
+  m_Name: FrostShoot_Njinja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0214073, y: 0}
   serializedVersion: 2
   m_Radius: 0.6734563
---- !u!114 &6948562725040370011
+--- !u!114 &6944204180395879249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,9 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5641150150828864269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ebb9ccb9305e74aa57fade2c06feff, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d3c3d90be63e8e47aef760966da251b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
   rb: {fileID: 6732340154442523518}
-  knockBack: 0

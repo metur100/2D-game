@@ -7,8 +7,12 @@ public class PlayerMovementKnight : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
 
-    public float runSpeed = 40f;
+    float runSpeed = 40f;
+    float slowSpeed = 20f;
+    float maxSpeed = 40f;
     float horizontalMove = 0f;
+    float slowOverTime = 1f;
+
     bool jump = false;
     bool crouch = false;
 
@@ -52,5 +56,15 @@ public class PlayerMovementKnight : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+    }
+    public void CoroutineKnight()
+    {
+        StartCoroutine(speedTimeKnight());
+    }
+    IEnumerator speedTimeKnight()
+    {
+        runSpeed = slowSpeed;
+        yield return new WaitForSeconds(slowOverTime);
+        runSpeed = maxSpeed;
     }
 }

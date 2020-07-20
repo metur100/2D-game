@@ -11723,6 +11723,7 @@ GameObject:
   - component: {fileID: 1368123721}
   - component: {fileID: 1368123723}
   - component: {fileID: 1368123722}
+  - component: {fileID: 1368123724}
   m_Layer: 11
   m_Name: Player_Knight
   m_TagString: Player_Knight
@@ -11787,8 +11788,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368123712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.082, y: 1.184, z: 0}
-  m_LocalScale: {x: 2.203, y: 2.3106098, z: 1}
+  m_LocalPosition: {x: -16.095, y: 1.184, z: 0}
+  m_LocalScale: {x: 2.198594, y: 2.3106098, z: 1}
   m_Children:
   - {fileID: 839280601}
   - {fileID: 753538470}
@@ -11990,6 +11991,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   animator: {fileID: 1368123720}
+--- !u!114 &1368123724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368123712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e0a17ea0e937c46b8b01029070d178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 50
+  startDashTime: 0.1
 --- !u!1 &1381139576
 GameObject:
   m_ObjectHideFlags: 0
@@ -20326,6 +20341,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5641150150828864269, guid: aef6c2ead94c2574b8daa773f18e73c1,
     type: 3}
   animator: {fileID: 1688004849}
+  cooldownTime: 2
 --- !u!1 &1695738811
 GameObject:
   m_ObjectHideFlags: 0
