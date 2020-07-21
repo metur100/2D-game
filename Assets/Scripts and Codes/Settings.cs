@@ -58,5 +58,8 @@ public class Settings : MonoBehaviour
      {
          Screen.fullScreen = isFullscreen;
      }
-
+    public void BackButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
 }
