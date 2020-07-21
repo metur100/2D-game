@@ -7,6 +7,7 @@ public class CastingBarSpell : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+
     public Animator animator;
 
     public Transform firePoint2;
@@ -20,7 +21,6 @@ public class CastingBarSpell : MonoBehaviour
 
     private Image castImage;
 
-   // private Image castImage;
     private RectTransform castTransoform;
 
     private bool casting;

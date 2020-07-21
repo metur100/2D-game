@@ -6,8 +6,11 @@ public class MaleAttack : MonoBehaviour
 {
     private bool Attacking = false;
 
-    private float attackTimer = 0;
-    private float attackCD = 1f;
+    private float attackTimer = 0.0f;
+    private float attackCD = 0.01f;
+
+    private float cooldownTime = 2;
+    private float nextFireTime = 0;
 
     public Collider2D MaleTrigger;
 
@@ -21,12 +24,15 @@ public class MaleAttack : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("MaleAttack") && !Attacking)
-        {
-            Attacking = true;
-            attackTimer = attackCD;
+        if (Time.time > nextFireTime) {
+            if (Input.GetButtonDown("MaleAttack") && !Attacking)
+            {
+                nextFireTime = Time.time + cooldownTime;
+                Attacking = true;
+                attackTimer = attackCD;
 
-            MaleTrigger.enabled = true;
+                MaleTrigger.enabled = true;
+            }
         }
 
         if (Attacking)
