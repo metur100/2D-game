@@ -24,7 +24,8 @@ public class MaleAttack : MonoBehaviour
     
     void Update()
     {
-        if (Time.time > nextFireTime) {
+        if (Time.time > nextFireTime)
+        {
             if (Input.GetButtonDown("MaleAttack") && !Attacking)
             {
                 nextFireTime = Time.time + cooldownTime;

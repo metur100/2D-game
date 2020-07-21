@@ -13,6 +13,10 @@ public class DashMove : MonoBehaviour
     private float cooldownTime = 1f;
     private float nextFireTime = 0f;
 
+    public Animator animator;
+
+    private bool isDashing = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,15 +27,19 @@ public class DashMove : MonoBehaviour
         {
             if (direction == 0)
             {
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Q))
                 {
                     nextFireTime = Time.time + cooldownTime;
+                    isDashing = true;
                     direction = 1;
+                    //animator.SetBool("isDashing", isDashing);
                 }
-                else if (Input.GetKeyDown(KeyCode.U))
+                else if (Input.GetKeyDown(KeyCode.E))
                 {
                     nextFireTime = Time.time + cooldownTime;
+                    isDashing = true;
                     direction = 2;
+                    //animator.SetBool("isDashing", isDashing);
                 }
             }
         }
@@ -49,12 +57,15 @@ public class DashMove : MonoBehaviour
                 if (direction == 1)
                 {
                     rb.velocity = Vector2.left * dashSpeed;
+                    isDashing = false;
                 }
                 else if (direction == 2)
                 {
                     rb.velocity = Vector2.right * dashSpeed;
+                    isDashing = false;
                 }
             }
         }
+       animator.SetBool("isDashing", isDashing);
     }
 }

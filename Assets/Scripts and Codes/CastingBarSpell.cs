@@ -46,13 +46,13 @@ public class CastingBarSpell : MonoBehaviour
     {
         if (Time.time > nextFireTime)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 nextFireTime = Time.time + cooldownTime;
                 StartCoroutine(CastSpell(frostBall));
                 StartCoroutine(ShootFrost());
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 nextFireTime = Time.time + cooldownTime;
                 StartCoroutine(CastSpell(fireBall));
