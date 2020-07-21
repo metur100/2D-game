@@ -10,20 +10,32 @@ public class DashMove : MonoBehaviour
     public float startDashTime;
     private int direction;
 
-     void Start()
+    private float cooldownTime = 1f;
+    private float nextFireTime = 0f;
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-     void Update()
+    void Update()
     {
-        if (direction == 0){
-            if (Input.GetKeyDown(KeyCode.Z))
+        if (Time.time > nextFireTime)
+        {
+            if (direction == 0)
             {
-                direction = 1;
-            } else if (Input.GetKeyDown(KeyCode.U)){
-                direction = 2;
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    nextFireTime = Time.time + cooldownTime;
+                    direction = 1;
+                }
+                else if (Input.GetKeyDown(KeyCode.U))
+                {
+                    nextFireTime = Time.time + cooldownTime;
+                    direction = 2;
+                }
             }
-        } else
+        }
+        else
         {
             if (dashTime <= 0)
             {
@@ -37,7 +49,8 @@ public class DashMove : MonoBehaviour
                 if (direction == 1)
                 {
                     rb.velocity = Vector2.left * dashSpeed;
-                } else if ( direction == 2)
+                }
+                else if (direction == 2)
                 {
                     rb.velocity = Vector2.right * dashSpeed;
                 }
