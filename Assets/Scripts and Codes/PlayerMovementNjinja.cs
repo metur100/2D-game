@@ -16,7 +16,6 @@ public class PlayerMovementNjinja : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
-    public WeaponNjinja Bullet;
     public bool grounded;
 
     void Update()
@@ -37,7 +36,7 @@ public class PlayerMovementNjinja : MonoBehaviour
         {
             crouch = false;
         }
-        if (grounded && GetComponent<Bullet>().knockBack == false)
+        if (grounded && GetComponent<FireBullet>().knockBack == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }

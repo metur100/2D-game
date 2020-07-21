@@ -6,14 +6,14 @@ using UnityEngine;
 public class HealthNjinja : MonoBehaviour
 {
     [SerializeField]
-    int maxHealth = 100;
-    int currentHealth;
+    public int maxHealth = 100;
+    public int currentHealth;
 
     bool isDead = false;
     public Animator animator;
     float delay = 1f;
 
-    public event Action<float> OnHealthPctChanged = delegate { };
+    public event Action <float> OnHealthPctChanged = delegate { };
 
     private void OnEnable()
     {
@@ -38,10 +38,5 @@ public class HealthNjinja : MonoBehaviour
 
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-    }
-
-    public static implicit operator HealthNjinja(float v)
-    {
-        throw new NotImplementedException();
     }
 }

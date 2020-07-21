@@ -16,7 +16,6 @@ public class PlayerMovementKnight : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
-    public WeaponKnight Bullet;
     public bool grounded;
 
     void Update()
@@ -38,7 +37,7 @@ public class PlayerMovementKnight : MonoBehaviour
        {
            crouch = false;
        }
-       if (grounded && GetComponent<Bullet>().knockBack == false)
+       if (grounded && GetComponent<FireBullet>().knockBack == false)
        {
            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
        }
