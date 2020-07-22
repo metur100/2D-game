@@ -9,8 +9,8 @@ public class MaleAttack : MonoBehaviour
     private float attackTimer = 0.0f;
     private float attackCD = 0.01f;
 
-    private float cooldownTime = 2;
-    private float nextFireTime = 0;
+    private float cooldownTime = 1f;
+    private float nextFireTime = 0f;
 
     public Collider2D MaleTrigger;
 

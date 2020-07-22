@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MaleTrigger : MonoBehaviour
 {
-   int dmg = -20;
+   private int maleDmg = -20;
 
    void OnTriggerEnter2D (Collider2D other)
    {
@@ -12,7 +12,7 @@ public class MaleTrigger : MonoBehaviour
         {
             // other.SendMessageUpwards("ModifyHealth", dmg);
             HealthNjinja eHealth = other.gameObject.GetComponent<HealthNjinja>();
-            eHealth.ModifyHealth(dmg);
+            eHealth.ModifyHealth(maleDmg);
             //gameObject.GetComponent<Animation>().Play("Njinja_Hurt");
         }
     }
