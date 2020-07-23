@@ -17,8 +17,8 @@ FROST MAGE
 
 To do:
 
-1. Animation on hit: Explosion
-2. Jump effect fix.
+1. Animation on hit: HURT ------------------- DONE
+2. Jump effect fix. ------------------------- DONE
 3. Fall off platform: Player is dead text!
 3. Player has won!
 4. Healthbar on top; Icons and healthbar.
@@ -28,3 +28,4 @@ To do:
 8. OnCruch dont move.
 9. Implement the music.
 10. Cooldown visible!
+11. If takes damage, flashes!

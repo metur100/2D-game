@@ -36,8 +36,8 @@ public class HealthKnight : MonoBehaviour
             animator.SetBool("isDead", isDead);
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
         }
-
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
+        animator.SetTrigger("isHurt");
     }
 }

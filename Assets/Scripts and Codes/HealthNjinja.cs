@@ -38,5 +38,6 @@ public class HealthNjinja : MonoBehaviour
 
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
+        animator.SetTrigger("isHurt");
     }
 }
