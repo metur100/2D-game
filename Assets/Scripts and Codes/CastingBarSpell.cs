@@ -7,32 +7,30 @@ public class CastingBarSpell : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-
     public Animator animator;
-
     public Transform firePoint2;
     public GameObject bulletPrefab2;
-
-    public float cooldownTime = 2;
-    private float nextFireTime = 0;
-
     private Vector3 starPos;
     private Vector3 endPos;
-
     private Image castImage;
-
     private RectTransform castTransoform;
-
     private bool casting;
-
     public CanvasGroup canvasGroup;
     public float fadeSpeed;
+    public Image frostBallAbility;
+    public Image fireBallAbility;
+    private float cooldownFrost = 2f;
+    private float cooldownFire = 2f;
+    bool isCooldownFrost = false;
+    bool isCooldownFire = false;
 
     private Spell frostBall = new Spell("Frost Ball", 1f, Color.blue);
     private Spell fireBall = new Spell("Fire Ball", 1f, Color.red);
     // Start is called before the first frame update
     void Start()
     {
+        frostBallAbility.fillAmount = 0;
+        fireBallAbility.fillAmount = 0;
         casting = false;
         castTransoform = GetComponent<RectTransform>();
         castImage = GetComponent<Image>();
@@ -44,21 +42,38 @@ public class CastingBarSpell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextFireTime)
+        if (Input.GetKeyDown(KeyCode.P) && isCooldownFrost == false)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            isCooldownFrost = true;
+            frostBallAbility.fillAmount = 1;
+            StartCoroutine(CastSpell(frostBall));
+            StartCoroutine(ShootFrost());
+            FindObjectOfType<AudioManager>().Play("CastingSpell");
+        }
+        if (Input.GetKeyDown(KeyCode.O) && isCooldownFire == false)
+        {
+            isCooldownFire = true;
+            fireBallAbility.fillAmount = 1;
+            StartCoroutine(CastSpell(fireBall));
+            StartCoroutine(ShootFire());
+            FindObjectOfType<AudioManager>().Play("CastingSpell");
+        }
+        if (isCooldownFrost)
+        {
+            frostBallAbility.fillAmount -= 1 / cooldownFrost * Time.deltaTime;
+            if (frostBallAbility.fillAmount <= 0)
             {
-                nextFireTime = Time.time + cooldownTime;
-                StartCoroutine(CastSpell(frostBall));
-                StartCoroutine(ShootFrost());
-                FindObjectOfType<AudioManager>().Play("CastingSpell");
+                frostBallAbility.fillAmount = 0;
+                isCooldownFrost = false;
             }
-            if (Input.GetKeyDown(KeyCode.O))
+        }
+        if (isCooldownFire)
+        {
+            fireBallAbility.fillAmount -= 1 / cooldownFire * Time.deltaTime;
+            if (fireBallAbility.fillAmount <= 0)
             {
-                nextFireTime = Time.time + cooldownTime;
-                StartCoroutine(CastSpell(fireBall));
-                StartCoroutine(ShootFire());
-                FindObjectOfType<AudioManager>().Play("CastingSpell");
+                fireBallAbility.fillAmount = 0;
+                isCooldownFire = false;
             }
         }
     }

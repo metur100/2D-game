@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MaleAttack : MonoBehaviour
 {
@@ -9,13 +10,17 @@ public class MaleAttack : MonoBehaviour
     private float attackTimer = 0.0f;
     private float attackCD = 0.01f;
 
-    private float cooldownTime = 1f;
-    private float nextFireTime = 0f;
+    public Image maleAttack;
+    public float cooldown = 2f;
+    bool isCooldown = false;
 
     public Collider2D MaleTrigger;
-
     public Animator animator;
 
+    void Start()
+    {
+        maleAttack.fillAmount = 0;
+    }
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -24,18 +29,25 @@ public class MaleAttack : MonoBehaviour
     
     void Update()
     {
-        if (Time.time > nextFireTime)
+        if (Input.GetButtonDown("MaleAttack") && !Attacking && isCooldown == false)
         {
-            if (Input.GetButtonDown("MaleAttack") && !Attacking)
-            {
-                nextFireTime = Time.time + cooldownTime;
-                Attacking = true;
-                FindObjectOfType<AudioManager>().Play("SwordAttack");
-                attackTimer = attackCD;
-                MaleTrigger.enabled = true;
-            }
+            isCooldown = true;
+            Attacking = true;
+            maleAttack.fillAmount = 1;
+            FindObjectOfType<AudioManager>().Play("SwordAttack");
+            attackTimer = attackCD;
+            MaleTrigger.enabled = true;
         }
+        if (isCooldown)
+        {
+            maleAttack.fillAmount -= 1 / cooldown * Time.deltaTime;
+            if (maleAttack.fillAmount <= 0)
+            {
+                maleAttack.fillAmount = 0;
+                isCooldown = false;
+            }
 
+        }
         if (Attacking)
         {
             if (attackTimer > 0)
