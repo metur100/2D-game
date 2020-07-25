@@ -26,10 +26,11 @@ To do:
 6. Fix male attack.
 7. Make it more beautiful generaly.
 8. OnCruch dont move.------------------------ IN PROGRESS
-9. Implement the music.
+9. Implement the audio and music. ------------ DONE
 10. Cooldown visible!
 11. If takes damage, flashes!----------------- DONE
 12. KnockBack on Colision! ------------------- DONE
+13. Njinja faceing Knight!
 
 
 IMPLEMENTED:

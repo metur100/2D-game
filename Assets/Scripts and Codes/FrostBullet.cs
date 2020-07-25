@@ -15,6 +15,7 @@ public class FrostBullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speedOfFrostBullet;
+        FindObjectOfType<AudioManager>().Play("FrostShot");
     }
     void OnTriggerEnter2D(Collider2D other)
     {

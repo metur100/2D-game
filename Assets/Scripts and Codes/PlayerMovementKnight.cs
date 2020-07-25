@@ -27,6 +27,7 @@ public class PlayerMovementKnight : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetButtonDown("Crouch"))
         {
@@ -37,10 +38,10 @@ public class PlayerMovementKnight : MonoBehaviour
        {
            crouch = false;
        }
-       if (grounded && GetComponent<FireBullet>().knockBack == false)
-       {
-           GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-       }
+  //  if (grounded && GetComponent<FireBullet>().knockBack == false)
+  //  {
+  //      GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+  //  }
 
     }
     public void OnLanding()

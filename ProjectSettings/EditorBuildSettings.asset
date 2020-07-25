@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: d30fbee988f498842a6e22beea9f1786
-  - enabled: 1
-    path: Assets/Scenes/GameOverNjinja.unity
-    guid: d115d107a93a6c94884c2f6e8528b381
   m_configObjects: {}

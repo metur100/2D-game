@@ -32,14 +32,14 @@ public class DashMove : MonoBehaviour
                     nextFireTime = Time.time + cooldownTime;
                     isDashing = true;
                     direction = 1;
-                    //animator.SetBool("isDashing", isDashing);
+                    FindObjectOfType<AudioManager>().Play("Dash");
                 }
                 else if (Input.GetKeyDown(KeyCode.E))
                 {
                     nextFireTime = Time.time + cooldownTime;
                     isDashing = true;
                     direction = 2;
-                    //animator.SetBool("isDashing", isDashing);
+                    FindObjectOfType<AudioManager>().Play("Dash");
                 }
             }
         }

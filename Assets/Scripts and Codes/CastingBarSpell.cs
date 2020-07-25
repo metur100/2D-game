@@ -51,12 +51,14 @@ public class CastingBarSpell : MonoBehaviour
                 nextFireTime = Time.time + cooldownTime;
                 StartCoroutine(CastSpell(frostBall));
                 StartCoroutine(ShootFrost());
+                FindObjectOfType<AudioManager>().Play("CastingSpell");
             }
             if (Input.GetKeyDown(KeyCode.O))
             {
                 nextFireTime = Time.time + cooldownTime;
                 StartCoroutine(CastSpell(fireBall));
                 StartCoroutine(ShootFire());
+                FindObjectOfType<AudioManager>().Play("CastingSpell");
             }
         }
     }

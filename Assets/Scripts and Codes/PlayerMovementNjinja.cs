@@ -27,6 +27,7 @@ public class PlayerMovementNjinja : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetButtonDown("Crouch2"))
         {

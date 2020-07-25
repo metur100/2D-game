@@ -30,8 +30,8 @@ public class MaleAttack : MonoBehaviour
             {
                 nextFireTime = Time.time + cooldownTime;
                 Attacking = true;
+                FindObjectOfType<AudioManager>().Play("SwordAttack");
                 attackTimer = attackCD;
-
                 MaleTrigger.enabled = true;
             }
         }
