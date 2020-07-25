@@ -21,12 +21,27 @@ To do:
 2. Jump effect fix. ------------------------- DONE
 3. Fall off platform: Player is dead text!--- DONE
 3. Player has won! -------------------------- DONE
-4. Healthbar on top; Icons and healthbar.
-5. Castig bar above the health bar!
+4. Healthbar on top; Icons and healthbar.----- DONE
+5. Castig bar above the health bar! ---------- DONE
 6. Fix male attack.
 7. Make it more beautiful generaly.
-8. OnCruch dont move.
+8. OnCruch dont move.------------------------ IN PROGRESS
 9. Implement the music.
 10. Cooldown visible!
 11. If takes damage, flashes!----------------- DONE
-12. KnockBack on Colision!
+12. KnockBack on Colision! ------------------- DONE
+
+
+IMPLEMENTED:
+
+Knight:
+
+Q and E: RUSH
+R = Male Attack
+
+
+
+Njinja:
+
+P = FrostBall that slows enemy
+O = FireBall that knockbacks the enemy

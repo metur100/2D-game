@@ -10,13 +10,11 @@ public class HealthBarNjinja : MonoBehaviour
     [SerializeField]
     private float updateSpeedSeconds = 0.5f;
 
-    private HealthNjinja healthNjinja;
-
     private void Awake()
     {
-        GetComponentInParent<HealthNjinja>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<HealthNjinja>().OnHealthPctChanged += HandleHealthChanged;
     }
-    private void HandleHealthChanged(float pct)
+    public void HandleHealthChanged(float pct)
     {
         StartCoroutine(ChangeToPct(pct));
     }

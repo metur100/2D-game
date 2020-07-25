@@ -12,7 +12,7 @@ public class HealthBarKnight : MonoBehaviour
 
     private void Awake()
     {
-        GetComponentInParent<HealthKnight>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<HealthKnight>().OnHealthPctChanged += HandleHealthChanged;
     }
     private void HandleHealthChanged(float pct)
     {

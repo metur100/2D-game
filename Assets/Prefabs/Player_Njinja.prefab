@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 9051426745095103070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 100, y: 99.999985, z: 1}
   m_Children: []
   m_Father: {fileID: 9051426745695232017}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23, y: -4}
+  m_AnchoredPosition: {x: -23.000088, y: -4.00004}
   m_SizeDelta: {x: 4.2, y: 0.6}
   m_Pivot: {x: 0.543494, y: 0.49999893}
 --- !u!222 &9051426745095103067
@@ -190,14 +190,14 @@ RectTransform:
   m_GameObject: {fileID: 9051426745622677329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 100, y: 99.999985, z: 1}
   m_Children: []
   m_Father: {fileID: 9051426745695232017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.500008, y: -4.6999893}
+  m_AnchoredPosition: {x: -41.49987, y: -4.7000384}
   m_SizeDelta: {x: 4.5, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9051426745622677342
@@ -351,6 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 9051426745095103068}
   updateSpeedSeconds: 0.5
+  healthNjinja: {fileID: 0}
 --- !u!1 &9051426746704408028
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +621,8 @@ MonoBehaviour:
   controller: {fileID: 9051426746913111979}
   animator: {fileID: 9051426746913111990}
   grounded: 0
+  rb: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!114 &9051426746913111988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,3 +638,4 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   animator: {fileID: 9051426746913111990}
+  gameOverUI: {fileID: 0}
