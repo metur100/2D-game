@@ -28,8 +28,8 @@ public class CastingBarSpell : MonoBehaviour
     public CanvasGroup canvasGroup;
     public float fadeSpeed;
 
-    private Spell frostBall = new Spell("Frost Ball", 2f, Color.blue);
-    private Spell fireBall = new Spell("Fire Ball", 2f, Color.red);
+    private Spell frostBall = new Spell("Frost Ball", 1f, Color.blue);
+    private Spell fireBall = new Spell("Fire Ball", 1f, Color.red);
     // Start is called before the first frame update
     void Start()
     {
@@ -124,13 +124,13 @@ public class CastingBarSpell : MonoBehaviour
     }
     IEnumerator ShootFrost()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         animator.SetTrigger("Throw");
     }
     IEnumerator ShootFire()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Instantiate(bulletPrefab2, firePoint2.position, firePoint2.rotation);
         animator.SetTrigger("Throw");
     }

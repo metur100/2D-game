@@ -8,12 +8,11 @@ public class HealthNjinja : MonoBehaviour
     [SerializeField]
     public int maxHealth = 100;
     public int currentHealth;
-
     bool isDead = false;
     public Animator animator;
     float delay = 1f;
-
     public event Action <float> OnHealthPctChanged = delegate { };
+    public GameObject gameOverUI;
 
     private void OnEnable()
     {
@@ -34,6 +33,7 @@ public class HealthNjinja : MonoBehaviour
             isDead = true;
             animator.SetBool("isDead", isDead);
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+            gameOverUI.SetActive(true);
         }
 
         float currentHealthPct = (float)currentHealth / (float)maxHealth;

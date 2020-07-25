@@ -6,8 +6,8 @@ public class FrostBullet : MonoBehaviour
 {
 
     public Rigidbody2D rb;
-    int damage = -5;
-    int speedOfFrostBullet = 20;
+    int damage = -20;
+    int speedOfFrostBullet = 30;
 
     public PlayerMovementNjinja mSpeedNinja;
     public PlayerMovementKnight mSpeedKnight;

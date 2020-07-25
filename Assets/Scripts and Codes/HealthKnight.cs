@@ -2,18 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthKnight : MonoBehaviour
 {
     [SerializeField]
     int maxHealth = 100;
     int currentHealth;
-
     bool isDead = false;
     public Animator animator;
     float delay = 1f;
-
     public event Action<float> OnHealthPctChanged = delegate { };
+    public GameObject gameOverUI;
+   // public GameObject menuContainer;
 
     private void OnEnable()
     {
@@ -35,6 +36,7 @@ public class HealthKnight : MonoBehaviour
             isDead = true;
             animator.SetBool("isDead", isDead);
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+            gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);

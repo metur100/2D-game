@@ -12,11 +12,11 @@ public class PlayerMovementNjinja : MonoBehaviour
     float maxSpeed = 40f;
     float horizontalMove = 0f;
     float slowOverTime = 1f;
-
     bool jump = false;
     bool crouch = false;
-
     public bool grounded;
+    public Rigidbody2D rb;
+    public GameObject gameOverUI;
 
     void Update()
     {
@@ -56,6 +56,11 @@ public class PlayerMovementNjinja : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+
+        if (rb.position.y < -6f)
+        {
+            gameOverUI.SetActive(true);
+        }
     }
     public void CoroutineNinja()
     {
