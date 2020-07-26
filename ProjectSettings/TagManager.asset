@@ -19,7 +19,7 @@ TagManager:
   - HeatlhBar
   - Njinja
   - Knight
-  - 
+  - Sky
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 3046670955
+    locked: 0
+  - name: Hils
+    uniqueID: 746852777
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
