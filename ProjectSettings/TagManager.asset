@@ -46,6 +46,9 @@ TagManager:
   - name: Hils
     uniqueID: 746852777
     locked: 0
+  - name: New Layer
+    uniqueID: 3101920987
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
