@@ -20,6 +20,7 @@ public class DashMove : MonoBehaviour
     {
         dashing.fillAmount = 0;
         rb = GetComponent<Rigidbody2D>();
+        dashTime = startDashTime;
     }
     void Update()
     {

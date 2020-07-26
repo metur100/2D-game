@@ -32,8 +32,8 @@ To do:
 12. KnockBack on Colision! ------------------- DONE
 13. Njinja faceing Knight!
 14. Knight should be MAGE! Njinja male!
-15. Make characters for cooldowns visible!
-16. Dash Animation on first hit - fix!
+15. Make latters for cooldowns visible!
+16. Dash Animation on first hit - fix! ------- DONE
 
 
 IMPLEMENTED:
