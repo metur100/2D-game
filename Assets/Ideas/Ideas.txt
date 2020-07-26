@@ -24,7 +24,7 @@ To do:
 4. Healthbar on top; Icons and healthbar.----- DONE
 5. Castig bar above the health bar! ---------- DONE
 6. Fix male attack.
-7. Make it more beautiful generaly.
+7. Make it more beautiful generaly.---------- IN PROGRESS
 8. OnCruch dont move.------------------------ IN PROGRESS
 9. Implement the audio and music. ------------ DONE
 10. Cooldown visible! ------------------------ DONE
@@ -32,6 +32,8 @@ To do:
 12. KnockBack on Colision! ------------------- DONE
 13. Njinja faceing Knight!
 14. Knight should be MAGE! Njinja male!
+15. Make characters for cooldowns visible!
+16. Dash Animation on first hit - fix!
 
 
 IMPLEMENTED:
