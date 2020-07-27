@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthNjinja : MonoBehaviour
 {
     [SerializeField]
-    public int maxHealth = 100;
+    public int maxHealth = 200;
     public int currentHealth;
     bool isDead = false;
     public Animator animator;

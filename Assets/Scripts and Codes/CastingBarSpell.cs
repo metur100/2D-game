@@ -20,12 +20,12 @@ public class CastingBarSpell : MonoBehaviour
     public Image frostBallAbility;
     public Image fireBallAbility;
     private float cooldownFrost = 2f;
-    private float cooldownFire = 2f;
+    private float cooldownFire = 4f;
     bool isCooldownFrost = false;
     bool isCooldownFire = false;
 
-    private Spell frostBall = new Spell("Frost Ball", 1f, Color.blue);
-    private Spell fireBall = new Spell("Fire Ball", 1f, Color.red);
+    private Spell frostBall = new Spell("Frost Ball", 0.5f, Color.blue);
+    private Spell fireBall = new Spell("Fire Ball", 2f, Color.red);
     // Start is called before the first frame update
     void Start()
     {
@@ -141,13 +141,13 @@ public class CastingBarSpell : MonoBehaviour
     }
     IEnumerator ShootFrost()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         animator.SetTrigger("Throw");
     }
     IEnumerator ShootFire()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Instantiate(bulletPrefab2, firePoint2.position, firePoint2.rotation);
         animator.SetTrigger("Throw");
     }

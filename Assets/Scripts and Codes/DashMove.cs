@@ -13,7 +13,7 @@ public class DashMove : MonoBehaviour
     public Animator animator;
     private bool isDashing = false;
     public Image dashing;
-    public float cooldown = 2f;
+    public float cooldown = 3f;
     bool isCooldown = false;
 
     void Start()

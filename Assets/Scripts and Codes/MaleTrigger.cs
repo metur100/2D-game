@@ -8,12 +8,10 @@ public class MaleTrigger : MonoBehaviour
 
    void OnTriggerEnter2D (Collider2D other)
    {
-        if (other.isTrigger != true && other.gameObject.tag == "Player_Njinja")
+        if (other.isTrigger != true && other.CompareTag("Player_Njinja"))
         {
-            // other.SendMessageUpwards("ModifyHealth", dmg);
             HealthNjinja eHealth = other.gameObject.GetComponent<HealthNjinja>();
             eHealth.ModifyHealth(maleDmg);
-            //gameObject.GetComponent<Animation>().Play("Njinja_Hurt");
         }
     }
 }

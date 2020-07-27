@@ -14,6 +14,78 @@ FROST MAGE
 4. DEFENCE: Reduce the damage taken for 30 % for 10 seconds. CD 20 seconds.
 5. BLINK: Teleport short distance.
 
+Paladin 
+1. Bubble (immunity)
+2. Poni (?) (seda na konja i ubrzava)
+3. Crusader Strike (basic dmg)
+4. Hammer of Justice (stun)
+
+Death Knight 
+1. Grip (privlaci protivnika)
+2. Wraith Walk (MS increase)
+3. Anti magic shell (shield/cc immunity)
+4. Scourge Strike (damage and dot)
+
+Warrior
+1. Charge (2 chargea, charges an enemy)
+2. Rampage (basic damage)
+3. Enrage (% dmg increase)
+4. Shattering throw (removes defensives)
+
+Mage
+1. Frostbolt (damages and slows)
+2. Blink (portuje karaktera x yardi po x osi)
+3. Ice Block (immunity, regena hp)
+4. Pyro (long cast, much dmg)
+
+Priest
+1. Shadow Word Pain (dot)
+2. Dispersion (defensive)
+3. Shadow Form (% dmg increase)
+4. Void Bolt (basic dmg, produzuje dot)
+
+Hunter
+1. Disengage (leapa se unazad)
+2. Freezing trap (postavlja trap koji stuna)
+3. Aimed Shot (basic dmg)
+4. Kornjaca (immunity)
+
+Shaman
+1. Astral shift (defensive)
+2. Wolf form (MS increase, dobija se Feral Lunge spell)
+3. Stormstrike (basic dmg)
+4. Frost Shock (slow)
+
+Rogue
+1. Stealth
+2. Kidney (stun)
+3. Cloak of shadows (immunity)
+4. Eviscerate (basic dmg)
+
+Monk
+1. Transcendence (ostavlja iluziju - switch)
+2. Fists of Fury (channel dmg)
+3. Karma (defensive, reflecta dmg)
+4. Torpedo (lansira se unapred, uradi dmg)
+
+Warlock
+1. Chaos Bolt (basic dmg)
+2. Gateway (dvosmerni portal)
+3. Immolate (dot)
+4. Resolve (defensive, cc immunity)
+
+Druid
+1. Starsurge (basic dmg)
+2. Bear form (defensive forma, smanjen dmg done)
+3. Moonfire (dot)
+4. Wild charge (disengage)
+
+Demon Hunter 
+1. Fel Rush (2 charge, lansira se unapred)
+2. Netherwalk (immunity i ms increase, ne moze da napada)
+3. Eye Beam (channel, % dmg increase par sekundi) (demon forma (?))
+4. Chaos Strike (basic dmg)
+
 
 To do:
 
@@ -23,17 +95,20 @@ To do:
 3. Player has won! -------------------------- DONE
 4. Healthbar on top; Icons and healthbar.----- DONE
 5. Castig bar above the health bar! ---------- DONE
-6. Fix male attack.
-7. Make it more beautiful generaly.---------- IN PROGRESS
-8. OnCruch dont move.------------------------ IN PROGRESS
+6. Fix male attack. -------------------------- IN PROGRESS
+7. Make it more beautiful generaly.---------- DONE
+8. OnCruch dont move.------------------------ DONE
 9. Implement the audio and music. ------------ DONE
 10. Cooldown visible! ------------------------ DONE
 11. If takes damage, flashes!----------------- DONE
 12. KnockBack on Colision! ------------------- DONE
-13. Njinja faceing Knight!
-14. Knight should be MAGE! Njinja male!
-15. Make latters for cooldowns visible!
+13. Njinja faceing Knight! ------------------- IN PROGRESS
+14. Knight should be MAGE! Njinja male! ------ IN PROGRESS
+15. Make latters for cooldowns visible!------- DONE
 16. Dash Animation on first hit - fix! ------- DONE
+17. Adding unity WEB GL! --------------------- DONE
+18. Make it more playable! ------------------- DONE
+19. Jump Attack!
 
 
 IMPLEMENTED:

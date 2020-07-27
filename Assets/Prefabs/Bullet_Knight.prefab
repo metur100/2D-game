@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd402356c83bf94cace5c17cb20dc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 50
   rb: {fileID: 4976590225913701864}
   knockBack: 0

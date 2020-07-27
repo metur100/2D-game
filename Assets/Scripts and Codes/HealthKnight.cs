@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class HealthKnight : MonoBehaviour
 {
     [SerializeField]
-    int maxHealth = 100;
-    int currentHealth;
+    int maxHealth = 200;
+    public int currentHealth;
     bool isDead = false;
     public Animator animator;
     float delay = 1f;

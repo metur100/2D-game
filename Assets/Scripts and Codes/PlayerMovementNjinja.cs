@@ -6,10 +6,9 @@ public class PlayerMovementNjinja : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
-
-    float runSpeed = 40f;
+    float runSpeed = 70f;
     float slowSpeed = 20f;
-    float maxSpeed = 40f;
+    float maxSpeed = 70f;
     float horizontalMove = 0f;
     float slowOverTime = 1f;
     bool jump = false;

@@ -6,12 +6,11 @@ public class PlayerMovementKnight : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
-
-    float runSpeed = 40f;
+    float runSpeed = 70f;
     float slowSpeed = 20f;
-    float maxSpeed = 40f;
+    float maxSpeed = 70f;
     float horizontalMove = 0f;
-    float slowOverTime = 1f;
+    float slowOverTime = 2f;
     bool jump = false;
     bool crouch = false;
     public bool grounded;
@@ -29,6 +28,11 @@ public class PlayerMovementKnight : MonoBehaviour
             animator.SetBool("IsJumping", true);
             FindObjectOfType<AudioManager>().Play("Jump");
         }
+        if (Input.GetButtonDown("Jump") && Input.GetButtonDown("meleeAttack"))
+        {
+            jump = true;
+            animator.SetBool("isJumpAttack", true);
+        }
         if (Input.GetButtonDown("Crouch"))
         {
            crouch = true;
@@ -38,11 +42,6 @@ public class PlayerMovementKnight : MonoBehaviour
        {
            crouch = false;
        }
-  //  if (grounded && GetComponent<FireBullet>().knockBack == false)
-  //  {
-  //      GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-  //  }
-
     }
     public void OnLanding()
     {
