@@ -34,7 +34,6 @@ public class CastingBarSpell : MonoBehaviour
         casting = false;
         castTransoform = GetComponent<RectTransform>();
         castImage = GetComponent<Image>();
-
         endPos = castTransoform.position;
         starPos = new Vector3(castTransoform.position.x - castTransoform.rect.width, castTransoform.position.y, castTransoform.position.z);
     }

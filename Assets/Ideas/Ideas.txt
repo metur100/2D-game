@@ -87,7 +87,7 @@ Demon Hunter
 4. Chaos Strike (basic dmg)
 
 
-To do:
+To-do list:
 
 1. Animation on hit: HURT ------------------- DONE
 2. Jump effect fix. ------------------------- DONE

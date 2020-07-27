@@ -7,7 +7,7 @@ public class FireBullet : MonoBehaviour
     public float speed = 50f;
     public Rigidbody2D rb;
     public bool knockBack = false;
-    int damage = -20;
+    int damage = -50;
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -25,7 +25,8 @@ public class FireBullet : MonoBehaviour
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
             knockBack = true;
-        }//-||- look Knight, its same
+        }
+   //-||- look Knight, its same
    // if (other.tag == "Player_Njinja" && GetComponent<Rigidbody2D>().velocity.x < 0)
    // {
    //     other.GetComponent<Rigidbody2D>().velocity = new Vector2(-45, 35);
