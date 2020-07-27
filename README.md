@@ -1,4 +1,4 @@
-# WoW ARENA
+# Knight vs.Ninja
 
 WARRIOR
 
