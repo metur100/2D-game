@@ -1,17 +1,39 @@
 # Knight vs.Ninja
 
-WARRIOR
+To-do list:
 
-1. RUSH: Warrior can "Charge", 2 sec cooldown.
-2. MALE ATTACK: Male Attack that deals normal DMG.
-3. RAGE: Increased DMG for 30 %, 1-2 minutes cd.
-4. DEFENCE: Reduce the damage taken for 70 % for 10 seconds.
-5. STUN: Stun the enemy for 3 sec.
+1. Animation on hit: HURT ------------------- DONE
+2. Jump effect fix. ------------------------- DONE
+3. Fall off platform: Player is dead text!--- DONE
+3. Player has won! -------------------------- DONE
+4. Healthbar on top; Icons and healthbar.----- DONE
+5. Castig bar above the health bar! ---------- DONE
+6. Fix male attack. -------------------------- IN PROGRESS
+7. Make it more beautiful generaly.---------- DONE
+8. OnCruch dont move.------------------------ DONE
+9. Implement the audio and music. ------------ DONE
+10. Cooldown visible! ------------------------ DONE
+11. If takes damage, flashes!----------------- DONE
+12. KnockBack on Colision! ------------------- DONE
+13. Njinja faceing Knight! ------------------- IN PROGRESS
+14. Knight should be MAGE! Njinja male! ------ IN PROGRESS
+15. Make latters for cooldowns visible!------- DONE
+16. Dash Animation on first hit - fix! ------- DONE
+17. Adding unity WEB GL! --------------------- DONE
+18. Make it more playable! ------------------- DONE
+19. Jump Attack!
 
-FROST MAGE
 
-1. FROST HIT: Reduce movement speed for 50 % for 7 seconds. Cast time 2 seconds.
-2. FREEZE: Hit enemy and freeezs it for for 5 secodns. Cast time 2.5 seconds. Deals less damage then FROST HIT.
-3. GAIN: Increased cast speed for 50 %, 1-2 minutes cd.
-4. DEFENCE: Reduce the damage taken for 30 % for 10 seconds. CD 20 seconds.
-5. BLINK: Teleport short distance.
+IMPLEMENTED:
+
+Knight:
+
+Q and E: RUSH
+R = Male Attack
+
+
+
+Njinja:
+
+P = FrostBall that slows enemy
+O = FireBall that knockbacks the enemy
