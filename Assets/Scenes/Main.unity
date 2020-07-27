@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 146055608}
   - component: {fileID: 146055607}
   m_Layer: 5
-  m_Name: NjinjaHasWon
+  m_Name: NinjaHasWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2155,10 +2155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3a677228f5ddd43a73958c316fe157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  clampLeft: -37.26
-  clampRight: 6.09
-  cameraX: 0
 --- !u!1 &523221591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,7 +2389,7 @@ GameObject:
   - component: {fileID: 718355521}
   - component: {fileID: 718355525}
   m_Layer: 5
-  m_Name: CastingBarCanvas_Njinja
+  m_Name: CastingBarCanvas_Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4732,7 +4728,7 @@ GameObject:
   - component: {fileID: 1274675942}
   - component: {fileID: 1274675941}
   m_Layer: 10
-  m_Name: HeadNjinja
+  m_Name: HeadNinja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5785,7 +5781,7 @@ GameObject:
   - component: {fileID: 1457999498}
   - component: {fileID: 1457999497}
   m_Layer: 5
-  m_Name: GameOverCanvasNjinja
+  m_Name: GameOverCanvasNinja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7955,7 +7951,7 @@ GameObject:
   - component: {fileID: 1948254137}
   - component: {fileID: 1948254136}
   m_Layer: 10
-  m_Name: HealthBarCanvas_Njinja
+  m_Name: HealthBarCanvas_Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9738,7 +9734,7 @@ GameObject:
   - component: {fileID: 9051426745575816989}
   - component: {fileID: 9051426745575816963}
   m_Layer: 10
-  m_Name: Player_Njinja
+  m_Name: Player_Ninja
   m_TagString: Player_Njinja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
