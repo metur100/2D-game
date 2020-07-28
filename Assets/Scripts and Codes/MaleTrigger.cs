@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MaleTrigger : MonoBehaviour
 {
-   private int maleDmg = -20;
+   public int normalMeleeDmg = -20;
 
    void OnTriggerEnter2D (Collider2D other)
    {
-        if (other.isTrigger != true && other.CompareTag("Player_Njinja"))
+        if (other.isTrigger != true && other.CompareTag("Player_Ninja"))
         {
-            HealthNjinja eHealth = other.gameObject.GetComponent<HealthNjinja>();
-            eHealth.ModifyHealth(maleDmg);
+            HealthNinja eHealth = other.gameObject.GetComponent<HealthNinja>();
+            eHealth.ModifyHealth(normalMeleeDmg);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,10 @@ public class MeleeAttack : MonoBehaviour
     bool isCooldown = false;
     public Collider2D meleeTrigger;
     public Animator animator;
+    public MaleTrigger dmg;
+    float damageTimeIncreased = 6f;
+    int enragedMeleeDamage = -40;
+    int normalMeleeDamage = -20;
 
     void Start()
     {
@@ -26,6 +31,10 @@ public class MeleeAttack : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(IncreasedDamage());
+        }
         if (Input.GetButtonDown("meleeAttack") && !Attacking && isCooldown == false)
         {
             isCooldown = true;
@@ -58,5 +67,11 @@ public class MeleeAttack : MonoBehaviour
             }
         }
         animator.SetBool("IsAttacking", Attacking);
+    }
+    IEnumerator IncreasedDamage()
+    {
+        dmg.normalMeleeDmg = enragedMeleeDamage;
+        yield return new WaitForSeconds(damageTimeIncreased);
+        dmg.normalMeleeDmg = normalMeleeDamage;
     }
 }

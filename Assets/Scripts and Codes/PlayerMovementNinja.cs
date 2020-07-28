@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementNjinja : MonoBehaviour
+public class PlayerMovementNinja : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
@@ -16,6 +16,11 @@ public class PlayerMovementNjinja : MonoBehaviour
     public bool grounded;
     public Rigidbody2D rb;
     public GameObject gameOverUI;
+    public float blinkDistance;
+    float blinkTimer;
+    public float blinkTime = 1f;
+    bool facingRight;
+    bool canBlink = true;
 
     void Update()
     {
@@ -40,9 +45,43 @@ public class PlayerMovementNjinja : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
+        if (Input.GetKeyDown(KeyCode.I) && canBlink)
+        {
+           // PlaySound(0);
+            animator.SetBool("isBlinking", true);
+            canBlink = false;
+        }
+        else
+            animator.SetBool("isBlinking", false);
 
+        if (!canBlink)
+        {
+            blinkTimer += Time.deltaTime;
+        }
+        if (blinkTimer > blinkTime)
+        {
+            canBlink = true;
+            blinkTimer = 0;
+        }
+        if (transform.right.x == 1)
+        {
+            facingRight = true;
+        }
+        else
+        {
+            facingRight = false;
+        }
     }
+    void Blink()
+    {
+        Vector3 blink;
+        if (facingRight)
+            blink = new Vector3(blinkDistance, 0, 0);
+        else
+            blink = new Vector3(-blinkDistance, 0, 0);
 
+        transform.position += blink;
+    }
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
@@ -51,7 +90,7 @@ public class PlayerMovementNjinja : MonoBehaviour
     public void OnCrouching(bool isCrouching)
     {
         animator.SetBool("IsCrouching", isCrouching);
-    }
+    }   
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);

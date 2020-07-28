@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FillStatusHealthBar : MonoBehaviour
 {
-    public HealthNjinja healthNjinja;
+    public HealthNinja healthNjinja;
     public Image fillImage;
     private Slider slider;
     // Start is called before the first frame update

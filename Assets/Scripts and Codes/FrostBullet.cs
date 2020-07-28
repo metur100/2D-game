@@ -8,22 +8,20 @@ public class FrostBullet : MonoBehaviour
     public Rigidbody2D rb;
     int damage = -5;
     int speedOfFrostBullet = 50;
-
-    private PlayerMovementNjinja mSpeedNinja;
+    private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
-
     void Start()
     {
         rb.velocity = transform.right * speedOfFrostBullet;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_Njinja")
+        if (other.gameObject.tag == "Player_Ninja")
         {
-            HealthNjinja healthNjinja = other.gameObject.GetComponent<HealthNjinja>();
-            healthNjinja.ModifyHealth(damage);
+            HealthNinja healthNinja = other.gameObject.GetComponent<HealthNinja>();
+            healthNinja.ModifyHealth(damage);
 
-            mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNjinja>();
+            mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
             mSpeedNinja.CoroutineNinja();
         }
 

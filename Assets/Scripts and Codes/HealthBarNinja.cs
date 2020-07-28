@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarNjinja : MonoBehaviour
+public class HealthBarNinja : MonoBehaviour
 {
     [SerializeField]
     private Image Bar;
@@ -12,7 +12,7 @@ public class HealthBarNjinja : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<HealthNjinja>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<HealthNinja>().OnHealthPctChanged += HandleHealthChanged;
     }
     public void HandleHealthChanged(float pct)
     {
