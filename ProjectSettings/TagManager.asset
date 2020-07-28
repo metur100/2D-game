@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player_Knight
-  - Player_Njinja
+  - Player_Ninja
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - 
   - Player
   - HeatlhBar
-  - Njinja
+  - Ninja
   - Knight
   - Sky
   - 
