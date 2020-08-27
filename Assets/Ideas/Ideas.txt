@@ -1,18 +1,16 @@
-WARRIOR
+Warrior
+1. Charge (2 chargea, charges an enemy) -------------------------- DONE -------- Q/E
+2. Rampage (basic damage) ---------------------------------------- DONE -------- R
+3. Enrage (% dmg increase) --------------------------------------- DONE -------- T
+4. Shattering throw (removes defensives) ------------------------- IN PROGRESS
+5. Stun ---------------------------------------------------------- IN PRGORESS
+6. Defence (reduce damge taken for 50 % ) ------------------------ IN PROGRESS
 
-1. RUSH: Warrior can "Charge", 2 sec cooldown.
-2. MALE ATTACK: Male Attack that deals normal DMG.
-3. RAGE: Increased DMG for 30 %, 1-2 minutes cd.
-4. DEFENCE: Reduce the damage taken for 70 % for 10 seconds.
-5. STUN: Stun the enemy for 3 sec.
-
-FROST MAGE
-
-1. FROST HIT: Reduce movement speed for 50 % for 7 seconds. Cast time 2 seconds.
-2. FREEZE: Hit enemy and freeezs it for for 5 secodns. Cast time 2.5 seconds. Deals less damage then FROST HIT.
-3. GAIN: Increased cast speed for 50 %, 1-2 minutes cd.
-4. DEFENCE: Reduce the damage taken for 30 % for 10 seconds. CD 20 seconds.
-5. BLINK: Teleport short distance.
+Mage
+1. Frostbolt (damages and slows) --------------------------------- DONE --------P
+2. Blink (portuje karaktera x yardi po x osi) -------------------- DONE -------- I
+3. Ice Block (immunity, regena hp) ------------------------------- IN PROGRESS
+4. Pyro (long cast, much dmg) ------------------------------------ DONE ------- O
 
 Paladin 
 1. Bubble (immunity)
@@ -25,18 +23,6 @@ Death Knight
 2. Wraith Walk (MS increase)
 3. Anti magic shell (shield/cc immunity)
 4. Scourge Strike (damage and dot)
-
-Warrior
-1. Charge (2 chargea, charges an enemy)
-2. Rampage (basic damage)
-3. Enrage (% dmg increase)
-4. Shattering throw (removes defensives)
-
-Mage
-1. Frostbolt (damages and slows)
-2. Blink (portuje karaktera x yardi po x osi)
-3. Ice Block (immunity, regena hp)
-4. Pyro (long cast, much dmg)
 
 Priest
 1. Shadow Word Pain (dot)
@@ -87,7 +73,7 @@ Demon Hunter
 4. Chaos Strike (basic dmg)
 
 
-To-do list:
+General Fixes - to-do list:
 
 1. Animation on hit: HURT ------------------- DONE
 2. Jump effect fix. ------------------------- DONE
@@ -109,18 +95,3 @@ To-do list:
 17. Adding unity WEB GL! --------------------- DONE
 18. Make it more playable! ------------------- DONE
 19. Jump Attack!
-
-
-IMPLEMENTED:
-
-Knight:
-
-Q and E: RUSH
-R = Male Attack
-
-
-
-Njinja:
-
-P = FrostBall that slows enemy
-O = FireBall that knockbacks the enemy

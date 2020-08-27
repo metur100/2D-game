@@ -2916,7 +2916,7 @@ GameObject:
   - component: {fileID: 620952855}
   - component: {fileID: 620952854}
   m_Layer: 5
-  m_Name: Enrage
+  m_Name: EnrageFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10712,11 +10712,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f78cf15c9819c4fad459a3b9b894eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeAttack: {fileID: 85611319}
-  cooldown: 1
   meleeTrigger: {fileID: 5711781466109101245}
   animator: {fileID: 5711781465433273623}
   dmg: {fileID: 5711781466109101247}
+  meleeAttack: {fileID: 85611319}
+  enrage: {fileID: 620952854}
 --- !u!4 &5711781466109101184
 Transform:
   m_ObjectHideFlags: 0

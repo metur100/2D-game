@@ -6,22 +6,26 @@ using UnityEngine.UI;
 
 public class MeleeAttack : MonoBehaviour
 {
-    private bool Attacking = false;
-    private float attackTimer = 0.0f;
-    private float attackCD = 0.01f;
-    public Image meleeAttack;
-    public float cooldown = 1f;
-    bool isCooldown = false;
     public Collider2D meleeTrigger;
     public Animator animator;
     public MaleTrigger dmg;
-    float damageTimeIncreased = 6f;
-    int enragedMeleeDamage = -40;
-    int normalMeleeDamage = -20;
+    public Image meleeAttack;
+    public Image enrage;
+    private bool Attacking = false;
+    private float attackTimer = 0.0f;
+    private float attackCD = 0.01f;
+    private float cooldownMaleeAttack = 1f;
+    private float cooldownEnrage = 10f;
+    private bool isCooldownMaleeAttack = false;
+    private bool isCooldownEnrage = false;
+    private float enrageDuration = 6f;
+    private int enragedMeleeDamage = -40;
+    private int normalMeleeDamage = -20;
 
     void Start()
     {
         meleeAttack.fillAmount = 0;
+        enrage.fillAmount = 0;
     }
     void Awake()
     {
@@ -31,28 +35,39 @@ public class MeleeAttack : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && isCooldownEnrage == false)
         {
-            StartCoroutine(IncreasedDamage());
+            isCooldownEnrage = true;
+            enrage.fillAmount = 1;
+            StartCoroutine(EnrageDamage());
+            //FindObjectOfType<AudioManager>().Play("");
         }
-        if (Input.GetButtonDown("meleeAttack") && !Attacking && isCooldown == false)
+        if (Input.GetButtonDown("meleeAttack") && !Attacking && isCooldownMaleeAttack == false)
         {
-            isCooldown = true;
+            isCooldownMaleeAttack = true;
             Attacking = true;
             meleeAttack.fillAmount = 1;
             FindObjectOfType<AudioManager>().Play("SwordAttack");
             attackTimer = attackCD;
             meleeTrigger.enabled = true;
         }
-        if (isCooldown)
+        if (isCooldownEnrage)
         {
-            meleeAttack.fillAmount -= 1 / cooldown * Time.deltaTime;
+            enrage.fillAmount -= 1 / cooldownEnrage * Time.deltaTime;
+            if (enrage.fillAmount <= 0)
+            {
+                enrage.fillAmount = 0;
+                isCooldownEnrage = false;
+            }
+        }
+        if (isCooldownMaleeAttack)
+        {
+            meleeAttack.fillAmount -= 1 / cooldownMaleeAttack * Time.deltaTime;
             if (meleeAttack.fillAmount <= 0)
             {
                 meleeAttack.fillAmount = 0;
-                isCooldown = false;
+                isCooldownMaleeAttack = false;
             }
-
         }
         if (Attacking)
         {
@@ -68,10 +83,10 @@ public class MeleeAttack : MonoBehaviour
         }
         animator.SetBool("IsAttacking", Attacking);
     }
-    IEnumerator IncreasedDamage()
+    IEnumerator EnrageDamage()
     {
         dmg.normalMeleeDmg = enragedMeleeDamage;
-        yield return new WaitForSeconds(damageTimeIncreased);
+        yield return new WaitForSeconds(enrageDuration);
         dmg.normalMeleeDmg = normalMeleeDamage;
     }
 }
