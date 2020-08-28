@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8396525191200044394}
   - component: {fileID: 6732340154442523518}
   - component: {fileID: 3746187665048875365}
-  - component: {fileID: 6944204180395879249}
+  - component: {fileID: -9197854928600143813}
   m_Layer: 0
   m_Name: FrostShoot_Njinja
   m_TagString: Untagged
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0214073, y: 0}
   serializedVersion: 2
   m_Radius: 0.6734563
---- !u!114 &6944204180395879249
+--- !u!114 &-9197854928600143813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

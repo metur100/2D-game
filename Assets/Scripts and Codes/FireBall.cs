@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBullet : MonoBehaviour
+public class FireBall : MonoBehaviour
 {
-    public float speed = 50f;
     public Rigidbody2D rb;
-    public bool knockBack = false;
-    int damage = -50;
+    public bool knockBackOnHit = false;
+    private float speedOfFireBall = 50f;
+    private int damageDone = -50;
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speedOfFireBall;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,12 +19,12 @@ public class FireBullet : MonoBehaviour
         if (other.tag == "Player_Knight" && GetComponent<Rigidbody2D>().velocity.x < 0)
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
-            knockBack = true;
+            knockBackOnHit = true;
         }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
         else if (other.tag == "Player_Knight" && GetComponent<Rigidbody2D>().velocity.x > 0)
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
-            knockBack = true;
+            knockBackOnHit = true;
         }
    //-||- look Knight, its same
    // if (other.tag == "Player_Njinja" && GetComponent<Rigidbody2D>().velocity.x < 0)
@@ -46,7 +46,7 @@ public class FireBullet : MonoBehaviour
         if (other.gameObject.tag == "Player_Knight")
         {
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
-            eHealth.ModifyHealth(damage);
+            eHealth.ModifyHealth(damageDone);
         }
         Destroy(gameObject);
     }

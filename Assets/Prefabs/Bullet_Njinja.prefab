@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5056138305826634222}
   - component: {fileID: -2997778423398701089}
   - component: {fileID: 154620645983734798}
-  - component: {fileID: 8275202784377266693}
+  - component: {fileID: 4614369990655206005}
   m_Layer: 0
   m_Name: Bullet_Njinja
   m_TagString: Untagged
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &8275202784377266693
+--- !u!114 &4614369990655206005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrostBullet : MonoBehaviour
+public class FrostBall : MonoBehaviour
 {
-
     public Rigidbody2D rb;
-    int damage = -5;
-    int speedOfFrostBullet = 50;
+    private int damageDone = -10;
+    private int speedOfFrostBullet = 50;
     private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
     void Start()
@@ -19,7 +18,7 @@ public class FrostBullet : MonoBehaviour
         if (other.gameObject.tag == "Player_Ninja")
         {
             HealthNinja healthNinja = other.gameObject.GetComponent<HealthNinja>();
-            healthNinja.ModifyHealth(damage);
+            healthNinja.ModifyHealth(damageDone);
 
             mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
             mSpeedNinja.CoroutineNinja();
@@ -28,7 +27,7 @@ public class FrostBullet : MonoBehaviour
         if (other.gameObject.tag == "Player_Knight")
         {
             HealthKnight healthKnight = other.gameObject.GetComponent<HealthKnight>();
-            healthKnight.ModifyHealth(damage);
+            healthKnight.ModifyHealth(damageDone);
 
             mSpeedKnight = other.gameObject.GetComponent<PlayerMovementKnight>();
             mSpeedKnight.CoroutineKnight();

@@ -11,9 +11,9 @@ public class MeleeAttack : MonoBehaviour
     public MaleTrigger dmg;
     public Image meleeAttack;
     public Image enrage;
-    private bool Attacking = false;
-    private float attackTimer = 0.0f;
-    private float attackCD = 0.01f;
+    private bool isMaleeAttacking = false;
+    private float maleeAttackTimer = 0.0f;
+    private float maleeAttackSpeed = 0.01f;
     private float cooldownMaleeAttack = 1f;
     private float cooldownEnrage = 10f;
     private bool isCooldownMaleeAttack = false;
@@ -42,13 +42,13 @@ public class MeleeAttack : MonoBehaviour
             StartCoroutine(EnrageDamage());
             //FindObjectOfType<AudioManager>().Play("");
         }
-        if (Input.GetButtonDown("meleeAttack") && !Attacking && isCooldownMaleeAttack == false)
+        if (Input.GetButtonDown("meleeAttack") && !isMaleeAttacking && isCooldownMaleeAttack == false)
         {
             isCooldownMaleeAttack = true;
-            Attacking = true;
+            isMaleeAttacking = true;
             meleeAttack.fillAmount = 1;
             FindObjectOfType<AudioManager>().Play("SwordAttack");
-            attackTimer = attackCD;
+            maleeAttackTimer = maleeAttackSpeed;
             meleeTrigger.enabled = true;
         }
         if (isCooldownEnrage)
@@ -69,19 +69,19 @@ public class MeleeAttack : MonoBehaviour
                 isCooldownMaleeAttack = false;
             }
         }
-        if (Attacking)
+        if (isMaleeAttacking)
         {
-            if (attackTimer > 0)
+            if (maleeAttackTimer > 0)
             {
-                attackTimer -= Time.deltaTime;
+                maleeAttackTimer -= Time.deltaTime;
             }
             else
             {
-                Attacking = false;
+                isMaleeAttacking = false;
                 meleeTrigger.enabled = false;
             }
         }
-        animator.SetBool("IsAttacking", Attacking);
+        animator.SetBool("IsAttacking", isMaleeAttacking);
     }
     IEnumerator EnrageDamage()
     {

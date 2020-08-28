@@ -5,33 +5,35 @@ using UnityEngine.UI;
 
 public class CastingBarSpell : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bulletPrefab;
+    public Transform firePointFrostBall;
+    public GameObject bulletPrefabFrostBall;
     public Animator animator;
-    public Transform firePoint2;
-    public GameObject bulletPrefab2;
+    public Transform firePointFireBall;
+    public GameObject bulletPrefabFireBall;
+    public CanvasGroup canvasGroup;
+    public Image frostBallAbility;
+    public Image fireBallAbility;
     private Vector3 starPos;
     private Vector3 endPos;
     private Image castImage;
     private RectTransform castTransoform;
-    private bool casting;
-    public CanvasGroup canvasGroup;
-    public float fadeSpeed;
-    public Image frostBallAbility;
-    public Image fireBallAbility;
-    private float cooldownFrost = 2f;
-    private float cooldownFire = 4f;
-    bool isCooldownFrost = false;
-    bool isCooldownFire = false;
-
     private Spell frostBall = new Spell("Frost Ball", 0.5f, Color.blue);
     private Spell fireBall = new Spell("Fire Ball", 2f, Color.red);
+    private bool isCasting;
+    private float fadeSpeed = 1f; 
+    private float cooldownFrost = 2f;
+    private float cooldownFire = 4f;
+    private bool isCooldownFrost = false;
+    private bool isCooldownFire = false;
+    private float cooldownFrostBall = 0.5f;
+    private float cooldownFireBall = 2f;
+    
     // Start is called before the first frame update
     void Start()
     {
         frostBallAbility.fillAmount = 0;
         fireBallAbility.fillAmount = 0;
-        casting = false;
+        isCasting = false;
         castTransoform = GetComponent<RectTransform>();
         castImage = GetComponent<Image>();
         endPos = castTransoform.position;
@@ -46,7 +48,7 @@ public class CastingBarSpell : MonoBehaviour
             isCooldownFrost = true;
             frostBallAbility.fillAmount = 1;
             StartCoroutine(CastSpell(frostBall));
-            StartCoroutine(ShootFrost());
+            StartCoroutine(ShootFrostBall());
             FindObjectOfType<AudioManager>().Play("CastingSpell");
         }
         if (Input.GetKeyDown(KeyCode.O) && isCooldownFire == false)
@@ -54,7 +56,7 @@ public class CastingBarSpell : MonoBehaviour
             isCooldownFire = true;
             fireBallAbility.fillAmount = 1;
             StartCoroutine(CastSpell(fireBall));
-            StartCoroutine(ShootFire());
+            StartCoroutine(ShootFireBall());
             FindObjectOfType<AudioManager>().Play("CastingSpell");
         }
         if (isCooldownFrost)
@@ -77,9 +79,9 @@ public class CastingBarSpell : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator FadeOutCastingBar()
     {
-        StopCoroutine("FadeIn");
+        StopCoroutine("FadeInCastingBar");
         while (canvasGroup.alpha > 0f)
         {
             float newValue = fadeSpeed * Time.deltaTime;
@@ -94,9 +96,9 @@ public class CastingBarSpell : MonoBehaviour
             yield return null;
         }
     }
-    private IEnumerator FadeIn()
+    private IEnumerator FadeInCastingBar()
     {
-        StopCoroutine("FadeOut");
+        StopCoroutine("FadeOutCastingBar");
         while (canvasGroup.alpha < 1f)
         {
             float newValue = fadeSpeed * Time.deltaTime;
@@ -113,10 +115,10 @@ public class CastingBarSpell : MonoBehaviour
     }
     private IEnumerator CastSpell (Spell spell)
     {
-        if (!casting)
+        if (!isCasting)
         {
-            StartCoroutine("FadeIn");
-            casting = true;
+            StartCoroutine("FadeInCastingBar");
+            isCasting = true;
             castImage.color = spell.myColor;
             castTransoform.position = starPos;
             float timeLeft = Time.deltaTime;
@@ -134,20 +136,20 @@ public class CastingBarSpell : MonoBehaviour
                 yield return null;
             }
             castTransoform.position = endPos;
-            casting = false;
-            StartCoroutine("FadeOut");
+            isCasting = false;
+            StartCoroutine("FadeOutCastingBar");
         }
     }
-    IEnumerator ShootFrost()
+    IEnumerator ShootFrostBall()
     {
-        yield return new WaitForSeconds(0.5f);
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        yield return new WaitForSeconds(cooldownFrostBall);
+        Instantiate(bulletPrefabFrostBall, firePointFrostBall.position, firePointFrostBall.rotation);
         animator.SetTrigger("Throw");
     }
-    IEnumerator ShootFire()
+    IEnumerator ShootFireBall()
     {
-        yield return new WaitForSeconds(2f);
-        Instantiate(bulletPrefab2, firePoint2.position, firePoint2.rotation);
+        yield return new WaitForSeconds(cooldownFireBall);
+        Instantiate(bulletPrefabFireBall, firePointFireBall.position, firePointFireBall.rotation);
         animator.SetTrigger("Throw");
     }
 }

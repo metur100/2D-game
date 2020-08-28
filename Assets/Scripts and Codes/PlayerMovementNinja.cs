@@ -6,20 +6,20 @@ public class PlayerMovementNinja : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
-    float runSpeed = 70f;
-    float slowSpeed = 20f;
-    float maxSpeed = 70f;
-    float horizontalMove = 0f;
-    float slowOverTime = 1f;
-    bool jump = false;
-    bool crouch = false;
-    public bool grounded;
-    public Rigidbody2D rb;
     public GameObject gameOverUI;
+    public Rigidbody2D rb;
+    private float normalMovementSpeed = 70f;
+    private float slowedMovementSpeed = 20f;
+    private float maxMovementSpeed = 70f;
+    private float horizontalMove = 0f;
+    private float slowOverTimeDuration = 1f;
+    private bool jump = false;
+    private bool crouch = false;
+    private bool grounded;
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal2") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal2") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump2"))
@@ -36,7 +36,7 @@ public class PlayerMovementNinja : MonoBehaviour
         {
             crouch = false;
         }
-        if (grounded && GetComponent<FireBullet>().knockBack == false)
+        if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
@@ -63,12 +63,12 @@ public class PlayerMovementNinja : MonoBehaviour
     }
     public void CoroutineNinja()
     {
-        StartCoroutine(speedTimeNinja());
+        StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }
-    IEnumerator speedTimeNinja()
+    IEnumerator SlowOverTimeOnHitWithFrostBullet()
     {
-        runSpeed = slowSpeed;
-        yield return new WaitForSeconds(slowOverTime);
-        runSpeed = maxSpeed;
+        normalMovementSpeed = slowedMovementSpeed;
+        yield return new WaitForSeconds(slowOverTimeDuration);
+        normalMovementSpeed = maxMovementSpeed;
     }
 }

@@ -8,7 +8,7 @@ public class HealthBarKnight : MonoBehaviour
     [SerializeField]
     private Image Bar;
     [SerializeField]
-    private float updateSpeedSeconds = 0.5f;
+    private float updateHealtbarFrame = 0.5f;
 
     private void Awake()
     {
@@ -23,10 +23,10 @@ public class HealthBarKnight : MonoBehaviour
         float preChangePct = Bar.fillAmount;
         float elapsed = 0f;
 
-        while (elapsed < updateSpeedSeconds)
+        while (elapsed < updateHealtbarFrame)
         {
             elapsed += Time.deltaTime;
-            Bar.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+            Bar.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateHealtbarFrame);
             yield return null;
         }
         Bar.fillAmount = pct;

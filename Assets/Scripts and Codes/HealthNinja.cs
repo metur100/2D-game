@@ -8,12 +8,12 @@ public class HealthNinja : MonoBehaviour
     [SerializeField]
     public int maxHealth = 200;
     public int currentHealth;
-    bool isDead = false;
-    public Animator animator;
-    float delay = 1f;
-    public event Action <float> OnHealthPctChanged = delegate { };
+    public event Action<float> OnHealthPctChanged = delegate { };
     public GameObject gameOverUI;
-
+    public Animator animator;
+    private float delay = 1f;
+    private bool isDead = false;
+    
     private void OnEnable()
     {
         currentHealth = maxHealth;

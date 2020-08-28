@@ -8,13 +8,13 @@ public class DashMove : MonoBehaviour
     public Image dashing;
     public Animator animator;
     private Rigidbody2D rb;
-    public float dashSpeed;
+    private float dashSpeed = 50f;
     private float dashTime;
-    public float startDashTime;
+    private float startDashTime = 0.5f;
     private int direction; 
     private bool isDashing = false; 
-    public float dashCooldown = 3f;
-    bool isDashCooldown = false;
+    private float dashCooldown = 3f;
+    private bool isDashCooldown = false;
 
     void Start()
     {
