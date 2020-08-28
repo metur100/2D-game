@@ -8,11 +8,13 @@ public class Blink : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Image blinking;
-    public float blinkDistance;
-    float blinkTimer;
-    public float blinkTime = 1f;
-    bool facingRight;
-    bool canBlink = true;
+    private float blinkDistance = 5f;
+    private float blinkTimer;
+    private float blinkTime = 1f;
+    private bool facingRight;
+    private bool canBlink = true;
+    private bool isBlinkCooldown = false;
+    private float blinkCooldown = 2f;
 
     void Start()
     {
@@ -21,12 +23,14 @@ public class Blink : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && canBlink)
+        if (Input.GetKeyDown(KeyCode.I) && canBlink && isBlinkCooldown == false)
         {
             // PlaySound(0);
             animator.SetBool("isBlinking", true);
+            blinking.fillAmount = 1;
             canBlink = false;
-        }
+            isBlinkCooldown = true;
+        }     
         else
             animator.SetBool("isBlinking", false);
 
@@ -47,6 +51,24 @@ public class Blink : MonoBehaviour
         {
             facingRight = false;
         }
+        if (isBlinkCooldown)
+        {
+            blinking.fillAmount -= 1 / blinkCooldown * Time.deltaTime;
+            if (blinking.fillAmount <= 0)
+            {
+                blinking.fillAmount = 0;
+                isBlinkCooldown = false;
+            }
+        }
     }
-        //animator.SetBool("isDashing", isDashing);
+   void Blinking()
+   {
+       Vector3 blink;
+       if (facingRight)
+           blink = new Vector3(blinkDistance, 0, 0);
+       else
+           blink = new Vector3(-blinkDistance, 0, 0);
+   
+       transform.position += blink;
+   }
 }

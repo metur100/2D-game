@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class DashMove : MonoBehaviour
 {
+    public Image dashing;
+    public Animator animator;
     private Rigidbody2D rb;
     public float dashSpeed;
     private float dashTime;
     public float startDashTime;
-    private int direction;
-    public Animator animator;
-    private bool isDashing = false;
-    public Image dashing;
-    public float cooldown = 3f;
-    bool isCooldown = false;
+    private int direction; 
+    private bool isDashing = false; 
+    public float dashCooldown = 3f;
+    bool isDashCooldown = false;
 
     void Start()
     {
@@ -26,29 +26,29 @@ public class DashMove : MonoBehaviour
     {
          if (direction == 0)
          {
-             if (Input.GetKeyDown(KeyCode.Q) && isCooldown == false)
+             if (Input.GetKeyDown(KeyCode.Q) && isDashCooldown == false)
              {
-                isCooldown = true;
+                isDashCooldown = true;
                 dashing.fillAmount = 1;
                 isDashing = true;
                 direction = 1;
                 FindObjectOfType<AudioManager>().Play("Dash");
              }
-             else if (Input.GetKeyDown(KeyCode.E) && isCooldown == false)
+             else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
              {
                 isDashing = true;
-                isCooldown = true;
+                isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 2;
                 FindObjectOfType<AudioManager>().Play("Dash");
              }
-            if (isCooldown)
+            if (isDashCooldown)
             {
-                dashing.fillAmount -= 1 / cooldown * Time.deltaTime;
+                dashing.fillAmount -= 1 / dashCooldown * Time.deltaTime;
                 if (dashing.fillAmount <= 0)
                 {
                     dashing.fillAmount = 0;
-                    isCooldown = false;
+                    isDashCooldown = false;
                 }
             }
         }
