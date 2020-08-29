@@ -6,8 +6,8 @@ public class FireBall : MonoBehaviour
 {
     public Rigidbody2D rb;
     public bool knockBackOnHit = false;
+    public int damageDoneFireB = -50;
     private float speedOfFireBall = 50f;
-    private int damageDone = -50;
     void Start()
     {
         rb.velocity = transform.right * speedOfFireBall;
@@ -46,7 +46,7 @@ public class FireBall : MonoBehaviour
         if (other.gameObject.tag == "Player_Knight")
         {
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
-            eHealth.ModifyHealth(damageDone);
+            eHealth.ModifyHealth(damageDoneFireB);
         }
         Destroy(gameObject);
     }

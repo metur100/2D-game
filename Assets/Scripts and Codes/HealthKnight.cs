@@ -14,24 +14,18 @@ public class HealthKnight : MonoBehaviour
     public int currentHealth;
     private bool isDead = false;
     private float delay = 1f;
-    
-   // public GameObject menuContainer;
 
     private void OnEnable()
     {
         currentHealth = maxHealth;
     }
-
     public void ModifyHealth(int amount)
     {
         currentHealth += amount;
-
-
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
-
         if (currentHealth < 0)
         {
             isDead = true;

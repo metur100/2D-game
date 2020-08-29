@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrostBall : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private int damageDone = -10;
+    public int damageDoneFrostB = -20;  
     private int speedOfFrostBullet = 50;
     private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
@@ -18,7 +18,7 @@ public class FrostBall : MonoBehaviour
         if (other.gameObject.tag == "Player_Ninja")
         {
             HealthNinja healthNinja = other.gameObject.GetComponent<HealthNinja>();
-            healthNinja.ModifyHealth(damageDone);
+            healthNinja.ModifyHealth(damageDoneFrostB);
 
             mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
             mSpeedNinja.CoroutineNinja();
@@ -27,7 +27,7 @@ public class FrostBall : MonoBehaviour
         if (other.gameObject.tag == "Player_Knight")
         {
             HealthKnight healthKnight = other.gameObject.GetComponent<HealthKnight>();
-            healthKnight.ModifyHealth(damageDone);
+            healthKnight.ModifyHealth(damageDoneFrostB);
 
             mSpeedKnight = other.gameObject.GetComponent<PlayerMovementKnight>();
             mSpeedKnight.CoroutineKnight();
