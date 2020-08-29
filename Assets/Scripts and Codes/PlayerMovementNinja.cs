@@ -8,7 +8,7 @@ public class PlayerMovementNinja : MonoBehaviour
     public Animator animator;
     public GameObject gameOverUI;
     public Rigidbody2D rb;
-    private float normalMovementSpeed = 70f;
+    public float normalMovementSpeed = 70f;
     private float slowedMovementSpeed = 20f;
     private float maxMovementSpeed = 70f;
     private float horizontalMove = 0f;
