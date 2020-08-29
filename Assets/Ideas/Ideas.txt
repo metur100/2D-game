@@ -12,6 +12,12 @@ Mage
 3. Ice Block (immunity, regena hp) ------------------------------- IN PROGRESS
 4. Pyro (long cast, much dmg) ------------------------------------ DONE ------- O
 
+Hunter
+1. Disengage (leapa se unazad)
+2. Freezing trap (postavlja trap koji stuna)
+3. Aimed Shot (basic dmg)
+4. Kornjaca (immunity)
+
 Paladin 
 1. Bubble (immunity)
 2. Poni (?) (seda na konja i ubrzava)
@@ -29,12 +35,6 @@ Priest
 2. Dispersion (defensive)
 3. Shadow Form (% dmg increase)
 4. Void Bolt (basic dmg, produzuje dot)
-
-Hunter
-1. Disengage (leapa se unazad)
-2. Freezing trap (postavlja trap koji stuna)
-3. Aimed Shot (basic dmg)
-4. Kornjaca (immunity)
 
 Shaman
 1. Astral shift (defensive)

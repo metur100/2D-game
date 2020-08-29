@@ -26,27 +26,29 @@ public class FireBall : MonoBehaviour
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
             knockBackOnHit = true;
         }
-   //-||- look Knight, its same
-   // if (other.tag == "Player_Njinja" && GetComponent<Rigidbody2D>().velocity.x < 0)
-   // {
-   //     other.GetComponent<Rigidbody2D>().velocity = new Vector2(-45, 35);
-   //     knockBack = true;
-   // }//-||- look Knight, its same
-   // else if (other.tag == "Player_Njinja" && GetComponent<Rigidbody2D>().velocity.x > 0)
-   // {
-   //     other.GetComponent<Rigidbody2D>().velocity = new Vector2(45, 35);
-   //     knockBack = true;
-   // }
-                            //+++++++ModifyHealth-Script+++++++///
-   //  if (other.gameObject.tag == "Player_Njinja")
-   //  {
-   //      HealthNjinja eHealth = other.gameObject.GetComponent<HealthNjinja>();
-   //      eHealth.ModifyHealth(damage);
-   //  }
         if (other.gameObject.tag == "Player_Knight")
         {
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
             eHealth.ModifyHealth(damageDoneFireB);
+        }
+        else
+        {
+            // If the player_tag ist Knight and if it's faceing an enemy from left to right, than knock him back -15 on x and 10 on y axes
+            if (other.tag == "Player_Hunter" && GetComponent<Rigidbody2D>().velocity.x < 0)
+            {
+                other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
+                knockBackOnHit = true;
+            }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
+            else if (other.tag == "Player_Hunter" && GetComponent<Rigidbody2D>().velocity.x > 0)
+            {
+                other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
+                knockBackOnHit = true;
+            }
+            if (other.gameObject.tag == "Player_Hunter")
+            {
+                HealthHunter eHealth = other.gameObject.GetComponent<HealthHunter>();
+                eHealth.ModifyHealth(damageDoneFireB);
+            }
         }
         Destroy(gameObject);
     }

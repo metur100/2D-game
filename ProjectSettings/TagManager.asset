@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player_Knight
   - Player_Ninja
+  - Player_Hunter
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Ninja
   - Knight
   - Sky
-  - 
+  - Hunter
   - 
   - 
   - 

@@ -7,7 +7,7 @@ public class FrostBall : MonoBehaviour
     public Rigidbody2D rb;
     public int damageDoneFrostB = -20;  
     private int speedOfFrostBullet = 50;
-    private PlayerMovementNinja mSpeedNinja;
+    private PlayerMovementHunter mSpeedHunter;
     private PlayerMovementKnight mSpeedKnight;
     void Start()
     {
@@ -15,13 +15,13 @@ public class FrostBall : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_Ninja")
+        if (other.gameObject.tag == "Player_Hunter")
         {
-            HealthNinja healthNinja = other.gameObject.GetComponent<HealthNinja>();
+            HealthHunter healthNinja = other.gameObject.GetComponent<HealthHunter>();
             healthNinja.ModifyHealth(damageDoneFrostB);
 
-            mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
-            mSpeedNinja.CoroutineNinja();
+            mSpeedHunter = other.gameObject.GetComponent<PlayerMovementHunter>();
+            mSpeedHunter.CoroutineHunter();
         }
 
         if (other.gameObject.tag == "Player_Knight")
