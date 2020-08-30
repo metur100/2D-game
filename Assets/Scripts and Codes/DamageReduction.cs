@@ -8,10 +8,13 @@ public class DamageReduction : MonoBehaviour
     public Image damageRed;
     public FrostBall frostBallDamage = new FrostBall();
     public FireBall fireBallDamage = new FireBall();
+    public BulletHunter bulletHunterDamage = new BulletHunter();
     public int damageReductionFrostB = -10;
     public int damageReductionFireB = -25;
-    private int normalFrostBDmg = -20;
-    private int normalFireBDmg = -50;
+    public int damageReductionBulletHunt = -5;
+    public int normalFrostBDmg = -20;
+    public int normalFireBDmg = -50;
+    public int normalBulletDamage = -10;
     private float dmgReductionDuration = 4f;
     private bool isCooldownDmgRed = false;
     private float DmgRedCooldown = 6f;
@@ -43,8 +46,10 @@ public class DamageReduction : MonoBehaviour
     {
         frostBallDamage.damageDoneFrostB = damageReductionFrostB;
         fireBallDamage.damageDoneFireB = damageReductionFireB;
+        bulletHunterDamage.damageDoneBullet = damageReductionBulletHunt;
         yield return new WaitForSeconds(dmgReductionDuration);
         frostBallDamage.damageDoneFrostB = normalFrostBDmg;
         fireBallDamage.damageDoneFireB = normalFireBDmg;
+        bulletHunterDamage.damageDoneBullet = normalBulletDamage;
     }
 }

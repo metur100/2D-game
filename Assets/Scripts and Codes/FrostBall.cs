@@ -21,7 +21,7 @@ public class FrostBall : MonoBehaviour
             healthNinja.ModifyHealth(damageDoneFrostB);
 
             mSpeedHunter = other.gameObject.GetComponent<PlayerMovementHunter>();
-            mSpeedHunter.CoroutineHunter();
+            mSpeedHunter.CoroutineHunterSlowOverTimeFrost();
         }
 
         if (other.gameObject.tag == "Player_Knight")
@@ -30,7 +30,7 @@ public class FrostBall : MonoBehaviour
             healthKnight.ModifyHealth(damageDoneFrostB);
 
             mSpeedKnight = other.gameObject.GetComponent<PlayerMovementKnight>();
-            mSpeedKnight.CoroutineKnight();
+            mSpeedKnight.CoroutineKnightSlowOverTimeFrost();
         }
         Destroy(gameObject);
     }

@@ -4,18 +4,18 @@ Warrior
 3. Enrage (% dmg increase) --------------------------------------- DONE -------- T
 4. Shattering throw (removes defensives) ------------------------- IN PROGRESS
 5. Stun ---------------------------------------------------------- IN PRGORESS
-6. Defence (reduce damge taken for 50 % ) ------------------------ IN PROGRESS
+6. Defence (reduce damge taken for 50 % ) ------------------------ DONE
 
 Mage
-1. Frostbolt (damages and slows) --------------------------------- DONE --------P
-2. Blink (portuje karaktera x yardi po x osi) -------------------- DONE -------- I
-3. Ice Block (immunity, regena hp) ------------------------------- IN PROGRESS
+1. Frostbolt (damages and slows) --------------------------------- DONE ------- P
+2. Blink (portuje karaktera x yardi po x osi) -------------------- DONE ------- I
+3. Ice Block (immunity, regena hp) ------------------------------- DONE ------- L
 4. Pyro (long cast, much dmg) ------------------------------------ DONE ------- O
 
 Hunter
-1. Disengage (leapa se unazad)
+1. Disengage (leapa se unazad) ----------------------------------- DONE ------- Z/U
 2. Freezing trap (postavlja trap koji stuna)
-3. Aimed Shot (basic dmg)
+3. Aimed Shot (basic dmg) ---------------------------------------- DONE ------- M
 4. Kornjaca (immunity)
 
 Paladin 

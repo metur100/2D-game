@@ -61,7 +61,7 @@ public class PlayerMovementHunter : MonoBehaviour
             gameOverUI.SetActive(true);
         }
     }
-    public void CoroutineHunter()
+    public void CoroutineHunterSlowOverTimeFrost()
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }

@@ -7,6 +7,7 @@ TagManager:
   - Player_Knight
   - Player_Ninja
   - Player_Hunter
+  - Player_Njinja
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Knight
   - Sky
   - Hunter
-  - 
+  - BulletHunter
   - 
   - 
   - 

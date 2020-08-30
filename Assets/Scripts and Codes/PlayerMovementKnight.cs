@@ -11,8 +11,10 @@ public class PlayerMovementKnight : MonoBehaviour
     private float normalMovementSpeed = 70f;
     private float slowedMovementSpeed = 20f;
     private float maxMovementSpeed = 70f;
+    private float trapMovementSpeed = 0f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 2f;
+    private float trapOverTimeDuration = 2f;
     private bool jump = false;
     private bool crouch = false;
     private bool grounded;
@@ -35,13 +37,13 @@ public class PlayerMovementKnight : MonoBehaviour
         }
         if (Input.GetButtonDown("Crouch"))
         {
-           crouch = true;
+            crouch = true;
         }
 
-       else if (Input.GetButtonUp("Crouch"))
-       {
-           crouch = false;
-       }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
+        }
     }
     public void OnLanding()
     {
@@ -61,14 +63,24 @@ public class PlayerMovementKnight : MonoBehaviour
             gameOverUI.SetActive(true);
         }
     }
-    public void CoroutineKnight()
+    public void CoroutineKnightSlowOverTimeFrost()
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
+    }
+    public void CoroutineMoveIfTrapKnight ()
+    {
+        StartCoroutine(stopMoveIfTrapKnight());
     }
     IEnumerator SlowOverTimeOnHitWithFrostBullet()
     {
         normalMovementSpeed = slowedMovementSpeed;
         yield return new WaitForSeconds(slowOverTimeDuration);
+        normalMovementSpeed = maxMovementSpeed;
+    }
+    IEnumerator stopMoveIfTrapKnight()
+    {
+        normalMovementSpeed = trapMovementSpeed;
+        yield return new WaitForSeconds(trapOverTimeDuration);
         normalMovementSpeed = maxMovementSpeed;
     }
 }
