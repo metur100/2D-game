@@ -14,7 +14,7 @@ Mage
 
 Hunter
 1. Disengage (leapa se unazad) ----------------------------------- DONE ------- Z/U
-2. Freezing trap (postavlja trap koji stuna)
+2. Freezing trap (postavlja trap koji stuna) --------------------- DONE ------- N 
 3. Aimed Shot (basic dmg) ---------------------------------------- DONE ------- M
 4. Kornjaca (immunity)
 

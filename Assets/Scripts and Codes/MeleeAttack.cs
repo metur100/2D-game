@@ -11,7 +11,7 @@ public class MeleeAttack : MonoBehaviour
     public MaleTrigger dmg;
     public Image meleeAttack;
     public Image enrage;
-    public bool isMaleeAttacking = false;
+    private bool isMaleeAttacking = false;
     private float maleeAttackTimer = 0.0f;
     private float maleeAttackSpeed = 0.01f;
     private float cooldownMaleeAttack = 1f;

@@ -12,7 +12,7 @@ public class PlayerMovementNinja : MonoBehaviour
     private float trapMoveSpeed = 0f;
     private float maxMovementSpeed = 70f;
     private float horizontalMove = 0f;
-    private float trapOverTimeDuration = 2f;
+    private float trapOverTimeDuration = 3f;
     private bool jump = false;
     private bool crouch = false;
     private bool grounded;

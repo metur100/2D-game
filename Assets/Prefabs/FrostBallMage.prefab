@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6732340154442523518}
   - component: {fileID: 3746187665048875365}
   - component: {fileID: -9197854928600143813}
-  m_Layer: 0
-  m_Name: FrostShoot_Njinja
+  m_Layer: 16
+  m_Name: FrostBallMage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
