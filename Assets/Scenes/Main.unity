@@ -3429,6 +3429,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hunter
       objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.13438945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13438945
+      objectReference: {fileID: 0}
     - target: {fileID: 6413541127721150039, guid: 27407f2e11e06574ca94ad4e3ba49078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3493,21 +3508,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 7.71686
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.18867922
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.13438945
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.13438945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27407f2e11e06574ca94ad4e3ba49078, type: 3}
@@ -4575,6 +4575,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hunter
       objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.13438945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13438945
+      objectReference: {fileID: 0}
     - target: {fileID: 6413541127721150039, guid: 27407f2e11e06574ca94ad4e3ba49078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4639,21 +4654,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 7.71686
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.18867922
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.13438945
-      objectReference: {fileID: 0}
-    - target: {fileID: 3983622827124866253, guid: 27407f2e11e06574ca94ad4e3ba49078,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.13438945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27407f2e11e06574ca94ad4e3ba49078, type: 3}
@@ -9069,57 +9069,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378967928}
   m_CullTransparentMesh: 0
---- !u!1 &1386849715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1386849717}
-  - component: {fileID: 1386849716}
-  m_Layer: 0
-  m_Name: SelectionScreen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1386849716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386849715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61fd34d36f20d42458f7e76e173be971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1:
-  - {fileID: 6863569635875286229, guid: 85498a957b84815489a29c5d0fa1defb, type: 3}
-  - {fileID: 839622558015993023, guid: 0976071537df7f9488e42b6e9cab3312, type: 3}
-  - {fileID: 1143010586214561043, guid: 27407f2e11e06574ca94ad4e3ba49078, type: 3}
-  player2:
-  - {fileID: 6863569635875286229, guid: 85498a957b84815489a29c5d0fa1defb, type: 3}
-  - {fileID: 839622558015993023, guid: 0976071537df7f9488e42b6e9cab3312, type: 3}
-  - {fileID: 1143010586214561043, guid: 27407f2e11e06574ca94ad4e3ba49078, type: 3}
---- !u!4 &1386849717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386849715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3856573, y: -3.1651545, z: -95012.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1391217250
 GameObject:
   m_ObjectHideFlags: 0
@@ -13929,7 +13878,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2145629640}
   - component: {fileID: 2145629639}
-  - component: {fileID: 2145629638}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -13937,25 +13885,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2145629638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145629637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &2145629639
 MonoBehaviour:
   m_ObjectHideFlags: 0
