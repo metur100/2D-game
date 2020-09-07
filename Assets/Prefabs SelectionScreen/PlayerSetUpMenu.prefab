@@ -69,26 +69,18 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_ActionsAsset: {fileID: -944628639613478452, guid: 48f5ab666544a1f478b2e04c0ec8a213,
     type: 3}
-  m_PointAction: {fileID: 2578748888553101014, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
+  m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: -3100314081698907915, guid: 48f5ab666544a1f478b2e04c0ec8a213,
     type: 3}
-  m_SubmitAction: {fileID: 3564021713971213568, guid: 48f5ab666544a1f478b2e04c0ec8a213,
+  m_SubmitAction: {fileID: 7606007572588662101, guid: 48f5ab666544a1f478b2e04c0ec8a213,
     type: 3}
-  m_CancelAction: {fileID: 7606522747912818657, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_LeftClickAction: {fileID: -6418863467268929250, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_MiddleClickAction: {fileID: -207588247773556301, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_RightClickAction: {fileID: -7773285568864007105, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_ScrollWheelAction: {fileID: -9142589948462643899, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_TrackedDevicePositionAction: {fileID: 2697143929396011547, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: -1288822515087718013, guid: 48f5ab666544a1f478b2e04c0ec8a213,
-    type: 3}
+  m_CancelAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 0}
+  m_TrackedDeviceOrientationAction: {fileID: 0}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
 --- !u!1 &8230258577347554516
