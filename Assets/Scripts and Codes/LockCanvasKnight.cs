@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LockCanvas : MonoBehaviour
+public class LockCanvasKnight : MonoBehaviour
 {
     private float posXMinus = -25;
     private float posXPlus = -25;
