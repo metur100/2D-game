@@ -8,7 +8,7 @@ public class ConfirmButton : MonoBehaviour
 {
     private bool isConfirmed = false;
     public CharacterSelection player1 = new CharacterSelection();
-    public SelectCharacter player2 = new SelectCharacter();
+    //public SelectCharacter player2 = new SelectCharacter();
     public GameObject selectedButton;
 
     public void loadSceneWithChars ()
