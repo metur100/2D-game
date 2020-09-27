@@ -1,0 +1,2 @@
+1. Make GameOverUI - Script for each fight
+2. Name it Arena of free assets
