@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a5b5819ccbaef8443ae9c4d9ac29b9dd
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: d30fbee988f498842a6e22beea9f1786
-  - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: 6aa38e6e877d6ac48b48798008058789
   - enabled: 1
+    path: Assets/Scenes/Knight vs. Ninja.unity
+    guid: d30fbee988f498842a6e22beea9f1786
+  - enabled: 1
     path: Assets/Scenes/Knight vs. Hunter.unity
     guid: d90e1cde8810bbf4db26cf048f0c43d8
+  - enabled: 1
+    path: Assets/Scenes/Ninja vs. Hunter.unity
+    guid: dd26221159506ea408e747a4dec5f7b2
   m_configObjects: {}
