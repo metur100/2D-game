@@ -21,7 +21,7 @@ public class BulletHunter : MonoBehaviour
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
             knockBackOnHit = true;
         }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
-        else if (other.tag == "Player_Knight" && GetComponent<Rigidbody2D>().velocity.x > 0)
+        if (other.tag == "Player_Knight" && GetComponent<Rigidbody2D>().velocity.x > 0)
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
             knockBackOnHit = true;
@@ -31,25 +31,39 @@ public class BulletHunter : MonoBehaviour
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
             eHealth.ModifyHealth(damageDoneBullet);
         }
-        else
+        // If the player_tag ist Knight and if it's faceing an enemy from left to right, than knock him back -15 on x and 10 on y axes
+        if (other.tag == "Player_Ninja" && GetComponent<Rigidbody2D>().velocity.x < 0)
         {
-            // If the player_tag ist Knight and if it's faceing an enemy from left to right, than knock him back -15 on x and 10 on y axes
-            if (other.tag == "Player_Ninja" && GetComponent<Rigidbody2D>().velocity.x < 0)
-            {
-                other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
-                knockBackOnHit = true;
-            }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
-            else if (other.tag == "Player_Ninja" && GetComponent<Rigidbody2D>().velocity.x > 0)
-            {
-                other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
-                knockBackOnHit = true;
-            }
-            if (other.gameObject.tag == "Player_Ninja")
-            {
-                HealthNinja eHealth = other.gameObject.GetComponent<HealthNinja>();
-                eHealth.ModifyHealth(damageDoneBullet);
-            }
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
+            knockBackOnHit = true;
+        }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
+        if (other.tag == "Player_Ninja" && GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
+            knockBackOnHit = true;
         }
+        if (other.gameObject.tag == "Player_Ninja")
+        {
+            HealthNinja eHealth = other.gameObject.GetComponent<HealthNinja>();
+            eHealth.ModifyHealth(damageDoneBullet);
+        }
+
+        if (other.tag == "Player_HolyKnight" && GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(-40, 15);
+            knockBackOnHit = true;
+        }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
+        if (other.tag == "Player_HolyKnight" && GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(40, -15);
+            knockBackOnHit = true;
+        }
+        if (other.gameObject.tag == "Player_HolyKnight")
+        {
+            HealthHolyKnight eHealth = other.gameObject.GetComponent<HealthHolyKnight>();
+            eHealth.ModifyHealth(damageDoneBullet);
+        }
+
         Destroy(gameObject);
     }
 }

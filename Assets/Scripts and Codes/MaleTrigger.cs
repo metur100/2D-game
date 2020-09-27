@@ -18,5 +18,10 @@ public class MaleTrigger : MonoBehaviour
             HealthHunter eHealth = other.gameObject.GetComponent<HealthHunter>();
             eHealth.ModifyHealth(normalMeleeDmg);
         }
+        else if (other.isTrigger != true && other.CompareTag("Player_Knight"))
+        {
+            HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
     }
 }

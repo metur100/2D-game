@@ -12,7 +12,7 @@ public class HealthBarHolyKnight : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<HealthHunter>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<HealthHolyKnight>().OnHealthPctChanged += HandleHealthChanged;
     }
     private void HandleHealthChanged(float pct)
     {
