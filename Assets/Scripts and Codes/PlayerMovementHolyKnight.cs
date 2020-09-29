@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovementHolyKnight : MonoBehaviour
 {
@@ -8,20 +9,44 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     public Animator animator;
     public GameObject gameOverUI;
     public Rigidbody2D rb;
+    public Image speeding;
     public float normalMovementSpeed = 70f;
     private float slowedMovementSpeed = 20f;
     private float maxMovementSpeed = 70f;
+    private float incraseMovementSpeed = 140f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 1f;
+    private float speedOverTimeDuration = 3f;
+    private float speedingCd = 9f;
     private bool jump = false;
     private bool crouch = false;
     private bool grounded;
+    private bool isSpeedingCd = false;
 
+    private void Start()
+    {
+        speeding.fillAmount = 0;
+    }
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+        if (Input.GetKeyDown(KeyCode.E) && isSpeedingCd == false)
+        {
+            isSpeedingCd = true;
+            speeding.fillAmount = 1;
+            StartCoroutine(IncreasedMovementSpeed());
+        }
+        if (isSpeedingCd)
+        {
+            speeding.fillAmount -= 1 / speedingCd * Time.deltaTime;
+            if (speeding.fillAmount <= 0)
+            {
+                speeding.fillAmount = 0;
+                isSpeedingCd = false;
+            }
+        }
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -69,6 +94,12 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     {
         normalMovementSpeed = slowedMovementSpeed;
         yield return new WaitForSeconds(slowOverTimeDuration);
+        normalMovementSpeed = maxMovementSpeed;
+    }
+    IEnumerator IncreasedMovementSpeed()
+    {
+        normalMovementSpeed = incraseMovementSpeed;
+        yield return new WaitForSeconds(speedOverTimeDuration);
         normalMovementSpeed = maxMovementSpeed;
     }
 }

@@ -20,8 +20,8 @@ Hunter
 
 Paladin 
 1. Bubble (immunity)
-2. Poni (?) (seda na konja i ubrzava)
-3. Crusader Strike (basic dmg)
+2. Poni (?) (seda na konja i ubrzava) ------------- DONE
+3. Crusader Strike (basic dmg) -------------------- DONE
 4. Hammer of Justice (stun)
 
 Death Knight 

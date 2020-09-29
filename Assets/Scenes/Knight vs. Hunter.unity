@@ -2237,7 +2237,7 @@ GameObject:
   - component: {fileID: 317003508}
   - component: {fileID: 317003507}
   m_Layer: 5
-  m_Name: DashFill
+  m_Name: SpeedingFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7893f90c60d5eae41b8c15df8f472613, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7711cf49e9a5bb84b91a09a04712bfea, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3959,7 +3959,7 @@ GameObject:
   - component: {fileID: 702919901}
   - component: {fileID: 702919900}
   m_Layer: 5
-  m_Name: Dash
+  m_Name: Speeding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7893f90c60d5eae41b8c15df8f472613, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7711cf49e9a5bb84b91a09a04712bfea, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 949197621}
   - component: {fileID: 949197620}
   m_Layer: 5
-  m_Name: Q/E
+  m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4978,7 +4978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Q/E
+  m_text: E
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7453,6 +7453,8 @@ GameObject:
   - component: {fileID: 1596799336}
   - component: {fileID: 1596799333}
   - component: {fileID: 1596799332}
+  - component: {fileID: 1596799334}
+  - component: {fileID: 1596799335}
   m_Layer: 11
   m_Name: Player_HolyKnight
   m_TagString: Player_HolyKnight
@@ -7476,6 +7478,7 @@ MonoBehaviour:
   animator: {fileID: 1596799336}
   gameOverUI: {fileID: 144240602}
   rb: {fileID: 1596799341}
+  speeding: {fileID: 317003507}
   normalMovementSpeed: 70
 --- !u!114 &1596799333
 MonoBehaviour:
@@ -7493,6 +7496,37 @@ MonoBehaviour:
   gameOverUI: {fileID: 144240602}
   animator: {fileID: 1596799336}
   currentHealth: 0
+--- !u!114 &1596799334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596799331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7a95b02f4b1264cb13016cf78aee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeTrigger: {fileID: 904638736}
+  animator: {fileID: 1596799336}
+  dmg: {fileID: 904638734}
+  meleeAttack: {fileID: 1420045906}
+--- !u!114 &1596799335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596799331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abebbb43d2840e84aad648dabf01b029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incraseMovementSpeed: 140
+  speedOverTimeDuration: 3
+  normalMoveSpeed: 70
 --- !u!95 &1596799336
 Animator:
   serializedVersion: 3
@@ -7686,8 +7720,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596799331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.104, y: 1.803, z: 0}
-  m_LocalScale: {x: 2.1893735, y: 2.3529267, z: 1}
+  m_LocalPosition: {x: -19.89, y: 2.67, z: 0}
+  m_LocalScale: {x: 2.7934272, y: 2.8105774, z: 1}
   m_Children:
   - {fileID: 1638885885}
   - {fileID: 1526856208}
@@ -7936,7 +7970,7 @@ RectTransform:
   m_GameObject: {fileID: 1638885884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0035255188, y: 0.003270003, z: 1}
+  m_LocalScale: {x: 0.0035255195, y: 0.0032700035, z: 1}
   m_Children:
   - {fileID: 1131244125}
   - {fileID: 1930598391}
@@ -7947,7 +7981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1154.9333, y: 979.26404}
+  m_AnchoredPosition: {x: -5884462, y: 5539039.5}
   m_SizeDelta: {x: 557.2153, y: 116.2652}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1638885886
