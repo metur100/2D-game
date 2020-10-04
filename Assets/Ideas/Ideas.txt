@@ -19,7 +19,7 @@ Hunter
 4. Kornjaca (immunity) ------------------------------------------- DONE ------- B
 
 Paladin 
-1. Bubble (immunity)
+1. Bubble (immunity)------------------------------- DONE
 2. Poni (?) (seda na konja i ubrzava) ------------- DONE
 3. Crusader Strike (basic dmg) -------------------- DONE
 4. Hammer of Justice (stun)

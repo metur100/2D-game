@@ -6,7 +6,7 @@ public class IncreaseMovementSpeed : MonoBehaviour
 {
     private PlayerMovementHolyKnight movementSpeed = new PlayerMovementHolyKnight();
     public float incraseMovementSpeed = 140f;
-    public float speedOverTimeDuration = 3f;
+    private float speedOverTimeDuration = 3f;
     public float normalMoveSpeed = 70f;
 
     private void Update()

@@ -12,6 +12,8 @@ public class PlayerMovementHunter : MonoBehaviour
     private float slowedMovementSpeed = 20f;
     private float maxMovementSpeed = 70f;
     private float horizontalMove = 0f;
+    private float trapMovementSpeed = 0f;
+    private float trapOverTimeDuration = 3f;
     private float slowOverTimeDuration = 1f;
     private bool jump = false;
     private bool crouch = false;
@@ -65,10 +67,20 @@ public class PlayerMovementHunter : MonoBehaviour
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }
+    public void CoroutineMoveIfTrapHunter()
+    {
+        StartCoroutine(stopMoveIfTrapHunter());
+    }
     IEnumerator SlowOverTimeOnHitWithFrostBullet()
     {
         normalMovementSpeed = slowedMovementSpeed;
         yield return new WaitForSeconds(slowOverTimeDuration);
+        normalMovementSpeed = maxMovementSpeed;
+    }
+    IEnumerator stopMoveIfTrapHunter()
+    {
+        normalMovementSpeed = trapMovementSpeed;
+        yield return new WaitForSeconds(trapOverTimeDuration);
         normalMovementSpeed = maxMovementSpeed;
     }
 }

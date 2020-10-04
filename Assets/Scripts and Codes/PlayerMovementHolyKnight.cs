@@ -18,6 +18,8 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     private float slowOverTimeDuration = 1f;
     private float speedOverTimeDuration = 3f;
     private float speedingCd = 9f;
+    private float trapOverTimeDuration = 3f;
+    private float trapMovementSpeed = 0f;
     private bool jump = false;
     private bool crouch = false;
     private bool grounded;
@@ -90,6 +92,10 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }
+    public void CoroutineMoveIfTrapHolyKnight()
+    {
+        StartCoroutine(stopMoveIfTrapHolyKnight());
+    }
     IEnumerator SlowOverTimeOnHitWithFrostBullet()
     {
         normalMovementSpeed = slowedMovementSpeed;
@@ -100,6 +106,12 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     {
         normalMovementSpeed = incraseMovementSpeed;
         yield return new WaitForSeconds(speedOverTimeDuration);
+        normalMovementSpeed = maxMovementSpeed;
+    }
+    IEnumerator stopMoveIfTrapHolyKnight()
+    {
+        normalMovementSpeed = trapMovementSpeed;
+        yield return new WaitForSeconds(trapOverTimeDuration);
         normalMovementSpeed = maxMovementSpeed;
     }
 }

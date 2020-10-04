@@ -264,7 +264,7 @@ Transform:
   - {fileID: 908770884}
   - {fileID: 1651239867}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &17897703
 MonoBehaviour:
@@ -385,7 +385,7 @@ RectTransform:
   m_Children:
   - {fileID: 1297062224}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 35180040}
   - component: {fileID: 35180042}
   - component: {fileID: 35180041}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ Transform:
   - {fileID: 656245245}
   - {fileID: 66977415}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &89674436
 GameObject:
@@ -1323,7 +1323,7 @@ RectTransform:
   m_Children:
   - {fileID: 474899080}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1422,7 +1422,7 @@ RectTransform:
   m_Children:
   - {fileID: 1868316014}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1804,7 +1804,7 @@ RectTransform:
   m_Children:
   - {fileID: 1413945208}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2236,7 +2236,7 @@ GameObject:
   - component: {fileID: 317003506}
   - component: {fileID: 317003508}
   - component: {fileID: 317003507}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: SpeedingFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2428,8 +2428,8 @@ GameObject:
   - component: {fileID: 322804091}
   - component: {fileID: 322804093}
   - component: {fileID: 322804092}
-  m_Layer: 11
-  m_Name: HeadKnight
+  m_Layer: 19
+  m_Name: HeadHolyKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e480585590b117443974744d58ee2162, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27d2fd16700b54a4a9e25a7c5b5762b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2501,7 +2501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368891880}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: Abilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3107,7 +3107,7 @@ GameObject:
   - component: {fileID: 529678111}
   - component: {fileID: 529678113}
   - component: {fileID: 529678112}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Defance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,7 +3153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6423da3e66a42147b1ce41114d4d8ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57e9537b4bcfcca42812c4ce8c9cef58, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3883,7 +3883,7 @@ GameObject:
   - component: {fileID: 678119807}
   - component: {fileID: 678119809}
   - component: {fileID: 678119808}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: SwordKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3958,7 +3958,7 @@ GameObject:
   - component: {fileID: 702919899}
   - component: {fileID: 702919901}
   - component: {fileID: 702919900}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Speeding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4609,7 +4609,7 @@ Transform:
   - {fileID: 1569347833}
   - {fileID: 822590564}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898329746
 GameObject:
@@ -4704,7 +4704,7 @@ GameObject:
   - component: {fileID: 904638735}
   - component: {fileID: 904638736}
   - component: {fileID: 904638734}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: meleeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -4932,7 +4932,7 @@ GameObject:
   - component: {fileID: 949197619}
   - component: {fileID: 949197621}
   - component: {fileID: 949197620}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5087,7 +5087,7 @@ Transform:
   - {fileID: 317860916}
   - {fileID: 440980407}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &959082659
 MonoBehaviour:
@@ -5248,8 +5248,8 @@ GameObject:
   - component: {fileID: 1009619466}
   - component: {fileID: 1009619468}
   - component: {fileID: 1009619467}
-  m_Layer: 5
-  m_Name: F
+  m_Layer: 19
+  m_Name: Q
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5294,7 +5294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F
+  m_text: Q
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5455,7 +5455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035772409}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -5745,7 +5745,7 @@ GameObject:
   - component: {fileID: 1131244125}
   - component: {fileID: 1131244127}
   - component: {fileID: 1131244126}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,7 +6166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1269994751}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -6515,7 +6515,7 @@ RectTransform:
   m_Children:
   - {fileID: 2085197499}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6533,7 +6533,7 @@ GameObject:
   - component: {fileID: 1397843663}
   - component: {fileID: 1397843665}
   - component: {fileID: 1397843664}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6719,7 +6719,7 @@ GameObject:
   - component: {fileID: 1420045905}
   - component: {fileID: 1420045907}
   - component: {fileID: 1420045906}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: SwordFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6869,7 +6869,7 @@ GameObject:
   - component: {fileID: 1492448772}
   - component: {fileID: 1492448771}
   - component: {fileID: 1492448770}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: DefenceFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6896,7 +6896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6423da3e66a42147b1ce41114d4d8ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57e9537b4bcfcca42812c4ce8c9cef58, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7201,7 +7201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1526856208}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -7455,7 +7455,8 @@ GameObject:
   - component: {fileID: 1596799332}
   - component: {fileID: 1596799334}
   - component: {fileID: 1596799335}
-  m_Layer: 11
+  - component: {fileID: 1596799338}
+  m_Layer: 19
   m_Name: Player_HolyKnight
   m_TagString: Player_HolyKnight
   m_Icon: {fileID: 0}
@@ -7525,7 +7526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   incraseMovementSpeed: 140
-  speedOverTimeDuration: 3
   normalMoveSpeed: 70
 --- !u!95 &1596799336
 Animator:
@@ -7598,6 +7598,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1596799338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596799331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399b79176b1025245a6ed9823cc7953e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnerable: {fileID: 1492448770}
 --- !u!58 &1596799339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7729,7 +7742,7 @@ Transform:
   - {fileID: 1269994751}
   - {fileID: 904638735}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608659718
 GameObject:
@@ -7876,7 +7889,7 @@ GameObject:
   - component: {fileID: 1626905500}
   - component: {fileID: 1626905502}
   - component: {fileID: 1626905501}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: EnrageFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7954,7 +7967,7 @@ GameObject:
   - component: {fileID: 1638885888}
   - component: {fileID: 1638885886}
   - component: {fileID: 1638885887}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: HealthBarAndCooldownCanvasKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9717,7 +9730,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868316013
 GameObject:
@@ -9939,7 +9952,7 @@ GameObject:
   - component: {fileID: 1930598391}
   - component: {fileID: 1930598393}
   - component: {fileID: 1930598392}
-  m_Layer: 11
+  m_Layer: 19
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -10119,7 +10132,7 @@ GameObject:
   - component: {fileID: 1966053955}
   - component: {fileID: 1966053957}
   - component: {fileID: 1966053956}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Enrage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15358,7 +15371,7 @@ RectTransform:
   - {fileID: 9031060579846296681}
   - {fileID: 9031060579866793743}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
