@@ -8,10 +8,10 @@ public class StunHolyKnight : MonoBehaviour
     private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
     private PlayerMovementHunter mSpeedHunter;
-    private float speedOfTrap = 30f;
+    private float speedOfStun = 30f;
     void Start()
     {
-        rb.velocity = transform.right * speedOfTrap;
+        rb.velocity = transform.right * speedOfStun;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
