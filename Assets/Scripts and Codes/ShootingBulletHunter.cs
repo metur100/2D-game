@@ -26,7 +26,7 @@ public class ShootingBulletHunter : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire3") && isCooldownBullet == false)
+        if (Input.GetButtonDown("Fire1") && isCooldownBullet == false)
         {
             isCooldownBullet = true;
             shootingBullet.fillAmount = 1;
@@ -44,7 +44,7 @@ public class ShootingBulletHunter : MonoBehaviour
         }
         else
         {
-            if (Input.GetButtonDown("Fire4") && isCooldownTrap == false)
+            if (Input.GetButtonDown("Fire2") && isCooldownTrap == false)
             {
                 isCooldownTrap = true;
                 shootingTrap.fillAmount = 1;

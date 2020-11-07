@@ -23,7 +23,7 @@ public class Blink : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && canBlink && isBlinkCooldown == false)
+        if (Input.GetKeyDown(KeyCode.R) && canBlink && isBlinkCooldown == false)
         {
             // PlaySound(0);
             animator.SetBool("isBlinking", true);

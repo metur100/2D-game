@@ -20,7 +20,7 @@ public class ShootingStunHolyKnight : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire5") && iscooldownStun == false)
+        if (Input.GetButtonDown("StunHolyKnight") && iscooldownStun == false)
         {
             iscooldownStun = true;
             shootingStun.fillAmount = 1;

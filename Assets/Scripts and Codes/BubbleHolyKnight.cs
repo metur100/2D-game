@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class BubbleHolyKnight : MonoBehaviour
 {
     public Image invulnerable;
+    public Animator anim;
     private bool isCooldownInvuln = false;
     private float invulnerabelCooldown = 9f;
+    private bool isBubble = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,9 @@ public class BubbleHolyKnight : MonoBehaviour
             isCooldownInvuln = true;
             invulnerable.fillAmount = 1;
             StartCoroutine(GetInvulnerable());
+            isBubble = true;
+            anim.SetBool("isBubble", isBubble);
+            isBubble = false;
             //FindObjectOfType<AudioManager>().Play("");
         }
         if (isCooldownInvuln)

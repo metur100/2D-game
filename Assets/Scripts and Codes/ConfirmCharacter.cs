@@ -14,13 +14,13 @@ public class ConfirmCharacter : MonoBehaviour
         {
           // PlayerPrefs.SetInt("CharacterSelected", character.index);
           // PlayerPrefs.SetInt("CharacterSelected2", character2.index);
-            SceneManager.LoadScene("Knight vs. Ninja");
+            SceneManager.LoadScene("Knight vs. Mage");
         }
         else if (character.index == 1 && character2.index == 2 || character.index == 2 && character2.index == 1)
         {
             //  PlayerPrefs.SetInt("CharacterSelected", character.index);
             //  PlayerPrefs.SetInt("CharacterSelected2", character2.index);
-            SceneManager.LoadScene("Ninja vs. Hunter");
+            SceneManager.LoadScene("Mage vs. Hunter");
         }
         else if (character.index == 0 && character2.index == 2 || character.index == 2 && character2.index == 0)
         {

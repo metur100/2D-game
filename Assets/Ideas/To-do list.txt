@@ -1,2 +1,3 @@
 1. Make GameOverUI - Script for each fight
 2. Name it Arena of free assets
+3. Make scene for each fight! Knight v. Ninja and Ninja v. Knight! Add Keyboards Controls for Knight and add Gamepad Control for Knight. That for all! Left selected player is keyboard and the right one is gamepad

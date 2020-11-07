@@ -19,20 +19,20 @@ public class PlayerMovementNinja : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal2") * normalMovementSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump2"))
+        if (Input.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("IsJumping", true);
             FindObjectOfType<AudioManager>().Play("Jump");
         }
-        if (Input.GetButtonDown("Crouch2"))
+        if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
         }
-        else if (Input.GetButtonUp("Crouch2"))
+        else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
         }

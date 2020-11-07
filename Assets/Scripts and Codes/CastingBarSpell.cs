@@ -43,7 +43,7 @@ public class CastingBarSpell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && isCooldownFrost == false)
+        if (Input.GetKeyDown(KeyCode.Keypad7) && isCooldownFrost == false)
         {
             isCooldownFrost = true;
             frostBallAbility.fillAmount = 1;
@@ -51,7 +51,7 @@ public class CastingBarSpell : MonoBehaviour
             StartCoroutine(ShootFrostBall());
             FindObjectOfType<AudioManager>().Play("CastingSpell");
         }
-        if (Input.GetKeyDown(KeyCode.O) && isCooldownFire == false)
+        if (Input.GetKeyDown(KeyCode.Keypad9) && isCooldownFire == false)
         {
             isCooldownFire = true;
             fireBallAbility.fillAmount = 1;

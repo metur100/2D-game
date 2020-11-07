@@ -16,28 +16,28 @@ public class PlayerMovementHunter : MonoBehaviour
     private float trapOverTimeDuration = 3f;
     private float slowOverTimeDuration = 1f;
     private bool jump = false;
-    private bool crouch = false;
+    //private bool crouch = false;
     private bool grounded;
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal3") * normalMovementSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump3"))
+        if (Input.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("IsJumping", true);
             FindObjectOfType<AudioManager>().Play("Jump");
         }
-        if (Input.GetButtonDown("Crouch3"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch3"))
-        {
-            crouch = false;
-        }
+        //if (Input.GetButtonDown("Crouch2"))
+        //{
+        //    crouch = true;
+        //}
+        //else if (Input.GetButtonUp("Crouch2"))
+        //{
+        //    crouch = false;
+        //}
         if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -49,13 +49,13 @@ public class PlayerMovementHunter : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
-    public void OnCrouching(bool isCrouching)
-    {
-        animator.SetBool("IsCrouching", isCrouching);
-    }
+    //public void OnCrouching(bool isCrouching)
+    //{
+    //    animator.SetBool("IsCrouching", isCrouching);
+    //}
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
         if (rb.position.y < -6f)

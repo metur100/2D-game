@@ -21,7 +21,7 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     private float trapOverTimeDuration = 3f;
     private float trapMovementSpeed = 0f;
     private bool jump = false;
-    private bool crouch = false;
+    //private bool crouch = false;
     private bool grounded;
     private bool isSpeedingCd = false;
 
@@ -55,14 +55,14 @@ public class PlayerMovementHolyKnight : MonoBehaviour
             animator.SetBool("IsJumping", true);
             FindObjectOfType<AudioManager>().Play("Jump");
         }
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+        //if (Input.GetButtonDown("Crouch"))
+        //{
+        //    crouch = true;
+        //}
+        //else if (Input.GetButtonUp("Crouch"))
+        //{
+        //    crouch = false;
+        //}
         if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -74,13 +74,13 @@ public class PlayerMovementHolyKnight : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
-    public void OnCrouching(bool isCrouching)
-    {
-        animator.SetBool("IsCrouching", isCrouching);
-    }
+    //public void OnCrouching(bool isCrouching)
+    //{
+    //    animator.SetBool("IsCrouching", isCrouching);
+    //}
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
         if (rb.position.y < -6f)
