@@ -15,7 +15,7 @@ public class MeleeAtackHolyKnight : MonoBehaviour
     private float maleeAttackSpeed = .001f;
     private float cooldownMaleeAttack = 1f;
     private bool isCooldownMaleeAttack = false;
-    private int normalMeleeDamage = -20;
+    public int normalMeleeDamage = -20;
 
     void Start()
     {

@@ -18,6 +18,7 @@ public class MeleeAttack : MonoBehaviour
     private float cooldownEnrage = 10f;
     private bool isCooldownMaleeAttack = false;
     private bool isCooldownEnrage = false;
+    private bool isEnrage = false;
     private float enrageDuration = 6f;
     private int enragedMeleeDamage = -40;
     private int normalMeleeDamage = -20;
@@ -86,7 +87,11 @@ public class MeleeAttack : MonoBehaviour
     IEnumerator EnrageDamage()
     {
         dmg.normalMeleeDmg = enragedMeleeDamage;
+        isEnrage = true;
+        animator.SetBool("IsEnrage", isEnrage);
         yield return new WaitForSeconds(enrageDuration);
+        isEnrage = false;
+        animator.SetBool("IsEnrage", isEnrage);
         dmg.normalMeleeDmg = normalMeleeDamage;
     }
 }

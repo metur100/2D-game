@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class LockCanvasKnight : MonoBehaviour
 {
-    private float posXMinus = -25;
-    private float posXPlus = -25;
+    private float posXMinus = -20;
+    private float posXPlus = -20;
     private float posYMinus = 35;
     private float posYPlus = 35;
     Transform t;
