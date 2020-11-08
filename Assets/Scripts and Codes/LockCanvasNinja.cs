@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class LockCanvasNinja : MonoBehaviour
 {
-    private float posXMinus = 18;
-    private float posXPlus = 18;
-    private float posYMinus = 35;
-    private float posYPlus = 35;
+    private float posXMinus = 90;
+    private float posXPlus = 90;
+    private float posYMinus = 80;
+    private float posYPlus = 80;
     Transform t;
     public float fixedRotation = 5;
 

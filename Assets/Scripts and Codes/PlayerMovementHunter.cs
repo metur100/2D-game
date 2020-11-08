@@ -38,10 +38,10 @@ public class PlayerMovementHunter : MonoBehaviour
         //{
         //    crouch = false;
         //}
-        if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
+        //if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
+        //{
+        //    GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        //}
     }
 
     public void OnLanding()

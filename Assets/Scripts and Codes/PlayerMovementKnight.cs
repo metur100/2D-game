@@ -8,16 +8,16 @@ public class PlayerMovementKnight : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public GameObject gameOverUI;
-    private float normalMovementSpeed = 70f;
+    private float normalMovementSpeed = 120f;
     private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 70f;
+    private float maxMovementSpeed = 120f;
     private float trapMovementSpeed = 0f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 2f;
     private float trapOverTimeDuration = 3f;
     private bool jump = false;
     private bool crouch = false;
-    private bool grounded;
+    //private bool grounded;
 
     void Update()
     {

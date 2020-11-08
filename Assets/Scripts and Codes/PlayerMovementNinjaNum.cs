@@ -8,9 +8,9 @@ public class PlayerMovementNinjaNum : MonoBehaviour
     public Animator animator;
     public GameObject gameOverUI;
     public Rigidbody2D rb;
-    public float normalMovementSpeed = 70f;
+    public float normalMovementSpeed = 120f;
     private float trapMoveSpeed = 0f;
-    private float maxMovementSpeed = 70f;
+    private float maxMovementSpeed = 120f;
     private float horizontalMove = 0f;
     private float trapOverTimeDuration = 3f;
     private bool jump = false;
@@ -36,10 +36,10 @@ public class PlayerMovementNinjaNum : MonoBehaviour
         {
             crouch = false;
         }
-        if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
+        //if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
+        //{
+        //    GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        //}
     }
 
     public void OnLanding()

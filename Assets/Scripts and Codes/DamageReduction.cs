@@ -23,7 +23,7 @@ public class DamageReduction : MonoBehaviour
     //public int normalMeleeAttackDamageHolyKnightNum = -20;
     private float dmgReductionDuration = 1f;
     private bool isCooldownDmgRed = false;
-    private float DmgRedCooldown = 1f;
+    private float DmgRedCooldown = 2f;
     // Start is called before the first frame update
     void Start()
     {
