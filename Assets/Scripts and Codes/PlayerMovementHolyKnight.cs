@@ -10,10 +10,10 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     public GameObject gameOverUI;
     public Rigidbody2D rb;
     public Image speeding;
-    public float normalMovementSpeed = 70f;
+    public float normalMovementSpeed = 120f;
     private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 70f;
-    private float incraseMovementSpeed = 140f;
+    private float maxMovementSpeed = 120f;
+    private float incraseMovementSpeed = 240f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 1f;
     private float speedOverTimeDuration = 3f;
@@ -22,7 +22,7 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     private float trapMovementSpeed = 0f;
     private bool jump = false;
     //private bool crouch = false;
-    private bool grounded;
+    //private bool grounded;
     private bool isSpeedingCd = false;
 
     private void Start()
@@ -34,6 +34,12 @@ public class PlayerMovementHolyKnight : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+            animator.SetBool("IsJumping", true);
+            FindObjectOfType<AudioManager>().Play("Jump");
+        }
         if (Input.GetKeyDown(KeyCode.E) && isSpeedingCd == false)
         {
             isSpeedingCd = true;
@@ -48,12 +54,6 @@ public class PlayerMovementHolyKnight : MonoBehaviour
                 speeding.fillAmount = 0;
                 isSpeedingCd = false;
             }
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("IsJumping", true);
-            FindObjectOfType<AudioManager>().Play("Jump");
         }
         //if (Input.GetButtonDown("Crouch"))
         //{
@@ -83,7 +83,7 @@ public class PlayerMovementHolyKnight : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
-        if (rb.position.y < -6f)
+        if (rb.position.y < -30f)
         {
             gameOverUI.SetActive(true);
         }

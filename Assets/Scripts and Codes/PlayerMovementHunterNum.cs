@@ -8,9 +8,9 @@ public class PlayerMovementHunterNum : MonoBehaviour
     public Animator animator;
     public GameObject gameOverUI;
     public Rigidbody2D rb;
-    private float normalMovementSpeed = 70f;
+    public float normalMovementSpeed = 120f;
     private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 70f;
+    private float maxMovementSpeed = 120f;
     private float horizontalMove = 0f;
     private float trapMovementSpeed = 0f;
     private float trapOverTimeDuration = 3f;
@@ -58,7 +58,7 @@ public class PlayerMovementHunterNum : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
-        if (rb.position.y < -6f)
+        if (rb.position.y < -30f)
         {
             gameOverUI.SetActive(true);
         }

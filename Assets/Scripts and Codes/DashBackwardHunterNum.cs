@@ -8,7 +8,7 @@ public class DashBackwardHunterNum : MonoBehaviour
     public Image dashingBackward;
     ///public Animator animator;
     private Rigidbody2D rb;
-    private float dashSpeed = 50f;
+    private float dashSpeed = 100f;
     private float dashTime;
     private float startDashTime = 0.5f;
     private int direction;

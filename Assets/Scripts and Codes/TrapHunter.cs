@@ -8,7 +8,7 @@ public class TrapHunter : MonoBehaviour
     private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
     private PlayerMovementHolyKnight mSpeedHolyKnight;
-    private float speedOfTrap = 30f;
+    private float speedOfTrap = 100f;
     void Start()
     {
         rb.velocity = transform.right * speedOfTrap;

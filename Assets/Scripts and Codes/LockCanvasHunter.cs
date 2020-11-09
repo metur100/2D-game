@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class LockCanvasHunter : MonoBehaviour
 {
-    private float posXMinus = 32;
-    private float posXPlus = 32;
-    private float posYMinus = 35;
-    private float posYPlus = 35;
+    private float posXMinus = 150;
+    private float posXPlus = 150;
+    private float posYMinus = 80;
+    private float posYPlus = 80;
     Transform t;
     public float fixedRotation = 5;
 

@@ -41,6 +41,7 @@ public class MeleeAttack : MonoBehaviour
             isCooldownEnrage = true;
             enrage.fillAmount = 1;
             StartCoroutine(EnrageDamage());
+            FindObjectOfType<AudioManager>().Play("Enrage");
             //FindObjectOfType<AudioManager>().Play("");
         }
         if (Input.GetButtonDown("meleeAttack") && !isMaleeAttacking && isCooldownMaleeAttack == false)
