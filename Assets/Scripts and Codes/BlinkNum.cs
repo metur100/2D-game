@@ -8,7 +8,7 @@ public class BlinkNum : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Image blinking;
-    private float blinkDistance = 8f;
+    private float blinkDistance = 25f;
     private float blinkTimer;
     private float blinkTime = 1f;
     private bool facingRight;

@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour
     public Rigidbody2D rb;
     //public bool knockBackOnHit = false;
     public int damageDoneFireB = -50;
-    private float speedOfFireBall = 50f;
+    private float speedOfFireBall = 100f;
     void Start()
     {
         rb.velocity = transform.right * speedOfFireBall;

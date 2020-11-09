@@ -6,7 +6,7 @@ public class FrostBall : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int damageDoneFrostB = -20;  
-    private int speedOfFrostBullet = 50;
+    private int speedOfFrostBullet = 100;
     private PlayerMovementHunter mSpeedHunter;
     private PlayerMovementKnight mSpeedKnight;
     void Start()

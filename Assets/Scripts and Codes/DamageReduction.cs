@@ -9,6 +9,7 @@ public class DamageReduction : MonoBehaviour
     public FrostBall frostBallDamage = new FrostBall();
     public FireBall fireBallDamage = new FireBall();
     public BulletHunter bulletHunterDamage = new BulletHunter();
+    public Animator animator;
     //public MeleeAtackHolyKnight meleeAttackDamage = new MeleeAtackHolyKnight();
     //public MeleeAtackHolyKnightNum meleeAttackDamageNum = new MeleeAtackHolyKnightNum();
     public int damageReductionFrostB = 0;
@@ -24,6 +25,7 @@ public class DamageReduction : MonoBehaviour
     private float dmgReductionDuration = 1f;
     private bool isCooldownDmgRed = false;
     private float DmgRedCooldown = 2f;
+    private bool isBlock = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,9 +55,13 @@ public class DamageReduction : MonoBehaviour
         frostBallDamage.damageDoneFrostB = damageReductionFrostB;
         fireBallDamage.damageDoneFireB = damageReductionFireB;
         bulletHunterDamage.damageDoneBullet = damageReductionBulletHunt;
-       // meleeAttackDamage.normalMeleeDamage = damageReductionMeleeAttackHolyKnight;
+        isBlock = true;
+        animator.SetBool("IsBlock", isBlock);
+        // meleeAttackDamage.normalMeleeDamage = damageReductionMeleeAttackHolyKnight;
         //meleeAttackDamageNum.normalMeleeDamage = damageReductionMeleeAttackHolyKnightNum;
         yield return new WaitForSeconds(dmgReductionDuration);
+        isBlock = false;
+        animator.SetBool("IsBlock", isBlock);
         frostBallDamage.damageDoneFrostB = normalFrostBDmg;
         fireBallDamage.damageDoneFireB = normalFireBDmg;
         bulletHunterDamage.damageDoneBullet = normalBulletDamage;
