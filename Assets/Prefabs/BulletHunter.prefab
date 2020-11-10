@@ -146,4 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2701563722034372949}
   knockBackOnHit: 0
-  damageDoneBullet: -10
+  damageDoneBullet: -20

@@ -8,7 +8,7 @@ public class MeleeAtackHolyKnight : MonoBehaviour
 {
     public Collider2D meleeTrigger;
     public Animator animator;
-    public MaleTrigger dmg;
+    public MeleeTriggerHolyKnight dmg;
     public Image meleeAttack;
     private bool isMaleeAttacking = false;
     private float maleeAttackTimer = 0.0f;

@@ -8,6 +8,7 @@ public class BulletHunter : MonoBehaviour
     public bool knockBackOnHit = false;
     public int damageDoneBullet = -20;
     private float speedOfBullet = 150f;
+    private float durationOfStun = 3f;
     void Start()
     {
         rb.velocity = transform.right * speedOfBullet;
@@ -66,4 +67,14 @@ public class BulletHunter : MonoBehaviour
 
         Destroy(gameObject);
     }
+    //public void CoroutineNoDamageFromArrowHunter()
+    //{
+    //    StartCoroutine(GetNoDamageFromArrowHunter());
+    //}
+    //IEnumerator GetNoDamageFromArrowHunter()
+    //{
+    //    damageDoneBullet = damgeDoneWhenStuned;
+    //    yield return new WaitForSeconds(durationOfStun);
+    //    damageDoneBullet = damageDoneBulletMax;
+    //}
 }

@@ -9,6 +9,10 @@ public class FrostBall : MonoBehaviour
     private int speedOfFrostBullet = 100;
     private PlayerMovementHunter mSpeedHunter;
     private PlayerMovementKnight mSpeedKnight;
+    private PlayerMovementHolyKnight mSpeedHolyKnight;
+    private PlayerMovementHolyKnightNum mSpeedHolyKnightNum;
+    private PlayerMovementHunterNum mSpeedHunterNum;
+    private PlayerMovementKnightNum mSpeedKnightNum;
     void Start()
     {
         rb.velocity = transform.right * speedOfFrostBullet;

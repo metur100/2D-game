@@ -7,7 +7,6 @@ TagManager:
   - Player_Knight
   - Player_Ninja
   - Player_Hunter
-  - Player_Njinja
   - Player_HolyKnight
   layers:
   - Default

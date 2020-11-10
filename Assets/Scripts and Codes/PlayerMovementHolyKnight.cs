@@ -11,7 +11,7 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     public Rigidbody2D rb;
     public Image speeding;
     public float normalMovementSpeed = 120f;
-    private float slowedMovementSpeed = 20f;
+    private float slowedMovementSpeed = 50f;
     private float maxMovementSpeed = 120f;
     private float incraseMovementSpeed = 240f;
     private float horizontalMove = 0f;

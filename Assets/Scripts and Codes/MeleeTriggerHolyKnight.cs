@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaleTrigger : MonoBehaviour
+public class MeleeTriggerHolyKnight : MonoBehaviour
 {
-   public int normalMeleeDmg = -20;
+    public int normalMeleeDmg = -20;
 
-   void OnTriggerEnter2D (Collider2D other)
-   {
+    void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.isTrigger != true && other.CompareTag("Player_Ninja"))
         {
             HealthNinja eHealth = other.gameObject.GetComponent<HealthNinja>();
@@ -18,7 +18,7 @@ public class MaleTrigger : MonoBehaviour
             HealthHunter eHealth = other.gameObject.GetComponent<HealthHunter>();
             eHealth.ModifyHealth(normalMeleeDmg);
         }
-        else if (other.isTrigger != true && other.CompareTag("Player_HolyKnight"))
+        else if (other.isTrigger != true && other.CompareTag("Player_Knight"))
         {
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
             eHealth.ModifyHealth(normalMeleeDmg);

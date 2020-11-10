@@ -11,6 +11,8 @@ public class ShootingStunHolyKnight : MonoBehaviour
     public Image shootingStun;
     private float cooldownStun = 2f;
     private bool iscooldownStun = false;
+    private bool isStun = false;
+    private bool canShoot;
 
     void Start()
     {
@@ -20,12 +22,11 @@ public class ShootingStunHolyKnight : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("StunHolyKnight") && iscooldownStun == false)
+        if (Input.GetButtonDown("StunHolyKnight") && iscooldownStun == false )
         {
             iscooldownStun = true;
             shootingStun.fillAmount = 1;
-            ShootBullet();
-            animator.SetTrigger("Throw");
+            StartCoroutine(DelyOnShooting());
         }
         if (iscooldownStun)
         {
@@ -39,6 +40,19 @@ public class ShootingStunHolyKnight : MonoBehaviour
     }
     void ShootBullet()
     {
+        if(canShoot)
         Instantiate(stunPrefab, firePointStun.position, firePointStun.rotation);
+    }
+    IEnumerator DelyOnShooting()
+    {
+        canShoot = false;
+        ShootBullet();
+        isStun = true;
+        animator.SetBool("IsStun", isStun);
+        yield return new WaitForSeconds(0.55f);
+        canShoot = true;
+        ShootBullet();
+        isStun = false;
+        animator.SetBool("IsStun", isStun);
     }
 }
