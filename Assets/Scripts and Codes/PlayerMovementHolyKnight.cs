@@ -21,8 +21,7 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     private float trapOverTimeDuration = 3f;
     private float trapMovementSpeed = 0f;
     private bool jump = false;
-    //private bool crouch = false;
-    //private bool grounded;
+    private bool isSpeeding = false;
     private bool isSpeedingCd = false;
 
     private void Start()
@@ -105,8 +104,12 @@ public class PlayerMovementHolyKnight : MonoBehaviour
     IEnumerator IncreasedMovementSpeed()
     {
         normalMovementSpeed = incraseMovementSpeed;
+        isSpeeding = true;
+        animator.SetBool("IsRunning", isSpeeding);
         yield return new WaitForSeconds(speedOverTimeDuration);
         normalMovementSpeed = maxMovementSpeed;
+        isSpeeding = false;
+        animator.SetBool("IsRunning", isSpeeding);
     }
     IEnumerator stopMoveIfTrapHolyKnight()
     {
