@@ -5471,6 +5471,7 @@ MonoBehaviour:
   invulnerable: {fileID: 871392396}
   bulletDealsNoDmg: {fileID: -7991271944654119458, guid: 389237288dad3ae4bb65dc75aceccbbe,
     type: 3}
+  animator: {fileID: 1014970877}
 --- !u!114 &1014970873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8117,7 +8118,6 @@ GameObject:
   - component: {fileID: 1414490219}
   - component: {fileID: 1414490218}
   - component: {fileID: 1414490217}
-  - component: {fileID: 1414490216}
   - component: {fileID: 1414490215}
   - component: {fileID: 1414490214}
   m_Layer: 19
@@ -8158,20 +8158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerable: {fileID: 554919515}
   anim: {fileID: 1414490220}
---- !u!114 &1414490216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414490213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abebbb43d2840e84aad648dabf01b029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incraseMovementSpeed: 240
-  normalMoveSpeed: 120
 --- !u!114 &1414490217
 MonoBehaviour:
   m_ObjectHideFlags: 0

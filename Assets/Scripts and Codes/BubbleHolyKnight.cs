@@ -26,9 +26,6 @@ public class BubbleHolyKnight : MonoBehaviour
             isCooldownInvuln = true;
             invulnerable.fillAmount = 1;
             StartCoroutine(GetInvulnerable());
-            isBubble = true;
-            anim.SetBool("isBubble", isBubble);
-            isBubble = false;
             //FindObjectOfType<AudioManager>().Play("");
         }
         if (isCooldownInvuln)
@@ -47,10 +44,14 @@ public class BubbleHolyKnight : MonoBehaviour
         Physics2D.IgnoreLayerCollision(19, 14, true);
         Physics2D.IgnoreLayerCollision(19, 18, true);
         Physics2D.IgnoreLayerCollision(19, 10, true);
-        yield return new WaitForSeconds(3f);
+        isBubble = true;
+        anim.SetBool("isBubble", isBubble);
+        yield return new WaitForSeconds(4f);
         Physics2D.IgnoreLayerCollision(19, 17, false);
         Physics2D.IgnoreLayerCollision(19, 14, false);
         Physics2D.IgnoreLayerCollision(19, 18, false);
         Physics2D.IgnoreLayerCollision(19, 10, true);
+        isBubble = false;
+        anim.SetBool("isBubble", isBubble);
     }
 }
