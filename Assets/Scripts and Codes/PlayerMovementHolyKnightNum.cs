@@ -10,10 +10,10 @@ public class PlayerMovementHolyKnightNum : MonoBehaviour
     public GameObject gameOverUI;
     public Rigidbody2D rb;
     public Image speeding;
-    public float normalMovementSpeed = 70f;
-    private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 70f;
-    private float incraseMovementSpeed = 140f;
+    public float normalMovementSpeed = 200f;
+    private float slowedMovementSpeed = 50f;
+    private float maxMovementSpeed = 200f;
+    private float incraseMovementSpeed = 300f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 1f;
     private float speedOverTimeDuration = 3f;
@@ -54,40 +54,23 @@ public class PlayerMovementHolyKnightNum : MonoBehaviour
             animator.SetBool("IsJumping", true);
             FindObjectOfType<AudioManager>().Play("Jump");
         }
-        //if (Input.GetButtonDown("Crouch"))
-        //{
-        //    crouch = true;
-        //}
-        //else if (Input.GetButtonUp("Crouch"))
-        //{
-        //    crouch = false;
-        //}
-        //if (grounded && GetComponent<FireBall>().knockBackOnHit == false)
-        //{
-        //    GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        //}
     }
 
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
     }
-
-    //public void OnCrouching(bool isCrouching)
-    //{
-    //    animator.SetBool("IsCrouching", isCrouching);
-    //}
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
-        if (rb.position.y < -6f)
+        if (rb.position.y < -30f)
         {
             gameOverUI.SetActive(true);
         }
     }
-    public void CoroutineHunterSlowOverTimeFrost()
+    public void CoroutineHolyKnightSlowOverTimeFrost()
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }

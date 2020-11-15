@@ -20,8 +20,8 @@ public class MeleeAttack : MonoBehaviour
     private bool isCooldownEnrage = false;
     private bool isEnrage = false;
     private float enrageDuration = 6f;
-    private int enragedMeleeDamage = -40;
-    private int normalMeleeDamage = -20;
+    public int enragedMeleeDamage = -40;
+    public int normalMeleeDamage = -20;
 
     void Start()
     {

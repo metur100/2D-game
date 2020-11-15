@@ -12,6 +12,7 @@ public class StunHolyKnight : MonoBehaviour
     private PlayerMovementKnightNum mSpeedKnightNum;
     private PlayerMovementHunterNum mSpeedHunterNum;
     public BulletHunter bulletDealsNoDamage = new BulletHunter();
+    //add meleeTrigger for holyknight
     public MaleTrigger noDmgMeleeAttack = new MaleTrigger();
     public FrostBall noDmgFrostBall = new FrostBall();
     public FireBall noDmgFireBall = new FireBall();
@@ -28,6 +29,7 @@ public class StunHolyKnight : MonoBehaviour
     private float destroyStun = 4f;
     void Start()
     {
+        StartCoroutine(DestroyGameobject());
         rb.velocity = transform.right * speedOfStun;
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -36,35 +38,46 @@ public class StunHolyKnight : MonoBehaviour
         {
             mSpeedKnight = other.gameObject.GetComponent<PlayerMovementKnight>();
             mSpeedKnight.CoroutineMoveIfTrapKnight();
-            mSpeedKnightNum = other.gameObject.GetComponent<PlayerMovementKnightNum>();
-            mSpeedKnightNum.CoroutineMoveIfTrapKnight();
 
             StartCoroutine(GetNoDamageFromMeleeAttackKnight());
-
-            Object.Destroy(gameObject, destroyStun);
         }
         if (other.gameObject.tag == "Player_Hunter")
         {
             StartCoroutine(GetNoDamageFromArrowHunter());
-            //mSpeedHunter = other.gameObject.GetComponent<PlayerMovementHunter>();
-            //mSpeedHunter.CoroutineMoveIfTrapHunter();
-            mSpeedHunterNum = other.gameObject.GetComponent<PlayerMovementHunterNum>();
-            mSpeedHunterNum.CoroutineMoveIfTrapHunter();
-
-            Object.Destroy(gameObject, destroyStun);
+            mSpeedHunter = other.gameObject.GetComponent<PlayerMovementHunter>();
+            mSpeedHunter.CoroutineMoveIfTrapHunter();
         }
 
         if (other.gameObject.tag == "Player_Ninja")
         {
             mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
             mSpeedNinja.CoroutineMoveIfTrapNinja();
+
+            StartCoroutine(GetNoDamageFromFrostBall());
+            StartCoroutine(GetNoDamageFromFireBall());
+        }
+
+        if (other.gameObject.tag == "Player_Ninja_Num")
+        {
             mSpeedNinjaNum = other.gameObject.GetComponent<PlayerMovementNinjaNum>();
             mSpeedNinjaNum.CoroutineMoveIfTrapNinja();
 
             StartCoroutine(GetNoDamageFromFrostBall());
             StartCoroutine(GetNoDamageFromFireBall());
+        }
 
-            Object.Destroy(gameObject, destroyStun);
+        if (other.gameObject.tag == "Player_Knight_Num")
+        {
+            mSpeedKnightNum = other.gameObject.GetComponent<PlayerMovementKnightNum>();
+            mSpeedKnightNum.CoroutineMoveIfTrapKnight();
+
+            StartCoroutine(GetNoDamageFromMeleeAttackKnight());
+        }
+        if (other.gameObject.tag == "Player_Hunter_Num")
+        {
+            StartCoroutine(GetNoDamageFromArrowHunter());
+            mSpeedHunterNum = other.gameObject.GetComponent<PlayerMovementHunterNum>();
+            mSpeedHunterNum.CoroutineMoveIfTrapHunter();
         }
     }
     IEnumerator GetNoDamageFromArrowHunter()
@@ -90,5 +103,10 @@ public class StunHolyKnight : MonoBehaviour
         noDmgFireBall.damageDoneFireB = fireBallDealsNoDamage;
         yield return new WaitForSeconds(durationOfStun);
         noDmgFireBall.damageDoneFireB = fireBallMaxDamage;
+    }
+    IEnumerator DestroyGameobject()
+    {
+        yield return new WaitForSeconds(0.07f);
+        Destroy(gameObject);
     }
 }

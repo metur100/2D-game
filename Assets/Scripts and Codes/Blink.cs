@@ -23,14 +23,14 @@ public class Blink : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && canBlink && isBlinkCooldown == false)
+        if (Input.GetKeyDown(KeyCode.E) && canBlink && isBlinkCooldown == false)
         {
             // PlaySound(0);
             animator.SetBool("isBlinking", true);
             blinking.fillAmount = 1;
             canBlink = false;
             isBlinkCooldown = true;
-        }     
+        }
         else
             animator.SetBool("isBlinking", false);
 
@@ -61,14 +61,14 @@ public class Blink : MonoBehaviour
             }
         }
     }
-   void Blinking()
-   {
-       Vector3 blink;
-       if (facingRight)
-           blink = new Vector3(blinkDistance, 0, 0);
-       else
-           blink = new Vector3(-blinkDistance, 0, 0);
-   
-       transform.position += blink;
-   }
+    void Blinking()
+    {
+        Vector3 blink;
+        if (facingRight)
+            blink = new Vector3(blinkDistance, 0, 0);
+        else
+            blink = new Vector3(-blinkDistance, 0, 0);
+
+        transform.position += blink;
+    }
 }

@@ -11,6 +11,7 @@ public class BubbleHolyKnightNum : MonoBehaviour
     private bool isCooldownInvuln = false;
     private float invulnerabelCooldown = 9f;
     private bool isBubble = false;
+    private float bubbleDuration = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +27,6 @@ public class BubbleHolyKnightNum : MonoBehaviour
             isCooldownInvuln = true;
             invulnerable.fillAmount = 1;
             StartCoroutine(GetInvulnerable());
-            isBubble = true;
-            anim.SetBool("isBubble", isBubble);
-            isBubble = false;
             //FindObjectOfType<AudioManager>().Play("");
         }
         if (isCooldownInvuln)
@@ -46,11 +44,19 @@ public class BubbleHolyKnightNum : MonoBehaviour
         Physics2D.IgnoreLayerCollision(19, 17, true);
         Physics2D.IgnoreLayerCollision(19, 14, true);
         Physics2D.IgnoreLayerCollision(19, 18, true);
-        Physics2D.IgnoreLayerCollision(19, 10, true);
-        yield return new WaitForSeconds(3f);
+        Physics2D.IgnoreLayerCollision(19, 15, true);
+        Physics2D.IgnoreLayerCollision(19, 16, true);
+        Physics2D.IgnoreLayerCollision(19, 20, true);
+        isBubble = true;
+        anim.SetBool("isBubble", isBubble);
+        yield return new WaitForSeconds(bubbleDuration);
         Physics2D.IgnoreLayerCollision(19, 17, false);
         Physics2D.IgnoreLayerCollision(19, 14, false);
         Physics2D.IgnoreLayerCollision(19, 18, false);
-        Physics2D.IgnoreLayerCollision(19, 10, true);
+        Physics2D.IgnoreLayerCollision(19, 15, false);
+        Physics2D.IgnoreLayerCollision(19, 16, false);
+        Physics2D.IgnoreLayerCollision(19, 20, false);
+        isBubble = false;
+        anim.SetBool("isBubble", isBubble);
     }
 }

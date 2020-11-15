@@ -8,7 +8,7 @@ public class DashMoveNum : MonoBehaviour
     public Image dashing;
     public Animator animator;
     private Rigidbody2D rb;
-    private float dashSpeed = 50f;
+    private float dashSpeed = 100f;
     private float dashTime;
     private float startDashTime = 0.5f;
     private int direction;
@@ -26,7 +26,7 @@ public class DashMoveNum : MonoBehaviour
     {
         if (direction == 0)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && isDashCooldown == false)
+            if (Input.GetKeyDown(KeyCode.Keypad7) && isDashCooldown == false)
             {
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
@@ -34,7 +34,7 @@ public class DashMoveNum : MonoBehaviour
                 direction = 1;
                 FindObjectOfType<AudioManager>().Play("Dash");
             }
-            else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
+            else if (Input.GetKeyDown(KeyCode.Keypad9) && isDashCooldown == false)
             {
                 isDashing = true;
                 isDashCooldown = true;

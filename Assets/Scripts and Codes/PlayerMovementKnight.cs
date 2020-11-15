@@ -8,16 +8,15 @@ public class PlayerMovementKnight : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public GameObject gameOverUI;
-    private float normalMovementSpeed = 120f;
-    private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 120f;
+    public float normalMovementSpeed = 200f;
+    private float slowedMovementSpeed = 50f;
+    private float maxMovementSpeed = 200f;
     private float trapMovementSpeed = 0f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 2f;
     private float trapOverTimeDuration = 3f;
     private bool jump = false;
     private bool crouch = false;
-    //private bool grounded;
 
     void Update()
     {
@@ -58,7 +57,7 @@ public class PlayerMovementKnight : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
 
-        if (rb.position.y < -6f)
+        if (rb.position.y < -30f)
         {
             gameOverUI.SetActive(true);
         }

@@ -8,6 +8,9 @@ public class TrapHunter : MonoBehaviour
     private PlayerMovementNinja mSpeedNinja;
     private PlayerMovementKnight mSpeedKnight;
     private PlayerMovementHolyKnight mSpeedHolyKnight;
+    private PlayerMovementNinjaNum mSpeedNinjaNum;
+    private PlayerMovementKnightNum mSpeedKnightNum;
+    private PlayerMovementHolyKnightNum mSpeedHolyKnightNum;
     private float speedOfTrap = 100f;
     void Start()
     {
@@ -34,6 +37,28 @@ public class TrapHunter : MonoBehaviour
         {
             mSpeedNinja = other.gameObject.GetComponent<PlayerMovementNinja>();
             mSpeedNinja.CoroutineMoveIfTrapNinja();
+
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player_Knight_Num")
+        {
+            mSpeedKnightNum = other.gameObject.GetComponent<PlayerMovementKnightNum>();
+            mSpeedKnightNum.CoroutineMoveIfTrapKnight();
+
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player_HolyKnight_Num")
+        {
+            mSpeedHolyKnightNum = other.gameObject.GetComponent<PlayerMovementHolyKnightNum>();
+            mSpeedHolyKnightNum.CoroutineMoveIfTrapHolyKnight();
+
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Player_Ninja_Num")
+        {
+            mSpeedNinjaNum = other.gameObject.GetComponent<PlayerMovementNinjaNum>();
+            mSpeedNinjaNum.CoroutineMoveIfTrapNinja();
 
             Destroy(gameObject);
         }

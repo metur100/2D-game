@@ -8,9 +8,9 @@ public class PlayerMovementKnightNum : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public GameObject gameOverUI;
-    private float normalMovementSpeed = 70f;
-    private float slowedMovementSpeed = 20f;
-    private float maxMovementSpeed = 70f;
+    public float normalMovementSpeed = 200f;
+    private float slowedMovementSpeed = 50f;
+    private float maxMovementSpeed = 200f;
     private float trapMovementSpeed = 0f;
     private float horizontalMove = 0f;
     private float slowOverTimeDuration = 2f;
@@ -58,7 +58,7 @@ public class PlayerMovementKnightNum : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
 
-        if (rb.position.y < -6f)
+        if (rb.position.y < -30f)
         {
             gameOverUI.SetActive(true);
         }

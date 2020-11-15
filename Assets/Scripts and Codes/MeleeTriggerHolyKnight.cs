@@ -23,5 +23,30 @@ public class MeleeTriggerHolyKnight : MonoBehaviour
             HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
             eHealth.ModifyHealth(normalMeleeDmg);
         }
+        else if (other.isTrigger != true && other.CompareTag("Player_HolyKnight"))
+        {
+            HealthHolyKnight eHealth = other.gameObject.GetComponent<HealthHolyKnight>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
+        if (other.isTrigger != true && other.CompareTag("Player_Ninja_Num"))
+        {
+            HealthNinjaNum eHealth = other.gameObject.GetComponent<HealthNinjaNum>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
+        else if (other.isTrigger != true && other.CompareTag("Player_Hunter_Num"))
+        {
+            HealthHunterNum eHealth = other.gameObject.GetComponent<HealthHunterNum>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
+        else if (other.isTrigger != true && other.CompareTag("Player_Knight_Num"))
+        {
+            HealthKnightNum eHealth = other.gameObject.GetComponent<HealthKnightNum>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
+        else if (other.isTrigger != true && other.CompareTag("Player_HolyKnight_Num"))
+        {
+            HealthHolyKnightNum eHealth = other.gameObject.GetComponent<HealthHolyKnightNum>();
+            eHealth.ModifyHealth(normalMeleeDmg);
+        }
     }
 }

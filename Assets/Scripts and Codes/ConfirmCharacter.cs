@@ -10,23 +10,21 @@ public class ConfirmCharacter : MonoBehaviour
 
     public void ConfirmButton()
     {
-        if (character.index == 0 && character2.index == 1 || character.index == 1 && character2.index == 0)
-        {
-          // PlayerPrefs.SetInt("CharacterSelected", character.index);
-          // PlayerPrefs.SetInt("CharacterSelected2", character2.index);
-            SceneManager.LoadScene("Knight vs. Mage");
-        }
-        else if (character.index == 1 && character2.index == 2 || character.index == 2 && character2.index == 1)
-        {
-            //  PlayerPrefs.SetInt("CharacterSelected", character.index);
-            //  PlayerPrefs.SetInt("CharacterSelected2", character2.index);
-            SceneManager.LoadScene("Mage vs. Hunter");
-        }
-        else if (character.index == 0 && character2.index == 2 || character.index == 2 && character2.index == 0)
-        {
-            // PlayerPrefs.SetInt("CharacterSelected", character.index);
-            // PlayerPrefs.SetInt("CharacterSelected2", character2.index);
-            SceneManager.LoadScene("Knight vs. Hunter");
-        }
+        PlayerPrefs.SetInt("CharacterSelected", character.index);
+        PlayerPrefs.SetInt("CharacterSelected2", character2.index);
+        SceneManager.LoadScene("Main");
+
+        //if (character.index == 0 && character2.index == 1 || character.index == 1 && character2.index == 0)
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
+        //else if (character.index == 1 && character2.index == 2 || character.index == 2 && character2.index == 1)
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
+        //else if (character.index == 0 && character2.index == 2 || character.index == 2 && character2.index == 0)
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
     }
 }

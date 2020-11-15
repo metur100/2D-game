@@ -8,6 +8,10 @@ TagManager:
   - Player_Ninja
   - Player_Hunter
   - Player_HolyKnight
+  - Player_Hunter_Num
+  - Player_HolyKnight_Num
+  - Player_Ninja_Num
+  - Player_Knight_Num
   layers:
   - Default
   - TransparentFX
@@ -29,7 +33,7 @@ TagManager:
   - MeleeAttackTrigger
   - TrapHunter
   - HolyKnight
-  - 
+  - StunHolyKnight
   - 
   - 
   - 
