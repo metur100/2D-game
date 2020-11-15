@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StunHolyKnight : MonoBehaviour
+public class StunHolyKnightNum : MonoBehaviour
 {
     public Rigidbody2D rb;
     private PlayerMovementNinja mSpeedNinja;
@@ -11,10 +11,10 @@ public class StunHolyKnight : MonoBehaviour
     private PlayerMovementNinjaNum mSpeedNinjaNum;
     private PlayerMovementKnightNum mSpeedKnightNum;
     private PlayerMovementHunterNum mSpeedHunterNum;
-    private PlayerMovementHolyKnightNum mSpeedHolyKnightNum;
+    private PlayerMovementHolyKnight mSpeedHolyKnight;
     public BulletHunter bulletDealsNoDamage = new BulletHunter();
     public MeleePrefabKnight noDmgMeleeAttackKnight = new MeleePrefabKnight();
-    public MeleePrefabHolyKnightNum noDmgMeleeAttackHolyKnightNum = new MeleePrefabHolyKnightNum();
+    public MeleePrefabHolyKnight noDmgMeleeAttackHolyKnight = new MeleePrefabHolyKnight();
     public FrostBall noDmgFrostBall = new FrostBall();
     public FireBall noDmgFireBall = new FireBall();
     private int bulletDealsNoDmg = 0;
@@ -80,12 +80,11 @@ public class StunHolyKnight : MonoBehaviour
             mSpeedHunterNum = other.gameObject.GetComponent<PlayerMovementHunterNum>();
             mSpeedHunterNum.CoroutineMoveIfTrapHunter();
         }
-        if (other.gameObject.tag == "Player_HolyKnight_Num")
+        if (other.gameObject.tag == "Player_HolyKnight")
         {
             StartCoroutine(GetNoDamageFromMeleeAttackHolyKnight());
-
-            mSpeedHolyKnightNum = other.gameObject.GetComponent<PlayerMovementHolyKnightNum>();
-            mSpeedHolyKnightNum.CoroutineMoveIfTrapHolyKnight();
+            mSpeedHolyKnight = other.gameObject.GetComponent<PlayerMovementHolyKnight>();
+            mSpeedHolyKnight.CoroutineMoveIfTrapHolyKnight();
         }
     }
     IEnumerator GetNoDamageFromArrowHunter()
@@ -102,9 +101,9 @@ public class StunHolyKnight : MonoBehaviour
     }
     IEnumerator GetNoDamageFromMeleeAttackHolyKnight()
     {
-        noDmgMeleeAttackHolyKnightNum.damageDoneMeleeAttack = meleeAttackNoDmg;
+        noDmgMeleeAttackHolyKnight.damageDoneMeleeAttack = meleeAttackNoDmg;
         yield return new WaitForSeconds(durationOfStun);
-        noDmgMeleeAttackHolyKnightNum.damageDoneMeleeAttack = meleeAttackMaxDmg;
+        noDmgMeleeAttackHolyKnight.damageDoneMeleeAttack = meleeAttackMaxDmg;
     }
     IEnumerator GetNoDamageFromFrostBall()
     {

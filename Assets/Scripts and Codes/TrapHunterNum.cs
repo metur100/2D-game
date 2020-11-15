@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapHunter : MonoBehaviour
+public class TrapHunterNum : MonoBehaviour
 {
     public Rigidbody2D rb;
     private PlayerMovementNinja mSpeedNinja;
@@ -12,6 +12,7 @@ public class TrapHunter : MonoBehaviour
     private PlayerMovementKnightNum mSpeedKnightNum;
     private PlayerMovementHolyKnightNum mSpeedHolyKnightNum;
     private PlayerMovementHunterNum mSpeedHunterNum;
+    private PlayerMovementHunter mSpeedHunter;
     private float speedOfTrap = 100f;
     void Start()
     {
@@ -64,10 +65,10 @@ public class TrapHunter : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.tag == "Player_Hunter_Num")
+        if (other.gameObject.tag == "Player_Hunter")
         {
-            mSpeedHunterNum = other.gameObject.GetComponent<PlayerMovementHunterNum>();
-            mSpeedHunterNum.CoroutineMoveIfTrapHunter();
+            mSpeedHunter = other.gameObject.GetComponent<PlayerMovementHunter>();
+            mSpeedHunter.CoroutineMoveIfTrapHunter();
 
             Destroy(gameObject);
         }

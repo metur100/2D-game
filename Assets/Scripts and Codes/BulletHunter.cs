@@ -113,6 +113,38 @@ public class BulletHunter : MonoBehaviour
             eHealth.ModifyHealth(damageDoneBullet);
         }
 
+        if (other.tag == "Player_Hunter" && GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(-450, 15);
+            knockBackOnHit = true;
+        }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
+        if (other.tag == "Player_Hunter" && GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(450, -15);
+            knockBackOnHit = true;
+        }
+        if (other.gameObject.tag == "Player_Hunter")
+        {
+            HealthHunter eHealth = other.gameObject.GetComponent<HealthHunter>();
+            eHealth.ModifyHealth(damageDoneBullet);
+        }
+
+        if (other.tag == "Player_Hunter_Num" && GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(-450, 15);
+            knockBackOnHit = true;
+        }// If the player_tag ist Knight and if it's faceing an enemy from right to left, than knock him back 15 on x and 10 on y axes
+        if (other.tag == "Player_Hunter_Num" && GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(450, -15);
+            knockBackOnHit = true;
+        }
+        if (other.gameObject.tag == "Player_Hunter_Num")
+        {
+            HealthHunterNum eHealth = other.gameObject.GetComponent<HealthHunterNum>();
+            eHealth.ModifyHealth(damageDoneBullet);
+        }
+
         Destroy(gameObject);
     }
     //public void CoroutineNoDamageFromArrowHunter()
