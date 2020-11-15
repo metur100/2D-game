@@ -6807,12 +6807,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePointMeleeAttack: {fileID: 413768612}
-  meleePrefab: {fileID: 6459892580861865829, guid: 9784f17f75973a74ebf99a442c13c195,
+  meleePrefab: {fileID: 1067674055605043487, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
   animator: {fileID: 1008176321}
   shootingMeleeAttack: {fileID: 1111383225}
   enrage: {fileID: 1897337106}
-  meleeDamage: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
+  meleeDamage: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
   enragedMeleeDmg: -40
   normalMeleeDamage: -20

@@ -10,7 +10,7 @@ public class ShootingMeleeAttackKnightNum : MonoBehaviour
     public Animator animator;
     public Image shootingMeleeAttack;
     public Image enrage;
-    public MeleePrefabKnight meleeDamage;
+    public MeleePrefabKnightNum meleeDamage;
     public int enragedMeleeDmg = -40;
     public int normalMeleeDamage = -20;
     private float coolddownMeleeAttacking = 2f;
