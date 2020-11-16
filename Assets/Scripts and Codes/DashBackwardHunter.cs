@@ -32,7 +32,7 @@ public class DashBackwardHunter : MonoBehaviour
                 dashingBackward.fillAmount = 1;
                 isDashingBackward = true;
                 direction = 1;
-                FindObjectOfType<AudioManager>().Play("Dash");
+                FindObjectOfType<AudioManager>().Play("DashHunter");
             }
             else if (Input.GetKeyDown(KeyCode.E) && isDashingBackwardCooldown == false)
             {
@@ -40,7 +40,7 @@ public class DashBackwardHunter : MonoBehaviour
                 isDashingBackwardCooldown = true;
                 dashingBackward.fillAmount = 1;
                 direction = 2;
-                FindObjectOfType<AudioManager>().Play("Dash");
+                FindObjectOfType<AudioManager>().Play("DashHunter");
             }
             if (isDashingBackwardCooldown)
             {

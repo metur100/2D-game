@@ -11,6 +11,7 @@ public class DamageReductionNum : MonoBehaviour
     public FireBall fireBallDamage = new FireBall();
     public BulletHunter bulletHunterDamage = new BulletHunter();
     public MeleePrefabHolyKnight meleeAttackDamageHolyKnight = new MeleePrefabHolyKnight();
+    public MeleePrefabHolyKnightNum meleeAttackDamageHolyKnightNum = new MeleePrefabHolyKnightNum();
     public MeleePrefabKnight meleeAttackDamage = new MeleePrefabKnight();
     public int damageReductionFrostB = 0;
     public int damageReductionFireB = 0;
@@ -42,7 +43,7 @@ public class DamageReductionNum : MonoBehaviour
             isCooldownDmgRed = true;
             damageRed.fillAmount = 1;
             StartCoroutine(DamageReductionDurationFrostB());
-            FindObjectOfType<AudioManager>().Play("");
+            FindObjectOfType<AudioManager>().Play("BlockedKnight");
         }
         if (isCooldownDmgRed)
         {
@@ -61,6 +62,7 @@ public class DamageReductionNum : MonoBehaviour
         bulletHunterDamage.damageDoneBullet = damageReductionBulletHunt;
         meleeAttackDamageHolyKnight.damageDoneMeleeAttack = damageReductionMeleeAttackHolyKnight;
         meleeAttackDamage.damageDoneMeleeAttack = damageReductionMeleeAttack;
+        meleeAttackDamageHolyKnightNum.damageDoneMeleeAttack = damageReductionMeleeAttackHolyKnightNum;
         isBlock = true;
         animator.SetBool("IsBlock", isBlock);
         yield return new WaitForSeconds(dmgReductionDuration);
@@ -71,5 +73,6 @@ public class DamageReductionNum : MonoBehaviour
         bulletHunterDamage.damageDoneBullet = normalBulletDamage;
         meleeAttackDamageHolyKnight.damageDoneMeleeAttack = normalMeleeAttackDamageHolyKnight;
         meleeAttackDamage.damageDoneMeleeAttack = normalMeleeAttackDamage;
+        meleeAttackDamageHolyKnightNum.damageDoneMeleeAttack = normalMeleeAttackDamageHolyKnightNum;
     }
 }

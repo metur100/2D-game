@@ -37,12 +37,13 @@ public class PlayerMovementHolyKnight : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-            FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().Play("JumpHolyKnight");
         }
         if (Input.GetKeyDown(KeyCode.E) && isSpeedingCd == false)
         {
             isSpeedingCd = true;
             speeding.fillAmount = 1;
+            FindObjectOfType<AudioManager>().Play("SprintHolyKnight");
             StartCoroutine(IncreasedMovementSpeed());
         }
         if (isSpeedingCd)

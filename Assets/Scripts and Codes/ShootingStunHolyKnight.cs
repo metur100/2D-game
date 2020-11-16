@@ -26,6 +26,7 @@ public class ShootingStunHolyKnight : MonoBehaviour
         {
             iscooldownStun = true;
             shootingStun.fillAmount = 1;
+            FindObjectOfType<AudioManager>().Play("StunHolyKnight");
             StartCoroutine(DelyOnShooting());
         }
         if (iscooldownStun)

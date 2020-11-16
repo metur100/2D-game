@@ -32,6 +32,7 @@ public class ShootingBulletHunterNum : MonoBehaviour
             shootingBullet.fillAmount = 1;
             ShootBullet();
             animator.SetTrigger("Throw");
+            FindObjectOfType<AudioManager>().Play("ArrowHunter");
         }
         if (isCooldownBullet)
         {
@@ -50,6 +51,7 @@ public class ShootingBulletHunterNum : MonoBehaviour
                 shootingTrap.fillAmount = 1;
                 ShootTrap();
                 animator.SetTrigger("Throw");
+                FindObjectOfType<AudioManager>().Play("TrapHunter");
             }
             if (isCooldownTrap)
             {

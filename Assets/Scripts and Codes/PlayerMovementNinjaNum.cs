@@ -27,7 +27,7 @@ public class PlayerMovementNinjaNum : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-            FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().Play("JumpDragon");
         }
         if (Input.GetButtonDown("Crouch2"))
         {

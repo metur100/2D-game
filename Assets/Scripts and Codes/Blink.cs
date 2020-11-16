@@ -30,6 +30,7 @@ public class Blink : MonoBehaviour
             blinking.fillAmount = 1;
             canBlink = false;
             isBlinkCooldown = true;
+            FindObjectOfType<AudioManager>().Play("BlinkMage");
         }
         else
             animator.SetBool("isBlinking", false);

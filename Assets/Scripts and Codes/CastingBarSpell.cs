@@ -49,7 +49,7 @@ public class CastingBarSpell : MonoBehaviour
             frostBallAbility.fillAmount = 1;
             StartCoroutine(CastSpell(frostBall));
             StartCoroutine(ShootFrostBall());
-            FindObjectOfType<AudioManager>().Play("CastingSpell");
+            FindObjectOfType<AudioManager>().Play("CastingFrostBall");
         }
         if (Input.GetKeyDown(KeyCode.R) && isCooldownFire == false)
         {
@@ -57,7 +57,7 @@ public class CastingBarSpell : MonoBehaviour
             fireBallAbility.fillAmount = 1;
             StartCoroutine(CastSpell(fireBall));
             StartCoroutine(ShootFireBall());
-            FindObjectOfType<AudioManager>().Play("CastingSpell");
+            FindObjectOfType<AudioManager>().Play("CastingFireBall");
         }
         if (isCooldownFrost)
         {

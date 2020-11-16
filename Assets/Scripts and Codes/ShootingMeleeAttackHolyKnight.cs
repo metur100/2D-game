@@ -30,7 +30,7 @@ public class ShootingMeleeAttackHolyKnight : MonoBehaviour
             shootingMeleeAttack.fillAmount = 1;
             maleeAttackTimer = maleeAttackSpeed;
             ShootMeleeAttack();
-            FindObjectOfType<AudioManager>().Play("SwordAttack");
+            FindObjectOfType<AudioManager>().Play("SwordAttackHolyKnight");
             //StartCoroutine(IsAttackingAnimation());
         }
         if (isCooldownMeleeAttack)

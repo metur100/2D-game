@@ -37,6 +37,7 @@ public class PlayerMovementHolyKnightNum : MonoBehaviour
         {
             isSpeedingCd = true;
             speeding.fillAmount = 1;
+            FindObjectOfType<AudioManager>().Play("SprintHolyKnight");
             StartCoroutine(IncreasedMovementSpeed());
         }
         if (isSpeedingCd)
@@ -52,7 +53,7 @@ public class PlayerMovementHolyKnightNum : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-            FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().Play("JumpHolyKnight");
         }
     }
 

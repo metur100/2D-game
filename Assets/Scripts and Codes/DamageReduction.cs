@@ -11,7 +11,8 @@ public class DamageReduction : MonoBehaviour
     public FireBall fireBallDamage = new FireBall();
     public BulletHunter bulletHunterDamage = new BulletHunter();   
     public MeleePrefabHolyKnight meleeAttackDamageHolyKnight = new MeleePrefabHolyKnight();
-    public MeleePrefabKnight meleeAttackDamage = new MeleePrefabKnight();
+    public MeleePrefabHolyKnightNum meleeAttackDamageHolyKnightNum = new MeleePrefabHolyKnightNum();
+    public MeleePrefabKnightNum meleeAttackDamageNum = new MeleePrefabKnightNum();
     public int damageReductionFrostB = 0;
     public int damageReductionFireB = 0;
     public int damageReductionBulletHunt = 0;
@@ -42,7 +43,7 @@ public class DamageReduction : MonoBehaviour
             isCooldownDmgRed = true;
             damageRed.fillAmount = 1;
             StartCoroutine(DamageReductionDurationFrostB());
-            FindObjectOfType<AudioManager>().Play("");
+            FindObjectOfType<AudioManager>().Play("BlockedKnight");
         }
         if (isCooldownDmgRed)
         {
@@ -60,7 +61,8 @@ public class DamageReduction : MonoBehaviour
         fireBallDamage.damageDoneFireB = damageReductionFireB;
         bulletHunterDamage.damageDoneBullet = damageReductionBulletHunt;
         meleeAttackDamageHolyKnight.damageDoneMeleeAttack = damageReductionMeleeAttackHolyKnight;
-        meleeAttackDamage.damageDoneMeleeAttack = damageReductionMeleeAttack;
+        meleeAttackDamageNum.damageDoneMeleeAttack = damageReductionMeleeAttackNum;
+        meleeAttackDamageHolyKnightNum.damageDoneMeleeAttack = damageReductionMeleeAttackHolyKnightNum;
         isBlock = true;
         animator.SetBool("IsBlock", isBlock);
         yield return new WaitForSeconds(dmgReductionDuration);
@@ -70,6 +72,7 @@ public class DamageReduction : MonoBehaviour
         fireBallDamage.damageDoneFireB = normalFireBDmg;
         bulletHunterDamage.damageDoneBullet = normalBulletDamage;
         meleeAttackDamageHolyKnight.damageDoneMeleeAttack = normalMeleeAttackDamageHolyKnight;
-        meleeAttackDamage.damageDoneMeleeAttack = normalMeleeAttackDamage;
+        meleeAttackDamageNum.damageDoneMeleeAttack = normalMeleeAttackDamageNum;
+        meleeAttackDamageHolyKnightNum.damageDoneMeleeAttack = normalMeleeAttackDamageHolyKnightNum;
     }
 }

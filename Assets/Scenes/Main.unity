@@ -839,7 +839,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278529279
+    rgba: 4278594815
   m_fontColor: {r: 1, g: 0.17343429, b: 0.02352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -864,9 +864,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -5416,7 +5416,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DeathKnight
     clip: {fileID: 8300000, guid: 1be2a26a72fed7b4cb17e9e05c4176d3, type: 3}
-    volume: 0.158
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -5425,7 +5425,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: 6e1067777ed44a646b8ca9d063413a27, type: 3}
-    volume: 0.153
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -5434,7 +5434,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DeathNjinja
     clip: {fileID: 8300000, guid: 56418188a0b817742b26bdbf139e2ac9, type: 3}
-    volume: 0.151
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -5443,25 +5443,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 3ce1698b324891e4da4115862223afd9, type: 3}
-    volume: 0.25
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
-  - name: CastingSpell
+  - name: CastingFireBall
     clip: {fileID: 8300000, guid: a18aa48de9c3f324a823213c51d611b4, type: 3}
-    volume: 0.25
+    volume: 0.707
     volumeVariance: 0
-    pitch: 1
+    pitch: 0.98
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
   - name: SwordAttack
     clip: {fileID: 8300000, guid: f7a16c0d68c93f04eb71e4c67ea3488f, type: 3}
-    volume: 0.25
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -5470,7 +5470,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Dash
     clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
-    volume: 0.25
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -5479,6 +5479,51 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Enrage
     clip: {fileID: 8300000, guid: d6f7f05151f5c704292ac2c36e3d9601, type: 3}
+    volume: 0.662
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: JumpHolyKnight
+    clip: {fileID: 8300000, guid: 4a0432b4f6134794c855e579d44805e7, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: JumpHunter
+    clip: {fileID: 8300000, guid: d5df4c59a2a8ae94f93ade11cedef6a6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: JumpDragon
+    clip: {fileID: 8300000, guid: 0b9e661755f12e141ade4b404bbaa60f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: CastingFrostBall
+    clip: {fileID: 8300000, guid: a18aa48de9c3f324a823213c51d611b4, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1.99
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: NoNoMage
+    clip: {fileID: 8300000, guid: bb2e032714ac9514cadf00a91790dd31, type: 3}
     volume: 0.25
     volumeVariance: 0
     pitch: 1
@@ -5486,8 +5531,17 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
-  - name: Block
-    clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
+  - name: ArrowHunter
+    clip: {fileID: 8300000, guid: aa9261daa369473449813c53c6a99438, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: TrapHunter
+    clip: {fileID: 8300000, guid: 4e436c34a1edfe244939507285d6882c, type: 3}
     volume: 0.25
     volumeVariance: 0
     pitch: 1
@@ -5495,17 +5549,35 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
-  - name: FireBlock
-    clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
-    volume: 0.25
+  - name: BlinkMage
+    clip: {fileID: 8300000, guid: 16ee86d50237e2d4c9473edd8604f63f, type: 3}
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
-  - name: Blink
-    clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
+  - name: DefenceHunter
+    clip: {fileID: 8300000, guid: 8328d52a9f539384688c99671d39b6f2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: DashHunter
+    clip: {fileID: 8300000, guid: 2ea3906a89a9ab64993d05dbc459b571, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: saas
+    clip: {fileID: 8300000, guid: 8b5ef56704a4dc24fa6b602c40b77e7f, type: 3}
     volume: 0.25
     volumeVariance: 0
     pitch: 1
@@ -5654,7 +5726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35580d97e72cf6648bc182358298d80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMeleeDmg: -20
 --- !u!4 &870284362
 Transform:
   m_ObjectHideFlags: 0
@@ -11063,7 +11134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a3f61be08314a49bc03368089dfdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMeleeDmg: -20
 --- !u!4 &1539647733
 Transform:
   m_ObjectHideFlags: 0
@@ -11862,7 +11932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a3f61be08314a49bc03368089dfdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMeleeDmg: -20
 --- !u!4 &1592822730
 Transform:
   m_ObjectHideFlags: 0
@@ -16238,7 +16307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35580d97e72cf6648bc182358298d80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMeleeDmg: -20
 --- !u!4 &2081821804
 Transform:
   m_ObjectHideFlags: 0

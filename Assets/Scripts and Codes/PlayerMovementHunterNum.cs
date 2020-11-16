@@ -26,7 +26,7 @@ public class PlayerMovementHunterNum : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-            FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().Play("JumpHunter");
         }
     }
 

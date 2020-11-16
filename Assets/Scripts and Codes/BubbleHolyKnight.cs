@@ -27,7 +27,7 @@ public class BubbleHolyKnight : MonoBehaviour
             isCooldownInvuln = true;
             invulnerable.fillAmount = 1;
             StartCoroutine(GetInvulnerable());
-            //FindObjectOfType<AudioManager>().Play("");
+            FindObjectOfType<AudioManager>().Play("BubblyHolyKnight");
         }
         if (isCooldownInvuln)
         {
