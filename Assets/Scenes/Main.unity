@@ -5576,8 +5576,44 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
     source: {fileID: 0}
-  - name: saas
-    clip: {fileID: 8300000, guid: 8b5ef56704a4dc24fa6b602c40b77e7f, type: 3}
+  - name: BlockedKnight
+    clip: {fileID: 8300000, guid: ba3a4e64e7237984cb1fcf4126d19aae, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: BubblyHolyKnight
+    clip: {fileID: 8300000, guid: e2c9c124f0d639b47a7ac988010de178, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: SwordAttackHolyKnight
+    clip: {fileID: 8300000, guid: c0026a4ae4823524e8561a34539bf850, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: SprintHolyKnight
+    clip: {fileID: 8300000, guid: a401b37ae240e4b49a6e5c087602d816, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: StunHolyKnight
+    clip: {fileID: 8300000, guid: 8a6bbbf2cfb4c6c428f70ad5837c2677, type: 3}
     volume: 0.25
     volumeVariance: 0
     pitch: 1
@@ -6923,7 +6959,9 @@ MonoBehaviour:
     type: 3}
   bulletHunterDamage: {fileID: -7991271944654119458, guid: 389237288dad3ae4bb65dc75aceccbbe,
     type: 3}
-  meleeAttackDamageHolyKnight: {fileID: 7503923935390907394, guid: 07ed0f8d6895a8843aa49e4477d31efe,
+  meleeAttackDamageHolyKnight: {fileID: 630158203847059409, guid: 906b7f4eb4bae2746a36da728f08e127,
+    type: 3}
+  meleeAttackDamageHolyKnightNum: {fileID: 4257144216862283056, guid: 07ed0f8d6895a8843aa49e4477d31efe,
     type: 3}
   meleeAttackDamage: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
     type: 3}
@@ -13635,9 +13673,11 @@ MonoBehaviour:
     type: 3}
   bulletHunterDamage: {fileID: -7991271944654119458, guid: 389237288dad3ae4bb65dc75aceccbbe,
     type: 3}
-  meleeAttackDamageHolyKnight: {fileID: 7503923935390907394, guid: 07ed0f8d6895a8843aa49e4477d31efe,
+  meleeAttackDamageHolyKnight: {fileID: 630158203847059409, guid: 906b7f4eb4bae2746a36da728f08e127,
     type: 3}
-  meleeAttackDamage: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
+  meleeAttackDamageHolyKnightNum: {fileID: 4257144216862283056, guid: 07ed0f8d6895a8843aa49e4477d31efe,
+    type: 3}
+  meleeAttackDamageNum: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
   damageReductionFrostB: 0
   damageReductionFireB: 0
