@@ -149,6 +149,8 @@ MonoBehaviour:
     type: 3}
   noDmgMeleeAttackKnight: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
     type: 3}
+  noDmgMeleeAttackKnightNum: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
+    type: 3}
   noDmgMeleeAttackHolyKnightNum: {fileID: 4257144216862283056, guid: 07ed0f8d6895a8843aa49e4477d31efe,
     type: 3}
   noDmgFrostBall: {fileID: -9197854928600143813, guid: aef6c2ead94c2574b8daa773f18e73c1,

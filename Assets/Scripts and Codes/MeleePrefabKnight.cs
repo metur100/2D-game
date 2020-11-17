@@ -8,7 +8,6 @@ public class MeleePrefabKnight : MonoBehaviour
     public Rigidbody2D rb;
     public int damageDoneMeleeAttack = -20;
     private float speedOfMeleeAttack = 100f;
-    internal bool knockBackOnHit;
 
     void Start()
     {

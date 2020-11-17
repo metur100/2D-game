@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2201272971756656987}
   - component: {fileID: 4585422970647804713}
   - component: {fileID: 4819636889463966681}
-  - component: {fileID: 7742306306786466438}
   - component: {fileID: 6894062885023800137}
   m_Layer: 20
   m_Name: StunHolyKnightPrefabNum
@@ -133,29 +132,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &7742306306786466438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083265297206814653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 340debdcfbb115f4793b63bc7b21fa81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2201272971756656987}
-  bulletDealsNoDamage: {fileID: -7991271944654119458, guid: 389237288dad3ae4bb65dc75aceccbbe,
-    type: 3}
-  noDmgMeleeAttackKnight: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
-    type: 3}
-  noDmgMeleeAttackHolyKnightNum: {fileID: 4257144216862283056, guid: 07ed0f8d6895a8843aa49e4477d31efe,
-    type: 3}
-  noDmgFrostBall: {fileID: -9197854928600143813, guid: aef6c2ead94c2574b8daa773f18e73c1,
-    type: 3}
-  noDmgFireBall: {fileID: 4614369990655206005, guid: 1e747152adc91c643b4257a111b6e0f5,
-    type: 3}
 --- !u!114 &6894062885023800137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +148,8 @@ MonoBehaviour:
   bulletDealsNoDamage: {fileID: -7991271944654119458, guid: 389237288dad3ae4bb65dc75aceccbbe,
     type: 3}
   noDmgMeleeAttackKnight: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
+    type: 3}
+  noDmgMeleeAttackKnightNum: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
   noDmgMeleeAttackHolyKnight: {fileID: 630158203847059409, guid: 906b7f4eb4bae2746a36da728f08e127,
     type: 3}

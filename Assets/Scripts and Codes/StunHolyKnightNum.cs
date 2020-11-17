@@ -14,6 +14,7 @@ public class StunHolyKnightNum : MonoBehaviour
     private PlayerMovementHolyKnight mSpeedHolyKnight;
     public BulletHunter bulletDealsNoDamage = new BulletHunter();
     public MeleePrefabKnight noDmgMeleeAttackKnight = new MeleePrefabKnight();
+    public MeleePrefabKnightNum noDmgMeleeAttackKnightNum = new MeleePrefabKnightNum();
     public MeleePrefabHolyKnight noDmgMeleeAttackHolyKnight = new MeleePrefabHolyKnight();
     public FrostBall noDmgFrostBall = new FrostBall();
     public FireBall noDmgFireBall = new FireBall();
@@ -72,7 +73,7 @@ public class StunHolyKnightNum : MonoBehaviour
             mSpeedKnightNum = other.gameObject.GetComponent<PlayerMovementKnightNum>();
             mSpeedKnightNum.CoroutineMoveIfTrapKnight();
 
-            StartCoroutine(GetNoDamageFromMeleeAttackKnight());
+            StartCoroutine(GetNoDamageFromMeleeAttackKnightNum());
         }
         if (other.gameObject.tag == "Player_Hunter_Num")
         {
@@ -99,6 +100,12 @@ public class StunHolyKnightNum : MonoBehaviour
         yield return new WaitForSeconds(durationOfStun);
         noDmgMeleeAttackKnight.damageDoneMeleeAttack = meleeAttackMaxDmg;
     }
+    IEnumerator GetNoDamageFromMeleeAttackKnightNum()
+    {
+        noDmgMeleeAttackKnightNum.damageDoneMeleeAttack = meleeAttackNoDmg;
+        yield return new WaitForSeconds(durationOfStun);
+        noDmgMeleeAttackKnightNum.damageDoneMeleeAttack = meleeAttackMaxDmg;
+    }
     IEnumerator GetNoDamageFromMeleeAttackHolyKnight()
     {
         noDmgMeleeAttackHolyKnight.damageDoneMeleeAttack = meleeAttackNoDmg;
@@ -119,7 +126,7 @@ public class StunHolyKnightNum : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.07f);
+        yield return new WaitForSeconds(3.1f);
         Destroy(gameObject);
     }
 }

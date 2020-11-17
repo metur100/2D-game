@@ -8,7 +8,6 @@ public class MeleePrefabHolyKnight : MonoBehaviour
     public Rigidbody2D rb;
     public int damageDoneMeleeAttack = -20;
     private float speedOfMeleeAttack = 100f;
-    internal bool knockBackOnHit;
 
     void Start()
     {
@@ -60,7 +59,7 @@ public class MeleePrefabHolyKnight : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.02f);
         Destroy(gameObject);
     }
 }

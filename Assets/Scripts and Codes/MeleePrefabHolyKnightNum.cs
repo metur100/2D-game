@@ -60,7 +60,7 @@ public class MeleePrefabHolyKnightNum : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.02f);
         Destroy(gameObject);
     }
 }

@@ -14,6 +14,7 @@ public class StunHolyKnight : MonoBehaviour
     private PlayerMovementHolyKnightNum mSpeedHolyKnightNum;
     public BulletHunter bulletDealsNoDamage = new BulletHunter();
     public MeleePrefabKnight noDmgMeleeAttackKnight = new MeleePrefabKnight();
+    public MeleePrefabKnightNum noDmgMeleeAttackKnightNum = new MeleePrefabKnightNum();
     public MeleePrefabHolyKnightNum noDmgMeleeAttackHolyKnightNum = new MeleePrefabHolyKnightNum();
     public FrostBall noDmgFrostBall = new FrostBall();
     public FireBall noDmgFireBall = new FireBall();
@@ -72,13 +73,13 @@ public class StunHolyKnight : MonoBehaviour
             mSpeedKnightNum = other.gameObject.GetComponent<PlayerMovementKnightNum>();
             mSpeedKnightNum.CoroutineMoveIfTrapKnight();
 
-            StartCoroutine(GetNoDamageFromMeleeAttackKnight());
+            StartCoroutine(GetNoDamageFromMeleeAttackKnightNum());
         }
         if (other.gameObject.tag == "Player_Hunter_Num")
         {
-            StartCoroutine(GetNoDamageFromArrowHunter());
             mSpeedHunterNum = other.gameObject.GetComponent<PlayerMovementHunterNum>();
             mSpeedHunterNum.CoroutineMoveIfTrapHunter();
+            StartCoroutine(GetNoDamageFromArrowHunter());
         }
         if (other.gameObject.tag == "Player_HolyKnight_Num")
         {
@@ -100,6 +101,12 @@ public class StunHolyKnight : MonoBehaviour
         yield return new WaitForSeconds(durationOfStun);
         noDmgMeleeAttackKnight.damageDoneMeleeAttack = meleeAttackMaxDmg;
     }
+    IEnumerator GetNoDamageFromMeleeAttackKnightNum()
+    {
+        noDmgMeleeAttackKnightNum.damageDoneMeleeAttack = meleeAttackNoDmg;
+        yield return new WaitForSeconds(durationOfStun);
+        noDmgMeleeAttackKnightNum.damageDoneMeleeAttack = meleeAttackMaxDmg;
+    }
     IEnumerator GetNoDamageFromMeleeAttackHolyKnight()
     {
         noDmgMeleeAttackHolyKnightNum.damageDoneMeleeAttack = meleeAttackNoDmg;
@@ -120,7 +127,7 @@ public class StunHolyKnight : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.07f);
+        yield return new WaitForSeconds(3.1f);
         Destroy(gameObject);
     }
 }
