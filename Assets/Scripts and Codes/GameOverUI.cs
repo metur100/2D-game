@@ -9,12 +9,16 @@ public class GameOverUI : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Retry()
+    public void CharacterSelection()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("CharacterSelection");
+    }
+    public void GameScene()
+    {
+        SceneManager.LoadScene("Main");
     }
     public void mainManuBack ()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu");
     }
 }

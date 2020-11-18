@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a5b5819ccbaef8443ae9c4d9ac29b9dd
@@ -17,10 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: d30fbee988f498842a6e22beea9f1786
-  - enabled: 1
-    path: Assets/Scenes/Knight vs. Hunter.unity
-    guid: d90e1cde8810bbf4db26cf048f0c43d8
-  - enabled: 1
-    path: Assets/Scenes/Mage vs. Hunter.unity
-    guid: dd26221159506ea408e747a4dec5f7b2
   m_configObjects: {}

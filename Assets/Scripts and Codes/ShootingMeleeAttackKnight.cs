@@ -40,7 +40,6 @@ public class ShootingMeleeAttackKnight : MonoBehaviour
             maleeAttackTimer = maleeAttackSpeed;
             ShootMeleeAttack();
             FindObjectOfType<AudioManager>().Play("SwordAttack");
-            //StartCoroutine(IsAttackingAnimation());
         }
         if (Input.GetKeyDown(KeyCode.T) && isCooldownEnrage == false)
         {
@@ -48,7 +47,6 @@ public class ShootingMeleeAttackKnight : MonoBehaviour
             enrage.fillAmount = 1;
             StartCoroutine(EnrageDamage());
             FindObjectOfType<AudioManager>().Play("Enrage");
-            //FindObjectOfType<AudioManager>().Play("");
         }
         if (isCooldownMeleeAttack)
         {

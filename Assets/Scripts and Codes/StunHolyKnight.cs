@@ -127,7 +127,7 @@ public class StunHolyKnight : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(3.1f);
+        yield return new WaitForSeconds(3.2f);
         Destroy(gameObject);
     }
 }

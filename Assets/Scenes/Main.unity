@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &28759916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -380,7 +380,7 @@ Transform:
   - {fileID: 1576546470}
   - {fileID: 3678603235272484709}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56158481
 GameObject:
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 146055608}
   - component: {fileID: 146055607}
   m_Layer: 5
-  m_Name: NinjaHasWon
+  m_Name: HunterHasWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ninja has won!
+  m_text: Hunter has won!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 63.05
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3141,7 +3141,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456512562}
-  - component: {fileID: 456512563}
   m_Layer: 5
   m_Name: GameOverManu
   m_TagString: Untagged
@@ -3172,18 +3171,6 @@ RectTransform:
   m_AnchoredPosition: {x: -15, y: -0.0039878}
   m_SizeDelta: {x: 1920, y: 954.02}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &456512563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456512561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5af707dd861d87c458c10663eedf13ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &461249807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5285,7 +5272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789116202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -138.01541, y: 13.880486, z: 2397.6484}
+  m_LocalPosition: {x: -139.3, y: 13.7, z: 2397.6484}
   m_LocalScale: {x: 5.0914297, y: 5.21269, z: 1}
   m_Children:
   - {fileID: 1634467562}
@@ -6338,6 +6325,7 @@ GameObject:
   - component: {fileID: 960612976}
   - component: {fileID: 960612975}
   - component: {fileID: 960612974}
+  - component: {fileID: 960612977}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -6408,8 +6396,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456512563}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 960612977}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -6458,6 +6446,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960612972}
   m_CullTransparentMesh: 0
+--- !u!114 &960612977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960612972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af707dd861d87c458c10663eedf13ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &973275625
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,20 +6965,6 @@ MonoBehaviour:
     type: 3}
   meleeAttackDamage: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
     type: 3}
-  damageReductionFrostB: 0
-  damageReductionFireB: 0
-  damageReductionBulletHunt: 0
-  damageReductionMeleeAttackHolyKnight: 0
-  damageReductionMeleeAttackHolyKnightNum: 0
-  damageReductionMeleeAttack: 0
-  damageReductionMeleeAttackNum: 0
-  normalFrostBDmg: -20
-  normalFireBDmg: -50
-  normalBulletDamage: -10
-  normalMeleeAttackDamageHolyKnight: -20
-  normalMeleeAttackDamageHolyKnightNum: -20
-  normalMeleeAttackDamage: -20
-  normalMeleeAttackDamageNum: -20
 --- !u!114 &1008176318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8942,6 +8928,7 @@ GameObject:
   - component: {fileID: 1301478597}
   - component: {fileID: 1301478596}
   - component: {fileID: 1301478595}
+  - component: {fileID: 1301478598}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -9012,8 +8999,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456512563}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1301478598}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
         m_MethodName: mainManuBack
         m_Mode: 1
         m_Arguments:
@@ -9062,6 +9049,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301478593}
   m_CullTransparentMesh: 0
+--- !u!114 &1301478598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301478593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af707dd861d87c458c10663eedf13ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1308666756
 GameObject:
   m_ObjectHideFlags: 0
@@ -9974,7 +9973,7 @@ GameObject:
   - component: {fileID: 1391217253}
   - component: {fileID: 1391217252}
   m_Layer: 5
-  m_Name: KnightHasWon
+  m_Name: MageHasWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10019,7 +10018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Knight has won!
+  m_text: Mage has won!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10041,21 +10040,21 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.95
+  m_fontSize: 72
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -10457,7 +10456,7 @@ GameObject:
   - component: {fileID: 1457999498}
   - component: {fileID: 1457999497}
   m_Layer: 5
-  m_Name: GameOverCanvasNinja
+  m_Name: GameOverCanvasMagevsHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10641,7 +10640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1475181496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10899,7 +10898,7 @@ GameObject:
   - component: {fileID: 1503656880}
   - component: {fileID: 1503656879}
   m_Layer: 5
-  m_Name: GameOverCanvasHunter
+  m_Name: GameOverCanvasHuntervsMage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12850,12 +12849,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665649824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.7, y: -1.8, z: 0}
+  m_LocalPosition: {x: -12.7, y: -3.6, z: 0}
   m_LocalScale: {x: 33.772392, y: 37.27493, z: 1}
   m_Children:
   - {fileID: 88000765}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1665649829
 EdgeCollider2D:
@@ -13225,6 +13224,7 @@ GameObject:
   - component: {fileID: 1691424793}
   - component: {fileID: 1691424792}
   - component: {fileID: 1691424791}
+  - component: {fileID: 1691424794}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -13295,8 +13295,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456512563}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1691424794}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -13345,6 +13345,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691424789}
   m_CullTransparentMesh: 0
+--- !u!114 &1691424794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691424789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af707dd861d87c458c10663eedf13ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1698449274
 GameObject:
   m_ObjectHideFlags: 0
@@ -13679,20 +13691,6 @@ MonoBehaviour:
     type: 3}
   meleeAttackDamageNum: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
-  damageReductionFrostB: 0
-  damageReductionFireB: 0
-  damageReductionBulletHunt: 0
-  damageReductionMeleeAttackHolyKnight: 0
-  damageReductionMeleeAttackHolyKnightNum: 0
-  damageReductionMeleeAttack: 0
-  damageReductionMeleeAttackNum: 0
-  normalFrostBDmg: -20
-  normalFireBDmg: -50
-  normalBulletDamage: -10
-  normalMeleeAttackDamageHolyKnight: -20
-  normalMeleeAttackDamageHolyKnightNum: -20
-  normalMeleeAttackDamage: -20
-  normalMeleeAttackDamageNum: -20
 --- !u!114 &1748849610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14152,7 +14150,7 @@ Transform:
   m_LocalScale: {x: 17.196232, y: 17.878626, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860316696
 GameObject:
@@ -16203,7 +16201,7 @@ Transform:
   - {fileID: 789116215}
   - {fileID: 6409703223817992546}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073774661
 GameObject:
@@ -17088,7 +17086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2145929121
 GameObject:
@@ -18994,7 +18992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 1503656878}
   animator: {fileID: 3678603235272483994}
   currentHealth: 0
 --- !u!58 &3678603235272483992
@@ -19119,7 +19117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3678603235272483995}
   animator: {fileID: 3678603235272483994}
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 1503656878}
   rb: {fileID: 3678603235272483993}
   normalMovementSpeed: 200
 --- !u!114 &3678603235272483998
@@ -22657,7 +22655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   currentHealth: 0
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 1457999496}
   animator: {fileID: 4739127128907259123}
 --- !u!50 &4739127128907259122
 Rigidbody2D:
@@ -22713,7 +22711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 4739127128907259118}
   animator: {fileID: 4739127128907259123}
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 1457999496}
   rb: {fileID: 4739127128907259122}
   normalMovementSpeed: 200
 --- !u!114 &4739127128907259125

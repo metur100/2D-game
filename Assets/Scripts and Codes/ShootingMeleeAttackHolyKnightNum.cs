@@ -29,6 +29,7 @@ public class ShootingMeleeAttackHolyKnightNum : MonoBehaviour
             isMeleeAttacking = true;
             shootingMeleeAttack.fillAmount = 1;
             maleeAttackTimer = maleeAttackSpeed;
+            animator.SetTrigger("MeleeAttack");
             ShootMeleeAttack();
             FindObjectOfType<AudioManager>().Play("SwordAttackHolyKnight");
             //StartCoroutine(IsAttackingAnimation());
@@ -53,7 +54,7 @@ public class ShootingMeleeAttackHolyKnightNum : MonoBehaviour
                 isMeleeAttacking = false;
             }
         }
-        animator.SetBool("IsAttacking", isMeleeAttacking);
+        //animator.SetBool("IsAttacking", isMeleeAttacking);
     }
 
     void ShootMeleeAttack()

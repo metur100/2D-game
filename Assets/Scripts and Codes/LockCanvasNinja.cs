@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class LockCanvasNinja : MonoBehaviour
 {
-    private float posXMinus = 90;
-    private float posXPlus = 90;
+    private float posXMinus = 75;
+    private float posXPlus = 75;
     private float posYMinus = 80;
     private float posYPlus = 80;
     Transform t;
