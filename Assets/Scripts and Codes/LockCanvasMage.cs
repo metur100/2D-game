@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class LockCanvasMage : MonoBehaviour
 {
-    private float posXMinus = -124;
-    private float posXPlus = -124;
+    private float posXMinus = -114;
+    private float posXPlus = -114;
     private float posYMinus = 80;
     private float posYPlus = 80;
     Transform t;
