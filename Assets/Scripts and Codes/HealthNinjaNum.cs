@@ -6,11 +6,12 @@ using UnityEngine;
 public class HealthNinjaNum : MonoBehaviour
 {
     [SerializeField]
-    public int maxHealth = 200;
-    public int currentHealth;
+    private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public GameObject gameOverUI;
     public Animator animator;
+    [SerializeField]
+    private int currentHealth;
     private float delay = 1f;
     private bool isDead = false;
     
