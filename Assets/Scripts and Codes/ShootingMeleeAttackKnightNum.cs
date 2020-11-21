@@ -11,8 +11,8 @@ public class ShootingMeleeAttackKnightNum : MonoBehaviour
     public Image shootingMeleeAttack;
     public Image enrage;
     public MeleePrefabKnightNum meleeDamage;
-    public int enragedMeleeDmg = -40;
-    public int normalMeleeDamage = -20;
+    private int enragedMeleeDmg = -40;
+    private int normalMeleeDamage = -20; //it deals 40 damage close range, 20 damage long range
     private float coolddownMeleeAttacking = 2f;
     private bool isCooldownMeleeAttack = false;
     private bool isMeleeAttacking = false;

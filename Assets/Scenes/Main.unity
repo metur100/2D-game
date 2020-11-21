@@ -5412,9 +5412,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6779847, y: -0.9427133}
+  m_Offset: {x: -0.7068543, y: -0.95712423}
   serializedVersion: 2
-  m_Radius: 0.7049493
+  m_Radius: 0.64622736
 --- !u!61 &789116212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7193,8 +7193,6 @@ MonoBehaviour:
   enrage: {fileID: 1897337106}
   meleeDamage: {fileID: 4492025114574709628, guid: 1fa8b25f6a9635047b1c380cbfe97006,
     type: 3}
-  enragedMeleeDmg: -40
-  normalMeleeDamage: -20
 --- !u!114 &1008176315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7352,9 +7350,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007873981, y: -0.6599998}
+  m_Offset: {x: 0.042553328, y: -0.9291216}
   serializedVersion: 2
-  m_Radius: 0.48180738
+  m_Radius: 0.26140183
 --- !u!61 &1008176323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11559,9 +11557,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6779847, y: -0.9427133}
+  m_Offset: {x: -0.6779846, y: -0.98093635}
   serializedVersion: 2
-  m_Radius: 0.7049493
+  m_Radius: 0.66672635
 --- !u!61 &1576546467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14356,9 +14354,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007873981, y: -0.6599998}
+  m_Offset: {x: 0.0365933, y: -0.9189792}
   serializedVersion: 2
-  m_Radius: 0.48180738
+  m_Radius: 0.25596893
 --- !u!61 &1748849616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14497,8 +14495,6 @@ MonoBehaviour:
   enrage: {fileID: 1296614104}
   meleeDamage: {fileID: 6302469496017713701, guid: 9784f17f75973a74ebf99a442c13c195,
     type: 3}
-  enragedMeleeDmg: -40
-  normalMeleeDamage: -20
 --- !u!1 &1762899401
 GameObject:
   m_ObjectHideFlags: 0
@@ -19028,9 +19024,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06628779, y: -0.16497387}
+  m_Offset: {x: 0.0671723, y: -0.21619444}
   serializedVersion: 2
-  m_Radius: 0.13474877
+  m_Radius: 0.09964534
 --- !u!50 &3678603235272483993
 Rigidbody2D:
   serializedVersion: 4
@@ -19252,7 +19248,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09878815, y: 0.09742108}
+  m_Offset: {x: 0.09347844, y: 0.09742108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19263,7 +19259,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1978872, y: 0.366879}
+  m_Size: {x: 0.18726778, y: 0.366879}
   m_EdgeRadius: 0
 --- !u!222 &3678603235398760938
 CanvasRenderer:
@@ -22580,9 +22576,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012257009, y: -0.901726}
+  m_Offset: {x: 0.012257009, y: -0.89733356}
   serializedVersion: 2
-  m_Radius: 0.26001346
+  m_Radius: 0.25110456
 --- !u!61 &4739127128907259117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22674,9 +22670,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  currentHealth: 0
   gameOverUI: {fileID: 1457999496}
   animator: {fileID: 4739127128907259123}
+  currentHealth: 0
 --- !u!50 &4739127128907259122
 Rigidbody2D:
   serializedVersion: 4
@@ -23617,7 +23613,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09878815, y: 0.09742108}
+  m_Offset: {x: 0.091759935, y: 0.09742108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -23628,7 +23624,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1978872, y: 0.366879}
+  m_Size: {x: 0.19464332, y: 0.366879}
   m_EdgeRadius: 0
 --- !u!212 &6409703223817992545
 SpriteRenderer:
@@ -23915,9 +23911,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06628779, y: -0.16497387}
+  m_Offset: {x: 0.07028922, y: -0.2142104}
   serializedVersion: 2
-  m_Radius: 0.13474877
+  m_Radius: 0.10018656
 --- !u!1 &6409703223872827072
 GameObject:
   m_ObjectHideFlags: 0
@@ -25421,9 +25417,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012257009, y: -0.901726}
+  m_Offset: {x: 0.012257009, y: -0.9017039}
   serializedVersion: 2
-  m_Radius: 0.26001346
+  m_Radius: 0.25000292
 --- !u!61 &9011451041478848575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25463,9 +25459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  currentHealth: 0
   gameOverUI: {fileID: 1457999496}
   animator: {fileID: 9011451041478848545}
+  currentHealth: 0
 --- !u!1 &9011451041710678494
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class DamageReductionNum : MonoBehaviour
     private int damageReductionMeleeAttackNum = 0;
     private int normalFrostBDmg = -20;
     private int normalFireBDmg = -50;
-    private int normalBulletDamage = -10;
+    private int normalBulletDamage = -20;
     private int normalMeleeAttackDamageHolyKnight = -20;
     private int normalMeleeAttackDamageHolyKnightNum = -20;
     private int normalMeleeAttackDamage = -20;
