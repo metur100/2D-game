@@ -1,39 +1,68 @@
-# Knight vs.Ninja
+This is my first game and it is still in development. I will add more abilities and characters in the fautures.
 
-To-do list:
+GO FULL SCREEN TO SEE ALL ABILITIES!
 
-1. Animation on hit: HURT ------------------- DONE
-2. Jump effect fix. ------------------------- DONE
-3. Fall off platform: Player is dead text!--- DONE
-3. Player has won! -------------------------- DONE
-4. Healthbar on top; Icons and healthbar.----- DONE
-5. Castig bar above the health bar! ---------- DONE
-6. Fix male attack. -------------------------- IN PROGRESS
-7. Make it more beautiful generaly.---------- DONE
-8. OnCruch dont move.------------------------ DONE
-9. Implement the audio and music. ------------ DONE
-10. Cooldown visible! ------------------------ DONE
-11. If takes damage, flashes!----------------- DONE
-12. KnockBack on Colision! ------------------- DONE
-13. Njinja faceing Knight! ------------------- IN PROGRESS
-14. Knight should be MAGE! Njinja male! ------ IN PROGRESS
-15. Make latters for cooldowns visible!------- DONE
-16. Dash Animation on first hit - fix! ------- DONE
-17. Adding unity WEB GL! --------------------- DONE
-18. Make it more playable! ------------------- DONE
-19. Jump Attack!
+This game is about 2D arena fighting: Knight, Dragon, HolyKnight and Hunter. Currently it is a game for 2 players.
 
 
-IMPLEMENTED:
+Controls:
+
+Player on left in champion selection screen:
+
+W - jump
+A - move left on x axes
+S - crouch (if the player has it)
+D - move right on x axes
+
+Q - Ability (based on the champion you choose)
+E - Ability (based on the champion you choose)
+R - Ability (based on the champion you choose)
+T - Ability (based on the champion you choose)
+F - Ability (based on the champion you choose)
+
+
+
+Player on right in champion  selection screen (turn on the num lock):
+
+8 - jump
+4 - move left on x axes
+5 - crouch (if the player has it)
+6 - move right on x axes
+
+7 - Ability (based on the champion you choose)
+9 - Ability (based on the champion you choose)
+1 - Ability (based on the champion you choose)
+2 -Ability (based on the champion you choose)
+3- Ability (based on the champion you choose)
 
 Knight:
+Abilities:
 
-Q and E: RUSH
-R = Male Attack
+Dashing: dash forward and backward
+Enrage:  increase damage done for 50 %
+Sword Hit: basic meele Attack, dealing normal damage
+Block: block any enemy attack for 1 second
 
+Dragon:
+Abilities:
 
+Teleport: teleport player only forward
+FireBall: deals massive damage, but has cast time for 2 seconds
+FrostBall: deals small damage, but faster cast time and also slows enemy for 2 seconds
+Invulnerability: can not move but can not take any damage for 3 seconds
 
-Njinja:
+Holy Knight:
+Abilities:
 
-P = FrostBall that slows enemy
-O = FireBall that knockbacks the enemy
+Holy Hit: basic melee attack with sword, dealing normal damage
+Hammer: stun the enemy, so enemy can not move and can not deal damage
+Speeding: increase movement speed for 50 % for 3 seconds
+Green Bubble: invulnerable to all damage taken, also can deal damage
+
+Hunter:
+Abilities:
+
+Arrow Hit: shooting an arrow with bow, dealing normal damage. if arrow hits enemy, enemy will be knocked back
+Trap: fires a trap, if the trap hits the ground it will stay on the ground. if enemy goes over the trap, enemy can not move for 3 seconds
+Dash Backwards: dash backwards and forwards
+Invulnerable dance: goes in dancing mode and becomes invulnerable to all attacks, but also hunter's attack deals no damage
