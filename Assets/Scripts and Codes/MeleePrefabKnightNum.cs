@@ -6,7 +6,7 @@ using UnityEngine;
 public class MeleePrefabKnightNum : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public int damageDoneMeleeAttack = -20;
+    public int damageDoneMeleeAttack = -20; //it deals 40 damage close range, 20 damage long range
     private float speedOfMeleeAttack = 100f;
     internal bool knockBackOnHit;
 

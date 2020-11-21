@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class HealthKnight : MonoBehaviour
 {
     [SerializeField]
-    public int maxHealth = 200;
+    private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public GameObject gameOverUI;
     public Animator animator;
-    public int currentHealth;
+    [SerializeField]
+    private int currentHealth;
     private bool isDead = false;
     private float delay = 1f;
 

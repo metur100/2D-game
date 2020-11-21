@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,6 @@ public class FireBall : MonoBehaviour
     public Rigidbody2D rb;
     public int damageDoneFireB = -50;
     private float speedOfFireBall = 100f;
-    internal bool knockBackOnHit;
 
     void Start()
     {
@@ -55,7 +55,6 @@ public class FireBall : MonoBehaviour
             HealthNinja eHealth = other.gameObject.GetComponent<HealthNinja>();
             eHealth.ModifyHealth(damageDoneFireB);
         }
-
         Destroy(gameObject);
     }
 }
