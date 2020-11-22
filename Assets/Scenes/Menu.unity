@@ -708,7 +708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.9557495}
+  m_AnchoredPosition: {x: 0, y: -0.9556885}
   m_SizeDelta: {x: 0, y: 56.799805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189049864
@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 415800068}
   - component: {fileID: 415800067}
   m_Layer: 5
-  m_Name: Advanture
+  m_Name: 1v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4604,7 +4604,7 @@ GameObject:
   - component: {fileID: 1418810916}
   - component: {fileID: 1418810915}
   m_Layer: 5
-  m_Name: Controls
+  m_Name: Champions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4957,8 +4957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000097752, y: 0.000013411}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 6, y: 0.000013411}
+  m_SizeDelta: {x: 297.5, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470654677
 MonoBehaviour:
@@ -4993,7 +4993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CONTROLS
+  m_Text: CHAMPIONS
 --- !u!222 &1470654678
 CanvasRenderer:
   m_ObjectHideFlags: 0
