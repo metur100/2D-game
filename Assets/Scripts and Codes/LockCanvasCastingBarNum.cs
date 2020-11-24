@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class LockCanvasCastingBarNum : MonoBehaviour
 {
-    private float posXMinus = 108;
-    private float posXPlus = 108;
-    private float posYMinus = 55;
-    private float posYPlus = 55;
+    private float posXMinus = 97;
+    private float posXPlus = 97;
+    private float posYMinus = 69f;
+    private float posYPlus = 69f;
     Transform t;
     public float fixedRotation = 5;
 

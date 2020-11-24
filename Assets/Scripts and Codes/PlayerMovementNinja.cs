@@ -53,7 +53,7 @@ public class PlayerMovementNinja : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
 
-        if (rb.position.y < -30f)
+        if (rb.position.y < -80f)
         {
             gameOverUI.SetActive(true);
         }

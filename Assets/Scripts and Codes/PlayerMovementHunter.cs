@@ -39,7 +39,7 @@ public class PlayerMovementHunter : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
-        if (rb.position.y < -30f)
+        if (rb.position.y < -80f)
         {
             gameOverUI.SetActive(true);
         }

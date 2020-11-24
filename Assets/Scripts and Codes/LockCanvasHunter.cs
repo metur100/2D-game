@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class LockCanvasHunter : MonoBehaviour
 {
-    private float posXMinus = 135;
-    private float posXPlus = 135;
+    private float posXMinus = 125;
+    private float posXPlus = 125;
     private float posYMinus = 80;
     private float posYPlus = 80;
     Transform t;
