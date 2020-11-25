@@ -7,11 +7,13 @@ public class ConfirmCharacter : MonoBehaviour
 {
     public CharacterSelection character = new CharacterSelection();
     public CharacterSelection2 character2 = new CharacterSelection2();
+    public BattlegroundSelection bg = new BattlegroundSelection();
 
     public void ConfirmButton()
     {
         PlayerPrefs.SetInt("CharacterSelected", character.index);
         PlayerPrefs.SetInt("CharacterSelected2", character2.index);
+        PlayerPrefs.SetInt("BGSelected", bg.index);
         SceneManager.LoadScene("Main");
 
         //if (character.index == 0 && character2.index == 1 || character.index == 1 && character2.index == 0)
