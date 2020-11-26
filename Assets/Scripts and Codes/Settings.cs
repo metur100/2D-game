@@ -10,15 +10,15 @@ public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
     Resolution[] resolutions;
-    public Dropdown ResolutionDropdown;
-    public Dropdown quality;
+    //public Dropdown ResolutionDropdown;
+    //public Dropdown quality;
 
     private void Start()
     {
         int CurrentResolutionIndex = 0;
         resolutions = Screen.resolutions;
 
-        ResolutionDropdown.ClearOptions();
+        //ResolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
@@ -34,9 +34,9 @@ public class Settings : MonoBehaviour
             }
         }
 
-        ResolutionDropdown.AddOptions(options);
-        ResolutionDropdown.value = CurrentResolutionIndex;
-        ResolutionDropdown.RefreshShownValue();
+        //ResolutionDropdown.AddOptions(options);
+        //ResolutionDropdown.value = CurrentResolutionIndex;
+        //ResolutionDropdown.RefreshShownValue();
     }
 
     public void SetResolution(int ResolutionIndex)

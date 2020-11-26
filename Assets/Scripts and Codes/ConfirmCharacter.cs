@@ -22,11 +22,11 @@ public class ConfirmCharacter : MonoBehaviour
         //}
         //else if (character.index == 1 && character2.index == 2 || character.index == 2 && character2.index == 1)
         //{
-        //    SceneManager.LoadScene("Main");
+        //    SceneManager.LoadScene("Main2");
         //}
         //else if (character.index == 0 && character2.index == 2 || character.index == 2 && character2.index == 0)
         //{
-        //    SceneManager.LoadScene("Main");
+        //    SceneManager.LoadScene("Main3");
         //}
     }
 }
