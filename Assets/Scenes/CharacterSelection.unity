@@ -4107,7 +4107,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SUPER GRASS
+  m_Text: NARROW LEAVE
 --- !u!222 &422599891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16207,7 +16207,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: JUNGLE
+  m_Text: TROPICAL JUNGLE
 --- !u!222 &1592807954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18436,7 +18436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SNOW TOWN
+  m_Text: RISING MOUNTAIN
 --- !u!222 &1900577714
 CanvasRenderer:
   m_ObjectHideFlags: 0
