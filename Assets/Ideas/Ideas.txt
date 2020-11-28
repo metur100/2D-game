@@ -1,28 +1,32 @@
 Warrior
-1. Charge (2 chargea, charges an enemy) -------------------------- DONE -------- Q/E
-2. Rampage (basic damage) ---------------------------------------- DONE -------- R
-3. Enrage (% dmg increase) --------------------------------------- DONE -------- T
-4. Shattering throw (removes defensives) ------------------------- DONE
-5. Stun ---------------------------------------------------------- DONE
-6. Defence (reduce damge taken for 50 % ) ------------------------ DONE -------- F
+1. Dash (2 chargea, charges an enemy) -------------------------------------- DONE
+2. Meleee Hit (basic damage) -------------------------------------------------- DONE
+3. Enrage (50 % dmg increase) ------------------------------------------------- DONE
+6. Block (reduce all damge taken for few seconds) ------------------------ DONE
 
 Mage
-1. Frostbolt (damages and slows) --------------------------------- DONE ------- P
-2. Blink (portuje karaktera x yardi po x osi) -------------------- DONE ------- I
-3. Ice Block (immunity, regena hp) ------------------------------- DONE ------- L
-4. Pyro (long cast, much dmg) ------------------------------------ DONE ------- O
+1. Frostbolt (damages and slows) --------------------------------- DONE
+2. Blink (portuje karaktera x yardi po x osi) -------------------- DONE
+3. Ice Block (immunity) ------------------------------------------ DONE
+4. Pyro (long cast, much dmg) ------------------------------------ DONE
 
 Hunter
-1. Disengage (leapa se unazad) ----------------------------------- DONE ------- Z/U
-2. Freezing trap (postavlja trap koji stuna) --------------------- DONE ------- N 
-3. Aimed Shot (basic dmg) ---------------------------------------- DONE ------- M
-4. Kornjaca (immunity) ------------------------------------------- DONE ------- B
+1. Disengage (leapa backwards and forwards) ----------------------------------- DONE
+2. Freezing trap (postavlja trap koji stuna) --------------------- DONE
+3. Aimed Shot (basic dmg) ---------------------------------------- DONE
+4. Kornjaca (immunity) ------------------------------------------- DONE
 
 Paladin 
 1. Bubble (immunity)------------------------------- DONE
 2. Poni (?) (seda na konja i ubrzava) ------------- DONE
 3. Crusader Strike (basic dmg) -------------------- DONE
-4. Hammer of Justice (stun)
+4. Hammer of Justice (stun)------------------------ DONE
+
+Shaman
+1. Shielded (reduce damage taken for 50 %)
+2. Change the form (increase movement speed for 20 %, bude increase the cast time for 3 seconds!----other form movement speed normal, cast time normal)
+3. Elemental blast (deals more damage wh)
+4. Slow Totem (drop a totem that slows the enemy)
 
 Death Knight 
 1. Grip (privlaci protivnika)
@@ -35,12 +39,6 @@ Priest
 2. Dispersion (defensive)
 3. Shadow Form (% dmg increase)
 4. Void Bolt (basic dmg, produzuje dot)
-
-Shaman
-1. Astral shift (defensive)
-2. Wolf form (MS increase, dobija se Feral Lunge spell)
-3. Stormstrike (basic dmg)
-4. Frost Shock (slow)
 
 Rogue
 1. Stealth
@@ -95,3 +93,13 @@ General Fixes - to-do list:
 17. Adding unity WEB GL! --------------------- DONE
 18. Make it more playable! ------------------- DONE
 19. Jump Attack!
+
+
+Unity asset store, the world where all champions are locked and put to suffering.
+Every week only few are choosen to fight for their destiny. 
+
+The choosen one are thrown in the battlefields where they have to fight to death.
+For this week only 4 of them  got the opportunity to fight in the battlefields of Unity. The one who wins is promised to live and be free. Only the strongest one can win and only with your help!
+
+So will you help the choosen one to concern the arena and be free?
+
