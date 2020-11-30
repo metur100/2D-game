@@ -12,6 +12,8 @@ TagManager:
   - Player_HolyKnight_Num
   - Player_Ninja_Num
   - Player_Knight_Num
+  - Player_Wolf
+  - Player_Wolf_Num
   layers:
   - Default
   - TransparentFX
