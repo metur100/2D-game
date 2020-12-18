@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ShootingBulletWolf : MonoBehaviour
 {
-    public Transform firePointBullet;
+    [SerializeField]
+    private Transform firePointBullet;
     public GameObject bulletPrefabWolf;
     public Animator animator;
     public Image shootingBulletImage;
