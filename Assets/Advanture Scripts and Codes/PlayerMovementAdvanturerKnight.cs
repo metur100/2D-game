@@ -8,7 +8,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public GameObject gameOverUI;
-    public float normalMovementSpeed = 200f;
+    public float normalMovementSpeed = 400f;
     private float horizontalMove = 0f;
     private bool jump = false;
     private bool crouch = false;
