@@ -52,9 +52,9 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
 
-        if (rb.position.y < -80f)
-        {
-            gameOverUI.SetActive(true);
-        }
+        //if (rb.position.y < -80f)
+        //{
+        //    gameOverUI.SetActive(true);
+        //}
     }
 }
