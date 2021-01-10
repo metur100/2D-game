@@ -14,6 +14,8 @@ TagManager:
   - Player_Knight_Num
   - Player_Wolf
   - Player_Wolf_Num
+  - Slim_AI
+  - Player_Knight_Advanturer
   layers:
   - Default
   - TransparentFX
