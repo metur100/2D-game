@@ -14,9 +14,9 @@ public class SpikesDamage : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_Knight")
+        if (other.gameObject.tag == "Player_Knight_Advanturer")
         {
-            HealthKnight eHealth = other.gameObject.GetComponent<HealthKnight>();
+            HealthKnightAdvanturer eHealth = other.gameObject.GetComponent<HealthKnightAdvanturer>();
             eHealth.ModifyHealth(damageDoneFireB);
         }
     }

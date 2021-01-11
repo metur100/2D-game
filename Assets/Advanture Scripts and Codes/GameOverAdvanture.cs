@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverAdvature : MonoBehaviour
+public class GameOverAdvanture : MonoBehaviour
 {
     public void Exit()
     {

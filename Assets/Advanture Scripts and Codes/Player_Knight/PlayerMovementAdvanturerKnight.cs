@@ -7,7 +7,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public Rigidbody2D rb;
-    public GameObject gameOverUI;
+    public GameObject gameOverUIAdvanture;
     public float normalMovementSpeed = 400f;
     private float horizontalMove = 0f;
     private bool jump = false;
@@ -54,7 +54,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
 
         //if (rb.position.y < -80f)
         //{
-        //    gameOverUI.SetActive(true);
+        //    gameOverUIAdvanture.SetActive(true);
         //}
     }
 }
