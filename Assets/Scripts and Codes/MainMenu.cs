@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void PlayAdvanture()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Advanture");
+    }
     public void ExitGame()
     {
         Application.Quit();
