@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SlimeHealthbar : MonoBehaviour
+public class SlimeHealthbarPatrol : MonoBehaviour
 {
     [SerializeField]
     private Image Bar;
@@ -13,7 +13,7 @@ public class SlimeHealthbar : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<SlimeHealth>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<SlimeHealthPatrol>().OnHealthPctChanged += HandleHealthChanged;
     }
     private void HandleHealthChanged(float pct)
     {

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimFollowAttack : MonoBehaviour
+public class SnailPatrolChaseAttack : MonoBehaviour
 {
     [SerializeField]
     Transform player;
     [SerializeField]
     float agroRange;
-    [SerializeField]
-    float moveSpeed;
     [SerializeField]
     float shootingRange;
     [SerializeField]
@@ -21,17 +18,12 @@ public class SlimFollowAttack : MonoBehaviour
     private float nextFireTime;
     [SerializeField]
     Rigidbody2D rb2d;
-    public Animator animator;
-    private bool isWalking = false;
-    public Transform groundDetection;
+    public float speed;
     public float distance;
-    //private bool movingRight = true;
-    //private float horizontalMove = 0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
+    private bool movingRight = true;
+    public Transform groundDetection;
+    private bool isWalking = true;
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -39,18 +31,11 @@ public class SlimFollowAttack : MonoBehaviour
         //transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         float distToPlayer = Vector2.Distance(transform.position, player.position);
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        if (distToPlayer < agroRange && distToPlayer > shootingRange)
+        if (distToPlayer < agroRange && distToPlayer > shootingRange && groundInfo.collider == true)
         {
-            if (groundInfo.collider == false)
-            {
-                StopChasingPlayer();
-            }
-            else
-            {
-                isWalking = true;
-                animator.SetBool("IsWalking", isWalking);
-                ChasePlayer();
-            }  
+           isWalking = true;
+           animator.SetBool("IsWalking", isWalking);
+           ChasePlayer();
         }
         else if (distToPlayer <= shootingRange && nextFireTime < Time.time)
         {
@@ -67,22 +52,40 @@ public class SlimFollowAttack : MonoBehaviour
             StopChasingPlayer();
         }
     }
+    private void StopChasingPlayer()
+    {
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.up, distance);
+        if (groundInfo.collider == false)
+        {
+            if (movingRight == true)
+            {
+                isWalking = true;
+                animator.SetBool("IsWalking", isWalking);
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingRight = false;
+            }
+            else
+            {
+                isWalking = true;
+                animator.SetBool("IsWalking", isWalking);
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingRight = true;
+            }
+        }
+    }
     private void ChasePlayer()
     {
         if (transform.position.x < player.position.x)
         {
-            rb2d.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(70, 70);
+            rb2d.velocity = new Vector2(speed, 0);
+            transform.localScale = new Vector2(20, 20);
         }
         else //if (transform.position.x < player.position.x)
         {
-            rb2d.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(-70, 70);
+            rb2d.velocity = new Vector2(-speed, 0);
+            transform.localScale = new Vector2(-20, 20);
         }
-    }
-    private void StopChasingPlayer()
-    {
-        rb2d.velocity = new Vector2(0, 0);
     }
     private void StartShooting()
     {
