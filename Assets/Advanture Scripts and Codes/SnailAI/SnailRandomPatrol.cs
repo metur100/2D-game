@@ -29,6 +29,7 @@ public class SnailRandomPatrol : MonoBehaviour
         {
             if(waitTime <= 0)
             {
+                transform.eulerAngles = new Vector3(0, -180, 0);
                 moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 waitTime = startWaitTime;
             }

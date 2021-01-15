@@ -26631,7 +26631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526470480}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: GroundPoint
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -34168,12 +34168,12 @@ GameObject:
   m_Component:
   - component: {fileID: 688849078}
   - component: {fileID: 688849077}
-  - component: {fileID: 688849076}
   - component: {fileID: 688849075}
   - component: {fileID: 688849080}
   - component: {fileID: 688849074}
   - component: {fileID: 688849079}
-  m_Layer: 0
+  - component: {fileID: 688849076}
+  m_Layer: 21
   m_Name: Snail_AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34215,32 +34215,21 @@ CircleCollider2D:
   m_Offset: {x: 0.030856764, y: -0.102463745}
   serializedVersion: 2
   m_Radius: 0.3725731
---- !u!61 &688849076
-BoxCollider2D:
+--- !u!114 &688849076
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688849073}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.031876683, y: -0.20517212}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7509221, y: 0.6479298}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b863de61af2e34d9dd36a47e16b63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  MoveRight: 0
+  animator: {fileID: 688849074}
 --- !u!212 &688849077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34300,8 +34289,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688849073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4983.2, y: 99.82, z: 0}
-  m_LocalScale: {x: -20, y: 20, z: 0}
+  m_LocalPosition: {x: 5015.84, y: 101.1, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 0}
   m_Children:
   - {fileID: 1022867737}
   - {fileID: 526470480}
@@ -34315,7 +34304,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688849073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 558cfec0e6430a6448a857d9cf8c3142, type: 3}
   m_Name: 
@@ -34335,7 +34324,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688849073}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -84311,7 +84300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022867737}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -97763,7 +97752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304423080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4974, y: 96, z: 0}
+  m_LocalPosition: {x: 4972.91, y: 96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97920,7 +97909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314402443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4849.0767, y: 165.05367, z: -11}
+  m_LocalPosition: {x: 4850.5757, y: 165.05367, z: -11}
   m_LocalScale: {x: 1.5597075, y: 1.5597075, z: 1.5597075}
   m_Children:
   - {fileID: 2118115636}
@@ -111164,7 +111153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807574274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4849.0767, y: 165.05367, z: -11}
+  m_LocalPosition: {x: 4850.5757, y: 165.05367, z: -11}
   m_LocalScale: {x: 1, y: 0.8875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
