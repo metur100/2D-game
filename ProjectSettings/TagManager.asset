@@ -18,6 +18,7 @@ TagManager:
   - ShootAtMe
   - Slime_AI_Patrol
   - Slime_AI
+  - Hide_AI
   layers:
   - Default
   - TransparentFX

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1891533987178280598}
   - component: {fileID: 1199366027922257461}
   - component: {fileID: 6557754689753873557}
-  - component: {fileID: 7961161438655963713}
   - component: {fileID: 3129190625950487911}
+  - component: {fileID: 8309595478010036221}
   m_Layer: 0
   m_Name: AITurretPrefab
   m_TagString: Untagged
@@ -101,22 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.022278441}
   serializedVersion: 2
   m_Radius: 0.18122458
---- !u!114 &7961161438655963713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454888418544356118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74a1740708b23544a7b0d3695a269db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 891840102600001788, guid: 4831051d3264a5b46ae465f497d7d935, type: 3}
-  speed: 50
-  bulletRB: {fileID: 3129190625950487911}
-  damageDone: -20
 --- !u!50 &3129190625950487911
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +122,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8309595478010036221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454888418544356118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73702793c6b549841a41e315b9780a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 891840102600001788, guid: 4831051d3264a5b46ae465f497d7d935, type: 3}
+  speed: 50
+  bulletRB: {fileID: 3129190625950487911}
+  damageDone: -20

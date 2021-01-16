@@ -8,16 +8,13 @@ public class EnemyPatrolStopGo : MonoBehaviour
 	public bool MoveRight;
 	public Animator animator;
 	private bool isInvulnerable = false;
-	private float ignoreCollisionOverTime = 2f;
-	// Use this for initialization
+	private float ignoreCollisionOverTime = 3.4f;
 	void Update()
 	{
-		// Use this for initialization
 		if (MoveRight)
 		{
 			transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-			StartCoroutine(GetInvulnerable());
-			transform.localScale = new Vector2(-20, 20);
+			transform.localScale = new Vector2(-20, 20);	
 		}
 		else
 		{
@@ -39,6 +36,10 @@ public class EnemyPatrolStopGo : MonoBehaviour
 				MoveRight = true;
 			}
 		}
+		if (trig.gameObject.CompareTag("Hide_AI"))
+        {
+			StartCoroutine(GetInvulnerable());
+		}
 	}
 	IEnumerator GetInvulnerable()
 	{
@@ -51,6 +52,5 @@ public class EnemyPatrolStopGo : MonoBehaviour
 		isInvulnerable = false;
 		animator.SetBool("IsHiding", isInvulnerable);
 		Physics2D.IgnoreLayerCollision(21, 11, false);
-
 	}
 }

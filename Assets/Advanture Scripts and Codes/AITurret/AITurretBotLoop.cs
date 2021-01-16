@@ -15,7 +15,7 @@ public class AITurretBotLoop : MonoBehaviour
     public Transform Shootpoint;
     public float Force;
 
-    // Start is called before the first frame update
+    // Add a tag where you can shoot
     void Start()
     {
 

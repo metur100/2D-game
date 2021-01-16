@@ -12,7 +12,7 @@ public class RangeShootingFollowRetreat : MonoBehaviour
     public float startTimeBtwShots;
 
     public GameObject projectile;
-
+    public Animator animator;
     private Transform player;
     // Start is called before the first frame update
     void Start()
@@ -26,14 +26,17 @@ public class RangeShootingFollowRetreat : MonoBehaviour
     {
         if (Vector2.Distance (transform.position, player.position) > stoppingDistance)
         {
+            //walking
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
         else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
         {
+            //shoting
             transform.position = this.transform.position;
         }
         else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
+            //retreating
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
