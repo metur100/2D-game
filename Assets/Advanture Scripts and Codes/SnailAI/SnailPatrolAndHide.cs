@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolStopGo : MonoBehaviour
+public class SnailPatrolAndHide : MonoBehaviour
 {
 	public float speed = 10f;
 	public bool MoveRight;
@@ -14,7 +14,7 @@ public class EnemyPatrolStopGo : MonoBehaviour
 		if (MoveRight)
 		{
 			transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-			transform.localScale = new Vector2(-60, 60);	
+			transform.localScale = new Vector2(-60, 60);
 		}
 		else
 		{
@@ -37,13 +37,13 @@ public class EnemyPatrolStopGo : MonoBehaviour
 			}
 		}
 		if (trig.gameObject.CompareTag("Hide_AI"))
-        {
+		{
 			StartCoroutine(GetInvulnerable());
 		}
 	}
 	IEnumerator GetInvulnerable()
 	{
-		Physics2D.IgnoreLayerCollision(21, 11, true);;
+		Physics2D.IgnoreLayerCollision(21, 17, true); ;
 		speed = 0f;
 		isInvulnerable = true;
 		animator.SetBool("IsHiding", isInvulnerable);
@@ -51,6 +51,6 @@ public class EnemyPatrolStopGo : MonoBehaviour
 		speed = 10f;
 		isInvulnerable = false;
 		animator.SetBool("IsHiding", isInvulnerable);
-		Physics2D.IgnoreLayerCollision(21, 11, false);
+		Physics2D.IgnoreLayerCollision(21, 17, false);
 	}
 }

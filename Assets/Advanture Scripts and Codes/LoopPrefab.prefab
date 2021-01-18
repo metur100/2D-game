@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b504312e53555459bf82adb14c0ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6680917683777370124, guid: 4db87422b098ded49b3a4a1ebeeb052a, type: 3}
+  target: {fileID: 6621863394611476816, guid: 4db87422b098ded49b3a4a1ebeeb052a, type: 3}
   speed: 50
   bulletRB: {fileID: 7247995949273038670}
   damageDone: -20
@@ -58,7 +58,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7027262371951243641}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -70,7 +70,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &503275058261770397
 SpriteRenderer:
   m_ObjectHideFlags: 0

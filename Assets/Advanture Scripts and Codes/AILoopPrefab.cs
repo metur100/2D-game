@@ -31,6 +31,6 @@ public class AILoopPrefab : MonoBehaviour
     IEnumerator destroyBullet()
     {
         yield return new WaitForSeconds(1.85f);
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }

@@ -16,11 +16,12 @@ TagManager:
   - Player_Wolf_Num
   - Player_Knight_Advanturer
   - ShootAtMe
-  - Slime_AI_Patrol
   - Slime_AI
   - Hide_AI
   - Platform
   - Trunk_AI
+  - Bee_AI
+  - Snail_AI
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TrunkHealthBar : MonoBehaviour
+public class SnailHealthBar : MonoBehaviour
 {
     [SerializeField]
     private Image Bar;
@@ -12,7 +12,7 @@ public class TrunkHealthBar : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<TrunkHealth>().OnHealthPctChanged += HandleHealthChanged;
+        FindObjectOfType<SnailHealth>().OnHealthPctChanged += HandleHealthChanged;
     }
     private void HandleHealthChanged(float pct)
     {
