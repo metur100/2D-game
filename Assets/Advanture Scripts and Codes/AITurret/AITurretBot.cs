@@ -14,6 +14,7 @@ public class AITurretBot : MonoBehaviour
     float nextTimeToFire = 0;
     public Transform Shootpoint;
     public float Force;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,9 @@ public class AITurretBot : MonoBehaviour
             //Gun.transform.up = Direction;
             if (Time.time > nextTimeToFire)
             {
-                nextTimeToFire = Time.time + 1 / FireRate;
+                nextTimeToFire = Time.time + 2 / FireRate;
                 shoot();
+                animator.SetTrigger("IsAttacking");
             }
         }
     }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimFollowAttack : MonoBehaviour
+public class TrunkFollowAttack : MonoBehaviour
 {
     [SerializeField]
     Transform player;

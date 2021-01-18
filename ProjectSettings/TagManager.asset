@@ -19,6 +19,8 @@ TagManager:
   - Slime_AI_Patrol
   - Slime_AI
   - Hide_AI
+  - Platform
+  - Trunk_AI
   layers:
   - Default
   - TransparentFX

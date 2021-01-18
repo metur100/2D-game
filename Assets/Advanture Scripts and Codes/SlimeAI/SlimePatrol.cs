@@ -20,16 +20,12 @@ public class SlimePatrol : MonoBehaviour
         {
             if (movingRight == true)
             {
-                isSpinning = true;
-                animator.SetBool("IsSpinning", isSpinning);
-                transform.eulerAngles = new Vector3(0, -180, 0);
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = false;
             }
             else
             {
-                isSpinning = true;
-                animator.SetBool("IsSpinning", isSpinning);
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = true;
             }
         }

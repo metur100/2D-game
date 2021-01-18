@@ -20,8 +20,8 @@ public class MondDRangeAttackPrefab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyProjectile();
@@ -33,6 +33,10 @@ public class MondDRangeAttackPrefab : MonoBehaviour
         {
             HealthKnightAdvanturer eHealth = other.gameObject.GetComponent<HealthKnightAdvanturer>();
             eHealth.ModifyHealth(damageDone);
+            DestroyProjectile();
+        }
+        if (other.CompareTag("Platform"))
+        {
             DestroyProjectile();
         }
     }

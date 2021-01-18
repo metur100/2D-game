@@ -26,6 +26,11 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             SlimeHealthPatrol eHealth = other.gameObject.GetComponent<SlimeHealthPatrol>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        if (other.gameObject.tag == "Trunk_AI")
+        {
+            TrunkHealth eHealth = other.gameObject.GetComponent<TrunkHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
     }
     IEnumerator DestroyGameobject()
     {

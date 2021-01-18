@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AITurretAttackPrefab : MonoBehaviour
+public class TrunkAttackPrefab : MonoBehaviour
 {
     [SerializeField]
     GameObject target;
