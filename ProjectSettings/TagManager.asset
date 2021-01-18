@@ -22,6 +22,9 @@ TagManager:
   - Trunk_AI
   - Bee_AI
   - Snail_AI
+  - Trunk_AI_2
+  - Trunk_AI_3
+  - Slime_AI_2
   layers:
   - Default
   - TransparentFX

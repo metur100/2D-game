@@ -13,7 +13,7 @@ public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
     public MeleePrefabKnightAdvanturer meleeDamage;
     private int enragedMeleeDmg = -40;
     private int normalMeleeDamage = -20; //it deals 40 damage close range, 20 damage long range
-    private float coolddownMeleeAttacking = 2f;
+    private float coolddownMeleeAttacking = 1f;
     private bool isCooldownMeleeAttack = false;
     private bool isMeleeAttacking = false;
     private float maleeAttackTimer = 0.0f;

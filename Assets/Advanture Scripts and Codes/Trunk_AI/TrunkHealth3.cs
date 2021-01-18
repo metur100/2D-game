@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SlimeHealth : MonoBehaviour
+public class TrunkHealth3 : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth = 200;
