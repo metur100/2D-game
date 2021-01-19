@@ -51,6 +51,26 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             SnailHealth eHealth = other.gameObject.GetComponent<SnailHealth>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Snail_AI_2")
+        {
+            SnailHealth2 eHealth = other.gameObject.GetComponent<SnailHealth2>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Turtle_AI")
+        {
+            TurtleHealth eHealth = other.gameObject.GetComponent<TurtleHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "BlueBird_AI")
+        {
+            BlueBirdHealth eHealth = other.gameObject.GetComponent<BlueBirdHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "BlueBird_AI_2")
+        {
+            BlueBirdHealth2 eHealth = other.gameObject.GetComponent<BlueBirdHealth2>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
     }
     IEnumerator DestroyGameobject()
     {

@@ -9,6 +9,8 @@ public class SnailPatrolAndHide : MonoBehaviour
 	public Animator animator;
 	private bool isInvulnerable = false;
 	private float ignoreCollisionOverTime = 3.4f;
+	public int snailHideDamage = -20;
+
 	void Update()
 	{
 		if (MoveRight)
@@ -39,6 +41,11 @@ public class SnailPatrolAndHide : MonoBehaviour
 		if (trig.gameObject.CompareTag("Hide_AI"))
 		{
 			StartCoroutine(GetInvulnerable());
+		}
+		if (trig.gameObject.tag == "Player_Knight_Advanturer"/* && other.gameObject.tag == "Hide_AI"*/)
+		{
+			HealthKnightAdvanturer eHealth = trig.gameObject.GetComponent<HealthKnightAdvanturer>();
+			eHealth.ModifyHealth(snailHideDamage);
 		}
 	}
 	IEnumerator GetInvulnerable()

@@ -28,7 +28,7 @@ public class AITurretBotLoop : MonoBehaviour
         RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
         if (rayInfo)
         {
-            if (rayInfo.collider.gameObject.tag == "ShootAtMe")
+            if (rayInfo.collider.gameObject.tag == "Target_AI")
             {
                 if (Detected == false)
                 {

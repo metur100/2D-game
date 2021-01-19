@@ -16,7 +16,7 @@ public class AILoopPrefab : MonoBehaviour
     {
         StartCoroutine(destroyBullet());
         bulletRB = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("ShootAtMe");
+        target = GameObject.FindGameObjectWithTag("Target_AI");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
     }

@@ -25,6 +25,13 @@ TagManager:
   - Trunk_AI_2
   - Trunk_AI_3
   - Slime_AI_2
+  - Slime_AI_Patrol
+  - GM
+  - Snail_AI_2
+  - Turtle_AI
+  - BlueBird_AI
+  - BlueBird_AI_2
+  - Target_AI
   layers:
   - Default
   - TransparentFX
