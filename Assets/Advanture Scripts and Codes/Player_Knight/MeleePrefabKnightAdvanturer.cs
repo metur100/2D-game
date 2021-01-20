@@ -26,6 +26,11 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             SlimeHealthPatrol2 eHealth = other.gameObject.GetComponent<SlimeHealthPatrol2>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Slime_AI_3")
+        {
+            SlimeHealthPatrol3 eHealth = other.gameObject.GetComponent<SlimeHealthPatrol3>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
         else if (other.gameObject.tag == "Trunk_AI")
         {
             TrunkHealth eHealth = other.gameObject.GetComponent<TrunkHealth>();
@@ -41,9 +46,24 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             TrunkHealth3 eHealth = other.gameObject.GetComponent<TrunkHealth3>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Trunk_AI_4")
+        {
+            TrunkHealth4 eHealth = other.gameObject.GetComponent<TrunkHealth4>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Trunk_AI_5")
+        {
+            TrunkHealth5 eHealth = other.gameObject.GetComponent<TrunkHealth5>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
         else if (other.gameObject.tag == "Bee_AI")
         {
             BeeHealth eHealth = other.gameObject.GetComponent<BeeHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Bee_AI_2")
+        {
+            BeeHealth2 eHealth = other.gameObject.GetComponent<BeeHealth2>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
         else if (other.gameObject.tag == "Snail_AI")
@@ -56,9 +76,29 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             SnailHealth2 eHealth = other.gameObject.GetComponent<SnailHealth2>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Snail_AI_3")
+        {
+            SnailHealth3 eHealth = other.gameObject.GetComponent<SnailHealth3>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Snail_AI_4")
+        {
+            SnailHealth4 eHealth = other.gameObject.GetComponent<SnailHealth4>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
         else if (other.gameObject.tag == "Turtle_AI")
         {
             TurtleHealth eHealth = other.gameObject.GetComponent<TurtleHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Turtle_AI_2")
+        {
+            TurtleHealth2 eHealth = other.gameObject.GetComponent<TurtleHealth2>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Turtle_AI_3")
+        {
+            TurtleHealth3 eHealth = other.gameObject.GetComponent<TurtleHealth3>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
         else if (other.gameObject.tag == "BlueBird_AI")
@@ -69,6 +109,16 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
         else if (other.gameObject.tag == "BlueBird_AI_2")
         {
             BlueBirdHealth2 eHealth = other.gameObject.GetComponent<BlueBirdHealth2>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "BlueBird_AI_3")
+        {
+            BlueBirdHealth3 eHealth = other.gameObject.GetComponent<BlueBirdHealth3>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Ghost_AI")
+        {
+            GhostHealth eHealth = other.gameObject.GetComponent<GhostHealth>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
     }

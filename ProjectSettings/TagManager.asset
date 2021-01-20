@@ -32,6 +32,18 @@ TagManager:
   - BlueBird_AI
   - BlueBird_AI_2
   - Target_AI
+  - Target_AI_2
+  - Target_AI_3
+  - Bee_AI_2
+  - Snail_AI_3
+  - Slime_AI_3
+  - Trunk_AI_4
+  - Turtle_AI_2
+  - Ghost_AI
+  - Trunk_AI_5
+  - Snail_AI_4
+  - BlueBird_AI_3
+  - Turtle_AI_3
   layers:
   - Default
   - TransparentFX

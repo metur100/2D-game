@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AILoopPrefab : MonoBehaviour
+public class AILoopPrefab2 : MonoBehaviour
 {
     [SerializeField]
     GameObject target;
@@ -16,7 +16,7 @@ public class AILoopPrefab : MonoBehaviour
     {
         StartCoroutine(destroyBullet());
         bulletRB = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Target_AI");
+        target = GameObject.FindGameObjectWithTag("Target_AI_2");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
     }
