@@ -17,4 +17,8 @@ public class GameOverAdvanture : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void LastCheckPoint()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

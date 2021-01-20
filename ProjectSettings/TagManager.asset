@@ -44,6 +44,7 @@ TagManager:
   - Snail_AI_4
   - BlueBird_AI_3
   - Turtle_AI_3
+  - Slime_AI_4
   layers:
   - Default
   - TransparentFX
