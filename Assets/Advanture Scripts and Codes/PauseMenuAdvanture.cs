@@ -7,6 +7,8 @@ public class PauseMenuAdvanture : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public GameObject pausedMenuUI;
+    public GameObject gameSaved;
+    public GameObject gameLoaded;
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +27,8 @@ public class PauseMenuAdvanture : MonoBehaviour
     public void Resume()
     {
         pausedMenuUI.SetActive(false);
+        gameSaved.SetActive(false);
+        gameLoaded.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }

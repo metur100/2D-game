@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerKnightPosition : MonoBehaviour
 {
     private GameMaster gm;
+    public GameObject gameSaved;
+    public GameObject gameLoaded;
     //public HealthKnightAdvanturer current;
     void Start()
     {
@@ -14,10 +16,12 @@ public class PlayerKnightPosition : MonoBehaviour
     }
     public void SavePlayer ()
     {
+        gameSaved.SetActive(true);
         SaveSystem.SavePlayer(this);
     }
     public void LoadPlayer()
     {
+        gameLoaded.SetActive(true);
         PlayerData data = SaveSystem.LoadPlayer();
 
         Vector2 position;
