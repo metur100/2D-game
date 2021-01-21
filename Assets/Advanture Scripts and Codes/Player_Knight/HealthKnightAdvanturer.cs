@@ -12,7 +12,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public GameObject gameOverUI;
     public Animator animator;
     [SerializeField]
-    private int currentHealth;
+    public int currentHealth;
     private bool isDead = false;
     private float delay = 1f;
 

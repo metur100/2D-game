@@ -6,22 +6,24 @@ using UnityEngine.SceneManagement;
 public class PlayerKnightPosition : MonoBehaviour
 {
     private GameMaster gm;
+    //public HealthKnightAdvanturer current;
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastChackPointPos;
     }
+    public void SavePlayer ()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //}
-    //public void LastCheckPoint()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //}
+        Vector2 position;
+
+        position.x = data.position[0];
+        position.y = data.position[1];
+        transform.position = position;
+    }
 }

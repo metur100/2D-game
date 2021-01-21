@@ -9,10 +9,6 @@ public class GameOverAdvanture : MonoBehaviour
     {
         Application.Quit();
     }
-    public void GameScene()
-    {
-        SceneManager.LoadScene("Advanture");
-    }
     public void mainManuBack()
     {
         SceneManager.LoadScene("Menu");
