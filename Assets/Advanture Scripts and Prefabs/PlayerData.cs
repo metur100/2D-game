@@ -9,7 +9,7 @@ public class PlayerData
     //public int health;
     public float[] position;
 
-    public PlayerData (PlayerKnightPosition pos /*HealthKnightAdvanturer currHealth*/)
+    public PlayerData (PlayerKnightPosition pos/*, HealthKnightAdvanturer currHealth*/)
     {
         //health = currHealth.currentHealth;
         position = new float[2];

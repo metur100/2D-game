@@ -5,29 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class PlayerKnightPosition : MonoBehaviour
 {
-    private GameMaster gm;
-    public GameObject gameSaved;
-    public GameObject gameLoaded;
+    //private GameMaster gm;
+    //public GameObject gameSaved;
+    //public GameObject gameLoaded;
+    /*public*/ Vector2 position;
     //public HealthKnightAdvanturer current;
-    void Start()
-    {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.lastChackPointPos;
-    }
+    //public int currentStateOfHealth;
+    //void Start()
+    //{
+    //    gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+    //    transform.position = gm.lastChackPointPos;
+    //}
     public void SavePlayer ()
     {
-        gameSaved.SetActive(true);
+        //gameSaved.SetActive(true);
         SaveSystem.SavePlayer(this);
     }
     public void LoadPlayer()
     {
-        gameLoaded.SetActive(true);
+        //gameLoaded.SetActive(true);
         PlayerData data = SaveSystem.LoadPlayer();
-
-        Vector2 position;
+        //Vector2 position;
 
         position.x = data.position[0];
         position.y = data.position[1];
         transform.position = position;
+        //currentStateOfHealth = data.health;
     }
 }
