@@ -15,12 +15,11 @@ public class DashMoveAdvanturer : MonoBehaviour
     private bool isDashing = false;
     private float dashCooldown = 3f;
     private bool isDashCooldown = false;
-    //public GameObject dashEffect;
-
-    //public PlayerKnightPosition pos;
+    public ParticleSystem dash;
 
     void Start()
     {
+        dash.Stop();
         dashing.fillAmount = 0;
         rb = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
@@ -31,23 +30,20 @@ public class DashMoveAdvanturer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) && isDashCooldown == false)
             {
-                //GameObject Player = Instantiate(dashEffect, transform.position, Quaternion.identity);
-                //Player.GetComponent<Rigidbody2D>().AddForce(Player.transform.forward * dashSpeed);
+                dash.Play();
                 isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 1;
-                
                 FindObjectOfType<AudioManager>().Play("Dash");
             }
             else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
             {
-                //Instantiate(dashEffect, transform.position, Quaternion.identity);
+                dash.Play();
                 isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 2;
-
                 FindObjectOfType<AudioManager>().Play("Dash");
             }
             if (isDashCooldown)

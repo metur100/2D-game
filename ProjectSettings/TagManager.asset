@@ -47,6 +47,7 @@ TagManager:
   - Slime_AI_4
   - StartPosition
   - MonD_NPC
+  - Ghost_Dialog
   layers:
   - Default
   - TransparentFX
