@@ -46,6 +46,7 @@ TagManager:
   - Turtle_AI_3
   - Slime_AI_4
   - StartPosition
+  - MonD_NPC
   layers:
   - Default
   - TransparentFX

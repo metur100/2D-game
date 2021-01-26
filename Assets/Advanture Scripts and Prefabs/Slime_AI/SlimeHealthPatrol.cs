@@ -9,13 +9,13 @@ public class SlimeHealthPatrol : MonoBehaviour
     [SerializeField]
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
-    //public GameObject gameOverUI;
     public Animator animator;
     [SerializeField]
     private int currentHealth;
     private bool isDead = false;
     //private float delay = 1f;
     public GameObject deathEffect;
+    public GameObject bloodSplash;
 
     private void OnEnable()
     {
@@ -34,6 +34,7 @@ public class SlimeHealthPatrol : MonoBehaviour
             //animator.SetBool("isDead", isDead);
             //FindObjectOfType<AudioManager>().Play("Death");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
 
         }
