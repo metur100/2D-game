@@ -48,6 +48,7 @@ TagManager:
   - StartPosition
   - MonD_NPC
   - Ghost_Dialog
+  - Moving_Platform
   layers:
   - Default
   - TransparentFX
