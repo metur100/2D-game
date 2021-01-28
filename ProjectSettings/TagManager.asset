@@ -49,6 +49,7 @@ TagManager:
   - MonD_NPC
   - Ghost_Dialog
   - Moving_Platform
+  - Bat_AI
   layers:
   - Default
   - TransparentFX

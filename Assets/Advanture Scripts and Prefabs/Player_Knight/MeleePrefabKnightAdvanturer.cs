@@ -61,6 +61,11 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             TrunkHealth5 eHealth = other.gameObject.GetComponent<TrunkHealth5>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Trunk_AI_6")
+        {
+            TrunkHealth6 eHealth = other.gameObject.GetComponent<TrunkHealth6>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
         else if (other.gameObject.tag == "Bee_AI")
         {
             BeeHealth eHealth = other.gameObject.GetComponent<BeeHealth>();
@@ -124,6 +129,11 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
         else if (other.gameObject.tag == "Ghost_AI")
         {
             GhostHealth eHealth = other.gameObject.GetComponent<GhostHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Bat_AI")
+        {
+            BatHealth eHealth = other.gameObject.GetComponent<BatHealth>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
     }
