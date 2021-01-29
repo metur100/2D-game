@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using EZCameraShake;
 
 public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
             isMeleeAttacking = true;
             shootingMeleeAttack.fillAmount = 1;
             maleeAttackTimer = maleeAttackSpeed;
+            //CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 1f);
             ShootMeleeAttack();
             FindObjectOfType<AudioManager>().Play("SwordAttack");
         }
