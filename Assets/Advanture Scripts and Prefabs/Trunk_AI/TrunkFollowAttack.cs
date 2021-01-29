@@ -36,35 +36,38 @@ public class TrunkFollowAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-        float distToPlayer = Vector2.Distance(transform.position, player.position);
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        if (distToPlayer < agroRange && distToPlayer > shootingRange)
+        if (player != null)
         {
-            if (groundInfo.collider == false)
+            //transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+            float distToPlayer = Vector2.Distance(transform.position, player.position);
+            RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
+            if (distToPlayer < agroRange && distToPlayer > shootingRange)
             {
-                StopChasingPlayer();
+                if (groundInfo.collider == false)
+                {
+                    StopChasingPlayer();
+                }
+                else
+                {
+                    isWalking = true;
+                    animator.SetBool("IsWalking", isWalking);
+                    ChasePlayer();
+                }
+            }
+            else if (distToPlayer <= shootingRange && nextFireTime < Time.time)
+            {
+                animator.SetTrigger("IsAttacking");
+                isWalking = false;
+                animator.SetBool("IsWalking", isWalking);
+                StartShooting();
+                nextFireTime = Time.time + fireRate;
             }
             else
             {
-                isWalking = true;
+                isWalking = false;
                 animator.SetBool("IsWalking", isWalking);
-                ChasePlayer();
+                StopChasingPlayer();
             }
-        }
-        else if (distToPlayer <= shootingRange && nextFireTime < Time.time)
-        {
-            animator.SetTrigger("IsAttacking");
-            isWalking = false;
-            animator.SetBool("IsWalking", isWalking);
-            StartShooting();
-            nextFireTime = Time.time + fireRate;
-        }
-        else
-        {
-            isWalking = false;
-            animator.SetBool("IsWalking", isWalking);
-            StopChasingPlayer();
         }
     }
     private void ChasePlayer()

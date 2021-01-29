@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public float speed;
     private float moveInput;
     public float jumpForce;
@@ -17,10 +18,14 @@ public class PlayerController : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+
+        anim = GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -33,6 +38,32 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
+        {
+            anim.SetTrigger("takeOf");
+            isJumping = true;
+            rb.velocity = Vector2.up * jumpForce;
+        }
+
+        if (isGrounded == true)
+        {
+            anim.SetBool("IsJumping", false);
+        }
+        else
+        {
+            anim.SetBool("IsJumping", true);
+        }
+
+        if (moveInput == 0)
+        {
+            anim.SetBool("IsRunning", false);
+        }
+        else
+        {
+            anim.SetBool("IsRunning", true);
+        }
+
+
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -42,11 +73,6 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
-        {
-            isJumping = true;
-            rb.velocity = Vector2.up * jumpForce;
-        }
         if (Input.GetKey(KeyCode.W) && isJumping == true)
         {
             if (jumpTimeCounter > 0)

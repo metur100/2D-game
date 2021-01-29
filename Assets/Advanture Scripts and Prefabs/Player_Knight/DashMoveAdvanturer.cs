@@ -7,8 +7,8 @@ public class DashMoveAdvanturer : MonoBehaviour
 {
     public Image dashing;
     public Animator animator;
-    private Rigidbody2D rb;
-    private float dashSpeed = 200f;
+    public Rigidbody2D rb;
+    public float dashSpeed;
     private float dashTime;
     private float startDashTime = 0.5f;
     private int direction;
@@ -21,7 +21,7 @@ public class DashMoveAdvanturer : MonoBehaviour
     {
         dash.Stop();
         dashing.fillAmount = 0;
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
     }
     void Update()

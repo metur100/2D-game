@@ -29,45 +29,38 @@ public class BeeShootingFollowRetreat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) > chasingDistance)
+        if (player != null)
         {
-            //startingPoint = standing
-            transform.position = this.transform.position;
-        }
-        else if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) < chasingDistance)
-        {
-            //chasing and shooting
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            if (timeBtwShots <= 0)
+            if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) > chasingDistance)
             {
-                animator.SetTrigger("IsAttacking");
-                Instantiate(projectile, shootingPoint.transform.position, Quaternion.identity);
-                timeBtwShots = startTimeBtwShots;
+                //startingPoint = standing
+                transform.position = this.transform.position;
             }
-            else
+            else if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) < chasingDistance)
             {
-                timeBtwShots -= Time.deltaTime;
+                //chasing and shooting
+                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                if (timeBtwShots <= 0)
+                {
+                    animator.SetTrigger("IsAttacking");
+                    Instantiate(projectile, shootingPoint.transform.position, Quaternion.identity);
+                    timeBtwShots = startTimeBtwShots;
+                }
+                else
+                {
+                    timeBtwShots -= Time.deltaTime;
+                }
+            }
+            else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
+            {
+                //shoting
+                transform.position = this.transform.position;
+            }
+            else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+            {
+                //retreating
+                transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
             }
         }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
-        {
-            //shoting
-            transform.position = this.transform.position;
-        }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
-        {
-            //retreating
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-        }
-        //if (timeBtwShots <= 0)
-        //{
-        //    animator.SetTrigger("IsAttacking");
-        //    Instantiate(projectile, shootingPoint.transform.position, Quaternion.identity);
-        //    timeBtwShots = startTimeBtwShots;
-        //}
-        //else
-        //{
-        //    timeBtwShots -= Time.deltaTime;
-        //}
     }
 }

@@ -15,43 +15,40 @@ public class AITurretBot : MonoBehaviour
     public Transform Shootpoint;
     public float Force;
     public Animator animator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     // Update is called once per frame
     void Update()
     {
-        Vector2 targetPos = Target.position;
-        Direction = targetPos - (Vector2)transform.position;
-        RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
-        if (rayInfo)
+        if (Target != null)
         {
-            if (rayInfo.collider.gameObject.tag == "Player_Knight_Advanturer")
+            Vector2 targetPos = Target.position;
+            Direction = targetPos - (Vector2)transform.position;
+            RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
+            if (rayInfo)
             {
-                if (Detected == false)
+                if (rayInfo.collider.gameObject.tag == "Player_Knight_Advanturer")
                 {
-                    Detected = true;
+                    if (Detected == false)
+                    {
+                        Detected = true;
+                    }
+                }
+                else
+                {
+                    if (Detected == true)
+                    {
+                        Detected = false;
+                    }
                 }
             }
-            else
+            if (Detected)
             {
-                if (Detected == true)
+                //Gun.transform.up = Direction;
+                if (Time.time > nextTimeToFire)
                 {
-                    Detected = false;
+                    nextTimeToFire = Time.time + 2 / FireRate;
+                    shoot();
+                    animator.SetTrigger("IsAttacking");
                 }
-            }
-        }
-        if (Detected)
-        {
-            //Gun.transform.up = Direction;
-            if (Time.time > nextTimeToFire)
-            {
-                nextTimeToFire = Time.time + 2 / FireRate;
-                shoot();
-                animator.SetTrigger("IsAttacking");
             }
         }
     }
