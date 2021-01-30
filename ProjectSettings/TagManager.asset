@@ -50,6 +50,7 @@ TagManager:
   - Ghost_Dialog
   - Moving_Platform
   - Bat_AI
+  - Trunk_AI_7
   layers:
   - Default
   - TransparentFX
