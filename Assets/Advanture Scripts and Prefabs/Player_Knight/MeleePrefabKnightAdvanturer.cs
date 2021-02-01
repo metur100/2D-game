@@ -144,7 +144,7 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.07f);
+        yield return new WaitForSeconds(0.09f);
         Destroy(gameObject);
     }
 }

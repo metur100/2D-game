@@ -7,14 +7,10 @@ public class DamageReductionKnightAdvanturer : MonoBehaviour
 {
     public Image damageRed;
     public Animator animator;
-    public SlimAttackPrefab doDamage;
-    private int damageReductionSlimAttack = 0;
-    private int normalSlimmAttackDmg = -20;
     private float dmgReductionDuration = 1f;
     private bool isCooldownDmgRed = false;
     private float DmgRedCooldown = 2f;
     private bool isBlock = false;
-    //Start is called before the first frame update
     void Start()
     {
         damageRed.fillAmount = 0;
@@ -40,12 +36,14 @@ public class DamageReductionKnightAdvanturer : MonoBehaviour
     }
     IEnumerator DamageReductionDurationFrostB()
     {
-        doDamage.damageDone = damageReductionSlimAttack;
+        Physics2D.IgnoreLayerCollision(11, 21, true);
+        Physics2D.IgnoreLayerCollision(11, 22, true);
         isBlock = true;
         animator.SetBool("IsBlock", isBlock);
         yield return new WaitForSeconds(dmgReductionDuration);
         isBlock = false;
         animator.SetBool("IsBlock", isBlock);
-        doDamage.damageDone = normalSlimmAttackDmg;
+        Physics2D.IgnoreLayerCollision(11, 21, false);
+        Physics2D.IgnoreLayerCollision(11, 22, false);
     }
 }

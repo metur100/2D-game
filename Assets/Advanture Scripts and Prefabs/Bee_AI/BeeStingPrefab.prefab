@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7261368846428250573}
   - component: {fileID: 3547643996797595463}
   - component: {fileID: 1072176264134571616}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BeeStingPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

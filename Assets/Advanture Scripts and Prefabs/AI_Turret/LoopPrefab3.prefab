@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3078747637572107926}
   - component: {fileID: 4066303511010645541}
   - component: {fileID: 7377298937601736486}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: LoopPrefab3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

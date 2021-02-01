@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6557754689753873557}
   - component: {fileID: 3129190625950487911}
   - component: {fileID: 8309595478010036221}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: AITurretPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

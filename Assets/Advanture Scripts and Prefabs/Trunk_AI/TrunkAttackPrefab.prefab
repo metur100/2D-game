@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7773254658091588692}
   - component: {fileID: 481236622642314359}
   - component: {fileID: 8898127961276124107}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: TrunkAttackPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
