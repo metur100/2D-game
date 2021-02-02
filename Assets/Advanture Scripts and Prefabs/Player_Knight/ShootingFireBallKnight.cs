@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class ShootingFireBallKnight : MonoBehaviour
 {
@@ -40,5 +41,6 @@ public class ShootingFireBallKnight : MonoBehaviour
     {
         yield return new WaitForSeconds(0.67f);
         Instantiate(bulletPrefab, firePointBullet.position, firePointBullet.rotation);
+        CameraShaker.Instance.ShakeOnce(.8f, .5f, 0.1f, 0.2f);
     }
 }

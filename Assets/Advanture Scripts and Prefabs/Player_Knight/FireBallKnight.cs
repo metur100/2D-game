@@ -6,15 +6,16 @@ public class FireBallKnight : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int damageDoneFireB = -10;
-    private float speedOfFireBall = 100f;
+    [SerializeField]
+    private float speedOfFireBall = 200f;
     public GameObject impactEffect;
     void Start()
     {
         rb.velocity = transform.right * speedOfFireBall;
+        Physics2D.IgnoreLayerCollision(15, 5, true);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.gameObject.tag == "Slime_AI")
         {
             SlimeHealthPatrol eHealth = other.gameObject.GetComponent<SlimeHealthPatrol>();

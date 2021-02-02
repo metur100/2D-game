@@ -22,8 +22,10 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
 
+    public ParticleSystem dust;
     void Update()
     {
+        
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -34,6 +36,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
             animator.SetTrigger("takeOf");
             isJumping = true;
             rb.velocity = Vector2.up * jumpForce;
+            CreateDust();
         }
 
         if (isGrounded == true)
@@ -60,6 +63,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.W))
         {
             isJumping = false;
+            CreateDust();
         }
         //if (Input.GetButtonDown("Jump"))
         //{
@@ -94,7 +98,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, isJumping);
 
-        if (rb.position.y < -350f)
+        if (rb.position.y < -400f)
         {
             gameOverUIAdvanture.SetActive(true);
         }
@@ -109,5 +113,9 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Moving_Platform"))
             this.transform.parent = null;
+    }
+    void CreateDust()
+    {
+        dust.Play();
     }
 }

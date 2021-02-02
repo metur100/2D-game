@@ -9,6 +9,8 @@ public class GhostRangeAttackPrefab : MonoBehaviour
     private int damageDone = -20;
     private Transform player;
     private Vector2 target;
+
+    public GameObject explodeEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +23,12 @@ public class GhostRangeAttackPrefab : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        StartCoroutine(ExplodeAfterDuration());
         //if (transform.position.x == target.x && transform.position.y == target.y)
         //{
         //    DestroyProjectile();
         //}
+        StartCoroutine(DestroyGameObjectAfter());
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,5 +49,10 @@ public class GhostRangeAttackPrefab : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
+    }
+    IEnumerator ExplodeAfterDuration()
+    {
+        yield return new WaitForSeconds(2f);
+        Instantiate(explodeEffect, target, Quaternion.identity);
     }
 }
