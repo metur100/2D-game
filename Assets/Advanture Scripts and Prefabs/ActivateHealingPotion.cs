@@ -5,7 +5,6 @@ using UnityEngine;
 public class ActivateHealingPotion : MonoBehaviour
 {
     public GameObject healthEffect;
-    public int healing = 20;
     private Transform player;
 
     private void Start()
