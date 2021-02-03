@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HealingPotion : MonoBehaviour
 {
-
     public HealthKnightAdvanturer health;
     [SerializeField]
     private int healing = 20;
