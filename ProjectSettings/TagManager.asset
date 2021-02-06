@@ -51,6 +51,7 @@ TagManager:
   - Moving_Platform
   - Bat_AI
   - Trunk_AI_7
+  - MonD_Ghost
   layers:
   - Default
   - TransparentFX

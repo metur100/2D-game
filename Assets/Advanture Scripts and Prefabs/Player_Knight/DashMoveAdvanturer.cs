@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class DashMoveAdvanturer : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class DashMoveAdvanturer : MonoBehaviour
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 1;
+                CameraShaker.Instance.ShakeOnce(.5f, .9f, 0.1f, 0.2f);
                 FindObjectOfType<AudioManager>().Play("Dash");
             }
             else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
@@ -44,6 +46,7 @@ public class DashMoveAdvanturer : MonoBehaviour
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 2;
+                CameraShaker.Instance.ShakeOnce(.5f, .9f, 0.1f, 0.2f);
                 FindObjectOfType<AudioManager>().Play("Dash");
             }
             if (isDashCooldown)

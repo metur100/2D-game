@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthKnightAdvanturer : MonoBehaviour
 {
-    [SerializeField]
-    private int maxHealth = 200;
+    public int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public GameObject gameOverUI;
     public Animator animator;
