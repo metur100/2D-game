@@ -52,6 +52,8 @@ TagManager:
   - Bat_AI
   - Trunk_AI_7
   - MonD_Ghost
+  - Suprise_Box
+  - Suprise_Box_2
   layers:
   - Default
   - TransparentFX
@@ -76,7 +78,7 @@ TagManager:
   - StunHolyKnight
   - Enemy_AI
   - AttackPrefab_AI
-  - 
+  - Props_Advanturer
   - 
   - 
   - 

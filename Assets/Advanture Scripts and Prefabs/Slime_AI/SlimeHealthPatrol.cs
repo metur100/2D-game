@@ -15,7 +15,7 @@ public class SlimeHealthPatrol : MonoBehaviour
     //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject bloodSplash;
-    public GameObject dropHealthPotion;
+    public GameObject dropItem;
 
     private void OnEnable()
     {
@@ -30,12 +30,10 @@ public class SlimeHealthPatrol : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            //isDead = true;
-            //animator.SetBool("isDead", isDead);
             //FindObjectOfType<AudioManager>().Play("Death");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
-            Instantiate(dropHealthPotion, transform.position, Quaternion.identity);
+            Instantiate(dropItem, transform.position, Quaternion.identity);
             Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
 
         }

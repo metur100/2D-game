@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3667023952459948259}
   - component: {fileID: 8777314449194146935}
   m_Layer: 0
-  m_Name: HealPotion
+  m_Name: InstantHealPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,3 +124,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 2044680525612048611, guid: 4831051d3264a5b46ae465f497d7d935, type: 3}
   healing: 50
+  healEffect: {fileID: 1457553721509586521, guid: 2c068adf749ea4243b116ad02c5aa92c,
+    type: 3}

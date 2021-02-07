@@ -9,12 +9,13 @@ public class TrunkHealth7 : MonoBehaviour
     [SerializeField]
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
-    //public GameObject gameOverUI;
-    //public Animator animator;
+    public Animator animator;
     [SerializeField]
     private int currentHealth;
-    private bool isDead = false;
-    private float delay = 1f;
+    //private float delay = 1f;
+    public GameObject deathEffect;
+    public GameObject bloodSplash;
+    public GameObject dropItem;
 
     private void OnEnable()
     {
@@ -27,17 +28,18 @@ public class TrunkHealth7 : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
-            //isDead = true;
-            //animator.SetBool("isDead", isDead);
             //FindObjectOfType<AudioManager>().Play("Death");
-            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
-            //gameOverUI.SetActive(true);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(bloodSplash, transform.position, Quaternion.identity);
+            Instantiate(dropItem, transform.position, Quaternion.identity);
+            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
+
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
         //FindObjectOfType<AudioManager>().Play("Hurt");
-        //animator.SetTrigger("isHurt");
+        animator.SetTrigger("IsHurt");
     }
 }

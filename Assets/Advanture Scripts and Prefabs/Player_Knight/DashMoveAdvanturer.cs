@@ -11,10 +11,10 @@ public class DashMoveAdvanturer : MonoBehaviour
     public Rigidbody2D rb;
     public float dashSpeed;
     private float dashTime;
-    private float startDashTime = 0.5f;
+    private float startDashTime = 0.2f;
     private int direction;
     private bool isDashing = false;
-    private float dashCooldown = 3f;
+    private float dashCooldown = 0.4f;
     private bool isDashCooldown = false;
     public ParticleSystem dash;
 

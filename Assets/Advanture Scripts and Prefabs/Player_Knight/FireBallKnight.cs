@@ -141,6 +141,21 @@ public class FireBallKnight : MonoBehaviour
             BatHealth eHealth = other.gameObject.GetComponent<BatHealth>();
             eHealth.ModifyHealth(damageDoneFireB);
         }
+        else if (other.gameObject.tag == "Suprise_Box")
+        {
+            SupriseBoxHealth eHealth = other.gameObject.GetComponent<SupriseBoxHealth>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
+        else if (other.gameObject.tag == "Suprise_Box_2")
+        {
+            SupriseBoxHealth2 eHealth = other.gameObject.GetComponent<SupriseBoxHealth2>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
+        else if (other.gameObject.tag == "Suprise_Box_3")
+        {
+            SupriseBoxHealth3 eHealth = other.gameObject.GetComponent<SupriseBoxHealth3>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

@@ -9,7 +9,7 @@ public class DamageReductionKnightAdvanturer : MonoBehaviour
     public Animator animator;
     private float dmgReductionDuration = 1f;
     private bool isCooldownDmgRed = false;
-    private float DmgRedCooldown = 2f;
+    private float DmgRedCooldown = 5f;
     private bool isBlock = false;
     void Start()
     {

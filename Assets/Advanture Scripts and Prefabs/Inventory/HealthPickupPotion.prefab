@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2208356478267219353}
   - component: {fileID: 5329485412864176164}
   - component: {fileID: 3994326311989220445}
+  - component: {fileID: -5004576922528644381}
   m_Layer: 0
   m_Name: HealthPickupPotion
   m_TagString: Untagged
@@ -124,3 +125,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4363611292451934872, guid: 15073eb64a3b8e2478ffa8bab0eaa888,
     type: 3}
+--- !u!95 &-5004576922528644381
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994326311989220444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c17093b37a782774cb8698635c9f18bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

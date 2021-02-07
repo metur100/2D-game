@@ -10,7 +10,7 @@ public class ShootingFireBallKnight : MonoBehaviour
     public GameObject bulletPrefab;
     public Animator animator;
     public Image shootingBullet;
-    private float cooldownBullet = 2f;
+    private float cooldownBullet = 1.5f;
     private bool isCooldownBullet = false;
 
     void Start()

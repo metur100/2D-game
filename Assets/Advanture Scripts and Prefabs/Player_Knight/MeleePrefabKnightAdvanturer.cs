@@ -141,6 +141,21 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             BatHealth eHealth = other.gameObject.GetComponent<BatHealth>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "Suprise_Box")
+        {
+            SupriseBoxHealth eHealth = other.gameObject.GetComponent<SupriseBoxHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Suprise_Box_2")
+        {
+            SupriseBoxHealth2 eHealth = other.gameObject.GetComponent<SupriseBoxHealth2>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
+        else if (other.gameObject.tag == "Suprise_Box_3")
+        {
+            SupriseBoxHealth3 eHealth = other.gameObject.GetComponent<SupriseBoxHealth3>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
     }
     IEnumerator DestroyGameobject()
     {

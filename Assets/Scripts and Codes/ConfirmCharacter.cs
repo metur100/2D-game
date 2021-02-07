@@ -14,7 +14,7 @@ public class ConfirmCharacter : MonoBehaviour
         PlayerPrefs.SetInt("CharacterSelected", character.index);
         PlayerPrefs.SetInt("CharacterSelected2", character2.index);
         PlayerPrefs.SetInt("BGSelected", bg.index);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Arena");
 
         //if (character.index == 0 && character2.index == 1 || character.index == 1 && character2.index == 0)
         //{
