@@ -28,7 +28,6 @@ public class GhostRangeAttackPrefab : MonoBehaviour
         //{
         //    DestroyProjectile();
         //}
-        StartCoroutine(DestroyGameObjectAfter());
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,16 +37,9 @@ public class GhostRangeAttackPrefab : MonoBehaviour
             eHealth.ModifyHealth(damageDone);
             DestroyProjectile();
         }
-        StartCoroutine(DestroyGameObjectAfter());
     }
-
     void DestroyProjectile()
     {
-        Destroy(gameObject);
-    }
-    IEnumerator DestroyGameObjectAfter()
-    {
-        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
     IEnumerator ExplodeAfterDuration()

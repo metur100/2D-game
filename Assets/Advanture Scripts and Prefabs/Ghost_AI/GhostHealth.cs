@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 public class GhostHealth : MonoBehaviour
 {
@@ -13,8 +14,11 @@ public class GhostHealth : MonoBehaviour
     //public Animator animator;
     [SerializeField]
     private int currentHealth;
-    private bool isDead = false;
-    private float delay = 1f;
+    public GameObject deathEffect;
+    public GameObject dropItem;
+    public GameObject destroyWall;
+    public Transform destroyAtPosition;
+    public GameObject destroyWallEffect;
 
     private void OnEnable()
     {
@@ -32,12 +36,22 @@ public class GhostHealth : MonoBehaviour
             //isDead = true;
             //animator.SetBool("isDead", isDead);
             //FindObjectOfType<AudioManager>().Play("Death");
-            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+            CameraShaker.Instance.ShakeOnce(0.4f, 10f, 2f, 2f);
+            StartCoroutine(WaitTime());
             //gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
         //FindObjectOfType<AudioManager>().Play("Hurt");
         //animator.SetTrigger("isHurt");
+    }
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(2f);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Instantiate(dropItem, transform.position, Quaternion.identity);
+        Instantiate(destroyWallEffect, destroyAtPosition.position, Quaternion.identity);
+        Destroy(destroyWall);
+        Destroy(gameObject);
     }
 }
