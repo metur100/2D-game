@@ -14,6 +14,11 @@ public class DodgeDamage : MonoBehaviour
     //{
     //    player = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").transform;
     //}
+    private void Start()
+    {
+        Physics2D.IgnoreLayerCollision(11, 21, false);
+        Physics2D.IgnoreLayerCollision(11, 22, false);
+    }
     IEnumerator DodgeAllDamage()
     {
         Physics2D.IgnoreLayerCollision(11, 21, true);

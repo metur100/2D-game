@@ -14,6 +14,17 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public int currentHealth;
     private bool isDead = false;
     private float delay = 1f;
+    Renderer rend;
+    Color c;
+
+    private void Start()
+    {
+        Physics2D.IgnoreLayerCollision(11, 21, false);
+        Physics2D.IgnoreLayerCollision(11, 22, false);
+        Physics2D.IgnoreLayerCollision(11, 23, false);
+        rend = GetComponent<Renderer>();
+        c = rend.material.color;
+    }
 
     private void OnEnable()
     {
@@ -22,6 +33,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public void ModifyHealth(int amount)
     {
         currentHealth += amount;
+        StartCoroutine("TemporalInvulnerability");
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
@@ -35,8 +47,23 @@ public class HealthKnightAdvanturer : MonoBehaviour
             gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
-        OnHealthPctChanged(currentHealthPct);
+        OnHealthPctChanged(currentHealthPct);    
         FindObjectOfType<AudioManager>().Play("Hurt");
         animator.SetTrigger("IsHurt");
+    }
+    IEnumerator TemporalInvulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(11, 21, true);
+        Physics2D.IgnoreLayerCollision(11, 22, true);
+        Physics2D.IgnoreLayerCollision(11, 23, true);
+        c.a = 0.5f;
+        rend.material.color = c;
+        yield return new WaitForSeconds(2f);
+        Physics2D.IgnoreLayerCollision(11, 21, false);
+        Physics2D.IgnoreLayerCollision(11, 22, false);
+        Physics2D.IgnoreLayerCollision(11, 23, false);
+        c.a = 1f;
+        rend.material.color = c;
+        
     }
 }
