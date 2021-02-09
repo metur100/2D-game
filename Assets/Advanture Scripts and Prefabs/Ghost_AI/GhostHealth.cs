@@ -19,6 +19,7 @@ public class GhostHealth : MonoBehaviour
     public GameObject destroyWall;
     public Transform destroyAtPosition;
     public GameObject destroyWallEffect;
+    public GameObject destroyEnvironment;
 
     private void OnEnable()
     {
@@ -52,6 +53,7 @@ public class GhostHealth : MonoBehaviour
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Instantiate(destroyWallEffect, destroyAtPosition.position, Quaternion.identity);
         Destroy(destroyWall);
+        Destroy(destroyEnvironment);
         Destroy(gameObject);
     }
 }
