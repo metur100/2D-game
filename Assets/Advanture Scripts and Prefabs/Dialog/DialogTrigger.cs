@@ -9,11 +9,13 @@ public class DialogTrigger : MonoBehaviour
     public PlayerMovementAdvanturerKnight moveSpeed;
     public GameObject triggerDialogStart;
     public GameObject triggerGhostDialog;
+    public GameObject triggerQuest;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MonD_NPC"))
         {
             activateDialogStart.SetActive(true);
+            triggerQuest.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerDialogStart);
         }

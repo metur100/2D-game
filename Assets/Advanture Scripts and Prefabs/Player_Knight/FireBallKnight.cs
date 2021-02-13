@@ -156,6 +156,11 @@ public class FireBallKnight : MonoBehaviour
             SupriseBoxHealth3 eHealth = other.gameObject.GetComponent<SupriseBoxHealth3>();
             eHealth.ModifyHealth(damageDoneFireB);
         }
+        else if (other.gameObject.tag == "GreenPig_AI")
+        {
+            GreenPigHealth eHealth = other.gameObject.GetComponent<GreenPigHealth>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

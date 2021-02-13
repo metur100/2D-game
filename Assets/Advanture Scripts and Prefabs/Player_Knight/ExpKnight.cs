@@ -21,7 +21,7 @@ public class ExpKnight : MonoBehaviour
             hideExpBar.SetActive(false);
         }
     }
-    public void ModifyHealth(int amount)
+    public void ModifyExp(int amount)
     {
         if (currentExp < maxExp)
         {

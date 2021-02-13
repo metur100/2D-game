@@ -11,15 +11,17 @@ public class SlimeHealthPatrol : MonoBehaviour
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
-    private int currentHealth;
+    public int currentHealth;
     //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
 
+    //QuestGoal current;
     private void OnEnable()
     {
         currentHealth = maxHealth;
+        //current = GetComponent<QuestGoal>();
     }
     public void ModifyHealth(int amount)
     {
@@ -30,6 +32,8 @@ public class SlimeHealthPatrol : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
+            QuestGoal q = gameObject.GetComponent<QuestGoal>();
+            q.EnemyKilled();
             //FindObjectOfType<AudioManager>().Play("Death");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);

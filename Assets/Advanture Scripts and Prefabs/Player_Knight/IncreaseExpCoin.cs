@@ -10,7 +10,7 @@ public class IncreaseExpCoin : MonoBehaviour
         if (other.gameObject.tag == "Player_Knight_Advanturer")
         {
             ExpKnight eHealth = other.gameObject.GetComponent<ExpKnight>();
-            eHealth.ModifyHealth(expCollider);
+            eHealth.ModifyExp(expCollider);
         }
         Destroy(gameObject);
     }

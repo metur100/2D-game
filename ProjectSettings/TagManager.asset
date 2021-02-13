@@ -55,6 +55,8 @@ TagManager:
   - Suprise_Box
   - Suprise_Box_2
   - Trunk_AI_6
+  - BigStump
+  - GreenPig_AI
   layers:
   - Default
   - TransparentFX

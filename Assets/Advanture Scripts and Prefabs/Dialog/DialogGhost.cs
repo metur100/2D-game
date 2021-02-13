@@ -11,6 +11,7 @@ public class DialogGhost : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject activateDialog;
+    public GameObject activateWallAndEnemies;
     public PlayerMovementAdvanturerKnight moveSpeed;
 
     public GameObject continueButton;
@@ -45,6 +46,7 @@ public class DialogGhost : MonoBehaviour
             index++;
             textDisplay.text = "";
             StartCoroutine(Type());
+            activateWallAndEnemies.SetActive(true);
         }
         else
         {

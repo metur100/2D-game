@@ -11,6 +11,7 @@ public class Dialog : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject activateDialog;
+    public GameObject disableQuestUI;
     public PlayerMovementAdvanturerKnight moveSpeed;
 
     public GameObject continueButton;
@@ -54,6 +55,7 @@ public class Dialog : MonoBehaviour
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
+            disableQuestUI.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
         }
     }

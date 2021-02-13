@@ -19,9 +19,6 @@ public class SnailPatrolChaseAttack : MonoBehaviour
     [SerializeField]
     Rigidbody2D rb2d;
     public float speed;
-    public float distance;
-    private bool movingRight = true;
-    public Transform groundDetection;
     private bool isWalking = true;
     public Animator animator;
 
@@ -30,8 +27,7 @@ public class SnailPatrolChaseAttack : MonoBehaviour
     {
         //transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         float distToPlayer = Vector2.Distance(transform.position, player.position);
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        if (distToPlayer < agroRange && distToPlayer > shootingRange && groundInfo.collider == true)
+        if (distToPlayer < agroRange && distToPlayer > shootingRange)
         {
            isWalking = true;
            animator.SetBool("IsWalking", isWalking);
@@ -54,25 +50,7 @@ public class SnailPatrolChaseAttack : MonoBehaviour
     }
     private void StopChasingPlayer()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.up, distance);
-        if (groundInfo.collider == false)
-        {
-            if (movingRight == true)
-            {
-                isWalking = true;
-                animator.SetBool("IsWalking", isWalking);
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            }
-            else
-            {
-                isWalking = true;
-                animator.SetBool("IsWalking", isWalking);
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingRight = true;
-            }
-        }
+        rb2d.velocity = new Vector2(0, 0);
     }
     private void ChasePlayer()
     {

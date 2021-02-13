@@ -156,6 +156,11 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
             SupriseBoxHealth3 eHealth = other.gameObject.GetComponent<SupriseBoxHealth3>();
             eHealth.ModifyHealth(damageDoneMeleeAttack);
         }
+        else if (other.gameObject.tag == "GreenPig_AI")
+        {
+            GreenPigHealth eHealth = other.gameObject.GetComponent<GreenPigHealth>();
+            eHealth.ModifyHealth(damageDoneMeleeAttack);
+        }
     }
     IEnumerator DestroyGameobject()
     {

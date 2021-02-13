@@ -16,10 +16,7 @@ public class GhostHealth : MonoBehaviour
     private int currentHealth;
     public GameObject deathEffect;
     public GameObject dropItem;
-    public GameObject destroyWall;
-    public Transform destroyAtPosition;
-    public GameObject destroyWallEffect;
-    public GameObject destroyEnvironment;
+
 
     private void OnEnable()
     {
@@ -51,9 +48,6 @@ public class GhostHealth : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Instantiate(dropItem, transform.position, Quaternion.identity);
-        Instantiate(destroyWallEffect, destroyAtPosition.position, Quaternion.identity);
-        Destroy(destroyWall);
-        Destroy(destroyEnvironment);
         Destroy(gameObject);
     }
 }

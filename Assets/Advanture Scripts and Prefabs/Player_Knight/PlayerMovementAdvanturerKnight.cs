@@ -98,7 +98,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, isJumping);
 
-        if (rb.position.y < -400f)
+        if (rb.position.y < -800f)
         {
             gameOverUIAdvanture.SetActive(true);
         }
