@@ -11,14 +11,12 @@ public class QuestGiver : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI experianceText;
-    public TextMeshProUGUI goldText;
     public void OpenQuestWindow()
     {
         questWindow.SetActive(true);
         titleText.text = quest.title;
         descriptionText.text = quest.description;
         experianceText.text = quest.experianceReward.ToString();
-        goldText.text = quest.goldReward.ToString();
     }
     public void AcceptQuest()
     {

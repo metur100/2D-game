@@ -10,6 +10,9 @@ public class DialogTrigger : MonoBehaviour
     public GameObject triggerDialogStart;
     public GameObject triggerGhostDialog;
     public GameObject triggerQuest;
+    //public GameObject triggerWall;
+    //[SerializeField]
+    //Transform positionWall;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MonD_NPC"))
@@ -22,6 +25,7 @@ public class DialogTrigger : MonoBehaviour
         if (other.CompareTag("MonD_Ghost"))
         {
             activateGhostDialog.SetActive(true);
+            //Instantiate(triggerWall, positionWall.position, Quaternion.identity);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerGhostDialog);
         }

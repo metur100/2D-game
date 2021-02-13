@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SlimeHealthPatrol : MonoBehaviour
 {
@@ -16,8 +18,7 @@ public class SlimeHealthPatrol : MonoBehaviour
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
-
-    //QuestGoal current;
+    public Button activateDeathCount;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -32,9 +33,8 @@ public class SlimeHealthPatrol : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            QuestGoal q = gameObject.GetComponent<QuestGoal>();
-            q.EnemyKilled();
             //FindObjectOfType<AudioManager>().Play("Death");
+            activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);

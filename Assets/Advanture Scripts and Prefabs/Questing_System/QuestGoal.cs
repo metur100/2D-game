@@ -8,20 +8,14 @@ public class QuestGoal
     public GoalType goalType;
     public int requiredAmount;
     public int currentAmount;
-    //public GameObject enemy;
     public bool IsReached()
     {
         return (currentAmount >= requiredAmount);
     }
     public void EnemyKilled()
     {
-        //if (goalType == GoalType.Kill)
-        //{
-        //    if(enemy.gameObject.CompareTag("Slime_AI") == true)
-        //    {
         currentAmount++;
-        //    }
-        //}    
+        TrackQuestProgress.scoreValue += 1;
     }
     public void ItemCollected()
     {

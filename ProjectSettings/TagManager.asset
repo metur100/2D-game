@@ -57,6 +57,7 @@ TagManager:
   - Trunk_AI_6
   - BigStump
   - GreenPig_AI
+  - Wall_FirstBoss
   layers:
   - Default
   - TransparentFX

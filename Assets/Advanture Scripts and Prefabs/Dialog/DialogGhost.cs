@@ -15,6 +15,10 @@ public class DialogGhost : MonoBehaviour
     public PlayerMovementAdvanturerKnight moveSpeed;
 
     public GameObject continueButton;
+
+    public GameObject triggerWall;
+    [SerializeField]
+    Transform positionWall;
     //public Animator animator;
 
     private void Start()
@@ -40,13 +44,14 @@ public class DialogGhost : MonoBehaviour
     {
         //animator.SetTrigger("Change");
         continueButton.SetActive(false);
-
+        activateWallAndEnemies.SetActive(true);
+        Instantiate(triggerWall, positionWall.position, Quaternion.identity);
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
+            //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
-            activateWallAndEnemies.SetActive(true);
         }
         else
         {

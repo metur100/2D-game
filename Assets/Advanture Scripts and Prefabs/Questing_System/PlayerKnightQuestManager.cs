@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerKnightQuestManager : MonoBehaviour
 {
     public Quest quest;
-    public ExpKnight exp = new ExpKnight();
+    public ExpKnight exp;
     public GameObject questCompleted;
 
     public void GoBattle()
