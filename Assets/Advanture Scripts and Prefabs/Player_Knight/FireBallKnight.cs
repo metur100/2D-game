@@ -161,6 +161,16 @@ public class FireBallKnight : MonoBehaviour
             GreenPigHealth eHealth = other.gameObject.GetComponent<GreenPigHealth>();
             eHealth.ModifyHealth(damageDoneFireB);
         }
+        else if (other.gameObject.tag == "Plant_AI")
+        {
+            PlantHealth eHealth = other.gameObject.GetComponent<PlantHealth>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
+        else if (other.gameObject.tag == "Plant_AI_2")
+        {
+            PlantHealth2 eHealth = other.gameObject.GetComponent<PlantHealth2>();
+            eHealth.ModifyHealth(damageDoneFireB);
+        }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

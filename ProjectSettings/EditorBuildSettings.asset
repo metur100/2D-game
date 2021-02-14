@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Advanture.unity
     guid: 84615de76386c5f4fa23a21d0db247fe
+  - enabled: 1
+    path: Assets/Scenes/Advanture2.unity
+    guid: c1eafcff70a9e674f898163fe7d9f810
   m_configObjects: {}

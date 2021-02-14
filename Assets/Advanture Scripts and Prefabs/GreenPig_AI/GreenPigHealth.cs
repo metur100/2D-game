@@ -18,6 +18,8 @@ public class GreenPigHealth : MonoBehaviour
     public GameObject dropItem;
     public GameObject destroyWallAndEnemies;
     SpriteRenderer spriteColor;
+    public GameObject activateMonD;
+    public GameObject destroyMovingPlatform;
     void Start()
     {
         spriteColor = GetComponent<SpriteRenderer>();
@@ -58,6 +60,8 @@ public class GreenPigHealth : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(destroyWallAndEnemies);
+        Destroy(destroyMovingPlatform);
+        activateMonD.SetActive(true);
         Destroy(gameObject);
     }
 }

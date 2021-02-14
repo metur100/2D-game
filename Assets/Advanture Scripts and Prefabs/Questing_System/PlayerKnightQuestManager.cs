@@ -7,6 +7,8 @@ public class PlayerKnightQuestManager : MonoBehaviour
     public Quest quest;
     public ExpKnight exp;
     public GameObject questCompleted;
+    public GameObject monDBeforeBoss;
+    public GameObject doTheQuestFirst;
 
     public void GoBattle()
     {
@@ -15,6 +17,8 @@ public class PlayerKnightQuestManager : MonoBehaviour
             quest.goal.EnemyKilled();
             if (quest.goal.IsReached())
             {
+                monDBeforeBoss.SetActive(true);
+                Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
                 StartCoroutine(disableQuestText());
             }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SnailHealth3 : MonoBehaviour
 {
@@ -11,15 +12,16 @@ public class SnailHealth3 : MonoBehaviour
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
-    private int currentHealth;
+    public int currentHealth;
     //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
-
+    public Button activateDeathCount;
     private void OnEnable()
     {
         currentHealth = maxHealth;
+        //current = GetComponent<QuestGoal>();
     }
     public void ModifyHealth(int amount)
     {
@@ -31,6 +33,7 @@ public class SnailHealth3 : MonoBehaviour
         if (currentHealth <= 0)
         {
             //FindObjectOfType<AudioManager>().Play("Death");
+            activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);

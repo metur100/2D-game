@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BlueBirdHealth3 : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class BlueBirdHealth3 : MonoBehaviour
     //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject dropItem;
-
+    public Button activateDeathCount;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -30,6 +31,7 @@ public class BlueBirdHealth3 : MonoBehaviour
         if (currentHealth <= 0)
         {
             //FindObjectOfType<AudioManager>().Play("Death");
+            activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
             Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);

@@ -58,6 +58,11 @@ TagManager:
   - BigStump
   - GreenPig_AI
   - Wall_FirstBoss
+  - MonD_BeforeFirstBoss
+  - DoTheQuestFirst
+  - MonD_AfterFirstBoss
+  - Plant_AI
+  - Plant_AI_2
   layers:
   - Default
   - TransparentFX
