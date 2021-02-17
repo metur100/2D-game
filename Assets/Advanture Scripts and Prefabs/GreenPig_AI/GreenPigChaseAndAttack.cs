@@ -9,25 +9,17 @@ public class GreenPigChaseAndAttack : MonoBehaviour
     [SerializeField]
     float agroRange;
     [SerializeField]
-    //float shootingRange;
-    //[SerializeField]
-    //GameObject bullet;
-    //[SerializeField]
-    //GameObject bulletParent;
-    //float fireRate = 1f;
-    //private float nextFireTime;
     Rigidbody2D rb2d;
     public float speed;
     private bool isWalking = true;
     public Animator animator;
     public float attackingDistance;
-    // Update is called once per frame
     void Update()
     {
         if (player != null)
         {
             float distToPlayer = Vector2.Distance(transform.position, player.position);
-            if (distToPlayer < agroRange /*&& distToPlayer > shootingRange*/)
+            if (distToPlayer < agroRange)
             {
                 isWalking = true;
                 animator.SetBool("IsWalking", isWalking);
@@ -37,14 +29,6 @@ public class GreenPigChaseAndAttack : MonoBehaviour
             {
                 animator.SetTrigger("IsAttacking");
             }
-            //else if (distToPlayer <= shootingRange && nextFireTime < Time.time)
-            //{
-            //    animator.SetTrigger("IsAttacking");
-            //    isWalking = false;
-            //    animator.SetBool("IsWalking", isWalking);
-            //    StartShooting();
-            //    nextFireTime = Time.time + fireRate;
-            //}
             else
             {
                 isWalking = false;
@@ -64,14 +48,10 @@ public class GreenPigChaseAndAttack : MonoBehaviour
             rb2d.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(-150, 150);
         }
-        else //if (transform.position.x < player.position.x)
+        else
         {
             rb2d.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(150, 150);
         }
     }
-    //private void StartShooting()
-    //{
-    //    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-    //}
 }

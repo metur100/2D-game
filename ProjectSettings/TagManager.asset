@@ -63,6 +63,9 @@ TagManager:
   - MonD_AfterFirstBoss
   - Plant_AI
   - Plant_AI_2
+  - Radish_AI
+  - Bunny_AI
+  - Mushroom_AI
   layers:
   - Default
   - TransparentFX

@@ -8,9 +8,7 @@ public class SlimePatrol : MonoBehaviour
     public float distance;
     private bool movingRight = true;
     public Transform groundDetection;
-    private bool isSpinning = true;
     public Animator animator;
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);

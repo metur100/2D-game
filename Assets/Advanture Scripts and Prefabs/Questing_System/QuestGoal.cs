@@ -14,6 +14,10 @@ public class QuestGoal
     }
     public void EnemyKilled()
     {
+        ////requiredAmount = PlayerPrefs.GetInt("rA");
+        //currentAmount = PlayerPrefs.GetInt("cA");
+        //PlayerPrefs.SetInt("cA", currentAmount);
+        ////PlayerPrefs.SetInt("cA", requiredAmount);
         currentAmount++;
         TrackQuestProgress.scoreValue += 1;
     }

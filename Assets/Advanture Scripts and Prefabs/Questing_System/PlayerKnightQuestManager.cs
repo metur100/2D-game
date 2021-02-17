@@ -20,11 +20,11 @@ public class PlayerKnightQuestManager : MonoBehaviour
                 monDBeforeBoss.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
-                StartCoroutine(disableQuestText());
+                StartCoroutine(DisableQuestText());
             }
         }
     }
-    IEnumerator disableQuestText()
+    IEnumerator DisableQuestText()
     {
         questCompleted.SetActive(true);
         yield return new WaitForSeconds(3f);
