@@ -154,6 +154,34 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 MushroomHealth eHealth33 = other.gameObject.GetComponent<MushroomHealth>();
                 eHealth33.ModifyHealth(damageDoneMeleeAttack);
                 break;
+            case "Mushroom_AI_2":
+                MushroomHealth eHealth34 = other.gameObject.GetComponent<MushroomHealth>();
+                eHealth34.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bunny_AI_2":
+                BunnyHealth2 eHealth35 = other.gameObject.GetComponent<BunnyHealth2>();
+                eHealth35.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Mushroom_AI_3":
+                MushroomHealth3 eHealth36 = other.gameObject.GetComponent<MushroomHealth3>();
+                eHealth36.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Radish_AI_3":
+                RadishHealth3 eHealth37 = other.gameObject.GetComponent<RadishHealth3>();
+                eHealth37.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Radish_AI_4":
+                RadishHealth4 eHealth38 = other.gameObject.GetComponent<RadishHealth4>();
+                eHealth38.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Mushroom_AI_4":
+                MushroomHealth4 eHealth39 = other.gameObject.GetComponent<MushroomHealth4>();
+                eHealth39.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Mushroom_AI_5":
+                MushroomHealth5 eHealth40 = other.gameObject.GetComponent<MushroomHealth5>();
+                eHealth40.ModifyHealth(damageDoneMeleeAttack);
+                break;
         }
     }
     IEnumerator DestroyGameobject()

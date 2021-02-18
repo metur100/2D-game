@@ -9,7 +9,6 @@ public class BulletHunter : MonoBehaviour
     public bool knockBackOnHit = false;
     public int damageDoneBullet = -20;
     private float speedOfBullet = 150f;
-    private float durationOfStun = 3f;
     void Start()
     {
         rb.velocity = transform.right * speedOfBullet;

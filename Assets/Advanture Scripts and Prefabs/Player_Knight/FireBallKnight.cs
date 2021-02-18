@@ -154,6 +154,34 @@ public class FireBallKnight : MonoBehaviour
                 MushroomHealth eHealth33 = other.gameObject.GetComponent<MushroomHealth>();
                 eHealth33.ModifyHealth(damageDoneFireB);
                 break;
+            case "Mushroom_AI_2":
+                MushroomHealth eHealth34 = other.gameObject.GetComponent<MushroomHealth>();
+                eHealth34.ModifyHealth(damageDoneFireB);
+                break;
+            case "Bunny_AI_2":
+                BunnyHealth2 eHealth35 = other.gameObject.GetComponent<BunnyHealth2>();
+                eHealth35.ModifyHealth(damageDoneFireB);
+                break;
+            case "Mushroom_AI_3":
+                MushroomHealth3 eHealth36 = other.gameObject.GetComponent<MushroomHealth3>();
+                eHealth36.ModifyHealth(damageDoneFireB);
+                break;
+            case "Radish_AI_3":
+                RadishHealth3 eHealth37 = other.gameObject.GetComponent<RadishHealth3>();
+                eHealth37.ModifyHealth(damageDoneFireB);
+                break;
+            case "Radish_AI_4":
+                RadishHealth4 eHealth38 = other.gameObject.GetComponent<RadishHealth4>();
+                eHealth38.ModifyHealth(damageDoneFireB);
+                break;
+            case "Mushroom_AI_4":
+                MushroomHealth4 eHealth39 = other.gameObject.GetComponent<MushroomHealth4>();
+                eHealth39.ModifyHealth(damageDoneFireB);
+                break;
+            case "Mushroom_AI_5":
+                MushroomHealth5 eHealth40 = other.gameObject.GetComponent<MushroomHealth5>();
+                eHealth40.ModifyHealth(damageDoneFireB);
+                break;
         }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);

@@ -13,7 +13,7 @@ public class DashMoveAdvanturer : MonoBehaviour
     private float dashTime;
     private float startDashTime = 0.2f;
     private int direction;
-    private bool isDashing = false;
+    //private bool isDashing = false;
     private float dashCooldown = 0.4f;
     private bool isDashCooldown = false;
     public ParticleSystem dash;
@@ -32,7 +32,7 @@ public class DashMoveAdvanturer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && isDashCooldown == false)
             {
                 dash.Play();
-                isDashing = true;
+                //isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 1;
@@ -42,7 +42,7 @@ public class DashMoveAdvanturer : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
             {
                 dash.Play();
-                isDashing = true;
+                //isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 2;
@@ -73,15 +73,15 @@ public class DashMoveAdvanturer : MonoBehaviour
                 if (direction == 1)
                 {
                     rb.velocity = Vector2.left * dashSpeed;
-                    isDashing = false;
+                    //isDashing = false;
                 }
                 else if (direction == 2)
                 {
                     rb.velocity = Vector2.right * dashSpeed;
-                    isDashing = false;
+                    //isDashing = false;
                 }
             }
         }
-        animator.SetBool("isDashing", isDashing);
+        //animator.SetBool("isDashing", isDashing);
     }
 }

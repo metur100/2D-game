@@ -66,6 +66,18 @@ TagManager:
   - Radish_AI
   - Bunny_AI
   - Mushroom_AI
+  - Mushroom_AI_2
+  - Bunny_AI_2
+  - Mushroom_AI_3
+  - Radish_AI_3
+  - Bunny_AI_3
+  - Radish_AI_4
+  - Mushroom_AI_4
+  - Mushroom_AI_5
+  - Destroy_Wall_Upper
+  - Destroy_Wall_Middle
+  - Destroy_Wall_Lower
+  - Suprise_Box_3
   layers:
   - Default
   - TransparentFX
