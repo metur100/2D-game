@@ -23,7 +23,7 @@ public class DestroyWallMiddleCave : MonoBehaviour
     }
     IEnumerator DestroyGameobject()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 }

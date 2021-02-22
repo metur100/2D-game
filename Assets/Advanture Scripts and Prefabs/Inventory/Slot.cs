@@ -9,7 +9,6 @@ public class Slot : MonoBehaviour
 
     private void Start()
     {
-
         inventory = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").GetComponent<Inventory>();
     }
     private void Update()

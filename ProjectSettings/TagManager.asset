@@ -78,6 +78,24 @@ TagManager:
   - Destroy_Wall_Middle
   - Destroy_Wall_Lower
   - Suprise_Box_3
+  - Chest_Box
+  - Chest_Box_2
+  - Chest_Box_3
+  - Rino_AI
+  - Rino_Flip
+  - Rino_Hit_Wall
+  - Bat_AI_2
+  - Bat_AI_3
+  - Bat_AI_4
+  - Bat_AI_5
+  - Bat_AI_6
+  - Rino_AI_2
+  - Rino_AI_3
+  - Rino_AI_4
+  - Trunk_AI_8
+  - Trunk_AI_9
+  - Trunk_AI_10
+  - Trunk_AI_11
   layers:
   - Default
   - TransparentFX

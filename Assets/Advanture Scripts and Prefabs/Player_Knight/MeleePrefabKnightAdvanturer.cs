@@ -182,6 +182,75 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 MushroomHealth5 eHealth40 = other.gameObject.GetComponent<MushroomHealth5>();
                 eHealth40.ModifyHealth(damageDoneMeleeAttack);
                 break;
+            case "Chest_Box":
+                ChestHealth eHealth41 = other.gameObject.GetComponent<ChestHealth>();
+                eHealth41.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Chest_Box_2":
+                ChestHealth2 eHealth42 = other.gameObject.GetComponent<ChestHealth2>();
+                eHealth42.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Chest_Box_3":
+                ChestHealth3 eHealth43 = other.gameObject.GetComponent<ChestHealth3>();
+                eHealth43.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bunny_AI_3":
+                BunnyHealth3 eHealth44 = other.gameObject.GetComponent<BunnyHealth3>();
+                eHealth44.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bat_AI_2":
+                BatHealth2 eHealth45 = other.gameObject.GetComponent<BatHealth2>();
+                eHealth45.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bat_AI_3":
+                BatHealth3 eHealth46 = other.gameObject.GetComponent<BatHealth3>();
+                eHealth46.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bat_AI_4":
+                BatHealth4 eHealth47 = other.gameObject.GetComponent<BatHealth4>();
+                eHealth47.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bat_AI_5":
+                BatHealth5 eHealth48 = other.gameObject.GetComponent<BatHealth5>();
+                eHealth48.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Bat_AI_6":
+                BatHealth6 eHealth49 = other.gameObject.GetComponent<BatHealth6>();
+                eHealth49.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Rino_AI":
+                RinoHealth eHealth50 = other.gameObject.GetComponent<RinoHealth>();
+                eHealth50.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Rino_AI_2":
+                RinoHealth2 eHealth51 = other.gameObject.GetComponent<RinoHealth2>();
+                eHealth51.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Rino_AI_3":
+                RinoHealth3 eHealth52 = other.gameObject.GetComponent<RinoHealth3>();
+                eHealth52.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Rino_AI_4":
+                RinoHealth3 eHealth53 = other.gameObject.GetComponent<RinoHealth3>();
+                eHealth53.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Trunk_AI_8":
+                TrunkHealth8 eHealth54 = other.gameObject.GetComponent<TrunkHealth8>();
+                eHealth54.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Trunk_AI_9":
+                TrunkHealth9 eHealth55 = other.gameObject.GetComponent<TrunkHealth9>();
+                eHealth55.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Trunk_AI_10":
+                TrunkHealth10 eHealth56 = other.gameObject.GetComponent<TrunkHealth10>();
+                eHealth56.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Trunk_AI_11":
+                TrunkHealth11 eHealth57 = other.gameObject.GetComponent<TrunkHealth11>();
+                eHealth57.ModifyHealth(damageDoneMeleeAttack);
+                break;
+
         }
     }
     IEnumerator DestroyGameobject()

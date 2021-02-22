@@ -16,7 +16,6 @@ public class HealthKnightAdvanturer : MonoBehaviour
     private float delay = 1f;
     Renderer rend;
     Color c;
-
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(11, 21, false);
@@ -40,10 +39,10 @@ public class HealthKnightAdvanturer : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            isDead = true;
+            isDead = true;  
             animator.SetBool("IsDead", isDead);
             FindObjectOfType<AudioManager>().Play("Death");
-            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+            Destroy(gameObject/*, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
             gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
