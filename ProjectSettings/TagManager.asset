@@ -96,6 +96,8 @@ TagManager:
   - Trunk_AI_9
   - Trunk_AI_10
   - Trunk_AI_11
+  - Rino_AI_5
+  - Rino_AI_6
   layers:
   - Default
   - TransparentFX
