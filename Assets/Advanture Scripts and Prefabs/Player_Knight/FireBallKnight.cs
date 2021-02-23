@@ -250,6 +250,18 @@ public class FireBallKnight : MonoBehaviour
                 TrunkHealth11 eHealth57 = other.gameObject.GetComponent<TrunkHealth11>();
                 eHealth57.ModifyHealth(damageDoneFireB);
                 break;
+            case "Bat_AI_7":
+                BatHealth7 eHealth58 = other.gameObject.GetComponent<BatHealth7>();
+                eHealth58.ModifyHealth(damageDoneFireB);
+                break;
+            case "Bat_AI_8":
+                BatHealth8 eHealth59 = other.gameObject.GetComponent<BatHealth8>();
+                eHealth59.ModifyHealth(damageDoneFireB);
+                break;
+            case "Bat_AI_9":
+                BatHealth9 eHealth60 = other.gameObject.GetComponent<BatHealth9>();
+                eHealth60.ModifyHealth(damageDoneFireB);
+                break;
         }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
