@@ -101,6 +101,9 @@ TagManager:
   - Bat_AI_7
   - Bat_AI_8
   - Bat_AI_9
+  - Dialog_Upper_Cave
+  - Dialog_Lower_Cave
+  - Destroy_Wall_End
   layers:
   - Default
   - TransparentFX
