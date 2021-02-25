@@ -46,7 +46,6 @@ public class DialogLowerCave : MonoBehaviour
             textDisplay.text = "";
             //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
-            activatePortal.SetActive(true);
         }
         else
         {
@@ -56,7 +55,12 @@ public class DialogLowerCave : MonoBehaviour
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
+            activateTriggerCreatePlatform.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+        }
+        if (index == sentences.Length - 2)
+        {
+            activatePortal.SetActive(true);
         }
     }
 }

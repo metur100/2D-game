@@ -104,6 +104,9 @@ TagManager:
   - Dialog_Upper_Cave
   - Dialog_Lower_Cave
   - Destroy_Wall_End
+  - Chest_Box_4
+  - Radish_AI_2
+  - Dialog_Start
   layers:
   - Default
   - TransparentFX

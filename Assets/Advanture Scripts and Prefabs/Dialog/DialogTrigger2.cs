@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DialogTrigger2 : MonoBehaviour
 {
+    public GameObject triggerStart;
+    public GameObject activateDialogStart;
     public GameObject triggerUpperCave;
     public GameObject activateDialogUpperCave;
     public GameObject triggerLowerCave;
@@ -22,6 +24,12 @@ public class DialogTrigger2 : MonoBehaviour
             activateDialogLowerCave.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerLowerCave);
+        }
+        if (collision.CompareTag("Dialog_Start"))
+        {
+            activateDialogStart.SetActive(true);
+            moveSpeed.normalMovementSpeed = 0f;
+            Destroy(triggerStart);
         }
     }
 }

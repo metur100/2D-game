@@ -17,7 +17,7 @@ public class DestroyEndWall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Destroy_Wall_End")
         {
-            WallHealthUpper eHealth = collision.gameObject.GetComponent<WallHealthUpper>();
+            WallHealthEnd eHealth = collision.gameObject.GetComponent<WallHealthEnd>();
             eHealth.ModifyHealth(damageDoneBullet);
         }
     }

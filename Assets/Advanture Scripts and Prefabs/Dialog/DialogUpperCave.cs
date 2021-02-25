@@ -37,16 +37,13 @@ public class DialogUpperCave : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
         continueButton.SetActive(false);
         activateTriggerCreatePlatform.SetActive(true);
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
-            //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
-            activatePortal.SetActive(true);
         }
         else
         {
@@ -56,7 +53,12 @@ public class DialogUpperCave : MonoBehaviour
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
+            activateTriggerCreatePlatform.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+        }
+        if (index == sentences.Length - 2)
+        {
+            activatePortal.SetActive(true);
         }
     }
 }

@@ -262,6 +262,14 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 BatHealth9 eHealth60 = other.gameObject.GetComponent<BatHealth9>();
                 eHealth60.ModifyHealth(damageDoneMeleeAttack);
                 break;
+            case "Chest_Box_4":
+                ChestHealth4 eHealth61 = other.gameObject.GetComponent<ChestHealth4>();
+                eHealth61.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Radish_AI_2":
+                RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
+                eHealth62.ModifyHealth(damageDoneMeleeAttack);
+                break;
 
         }
     }
