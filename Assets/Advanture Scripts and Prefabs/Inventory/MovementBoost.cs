@@ -12,9 +12,9 @@ public class MovementBoost : MonoBehaviour
         if (collision.CompareTag("Player_Knight_Advanturer"))
         {
             PlayerMovementAdvanturerKnight boostSpeed = collision.gameObject.GetComponent<PlayerMovementAdvanturerKnight>();
-            boostSpeed.normalMovementSpeed = 500f;
+            boostSpeed.normalMovementSpeed = 800f;
             StartCoroutine(WaitTime());
-            boostSpeed.normalMovementSpeed = 250f;
+            boostSpeed.normalMovementSpeed = 400f;
         }
     }
     IEnumerator WaitTime()

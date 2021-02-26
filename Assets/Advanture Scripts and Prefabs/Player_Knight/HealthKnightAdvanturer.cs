@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,10 +13,11 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public Animator animator;
     [SerializeField]
     public int currentHealth;
-    private bool isDead = false;
     private float delay = 1f;
     Renderer rend;
     Color c;
+    public int lifes = 3;
+    public RespawnManager respawn;
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(11, 21, false);
@@ -23,6 +25,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
         Physics2D.IgnoreLayerCollision(11, 23, false);
         rend = GetComponent<Renderer>();
         c = rend.material.color;
+        respawn = FindObjectOfType<RespawnManager>();
     }
 
     private void OnEnable()
@@ -39,11 +42,17 @@ public class HealthKnightAdvanturer : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            isDead = true;  
-            animator.SetBool("IsDead", isDead);
-            FindObjectOfType<AudioManager>().Play("Death");
-            Destroy(gameObject/*, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
-            gameOverUI.SetActive(true);
+            lifes--;
+            TrackLifes.scoreValue -= 1;
+            respawn.RespawnPlayer();
+            currentHealth = 200;
+            if (lifes <= 0)
+            {
+                Destroy(gameObject/*, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
+                gameOverUI.SetActive(true);
+                //animator.SetBool("IsDead", isDead);
+                //FindObjectOfType<AudioManager>().Play("Death");
+            }
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);    
@@ -63,6 +72,5 @@ public class HealthKnightAdvanturer : MonoBehaviour
         Physics2D.IgnoreLayerCollision(11, 23, false);
         c.a = 1f;
         rend.material.color = c;
-        
     }
 }

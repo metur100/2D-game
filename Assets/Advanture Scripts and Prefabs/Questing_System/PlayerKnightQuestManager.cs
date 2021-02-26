@@ -9,7 +9,6 @@ public class PlayerKnightQuestManager : MonoBehaviour
     public GameObject questCompleted;
     public GameObject monDBeforeBoss;
     public GameObject doTheQuestFirst;
-
     public void GoBattle()
     {
         if (quest.isActive)

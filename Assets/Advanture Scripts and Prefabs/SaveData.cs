@@ -6,8 +6,19 @@ using UnityEngine;
 public class SaveData
 {
     public static SaveData _current;
-    public static SaveData current;
+    public static SaveData current
+    {
+        get
+        {
+            if (_current == null)
+            {
+                _current = new SaveData();
+            }
+            return _current;
+        }
+    }
 
     public PlayerProfile profile;
-    public int buy;
+    public int expPlayer;
+    public int currentQuestProgress;
 }

@@ -15,9 +15,12 @@ public class ShootingAOE : MonoBehaviour
 
     public void Use()
     {
-        Instantiate(preabAOE, player.transform.position, Quaternion.identity);
-        Instantiate(explosionEffect, player.transform.position, Quaternion.identity);
-        CameraShaker.Instance.ShakeOnce(.9f, .7f, 0.2f, 0.2f);
-        Destroy(gameObject);
+        if (player != null)
+        {
+            Instantiate(preabAOE, player.transform.position, Quaternion.identity);
+            Instantiate(explosionEffect, player.transform.position, Quaternion.identity);
+            CameraShaker.Instance.ShakeOnce(.9f, .7f, 0.2f, 0.2f);
+            Destroy(gameObject);
+        }
     }
 }

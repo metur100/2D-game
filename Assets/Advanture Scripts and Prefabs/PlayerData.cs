@@ -5,11 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    //public int level;
-    //public int health;
     public float[] position;
 
-    public PlayerData (PlayerKnightPosition pos/*, HealthKnightAdvanturer currHealth*/)
+    public PlayerData (PlayerKnightPosition pos)
     {
         //health = currHealth.currentHealth;
         position = new float[2];

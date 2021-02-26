@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerProfile
 {
-    public string playerName;
     public int exp;
+    public int questProgess;
 }
