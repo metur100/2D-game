@@ -11,11 +11,11 @@ public class Dialog : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject activateDialog;
-    public GameObject disableQuestUI;
     public PlayerMovementAdvanturerKnight moveSpeed;
 
     public GameObject continueButton;
     //public Animator animator;
+    public QuestGiver activateQuestUI;
 
     private void Start()
     {
@@ -52,10 +52,13 @@ public class Dialog : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
         }
+        if (index == sentences.Length - 2)
+        {
+            activateQuestUI.OpenQuestWindow();
+        }
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
-            disableQuestUI.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
         }
     }

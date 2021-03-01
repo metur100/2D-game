@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class MovementBoost : MonoBehaviour
 {
-    public PlayerMovementAdvanturerKnight boost;
-    [SerializeField]
-    private float boostTime = 5f;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player_Knight_Advanturer"))
         {
-            PlayerMovementAdvanturerKnight boostSpeed = collision.gameObject.GetComponent<PlayerMovementAdvanturerKnight>();
-            boostSpeed.normalMovementSpeed = 800f;
-            StartCoroutine(WaitTime());
-            boostSpeed.normalMovementSpeed = 400f;
+            PlayerMovementAdvanturerKnight speedBoost = collision.gameObject.GetComponent<PlayerMovementAdvanturerKnight>();
+            speedBoost.normalMovementSpeed = 800f;
         }
-    }
-    IEnumerator WaitTime()
-    {
-        yield return new WaitForSeconds(boostTime);
+        Destroy(gameObject);
     }
 }

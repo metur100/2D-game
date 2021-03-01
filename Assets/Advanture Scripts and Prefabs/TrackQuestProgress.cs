@@ -14,6 +14,6 @@ public class TrackQuestProgress : MonoBehaviour
 
     void Update()
     {
-        score.text = "Enemies killed " + scoreValue + " of 10";
+        score.text = "Enemies killed " + scoreValue + " of 30";
     }
 }

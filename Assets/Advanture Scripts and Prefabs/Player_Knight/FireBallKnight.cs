@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireBallKnight : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public int damageDoneFireB = -10;
+    public int damageDoneFireB = -30;
     [SerializeField]
     private float speedOfFireBall = 200f;
     public GameObject impactEffect;

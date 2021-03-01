@@ -161,6 +161,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2597776505920407662}
   effect: {fileID: 4336586853149010947, guid: c15fef33824256a468838c190822da0d, type: 3}
+  player: {fileID: 6211963281479019781, guid: c04d008f88d26c946a5dfa09dc795079, type: 3}
+  activate: {fileID: 2533250505872817007, guid: 6238709492b2c5347b1b76c6cb69a441,
+    type: 3}
 --- !u!95 &2597776505920407662
 Animator:
   serializedVersion: 3

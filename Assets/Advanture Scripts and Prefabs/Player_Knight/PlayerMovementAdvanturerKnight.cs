@@ -23,9 +23,15 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     public float jumpTime;
 
     public ParticleSystem dust;
+    private readonly float boostTime = 3f;
+
     void Update()
     {
-        
+        if (normalMovementSpeed >= 800f)
+        {
+            //Decrease boosting speed
+            StartCoroutine(DecreaseSpeed());
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -117,5 +123,10 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+    IEnumerator DecreaseSpeed()
+    {
+        yield return new WaitForSeconds(boostTime);
+        normalMovementSpeed = 400f;
     }
 }

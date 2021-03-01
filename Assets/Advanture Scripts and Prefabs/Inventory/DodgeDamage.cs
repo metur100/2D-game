@@ -5,19 +5,16 @@ using UnityEngine;
 public class DodgeDamage : MonoBehaviour
 {
     public Animator animator;
-    private float dmgReductionDuration = 5f;
+    private readonly float dmgReductionDuration = 5f;
     private bool isDodge = false;
     public ParticleSystem effect;
-    //public GameObject particleEffect;
-    //private Transform player;
-    //private void Start()
-    //{
-    //    player = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").transform;
-    //}
+    public Transform player;
+    public GameObject activate;
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(11, 21, false);
         Physics2D.IgnoreLayerCollision(11, 22, false);
+        player = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").transform;
     }
     IEnumerator DodgeAllDamage()
     {
@@ -35,7 +32,7 @@ public class DodgeDamage : MonoBehaviour
     public void Use()
     {
         effect.Play();
-        //Instantiate(particleEffect, player.transform.position, Quaternion.identity);
+        Instantiate(activate, player.transform.position, Quaternion.identity);
         StartCoroutine(DodgeAllDamage());   
     }
 }

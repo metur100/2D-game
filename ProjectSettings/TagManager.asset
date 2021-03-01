@@ -107,6 +107,7 @@ TagManager:
   - Chest_Box_4
   - Radish_AI_2
   - Dialog_Start
+  - Dodge_Layer
   layers:
   - Default
   - TransparentFX

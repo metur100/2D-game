@@ -13,7 +13,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public Animator animator;
     [SerializeField]
     public int currentHealth;
-    private float delay = 1f;
+    //private float delay = 1f;
     Renderer rend;
     Color c;
     public int lifes = 3;
