@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 746676098587711931}
-  damageDoneMeleeAttack: -50
+  damageDoneAOE: -500
 --- !u!50 &746676098587711931
 Rigidbody2D:
   serializedVersion: 4

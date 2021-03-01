@@ -32,6 +32,16 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
             //Decrease boosting speed
             StartCoroutine(DecreaseSpeed());
         }
+        if (jumpForce >= 500f)
+        {
+            //Decreasejump force
+            StartCoroutine(DecreaseJumpForce());
+        }
+        if (rb.gravityScale <= 20f)
+        {
+            //Decrease gravity
+            StartCoroutine(ResetGravity());
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -128,5 +138,15 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     {
         yield return new WaitForSeconds(boostTime);
         normalMovementSpeed = 400f;
+    }
+    IEnumerator DecreaseJumpForce()
+    {
+        yield return new WaitForSeconds(boostTime);
+        jumpForce = 235f;
+    }
+    IEnumerator ResetGravity()
+    {
+        yield return new WaitForSeconds(boostTime);
+        rb.gravityScale = 40f;
     }
 }

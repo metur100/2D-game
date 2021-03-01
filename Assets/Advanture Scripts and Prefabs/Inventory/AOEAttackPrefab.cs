@@ -5,7 +5,7 @@ using UnityEngine;
 public class AOEAttackPrefab : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public int damageDoneAOE = -50; //it deals 40 damage close range, 20 damage long range
+    public int damageDoneAOE = -500; //it deals 40 damage close range, 20 damage long range
     private readonly float speedOfMeleeAttack = 100f;
 
     void Start()
@@ -152,6 +152,122 @@ public class AOEAttackPrefab : MonoBehaviour
             case "Mushroom_AI":
                 MushroomHealth eHealth33 = other.gameObject.GetComponent<MushroomHealth>();
                 eHealth33.ModifyHealth(damageDoneAOE);
+                break;
+            case "Mushroom_AI_2":
+                MushroomHealth2 eHealth34 = other.gameObject.GetComponent<MushroomHealth2>();
+                eHealth34.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bunny_AI_2":
+                BunnyHealth2 eHealth35 = other.gameObject.GetComponent<BunnyHealth2>();
+                eHealth35.ModifyHealth(damageDoneAOE);
+                break;
+            case "Mushroom_AI_3":
+                MushroomHealth3 eHealth36 = other.gameObject.GetComponent<MushroomHealth3>();
+                eHealth36.ModifyHealth(damageDoneAOE);
+                break;
+            case "Radish_AI_3":
+                RadishHealth3 eHealth37 = other.gameObject.GetComponent<RadishHealth3>();
+                eHealth37.ModifyHealth(damageDoneAOE);
+                break;
+            case "Radish_AI_4":
+                RadishHealth4 eHealth38 = other.gameObject.GetComponent<RadishHealth4>();
+                eHealth38.ModifyHealth(damageDoneAOE);
+                break;
+            case "Mushroom_AI_4":
+                MushroomHealth4 eHealth39 = other.gameObject.GetComponent<MushroomHealth4>();
+                eHealth39.ModifyHealth(damageDoneAOE);
+                break;
+            case "Mushroom_AI_5":
+                MushroomHealth5 eHealth40 = other.gameObject.GetComponent<MushroomHealth5>();
+                eHealth40.ModifyHealth(damageDoneAOE);
+                break;
+            case "Chest_Box":
+                ChestHealth eHealth41 = other.gameObject.GetComponent<ChestHealth>();
+                eHealth41.ModifyHealth(damageDoneAOE);
+                break;
+            case "Chest_Box_2":
+                ChestHealth2 eHealth42 = other.gameObject.GetComponent<ChestHealth2>();
+                eHealth42.ModifyHealth(damageDoneAOE);
+                break;
+            case "Chest_Box_3":
+                ChestHealth3 eHealth43 = other.gameObject.GetComponent<ChestHealth3>();
+                eHealth43.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bunny_AI_3":
+                BunnyHealth3 eHealth44 = other.gameObject.GetComponent<BunnyHealth3>();
+                eHealth44.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_2":
+                BatHealth2 eHealth45 = other.gameObject.GetComponent<BatHealth2>();
+                eHealth45.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_3":
+                BatHealth3 eHealth46 = other.gameObject.GetComponent<BatHealth3>();
+                eHealth46.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_4":
+                BatHealth4 eHealth47 = other.gameObject.GetComponent<BatHealth4>();
+                eHealth47.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_5":
+                BatHealth5 eHealth48 = other.gameObject.GetComponent<BatHealth5>();
+                eHealth48.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_6":
+                BatHealth6 eHealth49 = other.gameObject.GetComponent<BatHealth6>();
+                eHealth49.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI":
+                RinoHealth eHealth50 = other.gameObject.GetComponent<RinoHealth>();
+                eHealth50.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI_2":
+                RinoHealth2 eHealth51 = other.gameObject.GetComponent<RinoHealth2>();
+                eHealth51.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI_3":
+                RinoHealth3 eHealth52 = other.gameObject.GetComponent<RinoHealth3>();
+                eHealth52.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI_4":
+                RinoHealth3 eHealth53 = other.gameObject.GetComponent<RinoHealth3>();
+                eHealth53.ModifyHealth(damageDoneAOE);
+                break;
+            case "Trunk_AI_8":
+                TrunkHealth8 eHealth54 = other.gameObject.GetComponent<TrunkHealth8>();
+                eHealth54.ModifyHealth(damageDoneAOE);
+                break;
+            case "Trunk_AI_9":
+                TrunkHealth9 eHealth55 = other.gameObject.GetComponent<TrunkHealth9>();
+                eHealth55.ModifyHealth(damageDoneAOE);
+                break;
+            case "Trunk_AI_10":
+                TrunkHealth10 eHealth56 = other.gameObject.GetComponent<TrunkHealth10>();
+                eHealth56.ModifyHealth(damageDoneAOE);
+                break;
+            case "Trunk_AI_11":
+                TrunkHealth11 eHealth57 = other.gameObject.GetComponent<TrunkHealth11>();
+                eHealth57.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_7":
+                BatHealth7 eHealth58 = other.gameObject.GetComponent<BatHealth7>();
+                eHealth58.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_8":
+                BatHealth8 eHealth59 = other.gameObject.GetComponent<BatHealth8>();
+                eHealth59.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bat_AI_9":
+                BatHealth9 eHealth60 = other.gameObject.GetComponent<BatHealth9>();
+                eHealth60.ModifyHealth(damageDoneAOE);
+                break;
+            case "Chest_Box_4":
+                ChestHealth4 eHealth61 = other.gameObject.GetComponent<ChestHealth4>();
+                eHealth61.ModifyHealth(damageDoneAOE);
+                break;
+            case "Radish_AI_2":
+                RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
+                eHealth62.ModifyHealth(damageDoneAOE);
                 break;
         }
     }

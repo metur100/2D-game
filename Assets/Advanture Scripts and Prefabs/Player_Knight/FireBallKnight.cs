@@ -155,7 +155,7 @@ public class FireBallKnight : MonoBehaviour
                 eHealth33.ModifyHealth(damageDoneFireB);
                 break;
             case "Mushroom_AI_2":
-                MushroomHealth eHealth34 = other.gameObject.GetComponent<MushroomHealth>();
+                MushroomHealth2 eHealth34 = other.gameObject.GetComponent<MushroomHealth2>();
                 eHealth34.ModifyHealth(damageDoneFireB);
                 break;
             case "Bunny_AI_2":

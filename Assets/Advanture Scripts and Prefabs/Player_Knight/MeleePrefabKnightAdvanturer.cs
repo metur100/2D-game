@@ -155,7 +155,7 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 eHealth33.ModifyHealth(damageDoneMeleeAttack);
                 break;
             case "Mushroom_AI_2":
-                MushroomHealth eHealth34 = other.gameObject.GetComponent<MushroomHealth>();
+                MushroomHealth2 eHealth34 = other.gameObject.GetComponent<MushroomHealth2>();
                 eHealth34.ModifyHealth(damageDoneMeleeAttack);
                 break;
             case "Bunny_AI_2":

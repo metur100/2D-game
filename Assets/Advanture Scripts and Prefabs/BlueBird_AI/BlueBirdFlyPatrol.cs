@@ -24,7 +24,6 @@ public class BlueBirdFlyPatrol : MonoBehaviour
 	{
 		if (trig.gameObject.CompareTag("ShootAtMe"))
 		{
-
 			if (MoveRight)
 			{
 				MoveRight = false;
