@@ -30,6 +30,7 @@ public class ExpKnight : MonoBehaviour
         }
         if (currentExp >= maxExp)
         {
+            TrackPlayerLevels.scoreValue += 1;
             currentExp = 0;
             levelReached.SetActive(true);
             maxExp += 50;
