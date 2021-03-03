@@ -37,7 +37,6 @@ public class Dialog2 : MonoBehaviour
     {
         //animator.SetTrigger("Change");
         continueButton.SetActive(false);
-
         if (index < sentences.Length - 1)
         {
             index++;

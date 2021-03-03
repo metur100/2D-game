@@ -109,6 +109,7 @@ TagManager:
   - Dialog_Start
   - Dodge_Layer
   - Mini_Ghost_AI
+  - Dialog_GreenPig
   layers:
   - Default
   - TransparentFX

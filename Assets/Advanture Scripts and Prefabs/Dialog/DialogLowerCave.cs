@@ -39,7 +39,6 @@ public class DialogLowerCave : MonoBehaviour
     {
         //animator.SetTrigger("Change");
         continueButton.SetActive(false);
-        activateTriggerCreatePlatform.SetActive(true);
         if (index < sentences.Length - 1)
         {
             index++;
@@ -52,15 +51,19 @@ public class DialogLowerCave : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
         }
+        if (index == sentences.Length - 3)
+        {
+            activatePortal.SetActive(true);
+        }
+        if (index == sentences.Length - 5)
+        {
+            activateTriggerCreatePlatform.SetActive(true);
+        }
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
             activateTriggerCreatePlatform.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
-        }
-        if (index == sentences.Length - 2)
-        {
-            activatePortal.SetActive(true);
         }
     }
 }

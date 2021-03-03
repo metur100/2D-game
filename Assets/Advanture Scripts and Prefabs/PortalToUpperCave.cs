@@ -13,13 +13,12 @@ public class PortalToUpperCave : MonoBehaviour
         if (collision.gameObject.CompareTag("Player_Knight_Advanturer"))
         {
             Instantiate(portalEffect, portalEffect.transform.position, Quaternion.identity);
-            //StartCoroutine(Teleport());
-            player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
+            StartCoroutine(Teleport());
         }
     }
-    //    IEnumerator Teleport()
-    //    {
-    //        yield return new WaitForSeconds(0.1f);
-    //        player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
-    //    }
+    IEnumerator Teleport()
+    {
+        yield return new WaitForSeconds(0.1f);
+        player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
+    }
 }

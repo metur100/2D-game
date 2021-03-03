@@ -6,12 +6,12 @@ public class DialogTrigger : MonoBehaviour
 {
     public PlayerMovementAdvanturerKnight moveSpeed;
     public GameObject triggerDialogStart;
-    public GameObject triggerGhostDialog;
+    public GameObject triggerGreenPigDialog;
     public GameObject triggerBeforeFirstBoss;
     public GameObject triggerAfterFirstBoss;
     //public GameObject triggerQuestButton;
     public GameObject activateDialogStart;
-    public GameObject activateGhostDialog;
+    public GameObject activateGreenPigDialog;
     public GameObject activateDialogBeforeFirstBoss;
     public GameObject activateDialogAfterFirstBoss;
     public GameObject doTheQuestFirst;
@@ -24,11 +24,11 @@ public class DialogTrigger : MonoBehaviour
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerDialogStart);
         }
-        if (other.CompareTag("MonD_Ghost"))
+        if (other.CompareTag("Dialog_GreenPig"))
         {
-            activateGhostDialog.SetActive(true);
+            activateGreenPigDialog.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
-            Destroy(triggerGhostDialog);
+            Destroy(triggerGreenPigDialog);
         }
         if (other.CompareTag("MonD_BeforeFirstBoss"))
         {

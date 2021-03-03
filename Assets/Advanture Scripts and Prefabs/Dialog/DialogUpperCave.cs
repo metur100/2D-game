@@ -15,7 +15,6 @@ public class DialogUpperCave : MonoBehaviour
     public PlayerMovementAdvanturerKnight moveSpeed;
     public GameObject continueButton;
     public GameObject activateTriggerCreatePlatform;
-
     private void Start()
     {
         StartCoroutine(Type());
@@ -38,7 +37,7 @@ public class DialogUpperCave : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        activateTriggerCreatePlatform.SetActive(true);
+        //activateTriggerCreatePlatform.SetActive(true);
         if (index < sentences.Length - 1)
         {
             index++;
@@ -50,15 +49,19 @@ public class DialogUpperCave : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
         }
+        if (index == sentences.Length - 5)
+        {
+            activateTriggerCreatePlatform.SetActive(true);
+        }
+        if (index == sentences.Length - 3)
+        {
+            activatePortal.SetActive(true);
+        }
         if (index == sentences.Length - 1)
         {
             activateDialog.SetActive(false);
             activateTriggerCreatePlatform.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
-        }
-        if (index == sentences.Length - 2)
-        {
-            activatePortal.SetActive(true);
         }
     }
 }
