@@ -9,12 +9,12 @@ public class PlayerMovementNinja : MonoBehaviour
     public GameObject gameOverUI;
     public Rigidbody2D rb;
     public float normalMovementSpeed = 200f;
-    private float slowedMovementSpeed = 50f;
-    private float trapMoveSpeed = 0f;
-    private float maxMovementSpeed = 200f;
+    private readonly float slowedMovementSpeed = 50f;
+    private readonly float trapMoveSpeed = 0f;
+    private readonly float maxMovementSpeed = 200f;
     private float horizontalMove = 0f;
-    private float trapOverTimeDuration = 3f;
-    private float slowOverTimeDuration = 1f;
+    private readonly float trapOverTimeDuration = 3f;
+    private readonly float slowOverTimeDuration = 1f;
     private bool jump = false;
     private bool crouch = false;
 
@@ -60,13 +60,13 @@ public class PlayerMovementNinja : MonoBehaviour
     }
     public void CoroutineMoveIfTrapNinja()
     {
-        StartCoroutine(stopMoveIfTrapNinja());
+        StartCoroutine(StopMoveIfTrapNinja());
     }
     public void CoroutineNinjaSlowOverTimeFrost()
     {
         StartCoroutine(SlowOverTimeOnHitWithFrostBullet());
     }
-    IEnumerator stopMoveIfTrapNinja()
+    IEnumerator StopMoveIfTrapNinja()
     {
         normalMovementSpeed = trapMoveSpeed;
         yield return new WaitForSeconds(trapOverTimeDuration);

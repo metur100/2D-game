@@ -15,6 +15,7 @@ public class GhostShootingFollowRetreat : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject projectile;
+    public GameObject miniGhost;
     public GameObject shootingPoint;
     public Animator animator;
     Transform player;
@@ -45,6 +46,7 @@ public class GhostShootingFollowRetreat : MonoBehaviour
                 {
                     animator.SetTrigger("IsAttacking");
                     Instantiate(projectile, shootingPoint.transform.position, Quaternion.identity);
+                    Instantiate(miniGhost, shootingPoint.transform.position, Quaternion.identity);
                     timeBtwShots = startTimeBtwShots;
                 }
                 else

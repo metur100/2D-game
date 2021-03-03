@@ -136,7 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2188997453895961121}
-  damageDoneFireB: -10
+  damageDoneFireB: -40
+  speedOfFireBall: 200
   impactEffect: {fileID: 2789894439841343149, guid: d6f469fbc5c0fc74a948a3a419ca1d72,
     type: 3}
 --- !u!95 &2171006579255692983

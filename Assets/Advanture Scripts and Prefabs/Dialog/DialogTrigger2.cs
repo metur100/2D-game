@@ -10,6 +10,8 @@ public class DialogTrigger2 : MonoBehaviour
     public GameObject activateDialogUpperCave;
     public GameObject triggerLowerCave;
     public GameObject activateDialogLowerCave;
+    public GameObject triggerGhost;
+    public GameObject activateDialogGhost;
     public PlayerMovementAdvanturerKnight moveSpeed;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,6 +32,12 @@ public class DialogTrigger2 : MonoBehaviour
             activateDialogStart.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerStart);
+        }
+        if (collision.CompareTag("Ghost_Dialog"))
+        {
+            activateDialogGhost.SetActive(true);
+            moveSpeed.normalMovementSpeed = 0f;
+            Destroy(triggerGhost);
         }
     }
 }

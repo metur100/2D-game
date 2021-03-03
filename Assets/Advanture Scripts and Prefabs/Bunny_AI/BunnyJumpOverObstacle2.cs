@@ -7,7 +7,7 @@ public class BunnyJumpOverObstacle2 : MonoBehaviour
 	float dirX;
 
 	[SerializeField]
-	float moveSpeed = 3f;
+	float moveSpeed;
 
 	Rigidbody2D rb;
 

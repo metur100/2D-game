@@ -16,8 +16,13 @@ public class GhostHealth : MonoBehaviour
     private int currentHealth;
     public GameObject deathEffect;
     public GameObject dropItem;
-
-
+    public GameObject activateBotLoop;
+    SpriteRenderer spriteColor;
+    public GhostShootingFollowRetreat ghostAI;
+    void Start()
+    {
+        spriteColor = GetComponent<SpriteRenderer>();
+    }
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -28,6 +33,14 @@ public class GhostHealth : MonoBehaviour
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
+        }
+        if (currentHealth < 150)
+        {
+            CameraShaker.Instance.ShakeOnce(0.2f, 5f, 2f, 2f);
+            spriteColor.color = new Color(255, 0, 0, 255);
+            ghostAI.startTimeBtwShots = 1;
+            ghostAI.speed = 80f;
+            activateBotLoop.SetActive(true);
         }
         if (currentHealth < 0)
         {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3955302976514269254}
   - component: {fileID: 7141121368828341964}
   - component: {fileID: 8841198708081491960}
+  - component: {fileID: -1669071130217884753}
   m_Layer: 0
   m_Name: GhostSnowflakePrefab
   m_TagString: Untagged
@@ -136,5 +137,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 150
   damageDone: -50
-  explodeEffect: {fileID: 3278384093552553636, guid: 683c5de5dfe1cbe45a7c1b8ae5732dab,
-    type: 3}
+--- !u!114 &-1669071130217884753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272053932651806289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81076ff6894a1ec4d8ba09521c6a5b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 0}

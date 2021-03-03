@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireBallKnight : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public int damageDoneFireB = -30;
+    public int damageDoneFireB = -50;
     [SerializeField]
     private float speedOfFireBall = 200f;
     public GameObject impactEffect;
@@ -269,6 +269,10 @@ public class FireBallKnight : MonoBehaviour
             case "Radish_AI_2":
                 RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
                 eHealth62.ModifyHealth(damageDoneFireB);
+                break;
+            case "Mini_Ghost_AI":
+                MiniGhostHealth eHealth63 = other.gameObject.GetComponent<MiniGhostHealth>();
+                eHealth63.ModifyHealth(damageDoneFireB);
                 break;
         }
         Instantiate(impactEffect, transform.position, Quaternion.identity);

@@ -270,7 +270,10 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
                 eHealth62.ModifyHealth(damageDoneMeleeAttack);
                 break;
-
+            case "Mini_Ghost_AI":
+                MiniGhostHealth eHealth63 = other.gameObject.GetComponent<MiniGhostHealth>();
+                eHealth63.ModifyHealth(damageDoneMeleeAttack);
+                break;
         }
     }
     IEnumerator DestroyGameobject()

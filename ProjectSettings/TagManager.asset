@@ -108,6 +108,7 @@ TagManager:
   - Radish_AI_2
   - Dialog_Start
   - Dodge_Layer
+  - Mini_Ghost_AI
   layers:
   - Default
   - TransparentFX

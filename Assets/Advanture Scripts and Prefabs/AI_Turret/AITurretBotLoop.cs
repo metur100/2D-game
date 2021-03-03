@@ -14,12 +14,6 @@ public class AITurretBotLoop : MonoBehaviour
     float nextTimeToFire = 0;
     public Transform Shootpoint;
     public float Force;
-
-    // Add a tag where you can shoot
-    void Start()
-    {
-
-    }
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +22,7 @@ public class AITurretBotLoop : MonoBehaviour
         RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
         if (rayInfo)
         {
-            if (rayInfo.collider.gameObject.tag == "Target_AI")
+            if (rayInfo.collider.gameObject.CompareTag("Target_AI"))
             {
                 if (Detected == false)
                 {
@@ -49,17 +43,13 @@ public class AITurretBotLoop : MonoBehaviour
             if (Time.time > nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1 / FireRate;
-                shoot();
+                Shoot();
             }
         }
     }
-    void shoot()
+    void Shoot()
     {
         GameObject BulletIns = Instantiate(bullet, Shootpoint.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(transform.position, Range);
     }
 }
