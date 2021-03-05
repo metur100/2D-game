@@ -19,6 +19,7 @@ public class SlimeHealthPatrol : MonoBehaviour
     public GameObject bloodSplash;
     public GameObject dropItem;
     public Button activateDeathCount;
+    private bool isDead;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -31,9 +32,10 @@ public class SlimeHealthPatrol : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
             //FindObjectOfType<AudioManager>().Play("Death");
+            isDead = true;
             activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);

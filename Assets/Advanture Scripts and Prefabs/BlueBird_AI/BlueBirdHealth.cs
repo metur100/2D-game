@@ -17,6 +17,7 @@ public class BlueBirdHealth : MonoBehaviour
     public GameObject deathEffect;
     public GameObject dropItem;
     public Button activateDeathCount;
+    private bool isDead;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -28,9 +29,10 @@ public class BlueBirdHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
             //FindObjectOfType<AudioManager>().Play("Death");
+            isDead = true;
             activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);

@@ -5,13 +5,12 @@ using EZCameraShake;
 public class ShootingDestroyWall : MonoBehaviour
 {
     public GameObject prefabWall;
-    public GameObject effect;
+    //public GameObject effect;
     public Transform player;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").transform;
     }
-
     public void Use()
     {
         Instantiate(prefabWall, player.transform.position, Quaternion.identity);

@@ -14,6 +14,6 @@ public class TrackQuestProgressRunes : MonoBehaviour
 
     void Update()
     {
-        score.text = "Runes gethered" + scoreValue + " of 3";
+        score.text = "Runes gethered " + scoreValue + " of 3";
     }
 }
