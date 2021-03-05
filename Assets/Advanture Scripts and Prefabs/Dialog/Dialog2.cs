@@ -13,6 +13,7 @@ public class Dialog2 : MonoBehaviour
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
     public GameObject continueButton;
+    public QuestGiver activateQuestUI;
 
     private void Start()
     {
@@ -47,6 +48,10 @@ public class Dialog2 : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+        }
+        if (index == sentences.Length - 4)
+        {
+            activateQuestUI.OpenQuestWindow();
         }
         if (index == sentences.Length - 1)
         {

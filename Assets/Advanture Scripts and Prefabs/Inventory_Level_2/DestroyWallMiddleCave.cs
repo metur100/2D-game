@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class DestroyWallMiddleCave : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -15,7 +14,7 @@ public class DestroyWallMiddleCave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Destroy_Wall_Middle")
+        if (collision.gameObject.CompareTag("Destroy_Wall_Middle"))
         {
             WallHealthMiddle eHealth = collision.gameObject.GetComponent<WallHealthMiddle>();
             eHealth.ModifyHealth(damageDoneBullet);

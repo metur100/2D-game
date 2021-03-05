@@ -9,6 +9,7 @@ public class PlayerKnightQuestManager : MonoBehaviour
     public GameObject questCompleted;
     public GameObject monDBeforeBoss;
     public GameObject doTheQuestFirst;
+    public GameObject surpriseBox;
     public void GoBattle()
     {
         if (quest.isActive)
@@ -17,6 +18,21 @@ public class PlayerKnightQuestManager : MonoBehaviour
             if (quest.goal.IsReached())
             {
                 monDBeforeBoss.SetActive(true);
+                surpriseBox.SetActive(true);
+                Destroy(doTheQuestFirst);
+                exp.ModifyExp(quest.experianceReward);
+                StartCoroutine(DisableQuestText());
+            }
+        }
+    }
+    public void GoBattleRunes()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.ItemCollected();
+            if (quest.goal.IsReached())
+            {
+                surpriseBox.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
                 StartCoroutine(DisableQuestText());

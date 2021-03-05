@@ -14,20 +14,25 @@ public class QuestGoal
     }
     public void EnemyKilled()
     {
-        ////requiredAmount = PlayerPrefs.GetInt("rA");
-        //currentAmount = PlayerPrefs.GetInt("cA");
-        //PlayerPrefs.SetInt("cA", currentAmount);
-        ////PlayerPrefs.SetInt("cA", requiredAmount);
-        currentAmount++;
-        TrackQuestProgress.scoreValue += 1;
+        if (goalType == GoalType.Kill)
+        {
+            currentAmount++;
+            TrackQuestProgress.scoreValue++;
+        }
+            ////requiredAmount = PlayerPrefs.GetInt("rA");
+            //currentAmount = PlayerPrefs.GetInt("cA");
+            //PlayerPrefs.SetInt("cA", currentAmount);
+            ////PlayerPrefs.SetInt("cA", requiredAmount);
     }
     public void ItemCollected()
     {
         if (goalType == GoalType.Gethering)
+        {
             currentAmount++;
+            TrackQuestProgressRunes.scoreValue++;
+        }
     }
 }
-
 public enum GoalType
 {
     Kill,

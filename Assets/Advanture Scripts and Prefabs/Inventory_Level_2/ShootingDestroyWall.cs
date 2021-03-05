@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
-
 public class ShootingDestroyWall : MonoBehaviour
 {
     public GameObject prefabWall;
@@ -16,7 +15,7 @@ public class ShootingDestroyWall : MonoBehaviour
     public void Use()
     {
         Instantiate(prefabWall, player.transform.position, Quaternion.identity);
-        Instantiate(effect, player.transform.position, Quaternion.identity);
+        //Instantiate(effect, player.transform.position, Quaternion.identity);
         CameraShaker.Instance.ShakeOnce(.9f, .7f, 0.2f, 0.2f);
         Destroy(gameObject);
     }

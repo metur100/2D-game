@@ -73,6 +73,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1900819902975843785}
   damageDoneBullet: -30
+  activateWallDestroyed: {fileID: 9142777911810879486, guid: b1706dcca45c27e4c8af3a0126244653,
+    type: 3}
 --- !u!50 &1900819902975843785
 Rigidbody2D:
   serializedVersion: 4

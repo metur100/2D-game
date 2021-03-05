@@ -16,6 +16,8 @@ public class WallHealthUpper : MonoBehaviour
     //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject deactivateText;
+    public Button activateWallDestroyed;
+    private bool hasTriggered;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -27,9 +29,11 @@ public class WallHealthUpper : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !hasTriggered)
         {
+            hasTriggered = true;
             deactivateText.SetActive(false);
+            activateWallDestroyed.onClick.Invoke();
             //FindObjectOfType<AudioManager>().Play("Death");
             //activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
