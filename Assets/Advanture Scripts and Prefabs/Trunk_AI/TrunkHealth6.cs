@@ -17,7 +17,7 @@ public class TrunkHealth6 : MonoBehaviour
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
-    public Button activateDeathCount;
+    //public Button activateDeathCount;
     private bool isDead;
     private void OnEnable()
     {
@@ -35,7 +35,7 @@ public class TrunkHealth6 : MonoBehaviour
         {
             //FindObjectOfType<AudioManager>().Play("Death");
             isDead = true;
-            activateDeathCount.onClick.Invoke();
+            //activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
