@@ -11,19 +11,17 @@ public class GreenPigHealth : MonoBehaviour
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    public GreenPigChaseAndAttack moveSpeed;
+    //public GreenPigChaseAndAttack moveSpeed;
     [SerializeField]
-    private int currentHealth;
+    public int currentHealth;
     public GameObject deathEffect;
     public GameObject dropItem;
     public GameObject destroyWallAndEnemies;
-    SpriteRenderer spriteColor;
     public GameObject activateMonD;
-    public GameObject destroyMovingPlatform;
-    void Start()
-    {
-        spriteColor = GetComponent<SpriteRenderer>();
-    }
+    public GameObject movingPlatforms;
+    public GameObject effectDestroinyMovingPlatform;
+    [SerializeField]
+    Transform posEffectDestroyMovPlatform;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -35,10 +33,12 @@ public class GreenPigHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 50)
+        if (currentHealth <= 250)
         {
-            moveSpeed.speed = 100;
-            spriteColor.color = new Color(255, 0, 0, 255);
+            Instantiate(effectDestroinyMovingPlatform, transform.position, Quaternion.identity);
+            GetComponent<Boss>().enabled = true;
+            GetComponent<Animator>().enabled = true;
+            Destroy(movingPlatforms);
         }
         if (currentHealth < 0)
         {
@@ -60,7 +60,6 @@ public class GreenPigHealth : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(destroyWallAndEnemies);
-        Destroy(destroyMovingPlatform);
         activateMonD.SetActive(true);
         Destroy(gameObject);
     }

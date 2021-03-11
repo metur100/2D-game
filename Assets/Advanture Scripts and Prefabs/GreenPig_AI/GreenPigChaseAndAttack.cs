@@ -46,12 +46,12 @@ public class GreenPigChaseAndAttack : MonoBehaviour
         if (transform.position.x < player.position.x)
         {
             rb2d.velocity = new Vector2(speed, 0);
-            transform.localScale = new Vector2(-150, 150);
+            transform.localScale = new Vector2(-15, 15);
         }
         else
         {
             rb2d.velocity = new Vector2(-speed, 0);
-            transform.localScale = new Vector2(150, 150);
+            transform.localScale = new Vector2(15, 15);
         }
     }
 }

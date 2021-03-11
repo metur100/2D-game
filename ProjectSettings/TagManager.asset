@@ -110,6 +110,28 @@ TagManager:
   - Dodge_Layer
   - Mini_Ghost_AI
   - Dialog_GreenPig
+  - Boss
+  - Body_GreenPig_AI
+  - Slime_AI_5
+  - Slime_AI_6
+  - Slime_AI_7
+  - Slime_AI_8
+  - Turtle_AI_4
+  - Turtle_AI_5
+  - Turtle_AI_6
+  - Turtle_AI_7
+  - Bee_AI_3
+  - Bee_AI_4
+  - Bee_AI_5
+  - Snail_AI_5
+  - Snail_AI_6
+  - Snail_AI_7
+  - Snail_AI_8
+  - BlueBird_AI_4
+  - BlueBird_AI_5
+  - BlueBird_AI_6
+  - BlueBird_AI_7
+  - BlueBird_AI_8
   layers:
   - Default
   - TransparentFX
