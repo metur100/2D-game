@@ -269,6 +269,86 @@ public class AOEAttackPrefab : MonoBehaviour
                 RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
                 eHealth62.ModifyHealth(damageDoneAOE);
                 break;
+            case "Slime_AI_5":
+                SlimeHealthPatrol5 eHealth64 = other.gameObject.GetComponent<SlimeHealthPatrol5>();
+                eHealth64.ModifyHealth(damageDoneAOE);
+                break;
+            case "Slime_AI_6":
+                SlimeHealthPatrol6 eHealth65 = other.gameObject.GetComponent<SlimeHealthPatrol6>();
+                eHealth65.ModifyHealth(damageDoneAOE);
+                break;
+            case "Slime_AI_7":
+                SlimeHealthPatrol7 eHealth66 = other.gameObject.GetComponent<SlimeHealthPatrol7>();
+                eHealth66.ModifyHealth(damageDoneAOE);
+                break;
+            case "Slime_AI_8":
+                SlimeHealthPatrol8 eHealth67 = other.gameObject.GetComponent<SlimeHealthPatrol8>();
+                eHealth67.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bee_AI_3":
+                BeeHealth3 eHealth68 = other.gameObject.GetComponent<BeeHealth3>();
+                eHealth68.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bee_AI_4":
+                BeeHealth4 eHealth69 = other.gameObject.GetComponent<BeeHealth4>();
+                eHealth69.ModifyHealth(damageDoneAOE);
+                break;
+            case "Bee_AI_5":
+                BeeHealth5 eHealth70 = other.gameObject.GetComponent<BeeHealth5>();
+                eHealth70.ModifyHealth(damageDoneAOE);
+                break;
+            case "Snail_AI_5":
+                SnailHealth5 eHealth71 = other.gameObject.GetComponent<SnailHealth5>();
+                eHealth71.ModifyHealth(damageDoneAOE);
+                break;
+            case "Snail_AI_6":
+                SnailHealth6 eHealth72 = other.gameObject.GetComponent<SnailHealth6>();
+                eHealth72.ModifyHealth(damageDoneAOE);
+                break;
+            case "Snail_AI_7":
+                SnailHealth7 eHealth73 = other.gameObject.GetComponent<SnailHealth7>();
+                eHealth73.ModifyHealth(damageDoneAOE);
+                break;
+            case "Snail_AI_8":
+                SnailHealth8 eHealth74 = other.gameObject.GetComponent<SnailHealth8>();
+                eHealth74.ModifyHealth(damageDoneAOE);
+                break;
+            case "Turtle_AI_4":
+                TurtleHealth4 eHealth75 = other.gameObject.GetComponent<TurtleHealth4>();
+                eHealth75.ModifyHealth(damageDoneAOE);
+                break;
+            case "Turtle_AI_5":
+                TurtleHealth5 eHealth76 = other.gameObject.GetComponent<TurtleHealth5>();
+                eHealth76.ModifyHealth(damageDoneAOE);
+                break;
+            case "Turtle_AI_6":
+                TurtleHealth6 eHealth77 = other.gameObject.GetComponent<TurtleHealth6>();
+                eHealth77.ModifyHealth(damageDoneAOE);
+                break;
+            case "Turtle_AI_7":
+                TurtleHealth7 eHealth78 = other.gameObject.GetComponent<TurtleHealth7>();
+                eHealth78.ModifyHealth(damageDoneAOE);
+                break;
+            case "BlueBird_AI_4":
+                BlueBirdHealth4 eHealth79 = other.gameObject.GetComponent<BlueBirdHealth4>();
+                eHealth79.ModifyHealth(damageDoneAOE);
+                break;
+            case "BlueBird_AI_5":
+                BlueBirdHealth5 eHealth80 = other.gameObject.GetComponent<BlueBirdHealth5>();
+                eHealth80.ModifyHealth(damageDoneAOE);
+                break;
+            case "BlueBird_AI_6":
+                BlueBirdHealth6 eHealth81 = other.gameObject.GetComponent<BlueBirdHealth6>();
+                eHealth81.ModifyHealth(damageDoneAOE);
+                break;
+            case "BlueBird_AI_7":
+                BlueBirdHealth7 eHealth82 = other.gameObject.GetComponent<BlueBirdHealth7>();
+                eHealth82.ModifyHealth(damageDoneAOE);
+                break;
+            case "BlueBird_AI_8":
+                BlueBirdHealth8 eHealth83 = other.gameObject.GetComponent<BlueBirdHealth8>();
+                eHealth83.ModifyHealth(damageDoneAOE);
+                break;
         }
     }
     IEnumerator DestroyGameobject()
