@@ -21,7 +21,7 @@ public class ProjectileBoss : MonoBehaviour {
         if (other.CompareTag("Boss")) {
             camAnim = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
             camAnim.SetTrigger("shake");
-            other.GetComponent<Boss>().health -= damage;
+            //other.GetComponent<Boss>().health -= damage;
             Instantiate(explosion, transform.position, Quaternion.identity);
             Instantiate(explosionTwo, transform.position, Quaternion.identity);
             Destroy(gameObject);

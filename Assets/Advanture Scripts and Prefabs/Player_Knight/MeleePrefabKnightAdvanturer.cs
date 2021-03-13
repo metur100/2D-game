@@ -354,6 +354,18 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 BlueBirdHealth8 eHealth83 = other.gameObject.GetComponent<BlueBirdHealth8>();
                 eHealth83.ModifyHealth(damageDoneMeleeAttack);
                 break;
+            case "Suprise_Box_4":
+                SupriseBoxHealth4 eHealth84 = other.gameObject.GetComponent<SupriseBoxHealth4>();
+                eHealth84.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Suprise_Box_5":
+                SupriseBoxHealth5 eHealth85 = other.gameObject.GetComponent<SupriseBoxHealth5>();
+                eHealth85.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Suprise_Box_6":
+                SupriseBoxHealth6 eHealth86 = other.gameObject.GetComponent<SupriseBoxHealth6>();
+                eHealth86.ModifyHealth(damageDoneMeleeAttack);
+                break;
         }
     }
     IEnumerator DestroyGameobject()

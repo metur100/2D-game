@@ -52,7 +52,7 @@ public class Dialog : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
         }
-        if (index == sentences.Length - 2)
+        if (index == sentences.Length - 3)
         {
             activateQuestUI.OpenQuestWindow();
         }

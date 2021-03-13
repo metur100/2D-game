@@ -132,6 +132,9 @@ TagManager:
   - BlueBird_AI_6
   - BlueBird_AI_7
   - BlueBird_AI_8
+  - Suprise_Box_4
+  - Suprise_Box_5
+  - Suprise_Box_6
   layers:
   - Default
   - TransparentFX

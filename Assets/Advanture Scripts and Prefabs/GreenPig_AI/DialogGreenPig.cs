@@ -13,9 +13,7 @@ public class DialogGreenPig : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activateWallAndEnemies;
     public PlayerMovementAdvanturerKnight moveSpeed;
-
     public GameObject continueButton;
-
     public GameObject triggerWall;
     [SerializeField]
     Transform positionWall;
@@ -44,8 +42,7 @@ public class DialogGreenPig : MonoBehaviour
     {
         //animator.SetTrigger("Change");
         continueButton.SetActive(false);
-        activateWallAndEnemies.SetActive(true);
-        Instantiate(triggerWall, positionWall.position, Quaternion.identity);
+
         if (index < sentences.Length - 1)
         {
             index++;
@@ -60,6 +57,8 @@ public class DialogGreenPig : MonoBehaviour
         }
         if (index == sentences.Length - 1)
         {
+            activateWallAndEnemies.SetActive(true);
+            Instantiate(triggerWall, positionWall.position, Quaternion.identity);
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
         }

@@ -19,10 +19,6 @@ public class QuestGoal
             currentAmount++;
             TrackQuestProgress.scoreValue++;
         }
-            ////requiredAmount = PlayerPrefs.GetInt("rA");
-            //currentAmount = PlayerPrefs.GetInt("cA");
-            //PlayerPrefs.SetInt("cA", currentAmount);
-            ////PlayerPrefs.SetInt("cA", requiredAmount);
     }
     public void ItemCollected()
     {

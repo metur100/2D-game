@@ -15,6 +15,7 @@ public class DialogTrigger : MonoBehaviour
     public GameObject activateDialogBeforeFirstBoss;
     public GameObject activateDialogAfterFirstBoss;
     public GameObject doTheQuestFirst;
+    public GameObject bossAndHealthUI;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MonD_NPC"))
@@ -26,6 +27,7 @@ public class DialogTrigger : MonoBehaviour
         }
         if (other.CompareTag("Dialog_GreenPig"))
         {
+            bossAndHealthUI.SetActive(true);
             activateGreenPigDialog.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerGreenPigDialog);

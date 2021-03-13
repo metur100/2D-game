@@ -15,6 +15,6 @@ public class TrackLifes : MonoBehaviour
 
     void Update()
     {
-        score.text = "= " + scoreValue;
+        score.text = "" + scoreValue;
     }
 }

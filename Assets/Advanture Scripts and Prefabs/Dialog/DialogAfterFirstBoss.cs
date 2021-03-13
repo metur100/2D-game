@@ -38,8 +38,6 @@ public class DialogAfterFirstBoss : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
-        activatePortalNextLevel.SetActive(true);
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
@@ -51,6 +49,10 @@ public class DialogAfterFirstBoss : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+        }
+        if (index == sentences.Length - 2)
+        {
+            activatePortalNextLevel.SetActive(true);
         }
         if (index == sentences.Length - 1)
         {

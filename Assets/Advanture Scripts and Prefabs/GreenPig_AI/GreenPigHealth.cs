@@ -20,6 +20,7 @@ public class GreenPigHealth : MonoBehaviour
     public GameObject activateMonD;
     public GameObject movingPlatforms;
     public GameObject effectDestroinyMovingPlatform;
+    private bool isEffectTriggered;
     [SerializeField]
     Transform posEffectDestroyMovPlatform;
     private void OnEnable()
@@ -33,9 +34,10 @@ public class GreenPigHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 250)
+        if (currentHealth <= 250 && !isEffectTriggered)
         {
             Instantiate(effectDestroinyMovingPlatform, transform.position, Quaternion.identity);
+            isEffectTriggered = true;
             GetComponent<Boss>().enabled = true;
             GetComponent<Animator>().enabled = true;
             Destroy(movingPlatforms);
