@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DestroyBloodstain : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField]
+    private float destroyAfter;
     void Start()
     {
-        
+        StartCoroutine(DestroyGameobject());
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator DestroyGameobject()
     {
-        
+        yield return new WaitForSeconds(destroyAfter);
+        Destroy(gameObject);
     }
 }

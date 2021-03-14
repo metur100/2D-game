@@ -6,6 +6,8 @@ public class TutorialManager : MonoBehaviour
 {
     public GameObject[] popUps;
     private int popUpIndex;
+    public GameObject skipTutorial;
+    public GameObject playGame;
     void Update()
     {
         for(int i = 0; i < popUps.Length; i++)
@@ -19,55 +21,60 @@ public class TutorialManager : MonoBehaviour
                 popUps[i].SetActive(false);
             }
         }
-        if (popUpIndex == 0)
+        if (popUpIndex == 1)
         {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 1)
+        else if (popUpIndex == 2)
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 2 || popUpIndex == 3 || popUpIndex == 4 || popUpIndex == 5
-            || popUpIndex == 6 || popUpIndex == 7)
+        else if (popUpIndex == 0 || popUpIndex == 3 || popUpIndex == 4 || popUpIndex == 5
+            || popUpIndex == 6 || popUpIndex == 7 || popUpIndex == 8)
         {
             if (Input.anyKeyDown)
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 8)
+        else if (popUpIndex == 9)
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 9)
+        else if (popUpIndex == 10)
         {
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 10)
+        else if (popUpIndex == 11)
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 11)
+        else if (popUpIndex == 12)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 popUpIndex++;
             }
+        }
+        else if (popUpIndex == 13)
+        {
+            skipTutorial.SetActive(false);
+            playGame.SetActive(true);
         }
     }
 }
