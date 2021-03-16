@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestroyBloodstain : MonoBehaviour
 {
-
     [SerializeField]
     private float destroyAfter;
     void Start()

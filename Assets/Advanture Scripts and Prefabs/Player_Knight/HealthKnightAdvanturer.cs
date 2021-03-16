@@ -13,7 +13,6 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public Animator animator;
     [SerializeField]
     public int currentHealth;
-    //private float delay = 1f;
     Renderer rend;
     Color c;
     public int lifes = 3;
@@ -35,7 +34,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public void ModifyHealth(int amount)
     {
         currentHealth += amount;
-        StartCoroutine("TemporalInvulnerability");
+        StartCoroutine(TemporalInvulnerability());
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
@@ -48,7 +47,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
             currentHealth = 200;
             if (lifes <= 0)
             {
-                Destroy(gameObject/*, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
+                Destroy(gameObject);
                 gameOverUI.SetActive(true);
                 //animator.SetBool("IsDead", isDead);
                 //FindObjectOfType<AudioManager>().Play("Death");

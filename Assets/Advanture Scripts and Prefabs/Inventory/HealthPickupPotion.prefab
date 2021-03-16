@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5329485412864176164}
   - component: {fileID: 3994326311989220445}
   - component: {fileID: -5004576922528644381}
+  - component: {fileID: -1885363269763331025}
   m_Layer: 0
   m_Name: HealthPickupPotion
   m_TagString: Untagged
@@ -144,3 +145,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1885363269763331025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994326311989220444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aca0cb3f5624e46b749205c1e25bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 8845494328183140102, guid: 4e75a369b79d1f142a0f99bfda278f72, type: 3}

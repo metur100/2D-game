@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-
+    public LevelLoader nextLevel;
+    [SerializeField]
+    private int buildLevelIndex;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player_Knight_Advanturer"))
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Advanture2");
+            nextLevel.LoadScreenExample(buildLevelIndex);
         }
     }
 }

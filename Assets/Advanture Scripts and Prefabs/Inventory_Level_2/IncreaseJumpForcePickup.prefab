@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4585114754649891698}
   - component: {fileID: 2333842714040618214}
   - component: {fileID: 4548481294899649563}
+  - component: {fileID: 5512652593061306774}
   m_Layer: 0
   m_Name: IncreaseJumpForcePickup
   m_TagString: Untagged
@@ -145,3 +146,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28, y: 0.09931554}
   m_EdgeRadius: 0
+--- !u!114 &5512652593061306774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585114754649891699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aca0cb3f5624e46b749205c1e25bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 6685201382644760524, guid: fb5afee1cd8e0ef47bd199d23d20b760, type: 3}

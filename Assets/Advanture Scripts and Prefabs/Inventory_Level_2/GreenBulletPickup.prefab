@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 91689747884814584}
   - component: {fileID: 91689747884814587}
   - component: {fileID: 2199831747803307884}
+  - component: {fileID: 1258362420349257868}
   m_Layer: 0
   m_Name: GreenBulletPickup
   m_TagString: Untagged
@@ -134,3 +135,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1258362420349257868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91689747884814585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aca0cb3f5624e46b749205c1e25bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 4974801828131769695, guid: 6a666ed920f27ae42b402554d83edde7, type: 3}

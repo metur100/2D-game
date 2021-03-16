@@ -8,8 +8,7 @@ public class SnailPatrolAndHide : MonoBehaviour
 	public bool MoveRight;
 	public Animator animator;
 	private bool isInvulnerable = false;
-	private float ignoreCollisionOverTime = 3.4f;
-
+	private readonly float ignoreCollisionOverTime = 3.4f;
 	void Update()
 	{
 		if (MoveRight)
@@ -44,14 +43,14 @@ public class SnailPatrolAndHide : MonoBehaviour
 	}
 	IEnumerator GetInvulnerable()
 	{
-		Physics2D.IgnoreLayerCollision(21, 17, true);
-		speed = 0f;
-		isInvulnerable = true;
-		animator.SetBool("IsHiding", isInvulnerable);
-		yield return new WaitForSeconds(ignoreCollisionOverTime);
-		speed = 10f;
+        GetComponent<BoxCollider2D>().enabled = false;
+        speed = 0f;
+        isInvulnerable = true;
+        animator.SetBool("IsHiding", isInvulnerable);
+        yield return new WaitForSeconds(ignoreCollisionOverTime);
+        GetComponent<BoxCollider2D>().enabled = true;
+        speed = 10f;
 		isInvulnerable = false;
 		animator.SetBool("IsHiding", isInvulnerable);
-		Physics2D.IgnoreLayerCollision(21, 17, false);
 	}
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6766366015709979579}
   - component: {fileID: 6766366015709979576}
   - component: {fileID: -4457413488718754769}
+  - component: {fileID: -4802302575828941358}
   m_Layer: 0
   m_Name: AOEPickup
   m_TagString: Untagged
@@ -134,3 +135,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4802302575828941358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766366015709979578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aca0cb3f5624e46b749205c1e25bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 4675467872736524620, guid: 702514154d70d7c43a5b0cdfbb790fd2, type: 3}

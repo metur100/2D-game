@@ -12,7 +12,7 @@ public class SpawnItem : MonoBehaviour
     }
     public void Spawn()
     {
-        Vector2 playerPosition = new Vector2(playerPos.position.x - 50, playerPos.position.y + 10);
-        Instantiate(item, playerPos.position, Quaternion.identity);
+        Vector2 playerPosition = new Vector2(playerPos.position.x + 20, playerPos.position.y);
+        Instantiate(item, playerPosition, Quaternion.identity);
     }
 }

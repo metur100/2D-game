@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7464671647561121657}
   - component: {fileID: 1805740528264239872}
   - component: {fileID: 3529751914050533647}
+  - component: {fileID: -4307410164825977057}
   m_Layer: 0
   m_Name: BoostSpeedPickup
   m_TagString: Untagged
@@ -144,3 +145,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4307410164825977057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805740528264239873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aca0cb3f5624e46b749205c1e25bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 1945286704395506360, guid: f01dd575fc04da4439f7a2b680486aad, type: 3}
