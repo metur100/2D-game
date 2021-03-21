@@ -12,6 +12,8 @@ public class DialogTrigger2 : MonoBehaviour
     public GameObject activateDialogLowerCave;
     public GameObject triggerGhost;
     public GameObject activateDialogGhost;
+    public GameObject triggerAfterGhost;
+    public GameObject activateDialogAfterGhost;
     public PlayerMovementAdvanturerKnight moveSpeed;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,6 +40,12 @@ public class DialogTrigger2 : MonoBehaviour
             activateDialogGhost.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerGhost);
+        }
+        if (collision.CompareTag("Dialog_After_Ghost"))
+        {
+            activateDialogAfterGhost.SetActive(true);
+            moveSpeed.normalMovementSpeed = 0f;
+            Destroy(triggerAfterGhost);
         }
     }
 }

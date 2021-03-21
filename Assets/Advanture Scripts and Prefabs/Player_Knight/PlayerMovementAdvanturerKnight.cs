@@ -49,6 +49,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
         {
+            FindObjectOfType<AudioManager>().Play("Jump");
             animator.SetTrigger("takeOf");
             isJumping = true;
             rb.velocity = Vector2.up * jumpForce;

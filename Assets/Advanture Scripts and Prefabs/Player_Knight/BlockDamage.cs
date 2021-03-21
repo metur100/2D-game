@@ -23,7 +23,7 @@ public class BlockDamage : MonoBehaviour
             shootingBlock.fillAmount = 1;
             Instantiate(blockPrefab, firePointBlock.position, firePointBlock.rotation);
             animator.SetTrigger("IsBlocking");
-            FindObjectOfType<AudioManager>().Play("");
+            FindObjectOfType<AudioManager>().Play("BlockedKnight");
         }
         if (isCooldownBlock)
         {

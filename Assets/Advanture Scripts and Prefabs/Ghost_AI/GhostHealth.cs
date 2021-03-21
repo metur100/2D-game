@@ -16,9 +16,11 @@ public class GhostHealth : MonoBehaviour
     private int currentHealth;
     public GameObject deathEffect;
     public GameObject dropItem;
-    public GameObject activateBotLoop;
+    public GameObject activateBotLoopAttack;
     SpriteRenderer spriteColor;
     public GhostShootingFollowRetreat ghostAI;
+    public GameObject activateTriggerAfterBoss;
+    public GameObject killSmallGhosts;
     void Start()
     {
         spriteColor = GetComponent<SpriteRenderer>();
@@ -40,7 +42,7 @@ public class GhostHealth : MonoBehaviour
             spriteColor.color = new Color(255, 0, 0, 255);
             ghostAI.startTimeBtwShots = 1;
             ghostAI.speed = 80f;
-            activateBotLoop.SetActive(true);
+            activateBotLoopAttack.SetActive(true);
         }
         if (currentHealth < 0)
         {
@@ -61,6 +63,8 @@ public class GhostHealth : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Instantiate(dropItem, transform.position, Quaternion.identity);
+        Instantiate(killSmallGhosts, transform.position, Quaternion.identity); 
+        activateTriggerAfterBoss.SetActive(true);
         Destroy(gameObject);
     }
 }

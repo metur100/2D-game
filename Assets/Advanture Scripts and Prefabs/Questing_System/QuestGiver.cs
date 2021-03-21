@@ -11,6 +11,7 @@ public class QuestGiver : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI experianceText;
+    public GameObject questAcceptedTxt;
     public void OpenQuestWindow()
     {
         questWindow.SetActive(true);
@@ -23,5 +24,12 @@ public class QuestGiver : MonoBehaviour
         questWindow.SetActive(false);
         quest.isActive = true;
         player.quest = quest;
+        StartCoroutine(QuestAccepted());
+    }
+    IEnumerator QuestAccepted()
+    {
+        questAcceptedTxt.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        questAcceptedTxt.SetActive(false);
     }
 }

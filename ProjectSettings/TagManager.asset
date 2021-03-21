@@ -135,6 +135,7 @@ TagManager:
   - Suprise_Box_4
   - Suprise_Box_5
   - Suprise_Box_6
+  - Dialog_After_Ghost
   layers:
   - Default
   - TransparentFX

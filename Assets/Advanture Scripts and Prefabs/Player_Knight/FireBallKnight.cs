@@ -368,6 +368,7 @@ public class FireBallKnight : MonoBehaviour
                 break;
         }
         Instantiate(impactEffect, transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("FireBallExplosion");
         Destroy(gameObject);
     }
 }

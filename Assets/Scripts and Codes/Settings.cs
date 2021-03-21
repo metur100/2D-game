@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-
 public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;

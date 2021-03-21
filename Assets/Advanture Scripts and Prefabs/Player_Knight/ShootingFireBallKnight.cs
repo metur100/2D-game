@@ -25,7 +25,7 @@ public class ShootingFireBallKnight : MonoBehaviour
             shootingBullet.fillAmount = 1;
             StartCoroutine(ShootFireBall());
             animator.SetTrigger("Fire");
-            FindObjectOfType<AudioManager>().Play("");
+            FindObjectOfType<AudioManager>().Play("FireBallKnight");
         }
         if (isCooldownBullet)
         {

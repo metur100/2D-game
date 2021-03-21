@@ -25,4 +25,16 @@ public class OpenLink : MonoBehaviour
     {
         Application.OpenURL("https://creativecommons.org/");
     }
+    public void Discord()
+    {
+        Application.OpenURL("https://discord.gg/uzF4h75Dxf");
+    }
+    public void Youtube()
+    {
+        Application.OpenURL("https://www.youtube.com/channel/UCnagizhpBvBBt286pcwWs_g");
+    }
+    public void Freesound()
+    {
+        Application.OpenURL("https://github.com/metur100/MontheeCredits/blob/main/README.md");
+    }
 }
