@@ -136,6 +136,7 @@ TagManager:
   - Suprise_Box_5
   - Suprise_Box_6
   - Dialog_After_Ghost
+  - Slime_Patrol_Sound
   layers:
   - Default
   - TransparentFX

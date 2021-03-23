@@ -8,7 +8,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public GameObject gameOverUIAdvanture;
-    public float normalMovementSpeed = 250f;
+    public float normalMovementSpeed;
     private float horizontalMove = 0f;
     private bool crouch = false;
 
@@ -44,7 +44,6 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
         }
         horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.W))

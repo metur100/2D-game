@@ -29,7 +29,7 @@ public class QuestGiver : MonoBehaviour
     IEnumerator QuestAccepted()
     {
         questAcceptedTxt.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         questAcceptedTxt.SetActive(false);
     }
 }
