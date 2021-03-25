@@ -53,10 +53,12 @@ public class DialogLowerCave : MonoBehaviour
         }
         if (index == sentences.Length - 3)
         {
+            FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
             activatePortal.SetActive(true);
         }
         if (index == sentences.Length - 5)
         {
+            FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
             activateTriggerCreatePlatform.SetActive(true);
         }
         if (index == sentences.Length - 1)

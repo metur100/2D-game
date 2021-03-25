@@ -14,6 +14,7 @@ public class QuestGiver : MonoBehaviour
     public GameObject questAcceptedTxt;
     public void OpenQuestWindow()
     {
+        FindObjectOfType<AudioManager>().Play("Quest_Windows");
         questWindow.SetActive(true);
         titleText.text = quest.title;
         descriptionText.text = quest.description;

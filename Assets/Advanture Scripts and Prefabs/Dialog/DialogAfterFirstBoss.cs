@@ -52,6 +52,7 @@ public class DialogAfterFirstBoss : MonoBehaviour
         }
         if (index == sentences.Length - 2)
         {
+            FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
             activatePortalNextLevel.SetActive(true);
         }
         if (index == sentences.Length - 1)

@@ -38,8 +38,6 @@ public class DialogBeforeFirstBoss : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
-        movingPlatform.SetActive(true);
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
@@ -56,6 +54,11 @@ public class DialogBeforeFirstBoss : MonoBehaviour
         {
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+        }
+        if (index == sentences.Length - 2)
+        {
+            FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
+            movingPlatform.SetActive(true);
         }
     }
 }
