@@ -13,7 +13,6 @@ public class BlueBirdHealth3 : MonoBehaviour
     public Animator animator;
     [SerializeField]
     private int currentHealth;
-    //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject dropItem;
     public Button activateDeathCount;
@@ -36,7 +35,7 @@ public class BlueBirdHealth3 : MonoBehaviour
             activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
+            Destroy(gameObject);
 
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;

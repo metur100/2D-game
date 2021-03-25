@@ -11,9 +11,7 @@ public class SnailHealth7 : MonoBehaviour
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    [SerializeField]
     public int currentHealth;
-    //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
@@ -22,7 +20,6 @@ public class SnailHealth7 : MonoBehaviour
     private void OnEnable()
     {
         currentHealth = maxHealth;
-        //current = GetComponent<QuestGoal>();
     }
     public void ModifyHealth(int amount)
     {
@@ -33,18 +30,17 @@ public class SnailHealth7 : MonoBehaviour
         }
         if (currentHealth <= 0 && !isDead)
         {
-            //FindObjectOfType<AudioManager>().Play("Death");
             isDead = true;
             activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
+            Destroy(gameObject);
 
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Snail");
         animator.SetTrigger("IsHurt");
     }
 }

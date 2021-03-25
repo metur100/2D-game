@@ -11,7 +11,6 @@ public class GreenPigHealth : MonoBehaviour
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    //public GreenPigChaseAndAttack moveSpeed;
     [SerializeField]
     public int currentHealth;
     public GameObject deathEffect;

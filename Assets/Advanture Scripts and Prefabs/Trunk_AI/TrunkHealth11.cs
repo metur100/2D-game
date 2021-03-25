@@ -8,19 +8,17 @@ using UnityEngine.UI;
 public class TrunkHealth11 : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    [SerializeField]
     public int currentHealth;
-    //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
+    private bool isDead;
     private void OnEnable()
     {
         currentHealth = maxHealth;
-        //current = GetComponent<QuestGoal>();
     }
     public void ModifyHealth(int amount)
     {
@@ -29,18 +27,18 @@ public class TrunkHealth11 : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
-            //FindObjectOfType<AudioManager>().Play("Death");
+            isDead = true;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
+            Destroy(gameObject);
 
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Trunk");
         animator.SetTrigger("IsHurt");
     }
 }
