@@ -17,6 +17,7 @@ public class PickupItems : MonoBehaviour
     {
         if (other.CompareTag("Player_Knight_Advanturer"))
         {
+            FindObjectOfType<AudioManager>().Play("PickUp_Item");
             // spawn the sun button at the first available inventory slot ! 
             for (int i = 0; i < inventory.slots.Length; i++)
             {

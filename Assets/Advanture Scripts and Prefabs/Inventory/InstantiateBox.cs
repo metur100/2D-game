@@ -15,6 +15,7 @@ namespace Assets.Advanture_Scripts_and_Prefabs.Inventory_Level_2
         {
             if (player != null)
             {
+                FindObjectOfType<AudioManager>().Play("Box_Item");
                 Instantiate(prefabBox, player.transform.position, Quaternion.identity);
             }
             Destroy(gameObject);

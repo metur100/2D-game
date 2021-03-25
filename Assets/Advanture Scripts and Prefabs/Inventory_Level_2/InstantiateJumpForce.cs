@@ -14,6 +14,7 @@ public class InstantiateJumpForce : MonoBehaviour
 
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("JumpForce_Item");
         Instantiate(jumpTrigger, player.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

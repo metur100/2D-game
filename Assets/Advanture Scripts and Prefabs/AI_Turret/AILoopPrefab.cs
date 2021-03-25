@@ -14,7 +14,7 @@ public class AILoopPrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(destroyBullet());
+        StartCoroutine(DestroyBullet());
         bulletRB = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Target_AI");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
@@ -22,13 +22,13 @@ public class AILoopPrefab : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_Knight_Advanturer")
+        if (other.gameObject.CompareTag("Player_Knight_Advanturer"))
         {
             HealthKnightAdvanturer eHealth = other.gameObject.GetComponent<HealthKnightAdvanturer>();
             eHealth.ModifyHealth(damageDone);
         }
     }
-    IEnumerator destroyBullet()
+    IEnumerator DestroyBullet()
     {
         yield return new WaitForSeconds(1.85f);
         Destroy(gameObject);

@@ -13,6 +13,7 @@ public class ShootingDestroyWall : MonoBehaviour
     }
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("Destroy_Wall");
         Instantiate(prefabWall, player.transform.position, Quaternion.identity);
         //Instantiate(effect, player.transform.position, Quaternion.identity);
         CameraShaker.Instance.ShakeOnce(.9f, .7f, 0.2f, 0.2f);

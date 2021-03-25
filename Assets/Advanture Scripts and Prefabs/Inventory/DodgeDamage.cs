@@ -31,6 +31,7 @@ public class DodgeDamage : MonoBehaviour
     }
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("Dodge_Layer");
         effect.Play();
         Instantiate(activate, player.transform.position, Quaternion.identity);
         StartCoroutine(DodgeAllDamage());   

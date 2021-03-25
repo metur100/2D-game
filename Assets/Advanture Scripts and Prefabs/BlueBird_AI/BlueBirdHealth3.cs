@@ -41,7 +41,7 @@ public class BlueBirdHealth3 : MonoBehaviour
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_BlueBird");
         animator.SetTrigger("IsHurt");
     }
 }

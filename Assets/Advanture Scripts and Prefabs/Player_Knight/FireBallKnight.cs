@@ -8,7 +8,8 @@ public class FireBallKnight : MonoBehaviour
     public int damageDoneFireB = -50;
     [SerializeField]
     private float speedOfFireBall = 200f;
-    public GameObject impactEffect;
+    [SerializeField]
+    private GameObject impactEffect;
     void Start()
     {
         rb.velocity = transform.right * speedOfFireBall;

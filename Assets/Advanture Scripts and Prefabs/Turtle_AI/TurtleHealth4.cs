@@ -44,7 +44,7 @@ public class TurtleHealth4 : MonoBehaviour
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Turtle");
         animator.SetTrigger("IsHurt");
     }
 }

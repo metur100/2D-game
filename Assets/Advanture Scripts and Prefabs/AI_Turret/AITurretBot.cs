@@ -25,7 +25,7 @@ public class AITurretBot : MonoBehaviour
             RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
             if (rayInfo)
             {
-                if (rayInfo.collider.gameObject.tag == "Player_Knight_Advanturer")
+                if (rayInfo.collider.gameObject.CompareTag("Player_Knight_Advanturer"))
                 {
                     if (Detected == false)
                     {
@@ -46,13 +46,14 @@ public class AITurretBot : MonoBehaviour
                 if (Time.time > nextTimeToFire)
                 {
                     nextTimeToFire = Time.time + 2 / FireRate;
-                    shoot();
+                    Shoot();
                     animator.SetTrigger("IsAttacking");
+                    FindObjectOfType<AudioManager>().Play("Plant_Shoot");
                 }
             }
         }
     }
-    void shoot()
+    void Shoot()
     {
         GameObject BulletIns = Instantiate(bullet, Shootpoint.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);

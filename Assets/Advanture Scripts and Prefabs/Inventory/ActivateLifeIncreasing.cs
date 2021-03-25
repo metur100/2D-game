@@ -8,9 +8,10 @@ public class ActivateLifeIncreasing : MonoBehaviour
     {
         if (collision.CompareTag("Player_Knight_Advanturer"))
         {
+            FindObjectOfType<AudioManager>().Play("Life_Item");
             HealthKnightAdvanturer life = collision.gameObject.GetComponent<HealthKnightAdvanturer>();
             life.lifes++;
-            TrackLifes.scoreValue += 1;
+            TrackLifes.scoreValue++;
         }
         Destroy(gameObject);
     }

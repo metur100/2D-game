@@ -14,6 +14,7 @@ public class ActivateHealingPotion : MonoBehaviour
 
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("HealingPotion_Item");
         Instantiate(healthEffect, player.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

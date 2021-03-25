@@ -45,7 +45,7 @@ public class SlimeHealthPatrol : MonoBehaviour
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Slime");
         animator.SetTrigger("IsHurt");
     }
 }

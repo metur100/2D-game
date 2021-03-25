@@ -44,7 +44,7 @@ public class TrunkHealth : MonoBehaviour
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Trunk");
         animator.SetTrigger("IsHurt");
     }
 }

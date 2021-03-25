@@ -17,6 +17,7 @@ public class ShootingAOE : MonoBehaviour
     {
         if (player != null)
         {
+            FindObjectOfType<AudioManager>().Play("AOE_Item");
             Instantiate(preabAOE, player.transform.position, Quaternion.identity);
             Instantiate(explosionEffect, player.transform.position, Quaternion.identity);
             CameraShaker.Instance.ShakeOnce(.9f, .7f, 0.2f, 0.2f);

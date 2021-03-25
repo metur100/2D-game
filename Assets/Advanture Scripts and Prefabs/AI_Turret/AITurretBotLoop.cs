@@ -8,13 +8,11 @@ public class AITurretBotLoop : MonoBehaviour
     public Transform Target;
     bool Detected = false;
     Vector2 Direction;
-    //public GameObject Gun;
     public GameObject bullet;
     public float FireRate;
     float nextTimeToFire = 0;
     public Transform Shootpoint;
     public float Force;
-    // Update is called once per frame
     void Update()
     {
         Vector2 targetPos = Target.position;
@@ -39,7 +37,6 @@ public class AITurretBotLoop : MonoBehaviour
         }
         if (Detected)
         {
-            //Gun.transform.up = Direction;
             if (Time.time > nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1 / FireRate;

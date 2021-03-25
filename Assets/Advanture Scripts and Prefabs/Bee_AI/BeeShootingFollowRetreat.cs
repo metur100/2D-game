@@ -43,6 +43,7 @@ public class BeeShootingFollowRetreat : MonoBehaviour
                 if (timeBtwShots <= 0)
                 {
                     animator.SetTrigger("IsAttacking");
+                    FindObjectOfType<AudioManager>().Play("Bee_Sting");
                     Instantiate(projectile, shootingPoint.transform.position, Quaternion.identity);
                     timeBtwShots = startTimeBtwShots;
                 }

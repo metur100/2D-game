@@ -161,4 +161,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabGreenBullet: {fileID: 8544535383329480734, guid: c0660d4132a997a438c36fe0c99937d7,
     type: 3}
-  player: {fileID: 1562228367304528360, guid: 5ec2b02f3fd56d14ca3170f1d0580307, type: 3}
+  player: {fileID: 8870944803352797361, guid: 5ec2b02f3fd56d14ca3170f1d0580307, type: 3}

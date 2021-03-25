@@ -53,7 +53,7 @@ public class GreenPigHealth : MonoBehaviour
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_GreenPig");
         animator.SetTrigger("IsHurt");
     }
     IEnumerator WaitTime()

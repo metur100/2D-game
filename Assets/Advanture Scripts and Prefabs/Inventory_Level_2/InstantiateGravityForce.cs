@@ -14,6 +14,7 @@ public class InstantiateGravityForce : MonoBehaviour
 
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("Gravity_Item");
         Instantiate(gravityTrigger, player.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

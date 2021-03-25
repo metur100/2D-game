@@ -22,13 +22,14 @@ public class JumpBehavior : StateMachineBehaviour {
         {
             animator.SetTrigger("idle");
         }
-        else {
+        else 
+        {
             timer -= Time.deltaTime;
         }
-
+        
         Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
-	}
+    }
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	

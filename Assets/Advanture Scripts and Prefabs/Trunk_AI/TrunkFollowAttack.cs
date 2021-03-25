@@ -25,20 +25,15 @@ public class TrunkFollowAttack : MonoBehaviour
     private bool isWalking = false;
     public Transform groundDetection;
     public float distance;
-    //private bool movingRight = true;
-    //private float horizontalMove = 0f;
-    // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (player != null)
         {
-            //transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+
             float distToPlayer = Vector2.Distance(transform.position, player.position);
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
             if (distToPlayer < agroRange && distToPlayer > shootingRange)
@@ -59,6 +54,7 @@ public class TrunkFollowAttack : MonoBehaviour
                 animator.SetTrigger("IsAttacking");
                 isWalking = false;
                 animator.SetBool("IsWalking", isWalking);
+                FindObjectOfType<AudioManager>().Play("Trunk_Attack");
                 StartShooting();
                 nextFireTime = Time.time + fireRate;
             }
@@ -77,7 +73,7 @@ public class TrunkFollowAttack : MonoBehaviour
             rb2d.velocity = new Vector2(moveSpeed, 0);
             transform.localScale = new Vector2(-50, 50);
         }
-        else //if (transform.position.x < player.position.x)
+        else
         {
             rb2d.velocity = new Vector2(-moveSpeed, 0);
             transform.localScale = new Vector2(50, 50);
