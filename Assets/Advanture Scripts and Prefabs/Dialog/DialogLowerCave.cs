@@ -37,13 +37,12 @@ public class DialogLowerCave : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
-            //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
         }
         else

@@ -9,7 +9,6 @@ public class DialogTrigger : MonoBehaviour
     public GameObject triggerGreenPigDialog;
     public GameObject triggerBeforeFirstBoss;
     public GameObject triggerAfterFirstBoss;
-    //public GameObject triggerQuestButton;
     public GameObject activateDialogStart;
     public GameObject activateGreenPigDialog;
     public GameObject activateDialogBeforeFirstBoss;
@@ -21,7 +20,6 @@ public class DialogTrigger : MonoBehaviour
         if (other.CompareTag("MonD_NPC"))
         {
             activateDialogStart.SetActive(true);
-            //triggerQuestButton.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerDialogStart);
         }

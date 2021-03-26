@@ -8,10 +8,9 @@ using UnityEngine.UI;
 public class RinoHealth3 : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    [SerializeField]
     public int currentHealth;
     public GameObject deathEffect;
     public GameObject bloodSplash;
@@ -29,16 +28,14 @@ public class RinoHealth3 : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            //FindObjectOfType<AudioManager>().Play("Death");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
             Destroy(gameObject);
-
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Rino");
         animator.SetTrigger("IsHurt");
     }
 }

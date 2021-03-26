@@ -42,7 +42,7 @@ public class DialogGhost : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
         activateWallAndEnemies.SetActive(true);
         Instantiate(triggerWall, positionWall.position, Quaternion.identity);

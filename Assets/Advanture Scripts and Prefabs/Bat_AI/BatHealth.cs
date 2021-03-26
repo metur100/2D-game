@@ -8,15 +8,13 @@ using UnityEngine.UI;
 public class BatHealth : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
     private int currentHealth;
-    //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject dropItem;
-    //public Button activateDeathCount;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -30,16 +28,13 @@ public class BatHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            //FindObjectOfType<AudioManager>().Play("Death");
-            //activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
-
+            Destroy(gameObject);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Bat");
         animator.SetTrigger("IsHurt");
     }
 }

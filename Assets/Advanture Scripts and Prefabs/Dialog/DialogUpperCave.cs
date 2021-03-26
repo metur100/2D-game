@@ -36,8 +36,8 @@ public class DialogUpperCave : MonoBehaviour
     }
     public void NextSentence()
     {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
-        //activateTriggerCreatePlatform.SetActive(true);
         if (index < sentences.Length - 1)
         {
             index++;

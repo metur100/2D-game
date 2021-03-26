@@ -12,9 +12,7 @@ public class Dialog : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
-
     public GameObject continueButton;
-    //public Animator animator;
     public QuestGiver activateQuestUI;
 
     private void Start()
@@ -38,9 +36,8 @@ public class Dialog : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
         continueButton.SetActive(false);
-
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         if (index < sentences.Length - 1)
         {
             index++;

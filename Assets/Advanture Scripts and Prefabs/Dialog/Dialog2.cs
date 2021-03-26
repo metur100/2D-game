@@ -36,7 +36,7 @@ public class Dialog2 : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {

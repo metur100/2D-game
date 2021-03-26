@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class ChestHealth4 : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 10;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
     private int currentHealth;
-    //private float delay = 1f;
     public GameObject deathEffect;
     public GameObject dropItem;
     public GameObject activateText;
@@ -31,14 +30,12 @@ public class ChestHealth4 : MonoBehaviour
         if (currentHealth <= 0)
         {
             activateText.SetActive(true);
-            //FindObjectOfType<AudioManager>().Play("Death");
+            FindObjectOfType<AudioManager>().Play("Destroyed_Chest");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            Destroy(gameObject/*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length*/);
-
+            Destroy(gameObject);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
     }
 }

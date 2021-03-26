@@ -38,6 +38,7 @@ public class DialogBeforeFirstBoss : MonoBehaviour
     }
     public void NextSentence()
     {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
