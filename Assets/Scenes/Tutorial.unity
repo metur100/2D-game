@@ -43320,7 +43320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965607027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -403.7495, y: 50, z: -11}
+  m_LocalPosition: {x: -403.7545, y: 50, z: -11}
   m_LocalScale: {x: 1.5597075, y: 1.5597075, z: 1.5597075}
   m_Children:
   - {fileID: 1488368690}
@@ -98316,6 +98316,527 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519452984}
   m_CullTransparentMesh: 0
+--- !u!1 &1529250395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529250398}
+  - component: {fileID: 1529250397}
+  - component: {fileID: 1529250396}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1529250396
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529250395}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.007
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 26
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1529250397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529250395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3a63a9746e89d47add06f9e4cb9233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+  sounds:
+  - name: DeathKnight
+    clip: {fileID: 8300000, guid: 1be2a26a72fed7b4cb17e9e05c4176d3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: 6e1067777ed44a646b8ca9d063413a27, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 2f80b25021841214ea0327ab11ba06e5, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: SwordAttack
+    clip: {fileID: 8300000, guid: f7a16c0d68c93f04eb71e4c67ea3488f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Dash
+    clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: BlockedKnight
+    clip: {fileID: 8300000, guid: ba3a4e64e7237984cb1fcf4126d19aae, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: FireBallKnight
+    clip: {fileID: 8300000, guid: 4b8069a937824a942958f6d5e5abcbdb, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: FireBallExplosion
+    clip: {fileID: 8300000, guid: 2199a3412f95d8e4da9dd641776efba5, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: LevelUp
+    clip: {fileID: 8300000, guid: 0e77e1ebd36f9c349afff0658b3cd431, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Plant_Shoot
+    clip: {fileID: 8300000, guid: 9c540a1bfecbcd842b28dc19fbfa07ff, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Bee_Sting
+    clip: {fileID: 8300000, guid: 5fc1a3ed91dc3b049a0c9dec67c64a46, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Trunk_Attack
+    clip: {fileID: 8300000, guid: 1f5e2d7e4c993ae418d4560c1e8e17e8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Pig_Jump
+    clip: {fileID: 8300000, guid: 8ef0f6244b2db9a488c30a86ace615a9, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Slime
+    clip: {fileID: 8300000, guid: c6125819cbda4734a8a155aa3471b9ce, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Bee
+    clip: {fileID: 8300000, guid: 6a6a218f26d21f747b4a04ad6973bc61, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_GreenPig
+    clip: {fileID: 8300000, guid: f52b9309dd7afc543896b701f12f4f7c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Turtle
+    clip: {fileID: 8300000, guid: e95f4dd18292531439f3ef0dc754be72, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Snail
+    clip: {fileID: 8300000, guid: ea8fa0d97e236084a9f01c119da01945, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_BlueBird
+    clip: {fileID: 8300000, guid: d0110132ce467bd46a85211250e3ba6b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Trunk
+    clip: {fileID: 8300000, guid: e560f40ca1dbfec46bf76994cd10dbfd, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: PickUp_Item
+    clip: {fileID: 8300000, guid: 58885f8f2e086d24d871f275c0a37f64, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: HealingPotion_Item
+    clip: {fileID: 8300000, guid: 3af00c97496d703418d0d65d0426bdfc, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Dodge_Layer
+    clip: {fileID: 8300000, guid: f4758af873c0a5d4ab9aad41f10ecbcf, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Life_Item
+    clip: {fileID: 8300000, guid: e1d23e5a0df69834d9ba252be4f465e8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Gravity_Item
+    clip: {fileID: 8300000, guid: 960763f9ca63f794c81e696a68ba828b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: JumpForce_Item
+    clip: {fileID: 8300000, guid: d283cd7a56c159148997bfb8c1a0ddb3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: AOE_Item
+    clip: {fileID: 8300000, guid: 8f43cbe1ddb70e740946bb2b99ee20ed, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Box_Item
+    clip: {fileID: 8300000, guid: 8f888762814d92d4fb5a6786473f864b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: GreenBullet_Item
+    clip: {fileID: 8300000, guid: f1791d233c1792c47915cfb28301b6ca, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Exp_Item
+    clip: {fileID: 8300000, guid: 5c7f2f54b5980344b8df82179a7fb529, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Next_Dialog
+    clip: {fileID: 8300000, guid: 5cee4d2679146b74a9e92950c225e350, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Exp_Item
+    clip: {fileID: 8300000, guid: 5c7f2f54b5980344b8df82179a7fb529, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Destroy_Wall
+    clip: {fileID: 8300000, guid: 2de524c5011fd294f8ad9b953279db94, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: MonD_CreatePlatform
+    clip: {fileID: 8300000, guid: 9fc8cfda70a48ba4494e82927a81f70d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Chest_Destroyed
+    clip: {fileID: 8300000, guid: f63fde985901e6c4a956661b63f9edb6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Bat
+    clip: {fileID: 8300000, guid: 73bb0f8c7fc1b904f9e4a5c51ed5a83a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Radish
+    clip: {fileID: 8300000, guid: ee479728bf6afa84aab1bb118b9a0198, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Rino
+    clip: {fileID: 8300000, guid: d2380da340be9fb4ea3ed626dd4d0131, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Bunny
+    clip: {fileID: 8300000, guid: 78743d3f46302264f92793ea5474625d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: IsHurt_Mashroom
+    clip: {fileID: 8300000, guid: 6f0ca5ec7adbe374dbce8261b0049083, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Chest_Destroyed
+    clip: {fileID: 8300000, guid: f63fde985901e6c4a956661b63f9edb6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+  - name: Explode_Effect
+    clip: {fileID: 8300000, guid: b560ce155d1751c4eb7e759f96e3717e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
+    source: {fileID: 0}
+--- !u!4 &1529250398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529250395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.010242, y: 15.735422, z: -1204.5283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535033443
 GameObject:
   m_ObjectHideFlags: 0
@@ -100157,365 +100678,6 @@ RectTransform:
   m_AnchoredPosition: {x: -575.36, y: -374.8}
   m_SizeDelta: {x: 72.56566, y: 60.84482}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1691258894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1691258897}
-  - component: {fileID: 1691258896}
-  - component: {fileID: 1691258895}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1691258895
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691258894}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 442a006fd8726094680324c037d19418, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.007
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 26
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1691258896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691258894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3a63a9746e89d47add06f9e4cb9233, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 442a006fd8726094680324c037d19418, type: 3}
-    volume: 0.039
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 1
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: DeathKnight
-    clip: {fileID: 8300000, guid: 1be2a26a72fed7b4cb17e9e05c4176d3, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: Hurt
-    clip: {fileID: 8300000, guid: 6e1067777ed44a646b8ca9d063413a27, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: DeathNjinja
-    clip: {fileID: 8300000, guid: 56418188a0b817742b26bdbf139e2ac9, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: 3ce1698b324891e4da4115862223afd9, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: CastingFireBall
-    clip: {fileID: 8300000, guid: a18aa48de9c3f324a823213c51d611b4, type: 3}
-    volume: 0.707
-    volumeVariance: 0
-    pitch: 0.98
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: SwordAttack
-    clip: {fileID: 8300000, guid: f7a16c0d68c93f04eb71e4c67ea3488f, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: Dash
-    clip: {fileID: 8300000, guid: b38ce0d2437c5a14f891735bed26bb48, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: Enrage
-    clip: {fileID: 8300000, guid: d6f7f05151f5c704292ac2c36e3d9601, type: 3}
-    volume: 0.662
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: JumpHolyKnight
-    clip: {fileID: 8300000, guid: 4a0432b4f6134794c855e579d44805e7, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: JumpHunter
-    clip: {fileID: 8300000, guid: d5df4c59a2a8ae94f93ade11cedef6a6, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: JumpDragon
-    clip: {fileID: 8300000, guid: 0b9e661755f12e141ade4b404bbaa60f, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: CastingFrostBall
-    clip: {fileID: 8300000, guid: a18aa48de9c3f324a823213c51d611b4, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1.99
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: NoNoMage
-    clip: {fileID: 8300000, guid: bb2e032714ac9514cadf00a91790dd31, type: 3}
-    volume: 0.25
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: ArrowHunter
-    clip: {fileID: 8300000, guid: aa9261daa369473449813c53c6a99438, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: TrapHunter
-    clip: {fileID: 8300000, guid: 4e436c34a1edfe244939507285d6882c, type: 3}
-    volume: 0.25
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: BlinkMage
-    clip: {fileID: 8300000, guid: 16ee86d50237e2d4c9473edd8604f63f, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: DefenceHunter
-    clip: {fileID: 8300000, guid: 8328d52a9f539384688c99671d39b6f2, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: DashHunter
-    clip: {fileID: 8300000, guid: 2ea3906a89a9ab64993d05dbc459b571, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: BlockedKnight
-    clip: {fileID: 8300000, guid: ba3a4e64e7237984cb1fcf4126d19aae, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: BubblyHolyKnight
-    clip: {fileID: 8300000, guid: e2c9c124f0d639b47a7ac988010de178, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: SwordAttackHolyKnight
-    clip: {fileID: 8300000, guid: c0026a4ae4823524e8561a34539bf850, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: SprintHolyKnight
-    clip: {fileID: 8300000, guid: a401b37ae240e4b49a6e5c087602d816, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
-  - name: StunHolyKnight
-    clip: {fileID: 8300000, guid: 8a6bbbf2cfb4c6c428f70ad5837c2677, type: 3}
-    volume: 0.25
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: 02ae98445a1e75c4aa99c331e9557034, type: 2}
-    source: {fileID: 0}
---- !u!4 &1691258897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691258894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.010242, y: 15.735422, z: -1204.5283}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710067351
 GameObject:
   m_ObjectHideFlags: 0
@@ -107032,6 +107194,7 @@ GameObject:
   - component: {fileID: 1877627856}
   - component: {fileID: 1877627855}
   - component: {fileID: 1877627854}
+  - component: {fileID: 1877627859}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -107047,7 +107210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877627852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -403.7495, y: 50, z: -11}
+  m_LocalPosition: {x: -403.7545, y: 50, z: -11}
   m_LocalScale: {x: 1, y: 0.8875, z: 1}
   m_Children: []
   m_Father: {fileID: 461041016}
@@ -107177,6 +107340,102 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!82 &1877627859
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877627852}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b8d82111dfda08743875cbe45a656236, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1878163702
 GameObject:
   m_ObjectHideFlags: 0
@@ -107557,6 +107816,8 @@ MonoBehaviour:
   activateDialogAfterFirstBoss: {fileID: 0}
   doTheQuestFirst: {fileID: 0}
   bossAndHealthUI: {fileID: 0}
+  gameTheme: {fileID: 0}
+  bossTheme: {fileID: 0}
 --- !u!114 &1882055102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119680,12 +119941,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is your expiriance bar. You gain expiriance by collecting stars.
-    Upon reaching full bar will increase your level by 1.
+  m_text: 'This is your expiriance bar. You gain expiriance by collecting stars and
+    coins. Upon reaching full bar will increase your level by 1.
 
 
-    Press any key to
-    continue!'
+    Press any
+    key to continue!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7174fea6cd24434448cee1436f864e9a, type: 2}
   m_sharedMaterial: {fileID: 8388472287479418146, guid: 7174fea6cd24434448cee1436f864e9a,

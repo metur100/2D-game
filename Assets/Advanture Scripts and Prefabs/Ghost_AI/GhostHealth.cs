@@ -10,8 +10,7 @@ public class GhostHealth : MonoBehaviour
     [SerializeField]
     private int maxHealth = 200;
     public event Action<float> OnHealthPctChanged = delegate { };
-    //public GameObject gameOverUI;
-    //public Animator animator;
+    public Animator animator;
     [SerializeField]
     private int currentHealth;
     public GameObject deathEffect;
@@ -21,6 +20,7 @@ public class GhostHealth : MonoBehaviour
     public GhostShootingFollowRetreat ghostAI;
     public GameObject activateTriggerAfterBoss;
     public GameObject killSmallGhosts;
+    public GameObject botLoop;
     void Start()
     {
         spriteColor = GetComponent<SpriteRenderer>();
@@ -46,17 +46,15 @@ public class GhostHealth : MonoBehaviour
         }
         if (currentHealth < 0)
         {
-            //isDead = true;
-            //animator.SetBool("isDead", isDead);
-            //FindObjectOfType<AudioManager>().Play("Death");
+            FindObjectOfType<AudioManager>().Play("Death");
+            Destroy(botLoop);
             CameraShaker.Instance.ShakeOnce(0.4f, 10f, 2f, 2f);
             StartCoroutine(WaitTime());
-            //gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
-        //FindObjectOfType<AudioManager>().Play("Hurt");
-        //animator.SetTrigger("isHurt");
+        FindObjectOfType<AudioManager>().Play("IsHurt_Ghost");
+        animator.SetTrigger("IsHurt");
     }
     IEnumerator WaitTime()
     {

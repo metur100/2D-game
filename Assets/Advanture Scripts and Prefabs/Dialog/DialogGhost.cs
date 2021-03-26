@@ -13,14 +13,14 @@ public class DialogGhost : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activateWallAndEnemies;
     public PlayerMovementAdvanturerKnight moveSpeed;
-
     public GameObject continueButton;
-
     public GameObject triggerWall;
     [SerializeField]
     Transform positionWall;
-    //public Animator animator;
-
+    [SerializeField]
+    private GameObject shield;
+    [SerializeField]
+    private GhostShootingFollowRetreat chase;
     private void Start()
     {
         StartCoroutine(Type());
@@ -50,7 +50,6 @@ public class DialogGhost : MonoBehaviour
         {
             index++;
             textDisplay.text = "";
-            //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
         }
         else
@@ -62,6 +61,8 @@ public class DialogGhost : MonoBehaviour
         {
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            chase.chasingDistance = 500f;
+            Destroy(shield);
         }
     }
 }

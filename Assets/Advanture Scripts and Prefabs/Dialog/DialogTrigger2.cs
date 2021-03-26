@@ -15,6 +15,8 @@ public class DialogTrigger2 : MonoBehaviour
     public GameObject triggerAfterGhost;
     public GameObject activateDialogAfterGhost;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public AudioSource gameTheme;
+    public AudioSource bossTheme;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Dialog_Upper_Cave"))
@@ -37,6 +39,8 @@ public class DialogTrigger2 : MonoBehaviour
         }
         if (collision.CompareTag("Ghost_Dialog"))
         {
+            gameTheme.Stop();
+            bossTheme.Play();
             activateDialogGhost.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerGhost);

@@ -7,13 +7,17 @@ public class GreenPigChaseAndAttack : MonoBehaviour
     [SerializeField]
     Transform player;
     [SerializeField]
-    float agroRange;
-    [SerializeField]
     Rigidbody2D rb2d;
+    public float agroRange;
     public float speed;
     private bool isWalking = true;
     public Animator animator;
     public float attackingDistance;
+    private float localScaleX = 15;
+    private float localScaleMinusX = -15;
+    private float localScaleY = 15;
+    [SerializeField]
+    private GreenPigHealth health;
     void Update()
     {
         if (player != null)
@@ -43,15 +47,21 @@ public class GreenPigChaseAndAttack : MonoBehaviour
     }
     private void ChasePlayer()
     {
+        //if (health.currentHealth <= 250)
+        //{
+        //    localScaleX = 17;
+        //    localScaleMinusX = -17;
+        //    localScaleY = 17;
+        //}
         if (transform.position.x < player.position.x)
         {
             rb2d.velocity = new Vector2(speed, 0);
-            transform.localScale = new Vector2(-15, 15);
+            transform.localScale = new Vector2(localScaleMinusX, localScaleY);
         }
         else
         {
             rb2d.velocity = new Vector2(-speed, 0);
-            transform.localScale = new Vector2(15, 15);
+            transform.localScale = new Vector2(localScaleX, localScaleY);
         }
     }
 }

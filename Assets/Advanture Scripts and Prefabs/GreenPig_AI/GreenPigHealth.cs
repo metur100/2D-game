@@ -8,7 +8,7 @@ using EZCameraShake;
 public class GreenPigHealth : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
@@ -35,6 +35,7 @@ public class GreenPigHealth : MonoBehaviour
         }
         if (currentHealth <= 250 && !isEffectTriggered)
         {
+            CameraShaker.Instance.ShakeOnce(0.3f, 10f, 1f, 1f);
             Instantiate(effectDestroinyMovingPlatform, transform.position, Quaternion.identity);
             isEffectTriggered = true;
             GetComponent<Boss>().enabled = true;
@@ -43,12 +44,8 @@ public class GreenPigHealth : MonoBehaviour
         }
         if (currentHealth < 0)
         {
-            //isDead = true;
-            //animator.SetBool("isDead", isDead);
-            //FindObjectOfType<AudioManager>().Play("Death");
             CameraShaker.Instance.ShakeOnce(0.4f, 10f, 2f, 2f);
             StartCoroutine(WaitTime());
-            //gameOverUI.SetActive(true);
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
@@ -62,6 +59,7 @@ public class GreenPigHealth : MonoBehaviour
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(destroyWallAndEnemies);
         activateMonD.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Explode_Effect");
         Destroy(gameObject);
     }
 }

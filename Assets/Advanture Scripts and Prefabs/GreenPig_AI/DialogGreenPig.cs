@@ -10,15 +10,22 @@ public class DialogGreenPig : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
-    public GameObject activateDialog;
-    public GameObject activateWallAndEnemies;
-    public PlayerMovementAdvanturerKnight moveSpeed;
-    public GameObject continueButton;
-    public GameObject triggerWall;
+    [SerializeField]
+    private GameObject activateDialog;
+    [SerializeField]
+    private GameObject activateWallAndEnemies;
+    [SerializeField]
+    private PlayerMovementAdvanturerKnight moveSpeed;
+    [SerializeField]
+    private GameObject continueButton;
+    [SerializeField]
+    private GameObject triggerWall;
     [SerializeField]
     Transform positionWall;
-    //public Animator animator;
-
+    [SerializeField]
+    private GreenPigChaseAndAttack chaseDistance;
+    [SerializeField]
+    private GameObject shield;
     private void Start()
     {
         StartCoroutine(Type());
@@ -40,14 +47,12 @@ public class DialogGreenPig : MonoBehaviour
     }
     public void NextSentence()
     {
-        //animator.SetTrigger("Change");
         continueButton.SetActive(false);
 
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
-            //Instantiate(triggerWall, transform.position, Quaternion.identity);
             StartCoroutine(Type());
         }
         else
@@ -61,6 +66,8 @@ public class DialogGreenPig : MonoBehaviour
             Instantiate(triggerWall, positionWall.position, Quaternion.identity);
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            chaseDistance.agroRange = 500f;
+            Destroy(shield);
         }
     }
 }

@@ -10,11 +10,9 @@ public class Boss : MonoBehaviour
     public bool isDead;
     private void Update()
     {
-
         if (health.currentHealth <= 100) {
             anim.SetTrigger("stageTwo");
         }
-
         if (health.currentHealth <= 0) {
             anim.SetTrigger("death");
         }

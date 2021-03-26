@@ -32,11 +32,7 @@ public class AudioManager : MonoBehaviour
 			s.source.outputAudioMixerGroup = mixerGroup;
 		}
 	}
-    private void Start()
-    {
-        Play("Theme");
-    }
-    public void Play(string sound)
+	public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)
@@ -50,5 +46,4 @@ public class AudioManager : MonoBehaviour
 
 		s.source.Play();
 	}
-
 }

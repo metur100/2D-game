@@ -15,8 +15,8 @@ public class DialogAfterFirstBoss : MonoBehaviour
 
     public GameObject continueButton;
     public GameObject activatePortalNextLevel;
-    //public Animator animator;
-
+    [SerializeField]
+    AudioSource winSound;
     private void Start()
     {
         StartCoroutine(Type());
@@ -57,6 +57,7 @@ public class DialogAfterFirstBoss : MonoBehaviour
         }
         if (index == sentences.Length - 1)
         {
+            winSound.Play();
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
         }
