@@ -33,8 +33,12 @@ public class OpenLink : MonoBehaviour
     {
         Application.OpenURL("https://www.youtube.com/channel/UCnagizhpBvBBt286pcwWs_g");
     }
-    public void Freesound()
+    public void GitHubCredits()
     {
         Application.OpenURL("https://github.com/metur100/MontheeCredits/blob/main/README.md");
+    }
+    public void GitHub()
+    {
+        Application.OpenURL("https://github.com/metur100");
     }
 }

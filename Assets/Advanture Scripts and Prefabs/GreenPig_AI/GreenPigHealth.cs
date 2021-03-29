@@ -14,7 +14,6 @@ public class GreenPigHealth : MonoBehaviour
     [SerializeField]
     public int currentHealth;
     public GameObject deathEffect;
-    public GameObject dropItem;
     public GameObject destroyWallAndEnemies;
     public GameObject activateMonD;
     public GameObject movingPlatforms;
@@ -56,7 +55,6 @@ public class GreenPigHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(destroyWallAndEnemies);
         activateMonD.SetActive(true);
         FindObjectOfType<AudioManager>().Play("Explode_Effect");

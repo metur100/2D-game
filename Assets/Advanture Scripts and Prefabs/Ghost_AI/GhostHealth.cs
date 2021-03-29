@@ -14,7 +14,6 @@ public class GhostHealth : MonoBehaviour
     [SerializeField]
     private int currentHealth;
     public GameObject deathEffect;
-    public GameObject dropItem;
     public GameObject activateBotLoopAttack;
     SpriteRenderer spriteColor;
     public GhostShootingFollowRetreat ghostAI;
@@ -60,7 +59,6 @@ public class GhostHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Instantiate(dropItem, transform.position, Quaternion.identity);
         Instantiate(killSmallGhosts, transform.position, Quaternion.identity); 
         activateTriggerAfterBoss.SetActive(true);
         Destroy(gameObject);

@@ -8,11 +8,13 @@ public class HealingPotion : MonoBehaviour
     [SerializeField]
     private int healing = 20;
     public GameObject healEffect;
+    private bool isTriggered;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player_Knight_Advanturer"))
+        if (collision.CompareTag("Player_Knight_Advanturer") && !isTriggered)
         {
+            isTriggered = true;
             HealthKnightAdvanturer eHealth = collision.gameObject.GetComponent<HealthKnightAdvanturer>();
             eHealth.ModifyHealth(healing);
             Instantiate(healEffect, transform.position, Quaternion.identity);

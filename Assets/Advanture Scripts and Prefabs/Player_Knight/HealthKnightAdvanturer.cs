@@ -41,7 +41,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            FindObjectOfType<AudioManager>().Play("DeathNjinja");
+            FindObjectOfType<AudioManager>().Play("DeathKnight");
             lifes--;
             TrackLifes.scoreValue -= 1;
             respawn.RespawnPlayer();
@@ -50,8 +50,7 @@ public class HealthKnightAdvanturer : MonoBehaviour
             {
                 Destroy(gameObject);
                 gameOverUI.SetActive(true);
-                //animator.SetBool("IsDead", isDead);
-                FindObjectOfType<AudioManager>().Play("DeathNjinja");
+                FindObjectOfType<AudioManager>().Play("DeathKnight");
             }
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;

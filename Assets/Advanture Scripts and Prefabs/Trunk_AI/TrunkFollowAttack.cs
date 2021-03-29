@@ -17,7 +17,7 @@ public class TrunkFollowAttack : MonoBehaviour
     GameObject bullet;
     [SerializeField]
     GameObject bulletParent;
-    float fireRate = 1f;
+    private readonly float fireRate = 1f;
     private float nextFireTime;
     [SerializeField]
     Rigidbody2D rb2d;
