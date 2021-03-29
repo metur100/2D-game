@@ -160,3 +160,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeIncrease: {fileID: 7309600030946586774, guid: 17f156385a33a1e4ba37a840cf570f95,
     type: 3}
+  lifeEffect: {fileID: 101131272237219943, guid: dda2932c2bea8d149aeee0855668b854,
+    type: 3}

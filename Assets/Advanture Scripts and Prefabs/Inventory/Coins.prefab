@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4659575395608581758}
   - component: {fileID: 4659575395608581757}
   - component: {fileID: 4659575395608581756}
-  m_Layer: 0
+  - component: {fileID: -2095495946320682260}
+  m_Layer: 5
   m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,3 +114,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expCollider: 5
+  expEffect: {fileID: 3322505506904253060, guid: 671eb234547a65745aff05b20748e0d9,
+    type: 3}
+--- !u!95 &-2095495946320682260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659575395608581755}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c7405af04e5bc345a30bc5206e46324, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -8,7 +8,7 @@ using EZCameraShake;
 public class GhostHealth : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
     [SerializeField]
@@ -46,7 +46,7 @@ public class GhostHealth : MonoBehaviour
         }
         if (currentHealth < 0)
         {
-            FindObjectOfType<AudioManager>().Play("Death");
+            FindObjectOfType<AudioManager>().Play("Ghost_Dead");
             Destroy(botLoop);
             CameraShaker.Instance.ShakeOnce(0.4f, 10f, 2f, 2f);
             StartCoroutine(WaitTime());

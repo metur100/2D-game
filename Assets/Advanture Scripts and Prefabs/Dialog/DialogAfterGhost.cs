@@ -14,6 +14,8 @@ public class DialogAfterGhost : MonoBehaviour
     public PlayerMovementAdvanturerKnight moveSpeed;
     public GameObject continueButton;
     public GameObject activateCompletedGameUI;
+    [SerializeField]
+    AudioSource winSound;
     private void Start()
     {
         StartCoroutine(Type());
@@ -50,6 +52,7 @@ public class DialogAfterGhost : MonoBehaviour
         }
         if (index == sentences.Length - 1)
         {
+            winSound.Play();
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
             activateCompletedGameUI.SetActive(true);

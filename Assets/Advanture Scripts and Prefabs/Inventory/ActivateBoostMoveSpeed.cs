@@ -14,6 +14,7 @@ public class ActivateBoostMoveSpeed : MonoBehaviour
     public void Use()
     {
         Instantiate(speedEffect, player.transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Speed_Item");
         Destroy(gameObject);
     }
 }

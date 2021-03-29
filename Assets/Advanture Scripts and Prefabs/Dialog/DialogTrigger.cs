@@ -17,6 +17,7 @@ public class DialogTrigger : MonoBehaviour
     public GameObject bossAndHealthUI;
     public AudioSource gameTheme;
     public AudioSource bossTheme;
+    public GameObject activateTextSpawnBox;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MonD_NPC"))
@@ -50,11 +51,21 @@ public class DialogTrigger : MonoBehaviour
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerAfterFirstBoss);
         }
+        if (other.CompareTag("Spawn_Box_Txt"))
+        {
+            StartCoroutine(SpawnBoxTextUI());
+        }
     }
     IEnumerator WaitTime()
     {
         doTheQuestFirst.SetActive(true);
         yield return new WaitForSeconds(3f);
         doTheQuestFirst.SetActive(false);
+    }
+    IEnumerator SpawnBoxTextUI()
+    {
+        activateTextSpawnBox.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        activateTextSpawnBox.SetActive(false);
     }
 }

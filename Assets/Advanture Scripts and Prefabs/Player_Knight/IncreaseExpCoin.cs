@@ -5,14 +5,16 @@ using UnityEngine;
 public class IncreaseExpCoin : MonoBehaviour
 {
     public int expCollider;
+    public GameObject expEffect;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player_Knight_Advanturer"))
         {
             FindObjectOfType<AudioManager>().Play("Exp_Item");
-            ExpKnight eHealth = other.gameObject.GetComponent<ExpKnight>();
-            eHealth.ModifyExp(expCollider);
+            Instantiate(expEffect, transform.position, Quaternion.identity);
+            ExpKnight exp = other.gameObject.GetComponent<ExpKnight>();
+            exp.ModifyExp(expCollider);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

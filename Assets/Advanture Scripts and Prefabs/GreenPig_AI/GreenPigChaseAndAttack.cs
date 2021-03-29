@@ -16,8 +16,6 @@ public class GreenPigChaseAndAttack : MonoBehaviour
     private float localScaleX = 15;
     private float localScaleMinusX = -15;
     private float localScaleY = 15;
-    [SerializeField]
-    private GreenPigHealth health;
     void Update()
     {
         if (player != null)
@@ -47,12 +45,6 @@ public class GreenPigChaseAndAttack : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        //if (health.currentHealth <= 250)
-        //{
-        //    localScaleX = 17;
-        //    localScaleMinusX = -17;
-        //    localScaleY = 17;
-        //}
         if (transform.position.x < player.position.x)
         {
             rb2d.velocity = new Vector2(speed, 0);
