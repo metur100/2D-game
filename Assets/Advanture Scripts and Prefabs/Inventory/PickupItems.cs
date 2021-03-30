@@ -6,7 +6,7 @@ public class PickupItems : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
-
+    private bool isTriggered;
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").GetComponent<Inventory>();
@@ -14,8 +14,9 @@ public class PickupItems : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player_Knight_Advanturer"))
+        if (other.CompareTag("Player_Knight_Advanturer") && !isTriggered)
         {
+            isTriggered = true;
             FindObjectOfType<AudioManager>().Play("PickUp_Item");
             // spawn the sun button at the first available inventory slot ! 
             for (int i = 0; i < inventory.slots.Length; i++)
@@ -30,6 +31,11 @@ public class PickupItems : MonoBehaviour
                 }
             }
         }
-
+        StartCoroutine(TriggerIsFalse());
+    }
+    IEnumerator TriggerIsFalse()
+    {
+        yield return new WaitForSeconds(1f);
+        isTriggered = false;
     }
 }

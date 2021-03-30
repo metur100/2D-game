@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class TrackLifes : MonoBehaviour
 {
-    public static int scoreValue = 3;
+    public static int scoreValue = 5;
     TextMeshProUGUI score;
     void Start()
     {
-        scoreValue = 3;
+        scoreValue = 5;
         score = GetComponent<TextMeshProUGUI>();
     }
 

@@ -11,10 +11,9 @@ public class DashMoveAdvanturer : MonoBehaviour
     public Rigidbody2D rb;
     public float dashSpeed;
     private float dashTime;
-    private float startDashTime = 0.2f;
+    private readonly float startDashTime = 0.2f;
     private int direction;
-    //private bool isDashing = false;
-    private float dashCooldown = 0.4f;
+    private readonly float dashCooldown = 0.4f;
     private bool isDashCooldown = false;
     public ParticleSystem dash;
 
@@ -22,7 +21,6 @@ public class DashMoveAdvanturer : MonoBehaviour
     {
         dash.Stop();
         dashing.fillAmount = 0;
-        //rb = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
     }
     void Update()
@@ -32,7 +30,6 @@ public class DashMoveAdvanturer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && isDashCooldown == false)
             {
                 dash.Play();
-                //isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 1;
@@ -42,7 +39,6 @@ public class DashMoveAdvanturer : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.E) && isDashCooldown == false)
             {
                 dash.Play();
-                //isDashing = true;
                 isDashCooldown = true;
                 dashing.fillAmount = 1;
                 direction = 2;
@@ -73,15 +69,12 @@ public class DashMoveAdvanturer : MonoBehaviour
                 if (direction == 1)
                 {
                     rb.velocity = Vector2.left * dashSpeed;
-                    //isDashing = false;
                 }
                 else if (direction == 2)
                 {
                     rb.velocity = Vector2.right * dashSpeed;
-                    //isDashing = false;
                 }
             }
         }
-        //animator.SetBool("isDashing", isDashing);
     }
 }

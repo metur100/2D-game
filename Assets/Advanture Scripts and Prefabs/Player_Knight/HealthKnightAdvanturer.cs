@@ -15,8 +15,10 @@ public class HealthKnightAdvanturer : MonoBehaviour
     public int currentHealth;
     Renderer rend;
     Color c;
-    public int lifes = 3;
+    public int lifes;
     public RespawnManager respawn;
+    public AudioSource gameMusic;
+    public AudioSource bossMusic;
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(11, 21, false);
@@ -48,6 +50,8 @@ public class HealthKnightAdvanturer : MonoBehaviour
             currentHealth = 200;
             if (lifes <= 0)
             {
+                gameMusic.Stop();
+                bossMusic.Stop();
                 Destroy(gameObject);
                 gameOverUI.SetActive(true);
                 FindObjectOfType<AudioManager>().Play("DeathKnight");
