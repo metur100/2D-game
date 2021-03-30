@@ -15,6 +15,7 @@ public class DialogTrigger2 : MonoBehaviour
     public GameObject triggerAfterGhost;
     public GameObject activateDialogAfterGhost;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public GameObject bossHealthAndUI;
     public AudioSource gameTheme;
     public AudioSource bossTheme;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +42,7 @@ public class DialogTrigger2 : MonoBehaviour
         {
             gameTheme.Stop();
             bossTheme.Play();
+            bossHealthAndUI.SetActive(true);
             activateDialogGhost.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
             Destroy(triggerGhost);

@@ -232,7 +232,7 @@ public class FireBallKnight : MonoBehaviour
                 eHealth52.ModifyHealth(damageDoneFireB);
                 break;
             case "Rino_AI_4":
-                RinoHealth3 eHealth53 = other.gameObject.GetComponent<RinoHealth3>();
+                RinoHealth4 eHealth53 = other.gameObject.GetComponent<RinoHealth4>();
                 eHealth53.ModifyHealth(damageDoneFireB);
                 break;
             case "Trunk_AI_8":

@@ -230,7 +230,7 @@ public class AOEAttackPrefab : MonoBehaviour
                 eHealth52.ModifyHealth(damageDoneAOE);
                 break;
             case "Rino_AI_4":
-                RinoHealth3 eHealth53 = other.gameObject.GetComponent<RinoHealth3>();
+                RinoHealth4 eHealth53 = other.gameObject.GetComponent<RinoHealth4>();
                 eHealth53.ModifyHealth(damageDoneAOE);
                 break;
             case "Trunk_AI_8":
@@ -348,6 +348,18 @@ public class AOEAttackPrefab : MonoBehaviour
             case "BlueBird_AI_8":
                 BlueBirdHealth8 eHealth83 = other.gameObject.GetComponent<BlueBirdHealth8>();
                 eHealth83.ModifyHealth(damageDoneAOE);
+                break;
+            case "Suprise_Box_4":
+                SupriseBoxHealth4 eHealth84 = other.gameObject.GetComponent<SupriseBoxHealth4>();
+                eHealth84.ModifyHealth(damageDoneAOE);
+                break;
+            case "Suprise_Box_5":
+                SupriseBoxHealth5 eHealth85 = other.gameObject.GetComponent<SupriseBoxHealth5>();
+                eHealth85.ModifyHealth(damageDoneAOE);
+                break;
+            case "Suprise_Box_6":
+                SupriseBoxHealth6 eHealth86 = other.gameObject.GetComponent<SupriseBoxHealth6>();
+                eHealth86.ModifyHealth(damageDoneAOE);
                 break;
         }
     }

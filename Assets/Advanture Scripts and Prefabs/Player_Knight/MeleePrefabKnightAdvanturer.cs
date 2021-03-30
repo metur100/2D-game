@@ -231,7 +231,7 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 eHealth52.ModifyHealth(damageDoneMeleeAttack);
                 break;
             case "Rino_AI_4":
-                RinoHealth3 eHealth53 = other.gameObject.GetComponent<RinoHealth3>();
+                RinoHealth4 eHealth53 = other.gameObject.GetComponent<RinoHealth4>();
                 eHealth53.ModifyHealth(damageDoneMeleeAttack);
                 break;
             case "Trunk_AI_8":

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149081436530266043}
   - component: {fileID: 6235459542660174611}
+  - component: {fileID: 4560872336539174583}
   m_Layer: 0
   m_Name: BloodStain_Rino
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4560872336539174583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336986841307950594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6657496a6be04e84c3adbe0b4c260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAfter: 10

@@ -1110,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -342}
+  m_AnchoredPosition: {x: 0, y: -215}
   m_SizeDelta: {x: 1123.6584, y: 135.61661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66369281
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MONTHEE ADVENTURE
+  m_text: MONTHEE  ADVENTURE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7174fea6cd24434448cee1436f864e9a, type: 2}
   m_sharedMaterial: {fileID: 8388472287479418146, guid: 7174fea6cd24434448cee1436f864e9a,
@@ -1223,8 +1223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081983198429ca646819e49c577769fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radius: 636.5
-  m_arcDegrees: 94.9
+  m_radius: 500
+  m_arcDegrees: 120
   m_angularOffset: -90
 --- !u!1 &67214557
 GameObject:
@@ -6834,7 +6834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &729989592
 RectTransform:
   m_ObjectHideFlags: 0

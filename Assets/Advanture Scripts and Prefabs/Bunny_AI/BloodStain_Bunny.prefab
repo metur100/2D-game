@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7812362541245478615}
   - component: {fileID: 3823978598335031935}
+  - component: {fileID: 1610015185116921390}
   m_Layer: 0
   m_Name: BloodStain_Bunny
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1610015185116921390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453591995017910126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6657496a6be04e84c3adbe0b4c260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAfter: 10
