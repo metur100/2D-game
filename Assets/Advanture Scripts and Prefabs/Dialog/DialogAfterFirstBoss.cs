@@ -12,7 +12,7 @@ public class DialogAfterFirstBoss : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
-
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject activatePortalNextLevel;
     [SerializeField]
@@ -60,6 +60,7 @@ public class DialogAfterFirstBoss : MonoBehaviour
             winSound.Play();
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
         }
     }
 }

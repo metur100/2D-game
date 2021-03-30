@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public DashMoveAdvanturer dashMove;
     public GameObject triggerDialogStart;
     public GameObject triggerGreenPigDialog;
     public GameObject triggerBeforeFirstBoss;
@@ -24,6 +25,7 @@ public class DialogTrigger : MonoBehaviour
         {
             activateDialogStart.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
+            dashMove.dashSpeed = 0f;
             Destroy(triggerDialogStart);
         }
         if (other.CompareTag("Dialog_GreenPig"))
@@ -33,12 +35,14 @@ public class DialogTrigger : MonoBehaviour
             bossAndHealthUI.SetActive(true);
             activateGreenPigDialog.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
+            dashMove.dashSpeed = 0f;
             Destroy(triggerGreenPigDialog);
         }
         if (other.CompareTag("MonD_BeforeFirstBoss"))
         {
             activateDialogBeforeFirstBoss.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
+            dashMove.dashSpeed = 0f;
             Destroy(triggerBeforeFirstBoss);
         }
         if (other.CompareTag("DoTheQuestFirst"))
@@ -49,6 +53,7 @@ public class DialogTrigger : MonoBehaviour
         {
             activateDialogAfterFirstBoss.SetActive(true);
             moveSpeed.normalMovementSpeed = 0f;
+            dashMove.dashSpeed = 0f;
             Destroy(triggerAfterFirstBoss);
         }
         if (other.CompareTag("Spawn_Box_Txt"))

@@ -13,6 +13,7 @@ public class DialogGhost : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activateWallAndEnemies;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject triggerWall;
     [SerializeField]
@@ -61,6 +62,7 @@ public class DialogGhost : MonoBehaviour
         {
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
             chase.chasingDistance = 500f;
             Destroy(shield);
         }

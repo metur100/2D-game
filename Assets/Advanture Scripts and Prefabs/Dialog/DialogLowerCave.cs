@@ -13,6 +13,7 @@ public class DialogLowerCave : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activatePortal;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject activateTriggerCreatePlatform;
 
@@ -65,6 +66,7 @@ public class DialogLowerCave : MonoBehaviour
             activateDialog.SetActive(false);
             activateTriggerCreatePlatform.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
         }
     }
 }

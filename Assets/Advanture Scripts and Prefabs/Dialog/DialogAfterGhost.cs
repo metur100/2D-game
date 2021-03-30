@@ -12,6 +12,7 @@ public class DialogAfterGhost : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject activateCompletedGameUI;
     [SerializeField]
@@ -55,6 +56,7 @@ public class DialogAfterGhost : MonoBehaviour
             winSound.Play();
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
             activateCompletedGameUI.SetActive(true);
         }
     }

@@ -12,6 +12,7 @@ public class Dialog : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public QuestGiver activateQuestUI;
 
@@ -57,6 +58,7 @@ public class Dialog : MonoBehaviour
         {
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
         }
     }
 }

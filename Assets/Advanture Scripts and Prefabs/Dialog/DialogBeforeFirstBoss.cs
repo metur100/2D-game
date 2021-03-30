@@ -12,7 +12,7 @@ public class DialogBeforeFirstBoss : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
-
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject movingPlatform;
     //public Animator animator;
@@ -55,6 +55,7 @@ public class DialogBeforeFirstBoss : MonoBehaviour
         {
             activateDialog.SetActive(false);
             moveSpeed.normalMovementSpeed = 400f;
+            dashMove.dashSpeed = 200f;
         }
         if (index == sentences.Length - 2)
         {
