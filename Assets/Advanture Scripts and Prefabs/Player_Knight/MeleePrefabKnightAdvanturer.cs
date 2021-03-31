@@ -366,6 +366,14 @@ public class MeleePrefabKnightAdvanturer : MonoBehaviour
                 SupriseBoxHealth6 eHealth86 = other.gameObject.GetComponent<SupriseBoxHealth6>();
                 eHealth86.ModifyHealth(damageDoneMeleeAttack);
                 break;
+            case "Rino_AI_5":
+                RinoHealth5 eHealth87 = other.gameObject.GetComponent<RinoHealth5>();
+                eHealth87.ModifyHealth(damageDoneMeleeAttack);
+                break;
+            case "Rino_AI_6":
+                RinoHealth6 eHealth88 = other.gameObject.GetComponent<RinoHealth6>();
+                eHealth88.ModifyHealth(damageDoneMeleeAttack);
+                break;
         }
     }
     IEnumerator DestroyGameobject()

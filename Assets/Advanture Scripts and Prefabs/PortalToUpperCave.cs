@@ -18,7 +18,7 @@ public class PortalToUpperCave : MonoBehaviour
     }
     IEnumerator Teleport()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
     }
 }

@@ -48877,7 +48877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KNIGHT
+  m_text: RED HEAD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7174fea6cd24434448cee1436f864e9a, type: 2}
   m_sharedMaterial: {fileID: 8388472287479418146, guid: 7174fea6cd24434448cee1436f864e9a,
@@ -112222,6 +112222,7 @@ MonoBehaviour:
   doTheQuestFirst: {fileID: 0}
   surpriseBox: {fileID: 5753812960260856112, guid: d7dacc1fe1d22e244ade0c5b4b4384e1,
     type: 3}
+  lifeKnight: {fileID: 0}
 --- !u!114 &1882055098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112287,6 +112288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {fileID: 1882055107}
+  dashMove: {fileID: 0}
   triggerDialogStart: {fileID: 0}
   triggerGreenPigDialog: {fileID: 0}
   triggerBeforeFirstBoss: {fileID: 0}

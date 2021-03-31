@@ -9,15 +9,14 @@ public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
     Resolution[] resolutions;
-    //public Dropdown ResolutionDropdown;
-    //public Dropdown quality;
+    public Dropdown ResolutionDropdown;
 
     private void Start()
     {
         int CurrentResolutionIndex = 0;
         resolutions = Screen.resolutions;
 
-        //ResolutionDropdown.ClearOptions();
+        ResolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
@@ -33,11 +32,10 @@ public class Settings : MonoBehaviour
             }
         }
 
-        //ResolutionDropdown.AddOptions(options);
-        //ResolutionDropdown.value = CurrentResolutionIndex;
-        //ResolutionDropdown.RefreshShownValue();
+        ResolutionDropdown.AddOptions(options);
+        ResolutionDropdown.value = CurrentResolutionIndex;
+        ResolutionDropdown.RefreshShownValue();
     }
-
     public void SetResolution(int ResolutionIndex)
     {
         Resolution resolution = resolutions[ResolutionIndex];
@@ -47,12 +45,6 @@ public class Settings : MonoBehaviour
     {
         audioMixer.SetFloat("volume", slider.value);
     }
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-
-
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;

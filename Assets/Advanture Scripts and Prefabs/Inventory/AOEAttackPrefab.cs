@@ -269,6 +269,10 @@ public class AOEAttackPrefab : MonoBehaviour
                 RadishHealth2 eHealth62 = other.gameObject.GetComponent<RadishHealth2>();
                 eHealth62.ModifyHealth(damageDoneAOE);
                 break;
+            case "Mini_Ghost_AI":
+                MiniGhostHealth eHealth63 = other.gameObject.GetComponent<MiniGhostHealth>();
+                eHealth63.ModifyHealth(damageDoneAOE);
+                break;
             case "Slime_AI_5":
                 SlimeHealthPatrol5 eHealth64 = other.gameObject.GetComponent<SlimeHealthPatrol5>();
                 eHealth64.ModifyHealth(damageDoneAOE);
@@ -360,6 +364,14 @@ public class AOEAttackPrefab : MonoBehaviour
             case "Suprise_Box_6":
                 SupriseBoxHealth6 eHealth86 = other.gameObject.GetComponent<SupriseBoxHealth6>();
                 eHealth86.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI_5":
+                RinoHealth5 eHealth87 = other.gameObject.GetComponent<RinoHealth5>();
+                eHealth87.ModifyHealth(damageDoneAOE);
+                break;
+            case "Rino_AI_6":
+                RinoHealth6 eHealth88 = other.gameObject.GetComponent<RinoHealth6>();
+                eHealth88.ModifyHealth(damageDoneAOE);
                 break;
         }
     }
