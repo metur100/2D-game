@@ -137,4 +137,4 @@ MonoBehaviour:
   target: {fileID: 891840102600001788, guid: 4831051d3264a5b46ae465f497d7d935, type: 3}
   speed: 50
   bulletRB: {fileID: 3129190625950487911}
-  damageDone: -20
+  damageDone: -30

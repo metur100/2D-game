@@ -9,16 +9,20 @@ using UnityEngine.UI;
 public class SlimeHealthPatrol : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 200;
+    private int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public Animator animator;
-    [SerializeField]
     public int currentHealth;
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
     public Button activateDeathCount;
     private bool isDead;
+    [SerializeField]
+    Transform playerPosition;
+    [SerializeField]
+    private float distance;
+
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -32,7 +36,6 @@ public class SlimeHealthPatrol : MonoBehaviour
         }
         if (currentHealth <= 0 && !isDead)
         {
-            //FindObjectOfType<AudioManager>().Play("Death");
             isDead = true;
             activateDeathCount.onClick.Invoke();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -45,5 +48,17 @@ public class SlimeHealthPatrol : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
         FindObjectOfType<AudioManager>().Play("IsHurt_Slime");
         animator.SetTrigger("IsHurt");
+    }
+    private void Update()
+    {
+        if (gameObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            if (distToPlayer > distance && currentHealth < maxHealth)
+            {
+                ModifyHealth(80);
+            }
+        }
     }
 }

@@ -22,7 +22,6 @@ public class SlimeHealthbarPatrol : MonoBehaviour
     {
         float preChangePct = Bar.fillAmount;
         float elapsed = 0f;
-
         while (elapsed < updateHealtbarFrame)
         {
             elapsed += Time.deltaTime;

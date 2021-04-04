@@ -16,6 +16,10 @@ public class RadishHealth2 : MonoBehaviour
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
+    [SerializeField]
+    Transform playerPosition;
+    [SerializeField]
+    private float distance;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -38,5 +42,17 @@ public class RadishHealth2 : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
         FindObjectOfType<AudioManager>().Play("IsHurt_Radish");
         animator.SetTrigger("IsHurt");
+    }
+    private void Update()
+    {
+        if (gameObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            if (distToPlayer > distance && currentHealth < maxHealth)
+            {
+                ModifyHealth(100);
+            }
+        }
     }
 }

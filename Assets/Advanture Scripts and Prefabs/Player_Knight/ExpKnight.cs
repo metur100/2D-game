@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class ExpKnight : MonoBehaviour
 {
     [SerializeField]
-    private int maxExp = 100;
+    private int maxExp;
     public event Action<float> OnExpPctChanged = delegate { };
     public GameObject levelReached;
     [SerializeField]
     public int currentExp;
     public GameObject hideExpBar;
     public HealthKnightAdvanturer maxH;
+    public MeleePrefabKnightAdvanturer damageMeleeAttack;
+    public FireBallKnight damageFireBall;
     private void Start()
     {
         if (currentExp == 0)
@@ -34,8 +36,10 @@ public class ExpKnight : MonoBehaviour
             TrackPlayerLevels.scoreValue += 1;
             currentExp = 0;
             levelReached.SetActive(true);
-            maxExp += 50;
-            maxH.maxHealth += 50;
+            maxH.maxHealth += 100;
+            damageMeleeAttack.damageDoneMeleeAttack -= 10;
+            damageFireBall.damageDoneFireB -= 10;
+            maxH.ModifyHealth(maxH.maxHealth);
             StartCoroutine(DisableText());
         }
         float currentExpPct = (float)currentExp / (float)maxExp;
@@ -43,7 +47,7 @@ public class ExpKnight : MonoBehaviour
     }
     IEnumerator DisableText()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
         levelReached.SetActive(false);
     }
 }

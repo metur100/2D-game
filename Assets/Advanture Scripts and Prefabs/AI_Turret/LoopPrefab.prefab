@@ -49,7 +49,7 @@ MonoBehaviour:
   target: {fileID: 5481849335541786101, guid: 7fd8a460ff372bc4ba009a5d5d179ede, type: 3}
   speed: 100
   bulletRB: {fileID: 7247995949273038670}
-  damageDone: -20
+  damageDone: -50
 --- !u!50 &7247995949273038670
 Rigidbody2D:
   serializedVersion: 4

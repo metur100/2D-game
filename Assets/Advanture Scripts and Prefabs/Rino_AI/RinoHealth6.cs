@@ -15,6 +15,10 @@ public class RinoHealth6 : MonoBehaviour
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
+    [SerializeField]
+    Transform playerPosition;
+    [SerializeField]
+    private float distance;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -32,10 +36,23 @@ public class RinoHealth6 : MonoBehaviour
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);
         FindObjectOfType<AudioManager>().Play("IsHurt_Rino");
         animator.SetTrigger("IsHurt");
+    }
+    private void Update()
+    {
+        if (gameObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            if (distToPlayer > distance && currentHealth < maxHealth)
+            {
+                ModifyHealth(100);
+            }
+        }
     }
 }

@@ -61,4 +61,11 @@ public class Dialog2 : MonoBehaviour
             dashMove.dashSpeed = 200f;
         }
     }
+    public void SkipDialog()
+    {
+        activateQuestUI.OpenQuestWindow();
+        activateDialog.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+    }
 }

@@ -15,6 +15,10 @@ public class TrunkHealth7 : MonoBehaviour
     public GameObject bloodSplash;
     public GameObject dropItem;
     private bool isDead;
+    [SerializeField]
+    Transform playerPosition;
+    [SerializeField]
+    private float distance;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -39,5 +43,17 @@ public class TrunkHealth7 : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
         FindObjectOfType<AudioManager>().Play("IsHurt_Trunk");
         animator.SetTrigger("IsHurt");
+    }
+    private void Update()
+    {
+        if (gameObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            if (distToPlayer > distance && currentHealth < maxHealth)
+            {
+                ModifyHealth(80);
+            }
+        }
     }
 }

@@ -63,4 +63,12 @@ public class DialogBeforeFirstBoss : MonoBehaviour
             movingPlatform.SetActive(true);
         }
     }
+    public void SkipDialog()
+    {
+        activateDialog.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+        FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
+        movingPlatform.SetActive(true);
+    }
 }

@@ -22,8 +22,8 @@ public class PlayerKnightQuestManager : MonoBehaviour
                 surpriseBox.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
-                lifeKnight.lifes++;
-                TrackLifes.scoreValue++;
+                //lifeKnight.lifes++;
+                //TrackLifes.scoreValue++;
                 StartCoroutine(DisableQuestText());
             }
         }
@@ -38,8 +38,8 @@ public class PlayerKnightQuestManager : MonoBehaviour
                 surpriseBox.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
-                lifeKnight.lifes++;
-                TrackLifes.scoreValue++;
+                //lifeKnight.lifes++;
+                //TrackLifes.scoreValue++;
                 StartCoroutine(DisableQuestText());
             }
         }
@@ -47,7 +47,7 @@ public class PlayerKnightQuestManager : MonoBehaviour
     IEnumerator DisableQuestText()
     {
         questCompleted.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         questCompleted.SetActive(false);
     }
 }

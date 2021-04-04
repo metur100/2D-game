@@ -137,4 +137,4 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 100
   bulletRB: {fileID: 4662566496104469121}
-  damageDone: -20
+  damageDone: -50

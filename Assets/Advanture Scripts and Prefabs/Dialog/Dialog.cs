@@ -61,4 +61,12 @@ public class Dialog : MonoBehaviour
             dashMove.dashSpeed = 200f;
         }
     }
+    public void SkipDialog ()
+    {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
+        activateDialog.SetActive(false);
+        activateQuestUI.OpenQuestWindow();
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+    }
 }

@@ -6,7 +6,6 @@ public class IncreaseLife : MonoBehaviour
 {
     public GameObject lifeIncrease;
     private Transform player;
-    public GameObject lifeEffect;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player_Knight_Advanturer").transform;
@@ -15,7 +14,6 @@ public class IncreaseLife : MonoBehaviour
     public void Use()
     {
         Instantiate(lifeIncrease, player.transform.position, Quaternion.identity);
-        Instantiate(lifeEffect, player.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

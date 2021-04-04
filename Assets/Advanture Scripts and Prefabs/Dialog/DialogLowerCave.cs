@@ -69,4 +69,14 @@ public class DialogLowerCave : MonoBehaviour
             dashMove.dashSpeed = 200f;
         }
     }
+    public void SkipDialog()
+    {
+        FindObjectOfType<AudioManager>().Play("MonD_CreatePlatform");
+        activatePortal.SetActive(true);
+        activateTriggerCreatePlatform.SetActive(true);
+        activateDialog.SetActive(false);
+        //activateTriggerCreatePlatform.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+    }
 }

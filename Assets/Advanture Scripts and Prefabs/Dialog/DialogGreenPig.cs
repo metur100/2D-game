@@ -48,6 +48,7 @@ public class DialogGreenPig : MonoBehaviour
     }
     public void NextSentence()
     {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
         continueButton.SetActive(false);
 
         if (index < sentences.Length - 1)
@@ -71,5 +72,16 @@ public class DialogGreenPig : MonoBehaviour
             dashMove.dashSpeed = 200f;
             Destroy(shield);
         }
+    }
+    public void SkipDialog()
+    {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
+        activateWallAndEnemies.SetActive(true);
+        Instantiate(triggerWall, positionWall.position, Quaternion.identity);
+        activateDialog.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        chaseDistance.agroRange = 500f;
+        dashMove.dashSpeed = 200f;
+        Destroy(shield);
     }
 }

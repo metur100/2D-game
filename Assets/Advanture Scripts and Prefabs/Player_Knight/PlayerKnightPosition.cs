@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerKnightPosition : MonoBehaviour
 {
-    private GameMaster gm;
+    //private GameMaster gm;
     public GameObject gameSaved;
     public GameObject gameLoaded;
-    void Start()
-    {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.lastChackPointPos;
-    }
+    //void Start()
+    //{
+    //    gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+    //    transform.position = gm.lastChackPointPos;
+    //}
     public void SavePlayer()
     {
         gameSaved.SetActive(true);

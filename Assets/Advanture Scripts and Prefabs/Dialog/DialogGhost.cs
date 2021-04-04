@@ -67,4 +67,15 @@ public class DialogGhost : MonoBehaviour
             Destroy(shield);
         }
     }
+    public void SkipDialog()
+    {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
+        activateWallAndEnemies.SetActive(true);
+        Instantiate(triggerWall, positionWall.position, Quaternion.identity);
+        activateDialog.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+        chase.chasingDistance = 500f;
+        Destroy(shield);
+    }
 }

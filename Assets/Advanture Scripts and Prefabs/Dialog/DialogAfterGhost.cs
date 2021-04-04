@@ -60,4 +60,13 @@ public class DialogAfterGhost : MonoBehaviour
             activateCompletedGameUI.SetActive(true);
         }
     }
+    public void SkipDialog()
+    {
+        FindObjectOfType<AudioManager>().Play("Next_Dialog");
+        winSound.Play();
+        activateDialog.SetActive(false);
+        moveSpeed.normalMovementSpeed = 400f;
+        dashMove.dashSpeed = 200f;
+        activateCompletedGameUI.SetActive(true);
+    }
 }

@@ -17,6 +17,10 @@ public class TurtleHealth5 : MonoBehaviour
     public GameObject dropItem;
     public Button activateDeathCount;
     private bool isDead;
+    [SerializeField]
+    Transform playerPosition;
+    [SerializeField]
+    private float distance;
     private void OnEnable()
     {
         currentHealth = maxHealth;
@@ -42,5 +46,17 @@ public class TurtleHealth5 : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
         FindObjectOfType<AudioManager>().Play("IsHurt_Turtle");
         animator.SetTrigger("IsHurt");
+    }
+    private void Update()
+    {
+        if (gameObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            if (distToPlayer > distance && currentHealth < maxHealth)
+            {
+                ModifyHealth(150);
+            }
+        }
     }
 }

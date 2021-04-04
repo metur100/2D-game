@@ -7,18 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class HealthKnightAdvanturer : MonoBehaviour
 {
-    public int maxHealth = 200;
+    public int maxHealth;
     public event Action<float> OnHealthPctChanged = delegate { };
     public GameObject gameOverUI;
     public Animator animator;
-    [SerializeField]
     public int currentHealth;
     Renderer rend;
     Color c;
-    public int lifes;
+    //public int lifes;
     public RespawnManager respawn;
-    public AudioSource gameMusic;
-    public AudioSource bossMusic;
+    //public AudioSource gameMusic;
+    //public AudioSource bossMusic;
+    public GreenPigHealth greenPigHealth;
+    public GhostHealth ghostHealth;
+    public GameObject startPosGreenPig;
+    public GameObject startPosGhost;
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(11, 21, false);
@@ -43,19 +46,29 @@ public class HealthKnightAdvanturer : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            FindObjectOfType<AudioManager>().Play("DeathKnight");
-            lifes--;
-            TrackLifes.scoreValue -= 1;
+            //lifes--;
+            //TrackLifes.scoreValue -= 1;
             respawn.RespawnPlayer();
-            currentHealth = 200;
-            if (lifes <= 0)
+            currentHealth = maxHealth;
+            if (startPosGreenPig.activeInHierarchy == true)
             {
-                gameMusic.Stop();
-                bossMusic.Stop();
-                Destroy(gameObject);
-                gameOverUI.SetActive(true);
-                FindObjectOfType<AudioManager>().Play("DeathKnight");
+                greenPigHealth.transform.position = startPosGreenPig.transform.position;
+                greenPigHealth.ModifyHealth(600);
             }
+            if (startPosGhost.activeInHierarchy == true)
+            {
+                ghostHealth.transform.position = startPosGhost.transform.position;
+                ghostHealth.ModifyHealth(800);
+            }
+
+            //if (lifes <= 0)
+            //{
+            //    gameMusic.Stop();
+            //    bossMusic.Stop();
+            //    Destroy(gameObject);
+            //    gameOverUI.SetActive(true);
+            //    FindObjectOfType<AudioManager>().Play("DeathKnight");
+            //}
         }
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
         OnHealthPctChanged(currentHealthPct);    

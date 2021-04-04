@@ -21,7 +21,7 @@ public class AITurretAttackPrefab : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_Knight_Advanturer")
+        if (other.gameObject.CompareTag("Player_Knight_Advanturer"))
         {
             HealthKnightAdvanturer eHealth = other.gameObject.GetComponent<HealthKnightAdvanturer>();
             eHealth.ModifyHealth(damageDone);
