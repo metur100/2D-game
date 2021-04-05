@@ -16,6 +16,7 @@ public class RadishHealth4 : MonoBehaviour
     public GameObject deathEffect;
     public GameObject bloodSplash;
     public GameObject dropItem;
+    private bool isDead;
     [SerializeField]
     Transform playerPosition;
     [SerializeField]
@@ -31,8 +32,9 @@ public class RadishHealth4 : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);

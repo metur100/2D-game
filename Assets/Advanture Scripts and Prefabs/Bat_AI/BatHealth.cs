@@ -15,6 +15,7 @@ public class BatHealth : MonoBehaviour
     private int currentHealth;
     public GameObject deathEffect;
     public GameObject dropItem;
+    private bool isDead;
     [SerializeField]
     Transform playerPosition;
     [SerializeField]
@@ -30,8 +31,9 @@ public class BatHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(dropItem, transform.position, Quaternion.identity);
             Destroy(gameObject);

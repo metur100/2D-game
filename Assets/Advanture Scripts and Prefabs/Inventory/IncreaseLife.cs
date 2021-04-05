@@ -13,6 +13,7 @@ public class IncreaseLife : MonoBehaviour
 
     public void Use()
     {
+        FindObjectOfType<AudioManager>().Play("Life_Item");
         Instantiate(lifeIncrease, player.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

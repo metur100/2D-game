@@ -50,9 +50,16 @@ public class TutorialManager : MonoBehaviour
             }
         }
         else if (popUpIndex == 0 || popUpIndex == 4
-            || popUpIndex == 6 || popUpIndex == 7 || popUpIndex == 8)
+            || popUpIndex == 7 || popUpIndex == 8)
         {
             if (Input.anyKeyDown)
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 6)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 popUpIndex++;
             }
