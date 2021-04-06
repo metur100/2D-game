@@ -11,7 +11,7 @@ public class ActivateLifeIncreasing : MonoBehaviour
         {
             isTriggered = true;
             FindObjectOfType<AudioManager>().Play("Life_Item");
-            HealthKnightAdvanturer life = collision.gameObject.GetComponent<HealthKnightAdvanturer>();
+            //HealthKnightAdvanturer life = collision.gameObject.GetComponent<HealthKnightAdvanturer>();
             //life.lifes++;
             //TrackLifes.scoreValue++;
         }

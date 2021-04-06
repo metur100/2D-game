@@ -9,6 +9,7 @@ public class PauseMenuAdvanture : MonoBehaviour
     public GameObject pausedMenuUI;
     public GameObject gameSaved;
     public GameObject gameLoaded;
+    public GameObject settings;
     // Update is called once per frame
     void Update()
     {
@@ -46,5 +47,13 @@ public class PauseMenuAdvanture : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void OpenSettings()
+    {
+        settings.SetActive(true);
+    }
+    public void CloseSettings()
+    {
+        settings.SetActive(false);
     }
 }
