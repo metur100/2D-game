@@ -10,7 +10,6 @@ public class PlayerKnightQuestManager : MonoBehaviour
     public GameObject monDBeforeBoss;
     public GameObject doTheQuestFirst;
     public GameObject surpriseBox;
-    public HealthKnightAdvanturer lifeKnight;
     public void GoBattle()
     {
         if (quest.isActive)
@@ -22,8 +21,6 @@ public class PlayerKnightQuestManager : MonoBehaviour
                 surpriseBox.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
-                //lifeKnight.lifes++;
-                //TrackLifes.scoreValue++;
                 StartCoroutine(DisableQuestText());
             }
         }
@@ -38,8 +35,6 @@ public class PlayerKnightQuestManager : MonoBehaviour
                 surpriseBox.SetActive(true);
                 Destroy(doTheQuestFirst);
                 exp.ModifyExp(quest.experianceReward);
-                //lifeKnight.lifes++;
-                //TrackLifes.scoreValue++;
                 StartCoroutine(DisableQuestText());
             }
         }

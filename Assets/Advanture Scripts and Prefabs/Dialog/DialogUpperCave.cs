@@ -13,7 +13,7 @@ public class DialogUpperCave : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activatePortal;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveAdvanturer dashMove;
+    public DashMoveButton dashMove;
     public GameObject continueButton;
     public GameObject activateTriggerCreatePlatform;
     private void Start()

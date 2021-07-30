@@ -12,7 +12,7 @@ public class DialogAfterFirstBoss : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveAdvanturer dashMove;
+    public DashMoveButton dashMove;
     public GameObject continueButton;
     public GameObject activatePortalNextLevel;
     [SerializeField]

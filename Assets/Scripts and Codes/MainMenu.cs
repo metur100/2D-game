@@ -18,9 +18,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void LoadAdvanture()
+    public void Levels()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Advanture");
+        SceneManager.LoadScene("Levels");
     }
 }

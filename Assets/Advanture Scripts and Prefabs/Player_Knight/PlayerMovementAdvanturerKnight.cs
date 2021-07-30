@@ -24,6 +24,8 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
     public ParticleSystem dust;
     private readonly float boostTime = 3f;
     SpriteRenderer spriteColor;
+
+    public Joystick joystick;
     void Start()
     {
         spriteColor = GetComponent<SpriteRenderer>();
@@ -48,11 +50,24 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
             spriteColor.color = new Color(255, 246, 0, 255);
             StartCoroutine(ResetGravity());
         }
-        horizontalMove = Input.GetAxisRaw("Horizontal") * normalMovementSpeed;
+
+        if (joystick.Horizontal >= 0.2f)
+        {
+            horizontalMove = normalMovementSpeed;
+        }
+        else if (joystick.Horizontal <= -0.2f)
+        {
+            horizontalMove = -normalMovementSpeed;
+        }
+        else
+        {
+            horizontalMove = 0f;
+        }
+        float verticalMove = joystick.Vertical;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
+        if (isGrounded == true && verticalMove >= .5f)
         {
             FindObjectOfType<AudioManager>().Play("Jump");
             animator.SetTrigger("takeOf");
@@ -60,7 +75,6 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             CreateDust();
         }
-
         if (isGrounded == true)
         {
             animator.SetBool("IsJumping", false);
@@ -70,7 +84,7 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
 
-        if (Input.GetKey(KeyCode.W) && isJumping == true)
+        if (verticalMove >= .5f && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
@@ -82,17 +96,16 @@ public class PlayerMovementAdvanturerKnight : MonoBehaviour
                 isJumping = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.W))
+        if (verticalMove >= .5f)
         {
             isJumping = false;
             CreateDust();
         }
-        if (Input.GetButtonDown("Crouch"))
+        if (verticalMove <= -0.5f)
         {
             crouch = true;
         }
-
-        else if (Input.GetButtonUp("Crouch"))
+        else
         {
             crouch = false;
         }

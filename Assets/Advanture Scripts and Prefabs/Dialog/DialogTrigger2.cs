@@ -15,7 +15,7 @@ public class DialogTrigger2 : MonoBehaviour
     public GameObject triggerAfterGhost;
     public GameObject activateDialogAfterGhost;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveAdvanturer dashMove;
+    public DashMoveButton dashMove;
     public GameObject bossHealthAndUI;
     public AudioSource gameTheme;
     public AudioSource bossTheme;

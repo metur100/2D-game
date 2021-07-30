@@ -10,7 +10,6 @@ public class PauseMenuAdvanture : MonoBehaviour
     public GameObject gameSaved;
     public GameObject gameLoaded;
     public GameObject settings;
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

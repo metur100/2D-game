@@ -12,7 +12,7 @@ public class Dialog2 : MonoBehaviour
     public float typingSpeed;
     public GameObject activateDialog;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveAdvanturer dashMove;
+    public DashMoveButton dashMove;
     public GameObject continueButton;
     public QuestGiver activateQuestUI;
 
