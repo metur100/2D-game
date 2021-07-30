@@ -19,8 +19,6 @@ public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
     private bool isMeleeAttacking = false;
     private float maleeAttackTimer = 0.0f;
     private float maleeAttackSpeed = 0.01f;
-    public Button meleeButton;
-
     //private bool isCooldownEnrage = false;
     //private bool isEnrage = false;
     //private float enrageDuration = 3f;
@@ -34,7 +32,8 @@ public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("meleeAttack") && isCooldownMeleeAttack == false)
+
+        if (Input.GetButtonDown("meleeAttack") && isCooldownMeleeAttack == false)
         {
             isCooldownMeleeAttack = true;
             isMeleeAttacking = true;
@@ -82,6 +81,7 @@ public class ShootingMeleeAttackKnightAdvanturer : MonoBehaviour
         }
         animator.SetBool("IsAttacking", isMeleeAttacking);
     }
+
     void ShootMeleeAttack()
     {
         Instantiate(meleePrefab, firePointMeleeAttack.position, firePointMeleeAttack.rotation);

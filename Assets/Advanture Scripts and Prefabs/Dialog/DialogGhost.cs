@@ -13,7 +13,7 @@ public class DialogGhost : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activateWallAndEnemies;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveButton dashMove;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject triggerWall;
     [SerializeField]

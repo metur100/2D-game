@@ -8,16 +8,6 @@ public class TutorialManager : MonoBehaviour
     private int popUpIndex;
     public GameObject skipTutorial;
     public GameObject playGame;
-
-    public Joystick joystick;
-    private bool bagButton;
-    private bool questButton;
-    private bool blockButton;
-    private bool fireButton;
-    private bool dashButton;
-    private bool meleeButton;
-    private bool pauseGameButton;
-
     void Update()
     {
         for(int i = 0; i < popUps.Length; i++)
@@ -33,34 +23,33 @@ public class TutorialManager : MonoBehaviour
         }
         if (popUpIndex == 1)
         {
-            if (joystick.Horizontal >= 0.2f || joystick.Horizontal <= -0.2f)
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 2)
         {
-            float verticalMove = joystick.Vertical;
-            if (verticalMove >= .5f)
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 3)
         {
-            if (questButton)
+            if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 5)
         {
-            if (bagButton)
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 popUpIndex++;
             }
         }
-        else if (popUpIndex == 0 || popUpIndex == 6 || popUpIndex == 4
+        else if (popUpIndex == 0 || popUpIndex == 4
             || popUpIndex == 7 || popUpIndex == 8)
         {
             if (Input.anyKeyDown)
@@ -68,73 +57,45 @@ public class TutorialManager : MonoBehaviour
                 popUpIndex++;
             }
         }
+        else if (popUpIndex == 6)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                popUpIndex++;
+            }
+        }
         else if (popUpIndex == 9)
         {
-            if (meleeButton)
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 10)
         {
-            if (dashButton)
+            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 11)
         {
-            if (fireButton)
+            if (Input.GetKeyDown(KeyCode.T))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 12)
         {
-            if (blockButton)
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 13)
         {
-            if (pauseGameButton)
-            {
-                popUpIndex++;
-            }
-        }
-        else if (popUpIndex == 14)
-        {
             skipTutorial.SetActive(false);
             playGame.SetActive(true);
         }
-    }
-    public void BagButton()
-    {
-        bagButton = true;
-    }
-    public void QuestButton()
-    {
-        questButton = true;
-    }
-    public void MeleeButton()
-    {
-        meleeButton = true;
-    }
-    public void DashButton()
-    {
-        dashButton = true;
-    }
-    public void FireBallButton()
-    {
-        fireButton = true;
-    }
-    public void BlockButton()
-    {
-        blockButton = true;
-    }
-    public void PauseGame()
-    {
-        pauseGameButton = true;
     }
 }

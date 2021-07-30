@@ -9,24 +9,6 @@ public class LevelLoader : MonoBehaviour
     public Slider slider;
     public GameObject [] screens;
     AsyncOperation async;
-
-    int levelIsUnlocked;
-    public Button[] buttons;
-
-    void Start()
-    {
-        levelIsUnlocked = PlayerPrefs.GetInt("levelIsUnlocked", 1);
-
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = false;
-        }
-
-        for (int i = 0; i < levelIsUnlocked; i++)
-        {
-            buttons[i].interactable = true;
-        }
-    }
     public void LoadScreenExample(int lvl)
     {
         StartCoroutine(LoadingScreen(lvl));
@@ -52,9 +34,5 @@ public class LevelLoader : MonoBehaviour
             }
             yield return null;
         }
-    }
-    public void ResetLevels()
-    {
-        PlayerPrefs.DeleteKey("levelIsUnlocked");
     }
 }

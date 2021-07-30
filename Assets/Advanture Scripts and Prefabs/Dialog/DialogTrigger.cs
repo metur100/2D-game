@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveButton dashMove;
+    public DashMoveAdvanturer dashMove;
     public GameObject triggerDialogStart;
     public GameObject triggerGreenPigDialog;
     public GameObject triggerBeforeFirstBoss;

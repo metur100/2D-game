@@ -13,7 +13,7 @@ public class DialogLowerCave : MonoBehaviour
     public GameObject activateDialog;
     public GameObject activatePortal;
     public PlayerMovementAdvanturerKnight moveSpeed;
-    public DashMoveButton dashMove;
+    public DashMoveAdvanturer dashMove;
     public GameObject continueButton;
     public GameObject activateTriggerCreatePlatform;
 

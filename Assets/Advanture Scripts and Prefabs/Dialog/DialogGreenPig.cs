@@ -26,7 +26,7 @@ public class DialogGreenPig : MonoBehaviour
     private GreenPigChaseAndAttack chaseDistance;
     [SerializeField]
     private GameObject shield;
-    public DashMoveButton dashMove;
+    public DashMoveAdvanturer dashMove;
     private void Start()
     {
         StartCoroutine(Type());
